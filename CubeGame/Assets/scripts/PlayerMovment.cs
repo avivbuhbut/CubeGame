@@ -5,6 +5,7 @@ public class PlayerMovment : MonoBehaviour
 {
     public float speed;
     // Use this for initialization
+    Rigidbody rigidbody;
     void Start()
     {
 
@@ -20,11 +21,9 @@ public class PlayerMovment : MonoBehaviour
 
     void PlayerMovmentCotrol()
     {
-
-        if (Input.GetKeyDown("space"))
-        {
-           transform.Translate(Vector3.up * 8f * Time.deltaTime, Space.World);
-         }
+        if (Input.GetKey(KeyCode.Space))
+            transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);
+        //     rigidbody.velocity = new Vector2(rigidbody.velocity.x, speed);
 
         if (Input.GetKey(KeyCode.A))
         {
