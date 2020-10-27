@@ -13,9 +13,12 @@ public class SwitchPlayers : MonoBehaviour
     void Start()
     {
 
+        Player.gameObject.SetActive(false);
 
-        Player.SetActive(Player.activeInHierarchy);
-        Player2.SetActive(!Player2.activeInHierarchy);
+        // Player2.SetActive(!Player2.activeInHierarchy);
+        /// Player2.SetActive(!Player2.activeInHierarchy);
+   
+        //Player2.SetActive(Player2.activeInHierarchy);
     }
 
     // Update is called once per frame
@@ -29,20 +32,30 @@ public class SwitchPlayers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
 
-            if (Player.active == true) // player is now the main player ACTIVATE player2
+            if (Player.active == true ) // player is now the main player ACTIVATE player2
             {
-                Player2Cam.enabled = true;
-                PlayerCam.enabled = false;
-                Player2.active = true;
-                Player.active = false;
+                // Player2Cam.enabled = true;
+                // PlayerCam.enabled = false;
+
+                Player2Cam.gameObject.SetActive(true);
+                PlayerCam.gameObject.SetActive(false);
+                Player2.gameObject.SetActive(true);
+                Player.gameObject.SetActive(false);
             }
             else   // player2 is now the main player ACTIVATE player
 
             {
-                Player2Cam.enabled = false;
-                PlayerCam.enabled = true;
-                Player.active = true;
-                Player2.active = false;
+               // Player2Cam.enabled = false;
+             //   PlayerCam.enabled = true;
+             //   Player.active = true;
+            //    Player2.active = false;
+
+
+                Player2Cam.gameObject.SetActive(false);
+                PlayerCam.gameObject.SetActive(true);
+                Player2.gameObject.SetActive(false);
+                Player.gameObject.SetActive(true);
+
             }
 
 
