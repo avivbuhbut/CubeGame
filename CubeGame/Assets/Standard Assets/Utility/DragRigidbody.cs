@@ -15,6 +15,8 @@ namespace UnityStandardAssets.Utility
 
         private SpringJoint m_SpringJoint;
 
+        public GameObject Player;
+
 
         private void Update()
         {
@@ -24,6 +26,7 @@ namespace UnityStandardAssets.Utility
                 return;
             }
 
+          
             var mainCamera = FindCamera();
 
             // We need to actually hit an object
@@ -36,7 +39,7 @@ namespace UnityStandardAssets.Utility
                 return;
             }
             // We need to hit a rigidbody that is not kinematic
-            if (!hit.rigidbody || hit.rigidbody.isKinematic)
+            if (!hit.rigidbody || hit.rigidbody.isKinematic || hit.rigidbody.name =="Player" || hit.rigidbody.name == "Player2")
             {
                 return;
             }
