@@ -63,8 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GrapplingGunRaycasthit2D.cs" />
-    <Compile Include="Assets\GrapplingHook.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -75,6 +73,9 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\scripts\BetterJump.cs" />
     <Compile Include="Assets\scripts\FollowCamera.cs" />
+    <Compile Include="Assets\scripts\GenetratePrefab.cs" />
+    <Compile Include="Assets\scripts\GrapplingGunRaycasthit2D.cs" />
+    <Compile Include="Assets\scripts\GrapplingHook.cs" />
     <Compile Include="Assets\scripts\PlayerMovment.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
