@@ -77,6 +77,7 @@
     <Compile Include="Assets\scripts\GrapplingGunRaycasthit2D.cs" />
     <Compile Include="Assets\scripts\GrapplingHook.cs" />
     <Compile Include="Assets\scripts\PlayerMovment.cs" />
+    <Compile Include="Assets\scripts\SwitchPlayers.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
