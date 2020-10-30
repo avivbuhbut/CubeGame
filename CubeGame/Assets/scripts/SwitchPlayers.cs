@@ -38,9 +38,9 @@ public class SwitchPlayers : MonoBehaviour
                 // PlayerCam.enabled = false;
 
                 Player2Cam.gameObject.SetActive(true);
-                PlayerCam.gameObject.SetActive(false);
                 Player2.gameObject.SetActive(true);
                 Player.gameObject.SetActive(false);
+            //    PlayerCam.gameObject.SetActive(false);
             }
             else   // player2 is now the main player ACTIVATE player
 

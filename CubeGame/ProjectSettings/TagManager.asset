@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PizzaBox
+  - Music
+  - Floor
+  - Left Bound
   layers:
   - Default
   - TransparentFX

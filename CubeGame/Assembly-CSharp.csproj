@@ -70,6 +70,7 @@
     <Compile Include="Assets\Image Effects\Scripts\GaussianBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
+    <Compile Include="Assets\PlayMusic.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\ScoreCount.cs" />
     <Compile Include="Assets\scripts\BetterJump.cs" />
     <Compile Include="Assets\scripts\ColidedScript.cs" />
     <Compile Include="Assets\scripts\FollowCamera.cs" />
