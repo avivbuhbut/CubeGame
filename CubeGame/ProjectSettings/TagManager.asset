@@ -8,6 +8,7 @@ TagManager:
   - Music
   - Floor
   - Left Bound
+  - Bounds
   layers:
   - Default
   - TransparentFX

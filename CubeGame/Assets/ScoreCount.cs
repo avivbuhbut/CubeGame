@@ -19,6 +19,7 @@ public class ScoreCount : MonoBehaviour
 
     RaycastHit hit = new RaycastHit();
     Vector3 vel;
+
     public Rigidbody rigidbody;
     public Transform transform;
     // float pizzaSpeed = 20f;
@@ -28,6 +29,7 @@ public class ScoreCount : MonoBehaviour
     void Start()
     {
         OutBoundsText.enabled =false;
+        LocalScore.enabled = true;
         //Text sets your text to say this message
         //  m_MyText.text = "This is my text";
 
@@ -36,16 +38,16 @@ public class ScoreCount : MonoBehaviour
         currentPosY = transform.position.y;
         currentPosZ = transform.position.z;
 
+       
+
     }
 
     void Update()
     {
 
 
-        Debug.Log(rigidbody.velocity);
+        LocalScore.enabled = false;
 
-
-        LocalScore.text = "Score: " + localScore;
         GlobalScoreText.text = "Total Score: " + GlobalScore;
 
         vel = rigidbody.velocity;
@@ -63,7 +65,12 @@ public class ScoreCount : MonoBehaviour
         if ((vel.magnitude > 5) && (!Input.GetKey(KeyCode.Mouse0)))
         {
 
-         
+
+            LocalScore.enabled = true;
+
+            LocalScore.text = "Score: " + localScore;
+
+            Debug.Log(localScore);
             localScore++;
 
             if (localScore < 100)
@@ -73,8 +80,7 @@ public class ScoreCount : MonoBehaviour
                 boxInAir();
                 LocalScore.color = Color.green;
             }
-            else
-                LocalScore.color = Color.red;
+            
 
         }
         else
@@ -84,13 +90,16 @@ public class ScoreCount : MonoBehaviour
 
         //player can touch each pizza box once !!! add code!
 
-        
+
+             if (localScore == 0)
+                LocalScore.color = Color.red;
 
 
-        
-        GlobalScore += localScore/100;
 
-        
+
+            GlobalScore += localScore/100;
+
+       
     }
 
 
@@ -103,7 +112,7 @@ public class ScoreCount : MonoBehaviour
         // ADD THE OTHER BOUNDS
 
 
-        if (collision.gameObject.tag == "Left Bound") //&& vel.magnitude> pizzaSpeed)
+        if (collision.gameObject.tag == "Bounds") //&& vel.magnitude> pizzaSpeed)
         {
 
 
