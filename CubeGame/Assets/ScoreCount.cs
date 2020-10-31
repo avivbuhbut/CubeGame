@@ -13,8 +13,8 @@ public class ScoreCount : MonoBehaviour
     
     float speed;
 
-    public Text YourScoreText;
-    public Text myText;
+    public Text GlobalScoreText;
+    public Text LocalScore;
     public Text OutBoundsText;
 
     RaycastHit hit = new RaycastHit();
@@ -41,10 +41,12 @@ public class ScoreCount : MonoBehaviour
     void Update()
     {
 
-       
 
-        myText.text = "Score: " + localScore;
-        YourScoreText.text = "Your Score: " + GlobalScore;
+        Debug.Log(rigidbody.velocity);
+
+
+        LocalScore.text = "Score: " + localScore;
+        GlobalScoreText.text = "Total Score: " + GlobalScore;
 
         vel = rigidbody.velocity;
 
@@ -56,22 +58,37 @@ public class ScoreCount : MonoBehaviour
             m_MyText.text = "My text has now changed.";
         }*/
 
+
+        /*checks if the box is in the air - if it is the score goes up*/
         if ((vel.magnitude > 5) && (!Input.GetKey(KeyCode.Mouse0)))
         {
-   
+
+         
             localScore++;
-        
+
+            if (localScore < 100)
+                LocalScore.color = Color.red;
+            else if (localScore > 100)
+            {
+                boxInAir();
+                LocalScore.color = Color.green;
+            }
+            else
+                LocalScore.color = Color.red;
+
         }
         else
         {
             localScore = 0;
         }
 
-        //add code if a player recatch the box the score turns down in lots of ponts
+        //player can touch each pizza box once !!! add code!
+
+        
 
 
         
-        GlobalScore += localScore;
+        GlobalScore += localScore/100;
 
         
     }
@@ -83,6 +100,7 @@ public class ScoreCount : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        // ADD THE OTHER BOUNDS
 
 
         if (collision.gameObject.tag == "Left Bound") //&& vel.magnitude> pizzaSpeed)
@@ -106,5 +124,11 @@ public class ScoreCount : MonoBehaviour
         Text.enabled = true;
         yield return new WaitForSeconds(delay);
         Text.enabled = false;
+    }
+
+
+    public static bool boxInAir()
+    {
+        return true;
     }
 }

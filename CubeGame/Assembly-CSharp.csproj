@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraFollowPizza.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />
     <Compile Include="Assets\Image Effects\Scripts\ConvolutionKernel.cs" />
