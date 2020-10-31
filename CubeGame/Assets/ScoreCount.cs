@@ -29,7 +29,7 @@ public class ScoreCount : MonoBehaviour
     void Start()
     {
         OutBoundsText.enabled =false;
-        LocalScore.enabled = true;
+        LocalScore.enabled = false;
         //Text sets your text to say this message
         //  m_MyText.text = "This is my text";
 
