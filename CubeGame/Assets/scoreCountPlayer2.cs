@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreCount : MonoBehaviour
+public class scoreCountPlayer2 : MonoBehaviour
 {
 
 
 
     public static int GlobalScore;
     public int localScore;
-    
+
     float speed;
 
     /*Player2 Texts*/
@@ -18,24 +18,22 @@ public class ScoreCount : MonoBehaviour
     public Text LocalScorePlayer2;
     public Text OutBoundsTextPlayer2;
 
-    /*Player texts*/
-    public Text GlobalScoreTextPlayer;
-    public Text LocalScorePlayer;
-    public Text OutBoundsTextPlayer;
 
     RaycastHit hit = new RaycastHit();
     Vector3 vel;
 
-    public Rigidbody rigidbody;
-    public Transform transform;
+    public GameObject pizzaBox;
+    public Rigidbody rigidbodyPizzaBox;
+    public Transform transformPizzaBox;
     // float pizzaSpeed = 20f;
     float currentPosX = 0;
     float currentPosY = 0;
     float currentPosZ = 0;
+
+
+    
     void Start()
     {
-        OutBoundsTextPlayer.enabled =false;
-        LocalScorePlayer.enabled = false;
 
         OutBoundsTextPlayer2.enabled = false;
         LocalScorePlayer2.enabled = false;
@@ -44,28 +42,26 @@ public class ScoreCount : MonoBehaviour
         //Text sets your text to say this message
         //  m_MyText.text = "This is my text";
 
-        speed = rigidbody.velocity.magnitude;
-        currentPosX = transform.position.x;
-        currentPosY = transform.position.y;
-        currentPosZ = transform.position.z;
+        speed = rigidbodyPizzaBox.velocity.magnitude;
+        currentPosX = transformPizzaBox.position.x;
+        currentPosY = transformPizzaBox.position.y;
+        currentPosZ = transformPizzaBox.position.z;
 
-       
 
+      
     }
 
     void Update()
     {
-        GlobalScoreTextPlayer2.text = GlobalScoreTextPlayer.text;
-        LocalScorePlayer2.text = LocalScorePlayer.text;
-        OutBoundsTextPlayer2.text = OutBoundsTextPlayer.text;
 
-        LocalScorePlayer.enabled = false;
+     
+        LocalScorePlayer2.enabled = false;
 
-        GlobalScoreTextPlayer.text = "Total Score: " + GlobalScore;
+        GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
-        vel = rigidbody.velocity;
+        vel = rigidbodyPizzaBox.velocity;
 
-       
+
         //Press the space key to change the Text message
         /*
         if (Input.GetKey(KeyCode.Space))
@@ -79,21 +75,21 @@ public class ScoreCount : MonoBehaviour
         {
 
 
-            LocalScorePlayer.enabled = true;
+            LocalScorePlayer2.enabled = true;
 
-            LocalScorePlayer.text = "Score: " + localScore;
+            LocalScorePlayer2.text = "Score: " + localScore;
 
-            Debug.Log(localScore);
+           
             localScore++;
 
             if (localScore < 100)
-                LocalScorePlayer.color = Color.red;
+                LocalScorePlayer2.color = Color.red;
             else if (localScore > 100)
             {
                 boxInAir();
-                LocalScorePlayer.color = Color.green;
+                LocalScorePlayer2.color = Color.green;
             }
-            
+
 
         }
         else
@@ -104,19 +100,20 @@ public class ScoreCount : MonoBehaviour
         //player can touch each pizza box once !!! add code!
 
 
-             if (localScore == 0)
-            LocalScorePlayer.color = Color.red;
+        if (localScore == 0)
+            LocalScorePlayer2.color = Color.red;
 
 
 
 
-            GlobalScore += localScore/100;
+        GlobalScore += localScore / 100;
 
-       
+
+     
     }
 
 
-   
+
 
 
 
@@ -125,13 +122,14 @@ public class ScoreCount : MonoBehaviour
         // ADD THE OTHER BOUNDS
 
 
-        if (collision.gameObject.tag == "Bounds") //&& vel.magnitude> pizzaSpeed)
+        if (collision.gameObject.tag== "Bounds") //&& vel.magnitude> pizzaSpeed)
         {
 
 
-            StartCoroutine(ShowMessage(OutBoundsTextPlayer, "OUT OF BOUNDS!", 2));
+
+            StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
             Debug.Log("hit left bound");
-            gameObject.transform.position = new Vector3(currentPosX, currentPosY, currentPosZ);
+            pizzaBox.transform.position = new Vector3(currentPosX, currentPosY, currentPosZ);
         }
     }
 
