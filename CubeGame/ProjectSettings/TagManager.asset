@@ -11,6 +11,7 @@ TagManager:
   - Bounds
   - PizzaBoxCam
   - Player2
+  - PizzaBox2
   layers:
   - Default
   - TransparentFX

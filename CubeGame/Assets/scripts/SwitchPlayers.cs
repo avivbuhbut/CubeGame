@@ -14,10 +14,10 @@ public class SwitchPlayers : MonoBehaviour
     {
 
         Player.gameObject.SetActive(true);
-
+        Player2.gameObject.SetActive(false);
         // Player2.SetActive(!Player2.activeInHierarchy);
         /// Player2.SetActive(!Player2.activeInHierarchy);
-   
+
         //Player2.SetActive(Player2.activeInHierarchy);
     }
 

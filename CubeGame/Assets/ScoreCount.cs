@@ -62,16 +62,17 @@ public class ScoreCount : MonoBehaviour
         PizzaCam.gameObject.SetActive(false);
         player2GameObj.gameObject.SetActive(false);
         Player2CAM.gameObject.SetActive(false);
+
+
     }
 
     void Update()
     {
-   
-       
- 
 
-    //   LocalScorePlayer.enabled = false;
-       // LocalScorePlayer2.enabled = false;
+
+
+        //   LocalScorePlayer.enabled = false;
+        // LocalScorePlayer2.enabled = false;
 
 
 
@@ -98,6 +99,7 @@ public class ScoreCount : MonoBehaviour
             PizzaCam.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
+           
 
             LocalScorePlayer.enabled = true;
             LocalScorePlayer2.enabled = true;
@@ -173,8 +175,10 @@ public class ScoreCount : MonoBehaviour
 
 
         // if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox")
-        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged" )
         {
+            player2GameObj.gameObject.SetActive(false);
+
 
             LocalScorePlayer.enabled = false;
             LocalScorePlayer2.enabled = false;
@@ -196,6 +200,7 @@ public class ScoreCount : MonoBehaviour
                 player2GameObj.gameObject.SetActive(true);
             }
         }
+
 
 
     }
