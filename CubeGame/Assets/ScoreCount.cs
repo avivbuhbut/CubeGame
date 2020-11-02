@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class ScoreCount : MonoBehaviour
 {
 
@@ -26,10 +26,15 @@ public class ScoreCount : MonoBehaviour
     public Text LocalScorePlayer2;
     public Text OutBoundsTextPlayer2;
 
+  //  public Text boxText;
+
     /*Player texts*/
     public Text GlobalScoreTextPlayer;
     public Text LocalScorePlayer;
     public Text OutBoundsTextPlayer;
+
+
+    public TextMeshPro pizzaBoxTextMesh;
 
     public RaycastHit hit;
     public Vector3 vel;
@@ -42,6 +47,8 @@ public class ScoreCount : MonoBehaviour
     public float currentPosZ ;
     void Start()
     {
+      //  boxText.enabled = false;
+       pizzaBoxTextMesh.gameObject.SetActive(true);
 
         hit = new RaycastHit();
         OutBoundsTextPlayer.enabled =false;
@@ -76,7 +83,7 @@ public class ScoreCount : MonoBehaviour
 
 
 
-
+        
         GlobalScoreTextPlayer.text = "Total Score: " + GlobalScore;
         GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
@@ -95,8 +102,10 @@ public class ScoreCount : MonoBehaviour
         if ((vel.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
 
+           // boxText.enabled = true;
+            pizzaBoxTextMesh.gameObject.SetActive(true);
 
-            PizzaCam.gameObject.SetActive(true);
+           PizzaCam.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
            
@@ -105,21 +114,28 @@ public class ScoreCount : MonoBehaviour
             LocalScorePlayer2.enabled = true;
 
             LocalScorePlayer.text = "Score: " + localScore;
-            LocalScorePlayer2.text = LocalScorePlayer.text;
-          
+
+            pizzaBoxTextMesh.text = "Local Score: " + localScore;
 
             localScore++;
+
+      
+          
+          
+
 
             if (localScore < 100)
             {
                 LocalScorePlayer.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
+                pizzaBoxTextMesh.color = Color.red;
             }
             else if (localScore > 100)
             {
                 boxInAir();
                 LocalScorePlayer.color = Color.green;
                 LocalScorePlayer2.color = Color.green;
+                pizzaBoxTextMesh.color = Color.green;
             }
 
             if (localScore == 0)
@@ -129,7 +145,7 @@ public class ScoreCount : MonoBehaviour
             }
 
 
-
+            //pizzaBoxTextMesh.gameObject.SetActive(false);
         }
         else
         {
@@ -137,14 +153,14 @@ public class ScoreCount : MonoBehaviour
         }
 
         //player can touch each pizza box once !!! add code!
-
-
-       
-
+     //   boxText.enabled = false;
 
 
 
-            GlobalScore += localScore/100;
+
+
+
+        GlobalScore += localScore/100;
 
 
 
