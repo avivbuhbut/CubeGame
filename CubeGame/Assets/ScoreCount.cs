@@ -35,6 +35,7 @@ public class ScoreCount : MonoBehaviour
 
 
     public TextMeshPro pizzaBoxTextMesh;
+    public TextMeshPro pizzaBox2TextMesh;
 
     public RaycastHit hit;
     public Vector3 vel;
@@ -47,8 +48,12 @@ public class ScoreCount : MonoBehaviour
     public float currentPosZ ;
     void Start()
     {
+
+
+      
       //  boxText.enabled = false;
-       pizzaBoxTextMesh.gameObject.SetActive(true);
+       pizzaBoxTextMesh.gameObject.SetActive(false);
+        pizzaBox2TextMesh.gameObject.SetActive(false);
 
         hit = new RaycastHit();
         OutBoundsTextPlayer.enabled =false;
@@ -104,8 +109,9 @@ public class ScoreCount : MonoBehaviour
 
            // boxText.enabled = true;
             pizzaBoxTextMesh.gameObject.SetActive(true);
+            pizzaBox2TextMesh.gameObject.SetActive(true);
 
-           PizzaCam.gameObject.SetActive(true);
+            PizzaCam.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
            
@@ -116,6 +122,7 @@ public class ScoreCount : MonoBehaviour
             LocalScorePlayer.text = "Score: " + localScore;
 
             pizzaBoxTextMesh.text = "Local Score: " + localScore;
+            pizzaBox2TextMesh.text = "Local Score: " + localScore;
 
             localScore++;
 
@@ -129,6 +136,7 @@ public class ScoreCount : MonoBehaviour
                 LocalScorePlayer.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
                 pizzaBoxTextMesh.color = Color.red;
+                pizzaBox2TextMesh.color = Color.red;
             }
             else if (localScore > 100)
             {
@@ -136,19 +144,24 @@ public class ScoreCount : MonoBehaviour
                 LocalScorePlayer.color = Color.green;
                 LocalScorePlayer2.color = Color.green;
                 pizzaBoxTextMesh.color = Color.green;
+                pizzaBox2TextMesh.color = Color.green;
             }
 
             if (localScore == 0)
             {
                 LocalScorePlayer.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
+                
             }
 
 
             //pizzaBoxTextMesh.gameObject.SetActive(false);
+       
         }
         else
         {
+            pizzaBoxTextMesh.gameObject.SetActive(false);
+            pizzaBox2TextMesh.gameObject.SetActive(false);
             localScore = 0;
         }
 
@@ -162,9 +175,9 @@ public class ScoreCount : MonoBehaviour
 
         GlobalScore += localScore/100;
 
+   
 
 
-       
     }
 
 
