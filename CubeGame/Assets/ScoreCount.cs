@@ -82,7 +82,7 @@ public class ScoreCount : MonoBehaviour
 
 
         /*checks if the box is in the air - if it is the score goes up*/
-        if ((vel.magnitude > 5) && (!Input.GetKey(KeyCode.Mouse0)))
+        if ((vel.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
 
        
