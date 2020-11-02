@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Left Bound
   - Bounds
+  - PizzaBoxCam
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class ScoreCount : MonoBehaviour
 {
 
+    public Camera Player1;
+    public Camera Player2;
+
+
+    public Camera PizzaCam;
+    public GameObject PizzaBox;
 
    
     public static int GlobalScore;
@@ -51,7 +57,7 @@ public class ScoreCount : MonoBehaviour
         currentPosY = transform.position.y;
         currentPosZ = transform.position.z;
 
-       
+        PizzaCam.gameObject.SetActive(false);
 
     }
 
@@ -85,7 +91,11 @@ public class ScoreCount : MonoBehaviour
         if ((vel.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
 
-       
+
+            PizzaCam.gameObject.SetActive(true);
+            Player1.gameObject.SetActive(false);
+            Player2.gameObject.SetActive(false);
+
             LocalScorePlayer.enabled = true;
             LocalScorePlayer2.enabled = true;
 
@@ -131,6 +141,8 @@ public class ScoreCount : MonoBehaviour
 
             GlobalScore += localScore/100;
 
+
+
        
     }
 
@@ -163,6 +175,10 @@ public class ScoreCount : MonoBehaviour
 
             LocalScorePlayer.enabled = false;
             LocalScorePlayer2.enabled = false;
+
+            PizzaCam.gameObject.SetActive(false);
+            Player1.gameObject.SetActive(true);
+            Player2.gameObject.SetActive(true);
         }
 
 
