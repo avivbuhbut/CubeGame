@@ -60,7 +60,8 @@ public class ScoreCount : MonoBehaviour
         currentPosZ = transform.position.z;
 
         PizzaCam.gameObject.SetActive(false);
-
+        player2GameObj.gameObject.SetActive(false);
+        Player2CAM.gameObject.SetActive(false);
     }
 
     void Update()
@@ -178,11 +179,22 @@ public class ScoreCount : MonoBehaviour
             LocalScorePlayer.enabled = false;
             LocalScorePlayer2.enabled = false;
 
-            PizzaCam.gameObject.SetActive(false);
-            Player1CAM.gameObject.SetActive(true);
-            Player2CAM.gameObject.SetActive(false);
-            player1GameObj.gameObject.SetActive(true);
-            player2GameObj.gameObject.SetActive(false);
+            if (player2GameObj == true)
+            {
+                PizzaCam.gameObject.SetActive(false);
+                Player1CAM.gameObject.SetActive(true);
+                Player2CAM.gameObject.SetActive(false);
+                player1GameObj.gameObject.SetActive(true);
+                player2GameObj.gameObject.SetActive(false);
+            }
+            else
+            {
+                PizzaCam.gameObject.SetActive(false);
+                Player1CAM.gameObject.SetActive(false);
+                Player2CAM.gameObject.SetActive(true);
+                player1GameObj.gameObject.SetActive(false);
+                player2GameObj.gameObject.SetActive(true);
+            }
         }
 
 
