@@ -15,6 +15,7 @@ public class ScoreCount : MonoBehaviour
     public Camera PizzaCam;
     public GameObject PizzaBox;
 
+
    
     public static int GlobalScore;
     public  int localScore;
@@ -34,8 +35,8 @@ public class ScoreCount : MonoBehaviour
     public Text OutBoundsTextPlayer;
 
 
-    public TextMeshPro pizzaBoxTextMesh;
-    public TextMeshPro pizzaBox2TextMesh;
+   
+    public TextMeshPro pizzaBox1TextMesh;
 
     public RaycastHit hit;
     public Vector3 vel;
@@ -50,11 +51,11 @@ public class ScoreCount : MonoBehaviour
     {
 
 
-      
-      //  boxText.enabled = false;
-       pizzaBoxTextMesh.gameObject.SetActive(false);
-        pizzaBox2TextMesh.gameObject.SetActive(false);
 
+        //  boxText.enabled = false;
+        //pizzaBox2TextMesh.gameObject.SetActive(false);
+        //   pizzaBox1TextMesh.gameObject.SetActive(false);
+        
         hit = new RaycastHit();
         OutBoundsTextPlayer.enabled =false;
         LocalScorePlayer.enabled = false;
@@ -71,24 +72,25 @@ public class ScoreCount : MonoBehaviour
         currentPosY = transform.position.y;
         currentPosZ = transform.position.z;
 
-        PizzaCam.gameObject.SetActive(false);
+       PizzaCam.gameObject.SetActive(false);
+        
         player2GameObj.gameObject.SetActive(false);
         Player2CAM.gameObject.SetActive(false);
 
-
+        
     }
 
     void Update()
     {
 
-
+      
 
         //   LocalScorePlayer.enabled = false;
         // LocalScorePlayer2.enabled = false;
 
 
 
-        
+
         GlobalScoreTextPlayer.text = "Total Score: " + GlobalScore;
         GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
@@ -107,10 +109,10 @@ public class ScoreCount : MonoBehaviour
         if ((vel.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
 
-           // boxText.enabled = true;
-            pizzaBoxTextMesh.gameObject.SetActive(true);
-            pizzaBox2TextMesh.gameObject.SetActive(true);
-
+            // boxText.enabled = true;
+            // pizzaBox2TextMesh.gameObject.SetActive(true);
+            //  pizzaBox2TextMesh.gameObject.SetActive(true);
+            pizzaBox1TextMesh.gameObject.SetActive(true);
             PizzaCam.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
@@ -121,8 +123,8 @@ public class ScoreCount : MonoBehaviour
 
             LocalScorePlayer.text = "Score: " + localScore;
 
-            pizzaBoxTextMesh.text = "Local Score: " + localScore;
-            pizzaBox2TextMesh.text = "Local Score: " + localScore;
+      
+          pizzaBox1TextMesh.text = "Local Score: " + localScore;
 
             localScore++;
 
@@ -135,34 +137,28 @@ public class ScoreCount : MonoBehaviour
             {
                 LocalScorePlayer.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
-                pizzaBoxTextMesh.color = Color.red;
-                pizzaBox2TextMesh.color = Color.red;
+
+               pizzaBox1TextMesh.color = Color.red;
+               
             }
             else if (localScore > 100)
             {
                 boxInAir();
                 LocalScorePlayer.color = Color.green;
                 LocalScorePlayer2.color = Color.green;
-                pizzaBoxTextMesh.color = Color.green;
-                pizzaBox2TextMesh.color = Color.green;
+
+               pizzaBox1TextMesh.color = Color.green;
+         
             }
-
-            if (localScore == 0)
-            {
-                LocalScorePlayer.color = Color.red;
-                LocalScorePlayer2.color = Color.red;
-                
-            }
+           
 
 
-            //pizzaBoxTextMesh.gameObject.SetActive(false);
-       
         }
         else
         {
-            pizzaBoxTextMesh.gameObject.SetActive(false);
-            pizzaBox2TextMesh.gameObject.SetActive(false);
-            localScore = 0;
+               
+                localScore = 0;
+            
         }
 
         //player can touch each pizza box once !!! add code!
@@ -198,6 +194,8 @@ public class ScoreCount : MonoBehaviour
             StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
             LocalScorePlayer.enabled = false;
             LocalScorePlayer2.enabled = false;
+
+            pizzaBox1TextMesh.gameObject.SetActive(false);
             Debug.Log("hit left bound");
             gameObject.transform.position = new Vector3(currentPosX, currentPosY, currentPosZ);
         }
@@ -207,10 +205,11 @@ public class ScoreCount : MonoBehaviour
         if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged" )
         {
             player2GameObj.gameObject.SetActive(false);
-
-
+            pizzaBox1TextMesh.gameObject.SetActive(false);
+          
             LocalScorePlayer.enabled = false;
             LocalScorePlayer2.enabled = false;
+         
 
             if (player2GameObj == true)
             {
@@ -219,6 +218,8 @@ public class ScoreCount : MonoBehaviour
                 Player2CAM.gameObject.SetActive(false);
                 player1GameObj.gameObject.SetActive(true);
                 player2GameObj.gameObject.SetActive(false);
+              //  pizzaBox1TextMesh.gameObject.SetActive(true);
+
             }
             else
             {
@@ -227,6 +228,8 @@ public class ScoreCount : MonoBehaviour
                 Player2CAM.gameObject.SetActive(true);
                 player1GameObj.gameObject.SetActive(false);
                 player2GameObj.gameObject.SetActive(true);
+                //pizzaBox2TextMesh.gameObject.SetActive(false);
+
             }
         }
 
