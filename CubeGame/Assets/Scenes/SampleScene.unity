@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 115516801}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3293,8 +3293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b8320342ca2df4590d8f8b19659f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: {fileID: 963194227}
-  Player2: {fileID: 484558352}
+  Player1CAM: {fileID: 963194227}
+  Player2CAM: {fileID: 484558352}
+  player1GameObj: {fileID: 1332451213}
+  player2GameObj: {fileID: 115516800}
   PizzaCam: {fileID: 315846103}
   PizzaBox: {fileID: 1075257557}
   localScore: 0
@@ -4137,7 +4139,7 @@ GameObject:
   - component: {fileID: 1332451222}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

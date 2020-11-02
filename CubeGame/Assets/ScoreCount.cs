@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class ScoreCount : MonoBehaviour
 {
 
-    public Camera Player1;
-    public Camera Player2;
+    public Camera Player1CAM;
+    public Camera Player2CAM;
 
+    public GameObject player1GameObj;
+    public GameObject player2GameObj;
 
     public Camera PizzaCam;
     public GameObject PizzaBox;
@@ -93,8 +95,8 @@ public class ScoreCount : MonoBehaviour
 
 
             PizzaCam.gameObject.SetActive(true);
-            Player1.gameObject.SetActive(false);
-            Player2.gameObject.SetActive(false);
+            Player1CAM.gameObject.SetActive(false);
+            Player2CAM.gameObject.SetActive(false);
 
             LocalScorePlayer.enabled = true;
             LocalScorePlayer2.enabled = true;
@@ -177,8 +179,10 @@ public class ScoreCount : MonoBehaviour
             LocalScorePlayer2.enabled = false;
 
             PizzaCam.gameObject.SetActive(false);
-            Player1.gameObject.SetActive(true);
-            Player2.gameObject.SetActive(true);
+            Player1CAM.gameObject.SetActive(true);
+            Player2CAM.gameObject.SetActive(false);
+            player1GameObj.gameObject.SetActive(true);
+            player2GameObj.gameObject.SetActive(false);
         }
 
 
