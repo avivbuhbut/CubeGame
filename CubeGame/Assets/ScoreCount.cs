@@ -219,6 +219,8 @@ public class ScoreCount : MonoBehaviour
             GlobalScoreTMPBox1.gameObject.SetActive(false);
             pizzaBox1LocalScoreTMP.gameObject.SetActive(false);
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
+            PizzaCam.gameObject.SetActive(false);
+            Player1CAM.gameObject.SetActive(true);
 
             Debug.Log("hit left bound");
             gameObject.transform.position = new Vector3(currentPosX, currentPosY, currentPosZ);
@@ -236,6 +238,7 @@ public class ScoreCount : MonoBehaviour
             GlobalScoreTMPBox1.gameObject.SetActive(false);
 
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
+        
 
             if (player2GameObj == true)
             {
