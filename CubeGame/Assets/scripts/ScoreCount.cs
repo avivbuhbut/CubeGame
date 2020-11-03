@@ -12,89 +12,113 @@ public class ScoreCount : MonoBehaviour
     public GameObject player1GameObj;
     public GameObject player2GameObj;
 
-    public Camera PizzaCam;
-    public GameObject PizzaBox;
 
 
-   
+
+
+
     public static int GlobalScore;
-    public  int localScore;
-    
-   public float speed;
+    public int localScore;
+
+
 
     /*Player2 Texts*/
     public Text GlobalScoreTextPlayer2;
     public Text LocalScorePlayer2;
     public Text OutBoundsTextPlayer2;
 
-   
+
 
     /*Player texts*/
-
     public TextMeshPro GlobalScoreTMPPlayer;
-
-
-
-    /*Pizza Box text  TMP*/
-    public TextMeshPro GlobalScoreTMPBox;
-    public TextMeshPro pizzaBoxLocalScoreTMP;
     public TextMeshPro LocalScorePlayerTMP;
     public TextMeshPro OutBoundsTextPlayerTMP;
 
 
     public RaycastHit hit;
-    public Vector3 vel;
 
-    public Rigidbody rigidbody;
-    public Transform transform;
+
+    /*Pizza Box1*/
+    public Vector3 velBox1;
+    public Camera CamBox1;
+    public Rigidbody rigidbodyBox1;
+    public Transform transformBox1;
+    public TextMeshPro GlobalScoreTMPBox1;
+    public TextMeshPro LocalScorepizzaBox1TMP;
+    public float speedBox1;
+
+
+    public float currentPosX;
+    public float currentPosY;
+    public float currentPosZ;
+
+
+    /*Pizza Box2*/
+    public Vector3 velBox2;
+    public Camera CamBox2;
+    public Rigidbody rigidbodyBox2;
+    public Transform transformBox2;
+    public TextMeshPro GlobalScoreTMPBox2;
+    public TextMeshPro LocalScorepizzaBox2TMP;
+    public float speedBox2;
+
+
+
+
     // float pizzaSpeed = 20f;
-    public float currentPosX ;
-    public float currentPosY ;
-    public float currentPosZ ;
+
     void Start()
     {
 
 
 
-   
-        //pizzaBox2TextMesh.gameObject.SetActive(false);
-        //   pizzaBox1TextMesh.gameObject.SetActive(false);
+
 
         hit = new RaycastHit();
-        OutBoundsTextPlayerTMP.enabled =false;
+        OutBoundsTextPlayerTMP.enabled = false;
         LocalScorePlayerTMP.enabled = false;
 
         OutBoundsTextPlayer2.enabled = false;
         LocalScorePlayer2.enabled = false;
 
-
         //Text sets your text to say this message
         //  m_MyText.text = "This is my text";
 
-        speed = rigidbody.velocity.magnitude;
+        /*pizza Box1 speed*/
+        speedBox1 = rigidbodyBox1.velocity.magnitude;
+
         currentPosX = transform.position.x;
         currentPosY = transform.position.y;
         currentPosZ = transform.position.z;
 
-       PizzaCam.gameObject.SetActive(false);
-        
+
+
+        CamBox1.gameObject.SetActive(false);
+        CamBox2.gameObject.SetActive(false);
+
         player2GameObj.gameObject.SetActive(false);
         Player2CAM.gameObject.SetActive(false);
 
 
-        /*pizza text boxTMP*/
-        GlobalScoreTMPBox.gameObject.SetActive(false);
-        pizzaBoxLocalScoreTMP.gameObject.SetActive(false);
 
+        /*pizza text boxTMP*/
+        GlobalScoreTMPBox1.gameObject.SetActive(false);
+        LocalScorepizzaBox1TMP.gameObject.SetActive(false);
 
         /*Player1 text TMP*/
         GlobalScoreTMPPlayer.gameObject.SetActive(true);
+
+
+        /*pizzaBox2*/
+        speedBox2 = rigidbodyBox2.velocity.magnitude;
+        GlobalScoreTMPBox2.gameObject.SetActive(false);
+        LocalScorepizzaBox2TMP.gameObject.SetActive(false);
     }
 
     void Update()
     {
 
-      
+
 
         //   LocalScorePlayer.enabled = false;
         // LocalScorePlayer2.enabled = false;
@@ -106,35 +130,70 @@ public class ScoreCount : MonoBehaviour
         GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
         GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
-        GlobalScoreTMPBox.text = "Total Score: " + GlobalScore;
-        vel = rigidbody.velocity;
+        GlobalScoreTMPBox1.text = "Total Score: " + GlobalScore;
 
-       
-        //Press the space key to change the Text message
-        /*
-        if (Input.GetKey(KeyCode.Space))
+        /*Box1 velocity*/
+        velBox1 = rigidbodyBox1.velocity;
+
+
+        /*Box2 velocity*/
+        velBox2 = rigidbodyBox2.velocity;
+
+
+        /*if Box 2 is in the air*/
+        if ((velBox2.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
-            m_MyText.text = "My text has now changed.";
-        }*/
+
+            /*camera control*/
+            CamBox1.gameObject.SetActive(false);
+            CamBox2.gameObject.SetActive(true);
+            Player1CAM.gameObject.SetActive(false);
+            Player2CAM.gameObject.SetActive(false);
+
+            /*text control*/
+            LocalScorepizzaBox2TMP.gameObject.SetActive(true);
+
+          
+            LocalScorepizzaBox2TMP.text = "Local Score: " + localScore;
+
+            localScore++;
 
 
-        /*checks if the box is in the air - if it is the score goes up*/
-        if ((vel.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
+
+
+
+            if (localScore < 100)
+            {
+
+
+
+
+            }
+            else if (localScore > 100)
+            {
+
+
+
+
+            }
+        }
+
+
+
+        /*if Box 1 is in the air*/
+        if ((velBox1.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
-            boxInAir();
+
 
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
 
-            GlobalScoreTMPBox.gameObject.SetActive(true);
-            // boxText.enabled = true;
-            // pizzaBox2TextMesh.gameObject.SetActive(true);
-            //  pizzaBox2TextMesh.gameObject.SetActive(true);
+            GlobalScoreTMPBox1.gameObject.SetActive(true);
 
-            pizzaBoxLocalScoreTMP.gameObject.SetActive(true);
-            PizzaCam.gameObject.SetActive(true);
+            LocalScorepizzaBox1TMP.gameObject.SetActive(true);
+            CamBox1.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
-           
+
 
             LocalScorePlayerTMP.enabled = true;
             LocalScorePlayer2.enabled = true;
@@ -142,14 +201,10 @@ public class ScoreCount : MonoBehaviour
             LocalScorePlayerTMP.text = "Score: " + localScore;
 
 
-            pizzaBoxLocalScoreTMP.text = "Local Score: " + localScore;
+            LocalScorepizzaBox1TMP.text = "Local Score: " + localScore;
 
 
             localScore++;
-
-      
-          
-          
 
 
             if (localScore < 100)
@@ -157,49 +212,44 @@ public class ScoreCount : MonoBehaviour
                 LocalScorePlayerTMP.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
 
-                pizzaBoxLocalScoreTMP.color = Color.red;
+                LocalScorepizzaBox1TMP.color = Color.red;
 
 
 
             }
             else if (localScore > 100)
             {
-                boxInAir();
+
                 LocalScorePlayerTMP.color = Color.green;
                 LocalScorePlayer2.color = Color.green;
 
-                pizzaBoxLocalScoreTMP.color = Color.green;
-  
+                LocalScorepizzaBox1TMP.color = Color.green;
+
 
             }
-           
+
 
 
         }
         else
         {
-               
-                localScore = 0;
-            
+
+            localScore = 0;
+
         }
 
-        //player can touch each pizza box once !!! add code!
-     //   boxText.enabled = false;
 
 
 
+        GlobalScore += localScore / 100;
 
 
-
-        GlobalScore += localScore/100;
-
-   
 
 
     }
 
 
-   
+
 
 
 
@@ -211,15 +261,17 @@ public class ScoreCount : MonoBehaviour
         if (collision.gameObject.tag == "Bounds") //&& vel.magnitude> pizzaSpeed)
         {
 
-           
+
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             LocalScorePlayerTMP.enabled = false;
             LocalScorePlayer2.enabled = false;
-            GlobalScoreTMPBox.gameObject.SetActive(false);
-            pizzaBoxLocalScoreTMP.gameObject.SetActive(false);
+            GlobalScoreTMPBox1.gameObject.SetActive(false);
+            LocalScorepizzaBox1TMP.gameObject.SetActive(false);
+            LocalScorepizzaBox2TMP.gameObject.SetActive(false);
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
-            PizzaCam.gameObject.SetActive(false);
+            CamBox1.gameObject.SetActive(false);
+            CamBox2.gameObject.SetActive(false);
             Player1CAM.gameObject.SetActive(true);
 
             Debug.Log("hit left bound");
@@ -228,31 +280,34 @@ public class ScoreCount : MonoBehaviour
 
 
         // if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox")
-        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged" )
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged")
         {
             player2GameObj.gameObject.SetActive(false);
-            pizzaBoxLocalScoreTMP.gameObject.SetActive(false);
-          
+            LocalScorepizzaBox1TMP.gameObject.SetActive(false);
+            LocalScorepizzaBox2TMP.gameObject.SetActive(false);
+
             LocalScorePlayerTMP.enabled = false;
             LocalScorePlayer2.enabled = false;
-            GlobalScoreTMPBox.gameObject.SetActive(false);
+            GlobalScoreTMPBox1.gameObject.SetActive(false);
 
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
-        
+
 
             if (player2GameObj == true)
             {
-                PizzaCam.gameObject.SetActive(false);
+                CamBox1.gameObject.SetActive(false);
+                CamBox2.gameObject.SetActive(false);
                 Player1CAM.gameObject.SetActive(true);
                 Player2CAM.gameObject.SetActive(false);
                 player1GameObj.gameObject.SetActive(true);
                 player2GameObj.gameObject.SetActive(false);
-              //  pizzaBox1TextMesh.gameObject.SetActive(true);
+                //  pizzaBox1TextMesh.gameObject.SetActive(true);
 
             }
             else
             {
-                PizzaCam.gameObject.SetActive(false);
+                CamBox1.gameObject.SetActive(false);
+                CamBox2.gameObject.SetActive(false);
                 Player1CAM.gameObject.SetActive(false);
                 Player2CAM.gameObject.SetActive(true);
                 player1GameObj.gameObject.SetActive(false);
@@ -263,8 +318,9 @@ public class ScoreCount : MonoBehaviour
         }
 
 
-
     }
+
+
 
 
 

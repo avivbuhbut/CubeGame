@@ -63,9 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraFollowPizza.cs" />
-    <Compile Include="Assets\FollowCamera2Script.cs" />
-    <Compile Include="Assets\followCameraPizzaBoxes.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />
     <Compile Include="Assets\Image Effects\Scripts\ConvolutionKernel.cs" />
@@ -74,7 +71,6 @@
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
-    <Compile Include="Assets\PlayMusic.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -83,18 +79,23 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\ScoreCount.cs" />
     <Compile Include="Assets\scripts\BetterJump.cs" />
+    <Compile Include="Assets\scripts\CameraFollowPizza.cs" />
     <Compile Include="Assets\scripts\ColidedScript.cs" />
     <Compile Include="Assets\scripts\FollowCamera.cs" />
+    <Compile Include="Assets\scripts\FollowCamera2Script.cs" />
+    <Compile Include="Assets\scripts\followCameraPizzaBoxes.cs" />
     <Compile Include="Assets\scripts\GenetratePrefab.cs" />
     <Compile Include="Assets\scripts\GrapplingGunRaycasthit2D.cs" />
     <Compile Include="Assets\scripts\GrapplingHook.cs" />
     <Compile Include="Assets\scripts\MoveToPos.cs" />
     <Compile Include="Assets\scripts\movingFloor.cs" />
     <Compile Include="Assets\scripts\PlayerMovment.cs" />
+    <Compile Include="Assets\scripts\PlayMusic.cs" />
+    <Compile Include="Assets\scripts\ScoreCount.cs" />
     <Compile Include="Assets\scripts\SlowMotion.cs" />
     <Compile Include="Assets\scripts\SwitchPlayers.cs" />
+    <Compile Include="Assets\scripts\WhosMoving.cs" />
     <None Include="Assets\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
