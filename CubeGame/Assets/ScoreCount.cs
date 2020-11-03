@@ -36,8 +36,8 @@ public class ScoreCount : MonoBehaviour
 
 
     /*Pizza Box text  TMP*/
-    public TextMeshPro GlobalScoreTMPBox1;
-    public TextMeshPro pizzaBox1LocalScoreTMP;
+    public TextMeshPro GlobalScoreTMPBox;
+    public TextMeshPro pizzaBoxLocalScoreTMP;
     public TextMeshPro LocalScorePlayerTMP;
     public TextMeshPro OutBoundsTextPlayerTMP;
 
@@ -83,8 +83,8 @@ public class ScoreCount : MonoBehaviour
 
 
         /*pizza text boxTMP*/
-        GlobalScoreTMPBox1.gameObject.SetActive(false);
-        pizzaBox1LocalScoreTMP.gameObject.SetActive(false);
+        GlobalScoreTMPBox.gameObject.SetActive(false);
+        pizzaBoxLocalScoreTMP.gameObject.SetActive(false);
 
 
         /*Player1 text TMP*/
@@ -106,7 +106,7 @@ public class ScoreCount : MonoBehaviour
         GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
         GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
-        GlobalScoreTMPBox1.text = "Total Score: " + GlobalScore;
+        GlobalScoreTMPBox.text = "Total Score: " + GlobalScore;
         vel = rigidbody.velocity;
 
        
@@ -125,12 +125,12 @@ public class ScoreCount : MonoBehaviour
 
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
 
-            GlobalScoreTMPBox1.gameObject.SetActive(true);
+            GlobalScoreTMPBox.gameObject.SetActive(true);
             // boxText.enabled = true;
             // pizzaBox2TextMesh.gameObject.SetActive(true);
             //  pizzaBox2TextMesh.gameObject.SetActive(true);
 
-            pizzaBox1LocalScoreTMP.gameObject.SetActive(true);
+            pizzaBoxLocalScoreTMP.gameObject.SetActive(true);
             PizzaCam.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
@@ -142,7 +142,7 @@ public class ScoreCount : MonoBehaviour
             LocalScorePlayerTMP.text = "Score: " + localScore;
 
 
-            pizzaBox1LocalScoreTMP.text = "Local Score: " + localScore;
+            pizzaBoxLocalScoreTMP.text = "Local Score: " + localScore;
 
 
             localScore++;
@@ -157,7 +157,7 @@ public class ScoreCount : MonoBehaviour
                 LocalScorePlayerTMP.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
 
-                pizzaBox1LocalScoreTMP.color = Color.red;
+                pizzaBoxLocalScoreTMP.color = Color.red;
 
 
 
@@ -168,7 +168,7 @@ public class ScoreCount : MonoBehaviour
                 LocalScorePlayerTMP.color = Color.green;
                 LocalScorePlayer2.color = Color.green;
 
-                pizzaBox1LocalScoreTMP.color = Color.green;
+                pizzaBoxLocalScoreTMP.color = Color.green;
   
 
             }
@@ -216,8 +216,8 @@ public class ScoreCount : MonoBehaviour
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             LocalScorePlayerTMP.enabled = false;
             LocalScorePlayer2.enabled = false;
-            GlobalScoreTMPBox1.gameObject.SetActive(false);
-            pizzaBox1LocalScoreTMP.gameObject.SetActive(false);
+            GlobalScoreTMPBox.gameObject.SetActive(false);
+            pizzaBoxLocalScoreTMP.gameObject.SetActive(false);
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
             PizzaCam.gameObject.SetActive(false);
             Player1CAM.gameObject.SetActive(true);
@@ -231,11 +231,11 @@ public class ScoreCount : MonoBehaviour
         if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged" )
         {
             player2GameObj.gameObject.SetActive(false);
-            pizzaBox1LocalScoreTMP.gameObject.SetActive(false);
+            pizzaBoxLocalScoreTMP.gameObject.SetActive(false);
           
             LocalScorePlayerTMP.enabled = false;
             LocalScorePlayer2.enabled = false;
-            GlobalScoreTMPBox1.gameObject.SetActive(false);
+            GlobalScoreTMPBox.gameObject.SetActive(false);
 
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
         
