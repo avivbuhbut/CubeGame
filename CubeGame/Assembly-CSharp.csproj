@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\CameraFollowPizza.cs" />
     <Compile Include="Assets\FollowCamera2Script.cs" />
+    <Compile Include="Assets\followCameraPizzaBoxes.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />
     <Compile Include="Assets\Image Effects\Scripts\ConvolutionKernel.cs" />
