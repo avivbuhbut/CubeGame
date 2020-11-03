@@ -130,7 +130,7 @@ public class ScoreCount : MonoBehaviour
         GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
         GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
-        GlobalScoreTMPBox1.text = "Total Score: " + GlobalScore;
+        
 
         /*Box1 velocity*/
         velBox1 = rigidbodyBox1.velocity;
@@ -139,9 +139,9 @@ public class ScoreCount : MonoBehaviour
         /*Box2 velocity*/
         velBox2 = rigidbodyBox2.velocity;
 
-      
 
 
+        GlobalScore += localScore / 100;
 
 
         /*if Box 1 is in the air*/
@@ -165,7 +165,7 @@ public class ScoreCount : MonoBehaviour
 
 
             LocalScorepizzaBox1TMP.text = "Local Score: " + localScore;
-
+            GlobalScoreTMPBox1.text = "Total Score: " + GlobalScore;
 
             localScore++;
 
@@ -205,7 +205,7 @@ public class ScoreCount : MonoBehaviour
 
 
         /*if Box 2 is in the air*/
-        if ((velBox2.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
+       if ((velBox2.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
 
             /*camera control*/
@@ -217,13 +217,16 @@ public class ScoreCount : MonoBehaviour
 
             /*text control*/
             LocalScorepizzaBox2TMP.gameObject.SetActive(true);
-            GlobalScoreTMPPlayer.gameObject.SetActive(false);
-            GlobalScoreTMPBox2.gameObject.SetActive(true);
+            GlobalScoreTMPPlayer.enabled = false;
+            GlobalScoreTMPBox2.gameObject.SetActive(true) ;
 
-
-            LocalScorepizzaBox2TMP.text = "Local Score: " + localScore;
-
+            Debug.Log("Box2 localScore: " + localScore);
+            Debug.Log("Box2 GlobalScore: " + GlobalScore); //the problem is that the local and global score are zeros here.
             localScore++;
+            LocalScorepizzaBox2TMP.text = "Local Score: " + localScore;
+            GlobalScoreTMPBox2.text = "Total Score: " + GlobalScore;
+
+          
 
        
 
@@ -242,17 +245,12 @@ public class ScoreCount : MonoBehaviour
 
 
             }
-            else
-            {
-
-                localScore = 0;
-
-            }
+           
         }
 
 
 
-        GlobalScore += localScore / 100;
+
 
 
 
