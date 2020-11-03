@@ -18,7 +18,7 @@ public class ScoreCount : MonoBehaviour
 
 
     public static int GlobalScore;
-    public int localScore;
+    public static int localScore;
 
 
 
@@ -31,7 +31,7 @@ public class ScoreCount : MonoBehaviour
 
     /*Player texts*/
     public TextMeshPro GlobalScoreTMPPlayer;
-    public TextMeshPro LocalScorePlayerTMP;
+ 
     public TextMeshPro OutBoundsTextPlayerTMP;
 
 
@@ -76,7 +76,8 @@ public class ScoreCount : MonoBehaviour
 
         hit = new RaycastHit();
         OutBoundsTextPlayerTMP.enabled = false;
-        LocalScorePlayerTMP.enabled = false;
+
+
 
         OutBoundsTextPlayer2.enabled = false;
         LocalScorePlayer2.enabled = false;
@@ -120,7 +121,7 @@ public class ScoreCount : MonoBehaviour
 
 
 
-        //   LocalScorePlayer.enabled = false;
+     
         // LocalScorePlayer2.enabled = false;
 
 
@@ -139,44 +140,8 @@ public class ScoreCount : MonoBehaviour
         /*Box2 velocity*/
         velBox2 = rigidbodyBox2.velocity;
 
+      
 
-        /*if Box 2 is in the air*/
-        if ((velBox2.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
-        {
-
-            /*camera control*/
-            CamBox1.gameObject.SetActive(false);
-            CamBox2.gameObject.SetActive(true);
-            Player1CAM.gameObject.SetActive(false);
-            Player2CAM.gameObject.SetActive(false);
-
-            /*text control*/
-            LocalScorepizzaBox2TMP.gameObject.SetActive(true);
-
-          
-            LocalScorepizzaBox2TMP.text = "Local Score: " + localScore;
-
-            localScore++;
-
-
-
-
-
-            if (localScore < 100)
-            {
-
-
-
-
-            }
-            else if (localScore > 100)
-            {
-
-
-
-
-            }
-        }
 
 
 
@@ -195,10 +160,10 @@ public class ScoreCount : MonoBehaviour
             Player2CAM.gameObject.SetActive(false);
 
 
-            LocalScorePlayerTMP.enabled = true;
+        
             LocalScorePlayer2.enabled = true;
 
-            LocalScorePlayerTMP.text = "Score: " + localScore;
+            //LocalScorePlayerTMP.text = "Score: " + localScore;
 
 
             LocalScorepizzaBox1TMP.text = "Local Score: " + localScore;
@@ -209,7 +174,7 @@ public class ScoreCount : MonoBehaviour
 
             if (localScore < 100)
             {
-                LocalScorePlayerTMP.color = Color.red;
+             
                 LocalScorePlayer2.color = Color.red;
 
                 LocalScorepizzaBox1TMP.color = Color.red;
@@ -220,7 +185,7 @@ public class ScoreCount : MonoBehaviour
             else if (localScore > 100)
             {
 
-                LocalScorePlayerTMP.color = Color.green;
+              
                 LocalScorePlayer2.color = Color.green;
 
                 LocalScorepizzaBox1TMP.color = Color.green;
@@ -238,6 +203,54 @@ public class ScoreCount : MonoBehaviour
 
         }
 
+        Debug.Log(localScore);
+
+
+        /*if Box 2 is in the air*/
+        if ((velBox2.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
+        {
+
+            /*camera control*/
+            CamBox1.gameObject.SetActive(false);
+            CamBox2.gameObject.SetActive(true);
+            Player1CAM.gameObject.SetActive(false);
+            Player2CAM.gameObject.SetActive(false);
+
+
+            /*text control*/
+            LocalScorepizzaBox2TMP.gameObject.SetActive(true);
+            GlobalScoreTMPPlayer.gameObject.SetActive(false);
+            GlobalScoreTMPBox2.gameObject.SetActive(true);
+
+
+            LocalScorepizzaBox2TMP.text = "Local Score: " + localScore;
+
+            localScore++;
+
+       
+
+
+            if (localScore < 100)
+            {
+
+
+
+
+            }
+            else if (localScore > 100)
+            {
+
+
+
+
+            }
+            else
+            {
+
+                localScore = 0;
+
+            }
+        }
 
 
 
@@ -247,7 +260,6 @@ public class ScoreCount : MonoBehaviour
 
 
     }
-
 
 
 
@@ -264,7 +276,7 @@ public class ScoreCount : MonoBehaviour
 
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
-            LocalScorePlayerTMP.enabled = false;
+       
             LocalScorePlayer2.enabled = false;
             GlobalScoreTMPBox1.gameObject.SetActive(false);
             LocalScorepizzaBox1TMP.gameObject.SetActive(false);
@@ -286,7 +298,7 @@ public class ScoreCount : MonoBehaviour
             LocalScorepizzaBox1TMP.gameObject.SetActive(false);
             LocalScorepizzaBox2TMP.gameObject.SetActive(false);
 
-            LocalScorePlayerTMP.enabled = false;
+          
             LocalScorePlayer2.enabled = false;
             GlobalScoreTMPBox1.gameObject.SetActive(false);
 

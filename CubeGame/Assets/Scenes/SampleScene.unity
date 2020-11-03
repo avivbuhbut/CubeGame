@@ -5486,12 +5486,10 @@ MonoBehaviour:
   Player2CAM: {fileID: 484558352}
   player1GameObj: {fileID: 1332451213}
   player2GameObj: {fileID: 115516800}
-  localScore: 0
   GlobalScoreTextPlayer2: {fileID: 1606698061}
   LocalScorePlayer2: {fileID: 1135885880}
   OutBoundsTextPlayer2: {fileID: 59399503}
   GlobalScoreTMPPlayer: {fileID: 501938933}
-  LocalScorePlayerTMP: {fileID: 1730925384}
   OutBoundsTextPlayerTMP: {fileID: 1137015016}
   velBox1: {x: 0, y: 0, z: 0}
   CamBox1: {fileID: 315846103}
@@ -6260,7 +6258,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730925382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -799}
+  m_LocalPosition: {x: 0, y: 0, z: -824.1}
   m_LocalScale: {x: 4.26609, y: 4.26609, z: 4.26609}
   m_Children: []
   m_Father: {fileID: 2115430041}
