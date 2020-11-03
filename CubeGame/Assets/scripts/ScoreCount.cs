@@ -24,7 +24,7 @@ public class ScoreCount : MonoBehaviour
 
     /*Player2 Texts*/
     public Text GlobalScoreTextPlayer2;
-    public Text LocalScorePlayer2;
+  //  public Text LocalScorePlayer2;
     public Text OutBoundsTextPlayer2;
 
 
@@ -80,8 +80,7 @@ public class ScoreCount : MonoBehaviour
 
 
         OutBoundsTextPlayer2.enabled = false;
-        LocalScorePlayer2.enabled = false;
-
+     
         //Text sets your text to say this message
         //  m_MyText.text = "This is my text";
 
@@ -161,8 +160,7 @@ public class ScoreCount : MonoBehaviour
 
 
         
-            LocalScorePlayer2.enabled = true;
-
+          
             //LocalScorePlayerTMP.text = "Score: " + localScore;
 
 
@@ -175,7 +173,7 @@ public class ScoreCount : MonoBehaviour
             if (localScore < 100)
             {
              
-                LocalScorePlayer2.color = Color.red;
+              
 
                 LocalScorepizzaBox1TMP.color = Color.red;
 
@@ -186,7 +184,7 @@ public class ScoreCount : MonoBehaviour
             {
 
               
-                LocalScorePlayer2.color = Color.green;
+               
 
                 LocalScorepizzaBox1TMP.color = Color.green;
 
@@ -277,7 +275,7 @@ public class ScoreCount : MonoBehaviour
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
        
-            LocalScorePlayer2.enabled = false;
+          
             GlobalScoreTMPBox1.gameObject.SetActive(false);
             LocalScorepizzaBox1TMP.gameObject.SetActive(false);
             LocalScorepizzaBox2TMP.gameObject.SetActive(false);
@@ -299,7 +297,7 @@ public class ScoreCount : MonoBehaviour
             LocalScorepizzaBox2TMP.gameObject.SetActive(false);
 
           
-            LocalScorePlayer2.enabled = false;
+            
             GlobalScoreTMPBox1.gameObject.SetActive(false);
 
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
