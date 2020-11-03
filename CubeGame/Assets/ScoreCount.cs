@@ -32,13 +32,14 @@ public class ScoreCount : MonoBehaviour
     /*Player texts*/
 
     public TextMeshPro GlobalScoreTMPPlayer;
-    public Text LocalScorePlayer;
-    public Text OutBoundsTextPlayer;
+
+
 
     /*Pizza Box text  TMP*/
     public TextMeshPro GlobalScoreTMPBox1;
     public TextMeshPro pizzaBox1LocalScoreTMP;
-
+    public TextMeshPro LocalScorePlayerTMP;
+    public TextMeshPro OutBoundsTextPlayerTMP;
 
 
     public RaycastHit hit;
@@ -60,8 +61,8 @@ public class ScoreCount : MonoBehaviour
         //   pizzaBox1TextMesh.gameObject.SetActive(false);
 
         hit = new RaycastHit();
-        OutBoundsTextPlayer.enabled =false;
-        LocalScorePlayer.enabled = false;
+        OutBoundsTextPlayerTMP.enabled =false;
+        LocalScorePlayerTMP.enabled = false;
 
         OutBoundsTextPlayer2.enabled = false;
         LocalScorePlayer2.enabled = false;
@@ -135,10 +136,10 @@ public class ScoreCount : MonoBehaviour
             Player2CAM.gameObject.SetActive(false);
            
 
-            LocalScorePlayer.enabled = true;
+            LocalScorePlayerTMP.enabled = true;
             LocalScorePlayer2.enabled = true;
 
-            LocalScorePlayer.text = "Score: " + localScore;
+            LocalScorePlayerTMP.text = "Score: " + localScore;
 
 
             pizzaBox1LocalScoreTMP.text = "Local Score: " + localScore;
@@ -153,7 +154,7 @@ public class ScoreCount : MonoBehaviour
 
             if (localScore < 100)
             {
-                LocalScorePlayer.color = Color.red;
+                LocalScorePlayerTMP.color = Color.red;
                 LocalScorePlayer2.color = Color.red;
 
                 pizzaBox1LocalScoreTMP.color = Color.red;
@@ -164,7 +165,7 @@ public class ScoreCount : MonoBehaviour
             else if (localScore > 100)
             {
                 boxInAir();
-                LocalScorePlayer.color = Color.green;
+                LocalScorePlayerTMP.color = Color.green;
                 LocalScorePlayer2.color = Color.green;
 
                 pizzaBox1LocalScoreTMP.color = Color.green;
@@ -211,9 +212,9 @@ public class ScoreCount : MonoBehaviour
         {
 
            
-            StartCoroutine(ShowMessage(OutBoundsTextPlayer, "OUT OF BOUNDS!", 2));
-            StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
-            LocalScorePlayer.enabled = false;
+            StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
+            StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
+            LocalScorePlayerTMP.enabled = false;
             LocalScorePlayer2.enabled = false;
             GlobalScoreTMPBox1.gameObject.SetActive(false);
             pizzaBox1LocalScoreTMP.gameObject.SetActive(false);
@@ -230,7 +231,7 @@ public class ScoreCount : MonoBehaviour
             player2GameObj.gameObject.SetActive(false);
             pizzaBox1LocalScoreTMP.gameObject.SetActive(false);
           
-            LocalScorePlayer.enabled = false;
+            LocalScorePlayerTMP.enabled = false;
             LocalScorePlayer2.enabled = false;
             GlobalScoreTMPBox1.gameObject.SetActive(false);
 
@@ -267,7 +268,7 @@ public class ScoreCount : MonoBehaviour
 
 
     /*Writing text on screen for a small duration of time*/
-    IEnumerator ShowMessage(Text Text, string message, float delay)
+    IEnumerator ShowMessage(TextMeshPro Text, string message, float delay)
     {
         Text.text = message;
         Text.enabled = true;
