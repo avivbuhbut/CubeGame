@@ -2688,8 +2688,10 @@ MonoBehaviour:
   localScore: 0
   GlobalScoreTextPlayer2: {fileID: 284818716}
   OutBoundsTextPlayer2: {fileID: 1792359497}
+  Plsyer2Contrls: {fileID: 357162253}
   GlobalScoreTMPPlayer: {fileID: 501938933}
   OutBoundsTextPlayerTMP: {fileID: 1137015016}
+  Plsyer1Contrls: {fileID: 1894973242}
   velBox1: {x: 0, y: 0, z: 0}
   CamBox1: {fileID: 315846103}
   rigidbodyBox1: {fileID: 1527746843}
@@ -5720,8 +5722,10 @@ MonoBehaviour:
   localScore: 0
   GlobalScoreTextPlayer2: {fileID: 284818716}
   OutBoundsTextPlayer2: {fileID: 1792359497}
+  Plsyer2Contrls: {fileID: 357162253}
   GlobalScoreTMPPlayer: {fileID: 501938933}
   OutBoundsTextPlayerTMP: {fileID: 1137015016}
+  Plsyer1Contrls: {fileID: 1894973242}
   velBox1: {x: 0, y: 0, z: 0}
   CamBox1: {fileID: 315846103}
   rigidbodyBox1: {fileID: 1527746843}
@@ -5834,7 +5838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.61, y: -5.62}
+  m_AnchoredPosition: {x: -3.66, y: -5.62}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1527746848
@@ -7994,7 +7998,8 @@ PrefabInstance:
       propertyPath: LocalScorepizzaBox2TMP
       value: 
       objectReference: {fileID: 1000439854}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7605921356416353890, guid: f5b7147e9d0d41641b82a01021a9b855, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5b7147e9d0d41641b82a01021a9b855, type: 3}
 --- !u!1 &2115430040
 GameObject:

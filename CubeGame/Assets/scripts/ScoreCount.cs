@@ -23,12 +23,13 @@ public class ScoreCount : MonoBehaviour
     /*Player2 Texts*/
     public TextMeshPro GlobalScoreTextPlayer2;
     public TextMeshPro OutBoundsTextPlayer2;
-
+    public TextMeshPro Plsyer2Contrls;
 
 
     /*Player texts*/
     public TextMeshPro GlobalScoreTMPPlayer;
     public TextMeshPro OutBoundsTextPlayerTMP;
+    public TextMeshPro Plsyer1Contrls;
 
 
    
@@ -149,7 +150,9 @@ public class ScoreCount : MonoBehaviour
 
             /*Player Text Control*/
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
-           // GlobalScoreTextPlayer2.gameObject.SetActive(false);
+            GlobalScoreTextPlayer2.gameObject.SetActive(false);
+            Plsyer1Contrls.gameObject.SetActive(false);
+            Plsyer2Contrls.gameObject.SetActive(false);
 
             /*Box Text Control*/
             GlobalScoreTMPBox1.gameObject.SetActive(true);
@@ -159,7 +162,7 @@ public class ScoreCount : MonoBehaviour
             CamBox1.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
-
+  
 
             //LocalScorePlayerTMP.text = "Score: " + localScore;
             GlobalScore += Box1LocalSocre / 100;
@@ -208,7 +211,10 @@ public class ScoreCount : MonoBehaviour
             /*text control*/
             LocalScorepizzaBox2TMP.gameObject.SetActive(true);
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
-           // GlobalScoreTextPlayer2.gameObject.SetActive(false);
+            GlobalScoreTextPlayer2.gameObject.SetActive(false);
+            Plsyer1Contrls.gameObject.SetActive(false);
+            Plsyer2Contrls.gameObject.SetActive(false);
+
             GlobalScoreTMPBox2.gameObject.SetActive(true);
 
             ChangeBoxScoreTextColor(Box2LocalSocre, GlobalScoreTMPBox2, LocalScorepizzaBox2TMP);
@@ -282,7 +288,7 @@ public class ScoreCount : MonoBehaviour
         // if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox")
         if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged")
         {
-            player2GameObj.gameObject.SetActive(false);
+          //  player2GameObj.gameObject.SetActive(false);
 
             /*Box1 text */
             LocalScorepizzaBox1TMP.gameObject.SetActive(false);
@@ -301,10 +307,19 @@ public class ScoreCount : MonoBehaviour
             {
                 CamBox1.gameObject.SetActive(false);
                 CamBox2.gameObject.SetActive(false);
-                Player1CAM.gameObject.SetActive(true);
+
                 Player2CAM.gameObject.SetActive(false);
-                player1GameObj.gameObject.SetActive(true);
                 player2GameObj.gameObject.SetActive(false);
+                Plsyer2Contrls.gameObject.SetActive(false);
+                GlobalScoreTextPlayer2.gameObject.SetActive(false);
+
+                Player1CAM.gameObject.SetActive(true);
+                player1GameObj.gameObject.SetActive(true);
+                Plsyer1Contrls.gameObject.SetActive(true);
+                GlobalScoreTMPPlayer.gameObject.SetActive(true);
+                   
+
+
                 //  pizzaBox1TextMesh.gameObject.SetActive(true);
 
             }
@@ -312,10 +327,16 @@ public class ScoreCount : MonoBehaviour
             {
                 CamBox1.gameObject.SetActive(false);
                 CamBox2.gameObject.SetActive(false);
-                Player1CAM.gameObject.SetActive(false);
+
                 Player2CAM.gameObject.SetActive(true);
-                player1GameObj.gameObject.SetActive(false);
                 player2GameObj.gameObject.SetActive(true);
+                Plsyer2Contrls.gameObject.SetActive(true);
+                GlobalScoreTextPlayer2.gameObject.SetActive(true);
+
+                Player1CAM.gameObject.SetActive(false);
+                player1GameObj.gameObject.SetActive(false);
+                Plsyer1Contrls.gameObject.SetActive(false);
+                GlobalScoreTMPPlayer.gameObject.SetActive(false);
                 //pizzaBox2TextMesh.gameObject.SetActive(false);
 
             }
