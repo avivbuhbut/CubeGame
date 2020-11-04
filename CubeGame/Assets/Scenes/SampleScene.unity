@@ -2156,7 +2156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.5, y: 37.2}
+  m_AnchoredPosition: {x: -74.1, y: 11.3}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501938933
@@ -5486,6 +5486,7 @@ MonoBehaviour:
   Player2CAM: {fileID: 484558352}
   player1GameObj: {fileID: 1332451213}
   player2GameObj: {fileID: 115516800}
+  localScore: 0
   GlobalScoreTextPlayer2: {fileID: 1606698061}
   OutBoundsTextPlayer2: {fileID: 59399503}
   GlobalScoreTMPPlayer: {fileID: 501938933}
@@ -5497,6 +5498,8 @@ MonoBehaviour:
   GlobalScoreTMPBox1: {fileID: 1417330301}
   LocalScorepizzaBox1TMP: {fileID: 1730925384}
   speedBox1: 0
+  Box1LocalSocre: 0
+  Box1GlobalSocre: 0
   currentPosX: 0
   currentPosY: 0
   currentPosZ: 0
@@ -5507,6 +5510,8 @@ MonoBehaviour:
   GlobalScoreTMPBox2: {fileID: 1742540394}
   LocalScorepizzaBox2TMP: {fileID: 1000439854}
   speedBox2: 0
+  Box2LocalSocre: 0
+  Box2GlobalSocre: 0
 --- !u!54 &1527746843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6854,7 +6859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -117.5, y: 64.4}
+  m_AnchoredPosition: {x: -85.100006, y: 38.5}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894973242
@@ -7436,6 +7441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PizzaBOX2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605921356416353891, guid: f5b7147e9d0d41641b82a01021a9b855,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
