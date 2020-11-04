@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SwitchPlayers : MonoBehaviour
 {
@@ -9,9 +10,23 @@ public class SwitchPlayers : MonoBehaviour
     public GameObject Player2;
     public Camera PlayerCam;
     public Camera Player2Cam;
+
+    /*Players text*/
+    public TextMeshPro Player1Controls;
+    public TextMeshPro Player2Controls;
+    public TextMeshPro Player1GlobalScore;
+    public TextMeshPro Player2GlobalScore;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+
+        Player2Controls.gameObject.SetActive(false);
+        Player2GlobalScore.gameObject.SetActive(false);
+        Player1GlobalScore.gameObject.SetActive(true);
+        Player1Controls.gameObject.SetActive(true);
 
         Player.gameObject.SetActive(true);
         Player2.gameObject.SetActive(false);
@@ -36,23 +51,33 @@ public class SwitchPlayers : MonoBehaviour
             {
                 // Player2Cam.enabled = true;
                 // PlayerCam.enabled = false;
+                Player1GlobalScore.gameObject.SetActive(false);
+                Player1Controls.gameObject.SetActive(false);
                 Player.gameObject.SetActive(false);
                 PlayerCam.gameObject.SetActive(false);
                 Player2Cam.gameObject.SetActive(true);
                 Player2.gameObject.SetActive(true);
+                Player2Controls.gameObject.SetActive(true);
+                Player2GlobalScore.gameObject.SetActive(true);
                 
             //    
             }
             else    // player2 is now the main player ACTIVATE player
 
             {
-           
 
+
+
+                Player1GlobalScore.gameObject.SetActive(true);
+                Player1Controls.gameObject.SetActive(true);
 
                 Player2Cam.gameObject.SetActive(false);
                 PlayerCam.gameObject.SetActive(true);
                 Player2.gameObject.SetActive(false);
                 Player.gameObject.SetActive(true);
+
+                Player2Controls.gameObject.SetActive(false);
+                Player2GlobalScore.gameObject.SetActive(false);
 
             }
 

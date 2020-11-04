@@ -29,6 +29,8 @@ public class ScoreCount : MonoBehaviour
     /*Player texts*/
     public TextMeshPro GlobalScoreTMPPlayer;
     public TextMeshPro OutBoundsTextPlayerTMP;
+
+
    
 
 
@@ -110,7 +112,7 @@ public class ScoreCount : MonoBehaviour
         GlobalScoreTMPPlayer.gameObject.SetActive(true);
 
         /*Player2 text TMP*/
-        GlobalScoreTextPlayer2.gameObject.SetActive(true);
+      //  GlobalScoreTextPlayer2.gameObject.SetActive(true);
 
 
         /*pizzaBox2*/
@@ -147,7 +149,7 @@ public class ScoreCount : MonoBehaviour
 
             /*Player Text Control*/
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
-            GlobalScoreTextPlayer2.gameObject.SetActive(false);
+           // GlobalScoreTextPlayer2.gameObject.SetActive(false);
 
             /*Box Text Control*/
             GlobalScoreTMPBox1.gameObject.SetActive(true);
@@ -206,7 +208,7 @@ public class ScoreCount : MonoBehaviour
             /*text control*/
             LocalScorepizzaBox2TMP.gameObject.SetActive(true);
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
-            GlobalScoreTextPlayer2.gameObject.SetActive(false);
+           // GlobalScoreTextPlayer2.gameObject.SetActive(false);
             GlobalScoreTMPBox2.gameObject.SetActive(true);
 
             ChangeBoxScoreTextColor(Box2LocalSocre, GlobalScoreTMPBox2, LocalScorepizzaBox2TMP);
@@ -267,7 +269,7 @@ public class ScoreCount : MonoBehaviour
             LocalScorepizzaBox1TMP.gameObject.SetActive(false);
             LocalScorepizzaBox2TMP.gameObject.SetActive(false);
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
-            GlobalScoreTextPlayer2.gameObject.SetActive(true);
+            //GlobalScoreTextPlayer2.gameObject.SetActive(true);
             CamBox1.gameObject.SetActive(false);
             CamBox2.gameObject.SetActive(false);
             Player1CAM.gameObject.SetActive(true);
@@ -292,7 +294,7 @@ public class ScoreCount : MonoBehaviour
 
 
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
-            GlobalScoreTextPlayer2.gameObject.SetActive(true);
+           // GlobalScoreTextPlayer2.gameObject.SetActive(true);
 
 
             if (player2GameObj == true)

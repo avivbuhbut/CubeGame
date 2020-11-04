@@ -2216,6 +2216,10 @@ MonoBehaviour:
   Player2: {fileID: 115516800}
   PlayerCam: {fileID: 963194227}
   Player2Cam: {fileID: 484558352}
+  Player1Controls: {fileID: 1894973242}
+  Player2Controls: {fileID: 357162253}
+  Player1GlobalScore: {fileID: 501938933}
+  Player2GlobalScore: {fileID: 284818716}
 --- !u!114 &484558350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3883,6 +3887,10 @@ MonoBehaviour:
   Player2: {fileID: 115516800}
   PlayerCam: {fileID: 963194227}
   Player2Cam: {fileID: 484558352}
+  Player1Controls: {fileID: 1894973242}
+  Player2Controls: {fileID: 357162253}
+  Player1GlobalScore: {fileID: 501938933}
+  Player2GlobalScore: {fileID: 284818716}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
