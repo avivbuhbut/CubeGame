@@ -41,6 +41,7 @@ public class ScoreCount : MonoBehaviour
     /*Pizza Box1*/
     public Vector3 velBox1;
     public Camera CamBox1;
+
     public Rigidbody rigidbodyBox1;
     public Transform transformBox1;
     public TextMeshPro GlobalScoreTMPBox1;
@@ -266,7 +267,7 @@ public class ScoreCount : MonoBehaviour
         if (collision.gameObject.tag == "Bounds") //&& vel.magnitude> pizzaSpeed)
         {
 
-
+          
             StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
 
