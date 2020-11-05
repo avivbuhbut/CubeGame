@@ -39,6 +39,7 @@ public class Player2Bounds : MonoBehaviour
             CantDoThatTMP.gameObject.SetActive(true);
             StartCoroutine(ShowMessage(CantDoThatTMP, "CAN'T DO THAT!", 2));
             gameObject.transform.position = new Vector3(currentPosX, currentPosY, currentPosZ);
+          
         }
     }
 
