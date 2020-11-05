@@ -62,6 +62,8 @@ public class ScoreCount : MonoBehaviour
 
     public RaycastHit hit;
 
+
+
     void Start()
     {
 
@@ -127,9 +129,7 @@ public class ScoreCount : MonoBehaviour
         /*Box2 velocity*/
         velBox2 = rigidbodyBox2.velocity;
 
-
-
-
+      
 
         /*if Box 1 is in the air*/
         if ((velBox1.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
@@ -276,7 +276,7 @@ public class ScoreCount : MonoBehaviour
             /*Player1 Global TMP Contol*/
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
 
-            //GlobalScoreTextPlayer2.gameObject.SetActive(true);
+
 
             /*Camera Contorl*/
             CamBox1.gameObject.SetActive(false);
@@ -305,31 +305,8 @@ public class ScoreCount : MonoBehaviour
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
            // GlobalScoreTextPlayer2.gameObject.SetActive(true);
 
-
-            if (player2GameObj == true)
-            {
-                /*Boxs Camera Control*/
-                CamBox1.gameObject.SetActive(false);
-                CamBox2.gameObject.SetActive(false);
-
-                /*Player2 Control Camera Control*/
-                Player2CAM.gameObject.SetActive(false);
-                player2GameObj.gameObject.SetActive(false);
-                Plsyer2Contrls.gameObject.SetActive(false);
-                GlobalScoreTextPlayer2.gameObject.SetActive(false);
-
-                /*Player1 Control Camera Control*/
-                Player1CAM.gameObject.SetActive(true);
-                player1GameObj.gameObject.SetActive(true);
-                Plsyer1Contrls.gameObject.SetActive(true);
-                GlobalScoreTMPPlayer.gameObject.SetActive(true);
-                   
-
-
-                //  pizzaBox1TextMesh.gameObject.SetActive(true);
-
-            }
-            else
+            /*if player2 is currently active*/
+            if (player2GameObj.activeSelf == true)
             {
                 /*Boxs Camera Control*/
                 CamBox1.gameObject.SetActive(false);
@@ -346,6 +323,33 @@ public class ScoreCount : MonoBehaviour
                 player1GameObj.gameObject.SetActive(false);
                 Plsyer1Contrls.gameObject.SetActive(false);
                 GlobalScoreTMPPlayer.gameObject.SetActive(false);
+                   
+
+
+                //  pizzaBox1TextMesh.gameObject.SetActive(true);
+
+            }
+            /*if player1 is currently active*/
+            if (player1GameObj.activeSelf == true)
+            {
+                /*Boxs Camera Control*/
+                CamBox1.gameObject.SetActive(false);
+                CamBox2.gameObject.SetActive(false);
+
+            
+
+                /*Player2 Control Camera Control*/
+                Player2CAM.gameObject.SetActive(false);
+                player2GameObj.gameObject.SetActive(false);
+                Plsyer2Contrls.gameObject.SetActive(false);
+                GlobalScoreTextPlayer2.gameObject.SetActive(false);
+
+                /*Player1 Control Camera Control*/
+                Player1CAM.gameObject.SetActive(true);
+                player1GameObj.gameObject.SetActive(true);
+                Plsyer1Contrls.gameObject.SetActive(true);
+                GlobalScoreTMPPlayer.gameObject.SetActive(true);
+
                 //pizzaBox2TextMesh.gameObject.SetActive(false);
 
             }
