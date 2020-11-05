@@ -267,6 +267,11 @@ public class ScoreCount : MonoBehaviour
         // ADD THE OTHER BOUNDS
 
 
+     
+          
+
+
+
         if (collision.gameObject.tag == "Bounds") //&& vel.magnitude> pizzaSpeed)
         {
 

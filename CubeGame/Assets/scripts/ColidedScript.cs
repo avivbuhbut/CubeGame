@@ -6,7 +6,9 @@ public class ColidedScript : MonoBehaviour
 {
 
     public static int counter;
-
+    public GameObject PizzaBox2;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,11 @@ public class ColidedScript : MonoBehaviour
             //  Debug.Log(counter);
 
         }
+        
+
+       // if(counter ==2)
+          //  Instantiate(PizzaBox2, new Vector3(3.87f, -6.14387f, 10.27f), Quaternion.identity);
+        //PizzaBox2Trans.position = new Vector3(20.9f, -2.74677f, 10.26f);
 
 
 
