@@ -263,8 +263,10 @@ public class ScoreCount : MonoBehaviour
         {
 
               /*Players Out of Bounds Messages*/
-            StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
-            StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
+            if(player1GameObj.activeSelf ==true)
+                StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
+            if (player2GameObj.activeSelf == true)
+                StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
 
             /*Box1 Global and Local TMP Contol*/
             GlobalScoreTMPBox1.gameObject.SetActive(false);
