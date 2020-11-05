@@ -16,7 +16,7 @@ public class ColorChangeGrandually : MonoBehaviour
     void Update()
     {
 
-
+        /*try somthing else to make it grasually change to change the house color in from dark to bright*/
         lerpedColor = Color.Lerp(Color.white, Color.black, Time.time*2);
         gameObject.GetComponent<MeshRenderer>().material.color = lerpedColor;
     }

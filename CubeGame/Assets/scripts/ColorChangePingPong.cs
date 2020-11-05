@@ -17,6 +17,7 @@ public class ColorChangePingPong : MonoBehaviour
     {
 
 
+
         lerpedColor = Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time, 1));
         gameObject.GetComponent<MeshRenderer>().material.color = lerpedColor;
     }
