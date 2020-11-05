@@ -90,6 +90,7 @@
     <Compile Include="Assets\scripts\GrapplingHook.cs" />
     <Compile Include="Assets\scripts\MoveToPos.cs" />
     <Compile Include="Assets\scripts\movingFloor.cs" />
+    <Compile Include="Assets\scripts\Player2Bounds.cs" />
     <Compile Include="Assets\scripts\PlayerMovment.cs" />
     <Compile Include="Assets\scripts\PlayMusic.cs" />
     <Compile Include="Assets\scripts\ScoreCount.cs" />

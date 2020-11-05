@@ -291,9 +291,9 @@ public class ScoreCount : MonoBehaviour
 
 
         // if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox")
-        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "Untagged")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "PlateBoundsP2" || collision.gameObject.tag == "Untagged")
         {
-          //  player2GameObj.gameObject.SetActive(false);
+       
 
             /*Box1 text Control */
             LocalScorepizzaBox1TMP.gameObject.SetActive(false);

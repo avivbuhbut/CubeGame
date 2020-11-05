@@ -38,7 +38,7 @@ public class movingFloor : ColidedScript
         Debug.Log("Moving floor " + counter);
         // Debug.Log("moving floor counter: " + colidedScript.counter);
         //animAtor.SetBool("Activate", true);
-              if (counter == 3)
+              if (counter == 2)
                 animAtor.SetBool("Activate", true);
 
         ///    Debug.Log("inside moving floor");
