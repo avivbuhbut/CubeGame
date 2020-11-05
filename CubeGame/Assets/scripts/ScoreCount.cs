@@ -35,6 +35,7 @@ public class ScoreCount : MonoBehaviour
     /*Pizza Box1*/
     public Vector3 velBox1;
     public Camera CamBox1;
+    public GameObject Box1;
     public Rigidbody rigidbodyBox1;
     public Transform transformBox1;
     public TextMeshPro GlobalScoreTMPBox1;
@@ -52,6 +53,7 @@ public class ScoreCount : MonoBehaviour
     /*Pizza Box2*/
     public Vector3 velBox2;
     public Camera CamBox2;
+    public GameObject Box2;
     public Rigidbody rigidbodyBox2;
     public Transform transformBox2;
     public TextMeshPro GlobalScoreTMPBox2;
@@ -59,6 +61,9 @@ public class ScoreCount : MonoBehaviour
     public float speedBox2;
     public int Box2LocalSocre;
     public int Box2GlobalSocre;
+    
+    public static int Box2currentGreenPoints;
+    public static int Box1currentGreenPoints;
 
     public RaycastHit hit;
 
@@ -151,13 +156,6 @@ public class ScoreCount : MonoBehaviour
             CamBox1.gameObject.SetActive(true);
             Player1CAM.gameObject.SetActive(false);
             Player2CAM.gameObject.SetActive(false);
-  
-
-            GlobalScore += Box1LocalSocre / 100;
-
-            /*Box1 TMP Local and Global*/
-            LocalScorepizzaBox1TMP.text = "LocalSocre " + Box1LocalSocre;
-            GlobalScoreTMPBox1.text = "GlobalSocre: " + GlobalScore;
 
             /*COLOR CONTROL*/
             if (Box1LocalSocre < 100)
@@ -175,10 +173,19 @@ public class ScoreCount : MonoBehaviour
             }
 
 
+            GlobalScore += Box1LocalSocre / 100;
+
+            /*Box1 TMP Local and Global*/
+            LocalScorepizzaBox1TMP.text = "LocalSocre " + Box1LocalSocre;
+            GlobalScoreTMPBox1.text = "GlobalSocre: " + GlobalScore;
+
+            Box1currentGreenPoints += Box1LocalSocre / 100;
+
+
         }
         else
         {
-
+            Box1currentGreenPoints = 0;
             Box1LocalSocre = 0;
 
         }
@@ -220,7 +227,7 @@ public class ScoreCount : MonoBehaviour
             LocalScorepizzaBox2TMP.text = "LocalSocre " + Box2LocalSocre;
             GlobalScoreTMPBox2.text = "GlobalSocre: " + GlobalScore;
 
-
+            Box2currentGreenPoints += Box2LocalSocre / 100; 
 
         }
         else
@@ -228,7 +235,7 @@ public class ScoreCount : MonoBehaviour
 
             Box2LocalSocre = 0;
 
-
+            Box2currentGreenPoints = 0;
         }
 
 
@@ -246,6 +253,7 @@ public class ScoreCount : MonoBehaviour
         }
         else if (BoxlocalScore > 100)
         {
+
             LocalScoreTMPBox.color = Color.green;
         }
 
@@ -262,11 +270,28 @@ public class ScoreCount : MonoBehaviour
         if (collision.gameObject.tag == "Bounds") //&& vel.magnitude> pizzaSpeed)
         {
 
-              /*Players Out of Bounds Messages*/
-            if(player1GameObj.activeSelf ==true)
+            /*Players Out of Bounds Messages*/
+            if (player1GameObj.activeSelf == true)
+            {
+                if(Box1.activeSelf==true)
+                GlobalScore =Mathf.Abs( GlobalScore - Box1currentGreenPoints);
+
+                if (Box2.activeSelf == true)
+                    GlobalScore = Mathf.Abs(GlobalScore - Box2currentGreenPoints);
+
                 StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
+            }
             if (player2GameObj.activeSelf == true)
+            {
+                if (Box1.activeSelf == true)
+                    GlobalScore = Mathf.Abs(GlobalScore - Box1currentGreenPoints);
+
+                if (Box2.activeSelf == true)
+                    GlobalScore = Mathf.Abs(GlobalScore - Box2currentGreenPoints);
+
                 StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
+
+            }
 
             /*Box1 Global and Local TMP Contol*/
             GlobalScoreTMPBox1.gameObject.SetActive(false);

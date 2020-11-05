@@ -2915,6 +2915,7 @@ MonoBehaviour:
   Plsyer1Contrls: {fileID: 1894973242}
   velBox1: {x: 0, y: 0, z: 0}
   CamBox1: {fileID: 315846103}
+  Box1: {fileID: 1527746841}
   rigidbodyBox1: {fileID: 1527746843}
   transformBox1: {fileID: 1527746847}
   GlobalScoreTMPBox1: {fileID: 1417330301}
@@ -2927,6 +2928,7 @@ MonoBehaviour:
   currentPosZ: 0
   velBox2: {x: 0, y: 0, z: 0}
   CamBox2: {fileID: 1636331142}
+  Box2: {fileID: 511029626}
   rigidbodyBox2: {fileID: 240454127}
   transformBox2: {fileID: 240454131}
   GlobalScoreTMPBox2: {fileID: 1742540394}
@@ -5950,6 +5952,7 @@ MonoBehaviour:
   Plsyer1Contrls: {fileID: 1894973242}
   velBox1: {x: 0, y: 0, z: 0}
   CamBox1: {fileID: 315846103}
+  Box1: {fileID: 1527746841}
   rigidbodyBox1: {fileID: 1527746843}
   transformBox1: {fileID: 1527746847}
   GlobalScoreTMPBox1: {fileID: 1417330301}
@@ -5962,6 +5965,7 @@ MonoBehaviour:
   currentPosZ: 0
   velBox2: {x: 0, y: 0, z: 0}
   CamBox2: {fileID: 1636331142}
+  Box2: {fileID: 511029626}
   rigidbodyBox2: {fileID: 240454127}
   transformBox2: {fileID: 240454131}
   GlobalScoreTMPBox2: {fileID: 1742540394}
