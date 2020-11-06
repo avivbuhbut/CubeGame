@@ -7194,6 +7194,7 @@ GameObject:
   - component: {fileID: 1332451220}
   - component: {fileID: 1332451221}
   - component: {fileID: 1332451222}
+  - component: {fileID: 1332451223}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7344,6 +7345,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8500c4430faa84a42a2a6e924e0e060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1332451223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332451213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1a88484a0f1044584584dddf0751ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &1352593714
 GameObject:
   m_ObjectHideFlags: 0
@@ -9164,8 +9178,8 @@ GameObject:
   - component: {fileID: 1656131447}
   - component: {fileID: 1656131450}
   m_Layer: 0
-  m_Name: Cube (24)
-  m_TagString: Untagged
+  m_Name: ConveyorBelt
+  m_TagString: ConveyorBelt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
