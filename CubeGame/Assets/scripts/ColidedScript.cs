@@ -40,8 +40,8 @@ public class ColidedScript : MonoBehaviour
         }
         
 
-       // if(counter ==2)
-          //  Instantiate(PizzaBox2, new Vector3(3.87f, -6.14387f, 10.27f), Quaternion.identity);
+       if(counter ==3)
+           Instantiate(PizzaBox2, new Vector3(30.14f, -8.76f, -45.51f), Quaternion.identity);
         //PizzaBox2Trans.position = new Vector3(20.9f, -2.74677f, 10.26f);
 
 

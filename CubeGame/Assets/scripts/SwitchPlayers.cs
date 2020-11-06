@@ -28,8 +28,11 @@ public class SwitchPlayers : MonoBehaviour
         Player1GlobalScore.gameObject.SetActive(true);
         Player1Controls.gameObject.SetActive(true);
 
+        PlayerCam.gameObject.SetActive(true);
+        Player2Cam.gameObject.SetActive(false);
         Player.gameObject.SetActive(true);
         Player2.gameObject.SetActive(false);
+        
         // Player2.SetActive(!Player2.activeInHierarchy);
         /// Player2.SetActive(!Player2.activeInHierarchy);
 

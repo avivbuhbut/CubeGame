@@ -43,6 +43,7 @@ public class ScoreCount : MonoBehaviour
     public float speedBox1;
     public int Box1LocalSocre;
     public int Box1GlobalSocre;
+    public static int Box1currentGreenPoints;
 
 
     public float currentPosX;
@@ -61,9 +62,23 @@ public class ScoreCount : MonoBehaviour
     public float speedBox2;
     public int Box2LocalSocre;
     public int Box2GlobalSocre;
-    
     public static int Box2currentGreenPoints;
-    public static int Box1currentGreenPoints;
+ 
+
+
+    /*Pizza Box3*/
+    public Vector3 velBox3;
+    public Camera CamBox3;
+    public GameObject Box3;
+    public Rigidbody rigidbodyBox3;
+    public Transform transformBox3;
+    public TextMeshPro GlobalScoreTMPBox3;
+    public TextMeshPro LocalScorepizzaBox3TMP;
+    public float speedBox3;
+    public int Box3LocalSocre;
+    public int Box3GlobalSocre;
+    public static int Box3currentGreenPoints;
+
 
     public RaycastHit hit;
 
@@ -105,7 +120,8 @@ public class ScoreCount : MonoBehaviour
         OutBoundsTextPlayer2.enabled = false;
 
         /*Player2 active*/
-        player2GameObj.gameObject.SetActive(false);
+       player2GameObj.gameObject.SetActive(true);
+        
 
 
 
@@ -113,6 +129,11 @@ public class ScoreCount : MonoBehaviour
         speedBox2 = rigidbodyBox2.velocity.magnitude;
         GlobalScoreTMPBox2.gameObject.SetActive(false);
         LocalScorepizzaBox2TMP.gameObject.SetActive(false);
+
+        /*pizzaBox2*/
+        speedBox3 = rigidbodyBox3.velocity.magnitude;
+        GlobalScoreTMPBox3.gameObject.SetActive(false);
+        LocalScorepizzaBox3TMP.gameObject.SetActive(false);
     }
 
     void Update()
@@ -134,7 +155,9 @@ public class ScoreCount : MonoBehaviour
         /*Box2 velocity*/
         velBox2 = rigidbodyBox2.velocity;
 
-      
+        /*Box3 velocity*/
+        velBox3 = rigidbodyBox3.velocity;
+
 
         /*if Box 1 is in the air*/
         if ((velBox1.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
@@ -239,6 +262,66 @@ public class ScoreCount : MonoBehaviour
         }
 
 
+
+        /*if Box 3 is in the air*/
+        if ((velBox3.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
+        {
+            Box3LocalSocre++;
+
+
+            /*Player Text Control*/
+            GlobalScoreTMPPlayer.gameObject.SetActive(false);
+            GlobalScoreTextPlayer2.gameObject.SetActive(false);
+            Plsyer1Contrls.gameObject.SetActive(false);
+            Plsyer2Contrls.gameObject.SetActive(false);
+
+            /*Box Text Control*/
+            GlobalScoreTMPBox3.gameObject.SetActive(true);
+            LocalScorepizzaBox3TMP.gameObject.SetActive(true);
+
+            /*Cameras Control*/
+            CamBox3.gameObject.SetActive(true);
+            Player1CAM.gameObject.SetActive(false);
+            Player2CAM.gameObject.SetActive(false);
+
+            /*COLOR CONTROL*/
+            if (Box3LocalSocre < 100)
+            {
+               
+                
+                LocalScorepizzaBox3TMP.color = Color.red;
+
+            }
+            else if (Box3LocalSocre > 100)
+            {
+             //   LocalScorepizzaBox3TMP.text = "LocalSocre " + Box3LocalSocre;
+                LocalScorepizzaBox3TMP.color = Color.green;
+
+
+            }
+
+
+            GlobalScore += Box3LocalSocre / 100;
+
+            /*Box1 TMP Local and Global*/
+            LocalScorepizzaBox3TMP.text = "LocalSocre " + Box3LocalSocre;
+            GlobalScoreTMPBox3.text = "GlobalSocre: " + GlobalScore;
+
+            Box3currentGreenPoints += Box3LocalSocre / 100;
+
+
+        }
+        else
+        {
+            Box3currentGreenPoints = 0;
+            Box3LocalSocre = 0;
+
+        }
+
+
+
+
+
     }
 
 
@@ -286,6 +369,10 @@ public class ScoreCount : MonoBehaviour
                 if (Box2.activeSelf == true)
                     GlobalScore = Mathf.Abs(GlobalScore - Box2currentGreenPoints);
 
+                /*calculate the dif till box3 hit the bound*/
+                if (Box3.activeSelf == true)
+                    GlobalScore = Mathf.Abs(GlobalScore - Box3currentGreenPoints);
+
                 StartCoroutine(ShowMessage(OutBoundsTextPlayerTMP, "OUT OF BOUNDS!", 2));
             }
             if (player2GameObj.activeSelf == true)
@@ -298,6 +385,10 @@ public class ScoreCount : MonoBehaviour
                 if (Box2.activeSelf == true)
                     GlobalScore = Mathf.Abs(GlobalScore - Box2currentGreenPoints);
 
+                /*calculate the dif till box3 hit the bound*/
+                if (Box3.activeSelf == true)
+                    GlobalScore = Mathf.Abs(GlobalScore - Box3currentGreenPoints);
+
                 StartCoroutine(ShowMessage(OutBoundsTextPlayer2, "OUT OF BOUNDS!", 2));
 
             }
@@ -309,6 +400,9 @@ public class ScoreCount : MonoBehaviour
             /*Box2 Global and Local TMP Contol*/
             LocalScorepizzaBox2TMP.gameObject.SetActive(false);
 
+            /*Box3 Global and Local TMP Contol*/
+            LocalScorepizzaBox3TMP.gameObject.SetActive(false);
+
             /*Player1 Global TMP Contol*/
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
 
@@ -317,6 +411,7 @@ public class ScoreCount : MonoBehaviour
             /*Camera Contorl*/
             CamBox1.gameObject.SetActive(false);
             CamBox2.gameObject.SetActive(false);
+            CamBox3.gameObject.SetActive(false);
             Player1CAM.gameObject.SetActive(true);
 
             Debug.Log("hit left bound");
@@ -337,6 +432,10 @@ public class ScoreCount : MonoBehaviour
             GlobalScoreTMPBox2.gameObject.SetActive(false);
             LocalScorepizzaBox2TMP.gameObject.SetActive(false);
 
+            /*Box 3 text Control*/
+            GlobalScoreTMPBox3.gameObject.SetActive(false);
+            LocalScorepizzaBox3TMP.gameObject.SetActive(false);
+
             /*Player1 Global TMP Contol*/
             GlobalScoreTMPPlayer.gameObject.SetActive(true);
            // GlobalScoreTextPlayer2.gameObject.SetActive(true);
@@ -347,6 +446,7 @@ public class ScoreCount : MonoBehaviour
                 /*Boxs Camera Control*/
                 CamBox1.gameObject.SetActive(false);
                 CamBox2.gameObject.SetActive(false);
+                CamBox3.gameObject.SetActive(false);
 
                 /*Player2 Control Camera Control*/
                 Player2CAM.gameObject.SetActive(true);
@@ -371,8 +471,8 @@ public class ScoreCount : MonoBehaviour
                 /*Boxs Camera Control*/
                 CamBox1.gameObject.SetActive(false);
                 CamBox2.gameObject.SetActive(false);
+                CamBox3.gameObject.SetActive(false);
 
-            
 
                 /*Player2 Control Camera Control*/
                 Player2CAM.gameObject.SetActive(false);
