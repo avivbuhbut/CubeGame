@@ -19,10 +19,7 @@ public class Player2Bounds : MonoBehaviour
         currentPosX =  gameObject.transform.position.x;
         currentPosY = gameObject.transform.position.y;
         currentPosZ = gameObject.transform.position.z;
-        Debug.Log(currentPosX);
-        Debug.Log(currentPosY);
-        Debug.Log(currentPosZ);
-
+   
         /*Text TMP "Cant do that" Control*/
         CantDoThatTMP.gameObject.SetActive(false);
     } 

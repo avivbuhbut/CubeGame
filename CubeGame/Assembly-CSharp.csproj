@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Collisions.cs" />
     <Compile Include="Assets\ColorChangingGrandually.cs" />
+    <Compile Include="Assets\FinshLineDrop.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />
     <Compile Include="Assets\Image Effects\Scripts\ConvolutionKernel.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\scripts\SwitchPlayers.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
     <Compile Include="Assets\stopAnimation.cs" />
+    <Compile Include="Assets\TeleportBox.cs" />
     <None Include="Assets\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

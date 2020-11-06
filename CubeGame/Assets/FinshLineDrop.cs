@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movingFloor : ColidedScript
+public class FinshLineDrop : ColidedScript
 {
-   
+
     private Animation anim;
-    [SerializeField] Animator animAtor ;
+    [SerializeField] Animator animAtor;
 
 
     // Start is called before the first frame update
@@ -15,21 +15,21 @@ public class movingFloor : ColidedScript
 
 
 
-        animAtor.SetBool("Activate", false) ;
+        animAtor.SetBool("AcitveFloorDrop", false);
 
 
 
-        
 
 
-       // GameObject FinishPlate = GameObject.Find("FinishPlate");
 
-     //   Counter = FinishPlate.GetComponent<ColidedScript>().getCounter();
-     
-        
+        // GameObject FinishPlate = GameObject.Find("FinishPlate");
+
+        //   Counter = FinishPlate.GetComponent<ColidedScript>().getCounter();
+
+
 
     }
-   
+
 
     // Update is called once per frame
     void Update()
@@ -38,8 +38,8 @@ public class movingFloor : ColidedScript
 
         // Debug.Log("moving floor counter: " + colidedScript.counter);
         //animAtor.SetBool("Activate", true);
-              if (counter == 3)
-                animAtor.SetBool("Activate", true);
+        if (counter == 3)
+            animAtor.SetBool("AcitveFloorDrop", true);
 
         ///    Debug.Log("inside moving floor");
 

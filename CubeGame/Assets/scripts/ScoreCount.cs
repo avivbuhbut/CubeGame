@@ -120,7 +120,7 @@ public class ScoreCount : MonoBehaviour
         OutBoundsTextPlayer2.enabled = false;
 
         /*Player2 active*/
-       player2GameObj.gameObject.SetActive(true);
+       player2GameObj.gameObject.SetActive(false);
         
 
 
