@@ -4,15 +4,17 @@
       <File FileName="Assets/scripts/FollowCamera.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/PlayerMovment.cs" Line="32" Column="37" />
       <File FileName="Assets/scripts/ScoreCount.cs" Line="163" Column="11" />
-      <File FileName="Assets/StickToPlatform.cs" Line="28" Column="1" />
-      <File FileName="Assets/scripts/PizzaStickToPlatform.cs" Line="24" Column="56" />
       <File FileName="Assets/scripts/ColidedScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/FinshLineDrop.cs" Line="43" Column="1" />
+      <File FileName="Assets/scripts/PizzaStickToPlatform.cs" Line="31" Column="10" />
+      <File FileName="Assets/scripts/FinshLineDrop.cs" Line="38" Column="6" />
+      <File FileName="Assets/PizzaReach.cs" Line="19" Column="1" />
+      <File FileName="Assets/Standard Assets/Utility/DragRigidbody.cs" Line="34" Column="1" />
+      <File FileName="Assets/destroyOnTouch.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a0d34b11-27de-4118-818b-662ba1328195" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c4ff41bd-4626-4278-9313-784cf0d646df" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -35,8 +35,7 @@ public class FinshLineDrop : ColidedScript
     {
 
 
-        if (CubeTrans.position.x == 33f)
-            Debug.Log("Got To POS!");
+     
 
 
         if (counter == 3)

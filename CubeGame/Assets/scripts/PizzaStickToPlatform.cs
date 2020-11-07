@@ -28,7 +28,7 @@ public class PizzaStickToPlatform : MonoBehaviour
         {
             
             transform.parent = collision.transform;
-            box2Cam.gameObject.SetActive(false);
+         
 
         }
 
