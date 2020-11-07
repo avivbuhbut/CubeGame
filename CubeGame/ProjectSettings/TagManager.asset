@@ -14,6 +14,7 @@ TagManager:
   - PizzaBox2
   - PlateBoundsP2
   - ConveyorBelt
+  - FinishLineCube
   layers:
   - Default
   - TransparentFX
