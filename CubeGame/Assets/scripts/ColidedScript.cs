@@ -35,13 +35,13 @@ public class ColidedScript : MonoBehaviour
 
 
             counter++;
-            //  Debug.Log(counter);
+           //  Debug.Log(counter);
 
         }
 
 
-        if (counter == 3)
-            Debug.Log("Finish first part!");
+       // if (counter == 3)
+    //        Debug.Log("Finish first part!");
 
 
         //PizzaBox2Trans.position = new Vector3(20.9f, -2.74677f, 10.26f);

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PizzaStickToPlatform : MonoBehaviour
 {
+
+    public Camera box2Cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +28,21 @@ public class PizzaStickToPlatform : MonoBehaviour
         {
             
             transform.parent = collision.transform;
+            box2Cam.gameObject.SetActive(false);
 
         }
+
+
+        if (collision.gameObject.tag == "TriggerCube")
+        {
+            Debug.Log("Cube touched pizza box");
+            transform.parent = null;
+        }
+
+
+
     }
 
 
-   
-    
-}
+
+    }
