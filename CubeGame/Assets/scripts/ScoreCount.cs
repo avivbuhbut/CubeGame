@@ -420,7 +420,7 @@ public class ScoreCount : MonoBehaviour
 
 
         // if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox")
-        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "PlateBoundsP2" || collision.gameObject.tag == "Untagged")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "PlateBoundsP2" || collision.gameObject.tag == "Untagged" || collision.gameObject.tag == "FinishLineCube")
         {
        
 

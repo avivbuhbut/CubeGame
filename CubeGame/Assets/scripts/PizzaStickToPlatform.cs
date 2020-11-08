@@ -5,7 +5,8 @@ using UnityEngine;
 public class PizzaStickToPlatform : MonoBehaviour
 {
 
-    public Camera box2Cam;
+    public Transform FinishLineCubeTrans;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,28 +17,25 @@ public class PizzaStickToPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
     }
 
 
-    void OnCollisionEnter(Collision collision)
+   void OnCollisionEnter(Collision collision)
 
     {
-
-        if (collision.gameObject.tag == "FinishLineCube")
+        
+        if (collision.gameObject.tag == "Finish")
         {
-            
-            transform.parent = collision.transform;
+            Debug.Log("Hit Finish LIne!");
+     
          
 
         }
 
-
-        if (collision.gameObject.tag == "TriggerCube")
-        {
-            Debug.Log("Cube touched pizza box");
-            transform.parent = null;
-        }
+      
+        
 
 
 

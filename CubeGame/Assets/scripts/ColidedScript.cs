@@ -7,8 +7,12 @@ public class ColidedScript : MonoBehaviour
 
     public static int counter;
 
-    
-    
+    public Transform FinishLineCubeTrans;
+    public Transform PizzaBox1;
+    public Transform PizzaBox2;
+    public Transform PizzaBox3;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +39,18 @@ public class ColidedScript : MonoBehaviour
 
 
             counter++;
-           //  Debug.Log(counter);
+             Debug.Log(counter);
+  
 
+        }
+
+        if (col.gameObject.tag == "PizzaBox" && counter == 3)
+        {
+
+            
+            PizzaBox1.parent = FinishLineCubeTrans.transform;
+            PizzaBox2.parent = FinishLineCubeTrans.transform;
+            PizzaBox3.parent = FinishLineCubeTrans.transform;
         }
 
 
