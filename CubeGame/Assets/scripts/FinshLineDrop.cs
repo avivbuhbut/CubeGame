@@ -41,10 +41,12 @@ public class FinshLineDrop : ColidedScript
 
         if (counter == 3)
         {
-            Debug.Log("3Pizzas inisde");
+         
             animAtor.SetBool("AcitveFloorDrop", true);
         }
 
+
+        Debug.Log("Anim AcitveFloorDrop: " + animAtor.GetCurrentAnimatorStateInfo(0).IsName("AcitveFloorDrop"));
     
         
 
