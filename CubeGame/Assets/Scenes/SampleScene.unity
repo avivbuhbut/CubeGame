@@ -1088,8 +1088,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249931979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: 14.23, z: -53.848602}
-  m_LocalScale: {x: -3.428844, y: 2.0573776, z: 2.4081213}
+  m_LocalPosition: {x: 7.25, y: 14.63, z: -53.848602}
+  m_LocalScale: {x: -3.428844, y: 2.657103, z: 2.4081213}
   m_Children: []
   m_Father: {fileID: 284103892}
   m_RootOrder: 1
@@ -11929,6 +11929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
+  PizzaBoxs: {fileID: 764342330}
 --- !u!65 &1930186247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12016,7 +12017,7 @@ Transform:
   m_GameObject: {fileID: 1944625281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.44, y: 13.43, z: -53.848602}
-  m_LocalScale: {x: -0.3426101, y: 3.7177255, z: 2.4081213}
+  m_LocalScale: {x: -0.3426101, y: 4.9092565, z: 2.4081213}
   m_Children: []
   m_Father: {fileID: 284103892}
   m_RootOrder: 10
