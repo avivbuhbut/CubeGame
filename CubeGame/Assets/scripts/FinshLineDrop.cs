@@ -8,6 +8,7 @@ public class FinshLineDrop : ColidedScript
     private Animation anim;
     [SerializeField] Animator animAtor;
 
+
     public Transform CubeTrans;
 
 
@@ -35,11 +36,14 @@ public class FinshLineDrop : ColidedScript
     {
 
 
-     
+
 
 
         if (counter == 3)
+        {
+            Debug.Log("3Pizzas inisde");
             animAtor.SetBool("AcitveFloorDrop", true);
+        }
 
     
         
@@ -52,5 +56,13 @@ public class FinshLineDrop : ColidedScript
 
         if (collision.gameObject.tag == "LowerLevelCube")
             Debug.Log(collision.gameObject.tag);
+    }
+
+     void OnCollisionExit(Collision collision)
+    {
+        counter++;
+
+        if (collision.gameObject.tag == "PizzaBox" && counter == 3)
+            Debug.Log("All of the pizza boxes are out!");
     }
 }

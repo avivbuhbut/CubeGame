@@ -47,7 +47,7 @@ public class ColidedScript : MonoBehaviour
         if (col.gameObject.tag == "PizzaBox" && counter == 3)
         {
 
-            
+            Debug.Log("FinishLineCubeTrans is now parent of pizzaBoxes");
             PizzaBox1.parent = FinishLineCubeTrans.transform;
             PizzaBox2.parent = FinishLineCubeTrans.transform;
             PizzaBox3.parent = FinishLineCubeTrans.transform;

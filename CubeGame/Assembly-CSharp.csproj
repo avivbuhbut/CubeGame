@@ -109,6 +109,7 @@
     <Compile Include="Assets\scripts\SwitchPlayers.cs" />
     <Compile Include="Assets\scripts\TeleportBox.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
+    <Compile Include="Assets\TrigCubeChangeParent.cs" />
     <Compile Include="Assets\TriggerCubeClider.cs" />
     <None Include="Assets\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
