@@ -19,6 +19,7 @@ TagManager:
   - TriggerCube
   - House
   - TriggerCubeFloor
+  - HandGun
   layers:
   - Default
   - TransparentFX
