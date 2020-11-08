@@ -1,20 +1,18 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/FollowCamera.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HandGunPickUp.cs">
     <Files>
-      <File FileName="Assets/scripts/FollowCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/PlayerMovment.cs" Line="32" Column="37" />
-      <File FileName="Assets/scripts/ScoreCount.cs" Line="163" Column="11" />
-      <File FileName="Assets/scripts/ColidedScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/PizzaStickToPlatform.cs" Line="31" Column="10" />
-      <File FileName="Assets/scripts/FinshLineDrop.cs" Line="38" Column="6" />
-      <File FileName="Assets/PizzaReach.cs" Line="19" Column="1" />
-      <File FileName="Assets/Standard Assets/Utility/DragRigidbody.cs" Line="34" Column="1" />
-      <File FileName="Assets/destroyOnTouch.cs" Line="6" Column="2" />
+      <File FileName="Assets/scripts/ColidedScript.cs" />
+      <File FileName="Assets/scripts/PizzaStickToPlatform.cs" />
+      <File FileName="Assets/scripts/FinshLineDrop.cs" />
+      <File FileName="Assets/PizzaReach.cs" />
+      <File FileName="Assets/Standard Assets/Utility/DragRigidbody.cs" />
+      <File FileName="Assets/destroyOnTouch.cs" />
+      <File FileName="Assets/HandGunPickUp.cs" Line="34" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c4ff41bd-4626-4278-9313-784cf0d646df" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="73265bca-9b52-44e4-9cbf-96bdf36c5c74" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
