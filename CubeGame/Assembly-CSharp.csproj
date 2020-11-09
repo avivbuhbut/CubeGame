@@ -72,6 +72,7 @@
     <Compile Include="Assets\Image Effects\Scripts\GaussianBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
+    <Compile Include="Assets\MeshDestroy.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\PizzaBoxReach.cs" />
     <Compile Include="Assets\PizzaReach.cs" />

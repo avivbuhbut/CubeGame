@@ -18,7 +18,7 @@ public class HandGunPickUp : MonoBehaviour
     void Start()
     {
         FirstTransition = false;
-        HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
+       // HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Update is called once per frame
