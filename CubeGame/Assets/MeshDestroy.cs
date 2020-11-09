@@ -12,24 +12,25 @@ public class MeshDestroy : MonoBehaviour
 
     public int CutCascades = 1;
     public float ExplodeForce = 0;
-
+    public bool Distraction1 ;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Distraction1 = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
-            DestroyMesh();
+              DestroyMesh();
         }
     }
 
     private void DestroyMesh()
     {
+    
         var originalMesh = GetComponent<MeshFilter>().mesh;
         originalMesh.RecalculateBounds();
         var parts = new List<PartMesh>();
@@ -148,7 +149,7 @@ public class MeshDestroy : MonoBehaviour
                                         original.UV[triangles[j + singleIndex]],
                                         Vector2.Lerp(original.UV[triangles[j + singleIndex]], original.UV[triangles[j + ((singleIndex + 1) % 3)]], lerp1),
                                         Vector2.Lerp(original.UV[triangles[j + singleIndex]], original.UV[triangles[j + ((singleIndex + 2) % 3)]], lerp2));
-                    
+
                     continue;
                 }
 
@@ -278,10 +279,10 @@ public class MeshDestroy : MonoBehaviour
             mesh.vertices = Vertices;
             mesh.normals = Normals;
             mesh.uv = UV;
-            for(var i = 0; i < Triangles.Length; i++)
+            for (var i = 0; i < Triangles.Length; i++)
                 mesh.SetTriangles(Triangles[i], i, true);
             Bounds = mesh.bounds;
-            
+
             var renderer = GameObject.AddComponent<MeshRenderer>();
             renderer.materials = original.GetComponent<MeshRenderer>().materials;
 
@@ -299,4 +300,39 @@ public class MeshDestroy : MonoBehaviour
         }
 
     }
+
+    int counter = 1;
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        /*
+        if (collision.gameObject.tag == "PizzaBox" && Distraction1 == false)
+        {
+            Distraction1 = true;
+            //counter--;
+            ExampleCoroutine();
+            DestroyMesh();
+        }
+
+        if (collision.gameObject.tag == "BoundsCube")
+        {
+            Destroy(collision.gameObject);
+        }
+        */
+
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        //Print the time of when the function is first called.
+       // Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(6);
+
+        //After we have waited 5 seconds print the time again.
+       // Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+    }
+
+
 }

@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class HandGunPickUp : MonoBehaviour
 {
+
+
+    /*Fire Gun*/
+    public Camera Player1Cam;
+    public GameObject bullet;
+    Vector3 clickPos;
+
+
     public Transform WeaponHolderTrans;
     public Transform WeaponHolderTransLeftHand;
     public Transform HandGunTrans;
+    public Transform AimTrans;
 
     public bool FirstTransition;
 
@@ -24,6 +33,11 @@ public class HandGunPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        if (Input.GetKey(KeyCode.Mouse0))
+            Fire();
+
         LeftHandGunFacingDirectio=  Mathf.Atan2(WeaponHolderTransLeftHand.transform.right.z, WeaponHolderTransLeftHand.transform.right.x) * Mathf.Rad2Deg;
         RightHandGunFacingDirectio = Mathf.Atan2(WeaponHolderTrans.transform.right.z, WeaponHolderTrans.transform.right.x) * Mathf.Rad2Deg;
 
@@ -111,13 +125,31 @@ public class HandGunPickUp : MonoBehaviour
     }
 
 
-        
-        
-
-    
-    
 
 
+
+    void Fire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            clickPos = Vector3.one;
+            Vector3 punktA = new Vector3(1, 2, 0);
+            Vector3 punktB = new Vector3(2, 1, 0);
+            Vector3 punktC = new Vector3(3, 3, 0);
+            Plane plane = new Plane(punktA, punktB, punktC);
+            Ray ray = Player1Cam.ScreenPointToRay(Input.mousePosition);
+            float DistanceToPlane;
+            if (plane.Raycast(ray, out DistanceToPlane))
+            {
+                clickPos = ray.GetPoint(DistanceToPlane);
+            }
+            Vector3 finalClickPos = new Vector3(clickPos.x, clickPos.y, 1);
+            Instantiate(bullet, AimTrans.transform.position, Quaternion.LookRotation(finalClickPos));
+
+        }
+
+
+    }
 
 
 

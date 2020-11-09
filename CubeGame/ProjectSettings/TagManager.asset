@@ -21,6 +21,7 @@ TagManager:
   - TriggerCubeFloor
   - HandGun
   - HandGunM1911
+  - BoundsCube
   layers:
   - Default
   - TransparentFX
