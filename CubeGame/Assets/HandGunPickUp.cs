@@ -28,7 +28,7 @@ public class HandGunPickUp : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
             transform.parent = null;
 
-
+   
         /*if the gun is in players hand , point to mouse pos*/
         if (HandGunTrans.transform.parent == WeaponHolderTrans || HandGunTrans.transform.parent == WeaponHolderTransLeftHand)
         {
@@ -44,7 +44,7 @@ public class HandGunPickUp : MonoBehaviour
                 Vector2 mousePos = Input.mousePosition;
                 // mousePos.z = 5.23f;
 
-                Vector2 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTrans.position);
+               Vector2 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTrans.position);
                 mousePos.x = mousePos.x - objectPos.x;
                 mousePos.y = mousePos.y - objectPos.y;
 
@@ -63,24 +63,28 @@ public class HandGunPickUp : MonoBehaviour
 
                 HandGunTrans.transform.parent = WeaponHolderTransLeftHand;
                 HandGunTrans.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
-            
 
-               //HandGunTrans.transform.rotation = Quaternion.Euler(new Vector3(0f,90f,0f));
 
+                //HandGunTrans.transform.rotation = Quaternion.Euler(new Vector3(0f,90f,0f));
+                Vector2 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTransLeftHand.position);
                 //  FaceLeft();
                 Debug.Log("Gun facing Left");
                 //rotation
                 Vector2 mousePos = Input.mousePosition;
                 // mousePos.z = 5.23f;
 
-                Vector2 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTransLeftHand.position);
-                mousePos.x = mousePos.x - objectPos.x;
-                mousePos.y = objectPos.y - mousePos.y  ;
+          
+
+                mousePos.x = mousePos.x-objectPos.x  ;
+                mousePos.y =  objectPos.y -  mousePos.y;
 
                 float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
                 WeaponHolderTransLeftHand.rotation = Quaternion.Euler(new Vector3(0f, 180f, angle));
 
-
+                if (WeaponHolderTransLeftHand.rotation.y == 180)
+                    Debug.Log("facing right");
+                else
+                    Debug.Log("facing Left");
             }
 
 
