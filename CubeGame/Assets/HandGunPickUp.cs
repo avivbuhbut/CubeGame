@@ -8,7 +8,7 @@ public class HandGunPickUp : MonoBehaviour
     public Transform WeaponHolderTransLeftHand;
     public Transform HandGunTrans;
 
-  
+    public bool FirstTransition;
 
     bool isFacingRight = true;
     float LeftHandGunFacingDirectio;
@@ -17,6 +17,7 @@ public class HandGunPickUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FirstTransition = false;
         HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
     }
 
@@ -29,7 +30,11 @@ public class HandGunPickUp : MonoBehaviour
         // Debug.Log("Player Pos: " + this.transform.position);
 
         if (Input.GetKey(KeyCode.Q))
-            transform.parent = null;
+        {
+         //   HandGunTrans.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            HandGunTrans.transform.parent = null;
+        }
+
 
 
         /*if the gun is in players hand , point to mouse pos*/
@@ -64,6 +69,8 @@ public class HandGunPickUp : MonoBehaviour
 
             }
             if (RightHandGunFacingDirectio == 180 || LeftHandGunFacingDirectio == 180) {//  gun faces right
+
+
 
                 Debug.Log("LeftHandGunFacingDirectio" + LeftHandGunFacingDirectio);
               Debug.Log("RightHandGunFacingDirectio" + RightHandGunFacingDirectio);
