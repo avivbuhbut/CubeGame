@@ -66,6 +66,7 @@
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
     <Compile Include="Assets\childOfPlayer.cs" />
+    <Compile Include="Assets\DestroyObject.cs" />
     <Compile Include="Assets\destroyOnTouch.cs" />
     <Compile Include="Assets\Fire.cs" />
     <Compile Include="Assets\HandGunPickUp.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\SC_RigidbodyMagnet.cs" />
     <Compile Include="Assets\scripts\BetterJump.cs" />
     <Compile Include="Assets\scripts\CameraFollowPizza.cs" />
     <Compile Include="Assets\scripts\ColidedScript.cs" />

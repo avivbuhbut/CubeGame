@@ -13,6 +13,8 @@ public class childOfPlayer : MonoBehaviour
     public Transform Player2Trans;
     public Rigidbody Player2Ridg;
 
+
+
     public float forceFactor = 10;
 
 
@@ -25,6 +27,8 @@ public class childOfPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
       
         OnMouseOver();
     }
@@ -34,6 +38,7 @@ public class childOfPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" )
         {
+            Player1Ridg.GetComponent<SphereCollider>().enabled = true;
             HammerCubeRigidBody.isKinematic = true;
 
             gameObject.transform.parent = Player1Trans;
@@ -43,9 +48,11 @@ public class childOfPlayer : MonoBehaviour
 
         if(collision.gameObject.tag == "Player2")
         {
+            Player2Ridg.GetComponent<SphereCollider>().enabled = true;
             HammerCubeRigidBody.isKinematic = true;
 
             gameObject.transform.parent = Player2Trans;
+
             gameObject.transform.position = new Vector3(Player2Trans.position.x + 1, Player2Trans.position.y + 3, Player2Trans.position.z);
 
 
@@ -81,6 +88,8 @@ public class childOfPlayer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Player2Ridg.GetComponent<SphereCollider>().enabled = false;
+            Player1Ridg.GetComponent<SphereCollider>().enabled = false;
             gameObject.transform.parent = null;
             HammerCubeRigidBody.isKinematic = false;
         }
