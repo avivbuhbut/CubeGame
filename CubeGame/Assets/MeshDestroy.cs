@@ -269,6 +269,7 @@ public class MeshDestroy : MonoBehaviour
         public void MakeGameobject(MeshDestroy original)
         {
             GameObject = new GameObject(original.name);
+          //  GameObject.tag = "CubeDistraction";
             GameObject.transform.position = original.transform.position;
             GameObject.transform.rotation = original.transform.rotation;
             GameObject.transform.localScale = original.transform.localScale;

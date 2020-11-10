@@ -8,11 +8,13 @@ public class childOfPlayer : MonoBehaviour
     public Rigidbody HammerCubeRigidBody;
     public Transform Player1Trans;
     public Rigidbody Player1Ridg;
+    public GameObject Player1GamObj;
 
-
+    public GameObject Player2GamObj;
     public Transform Player2Trans;
     public Rigidbody Player2Ridg;
 
+  
 
 
     public float forceFactor = 10;
@@ -21,7 +23,7 @@ public class childOfPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+ 
     }
 
     // Update is called once per frame
@@ -57,27 +59,47 @@ public class childOfPlayer : MonoBehaviour
 
 
         }
+        
+     /*
+      *if (collision.gameObject.tag == "Floor") {
+            Player2GamObj.GetComponent<DragRigidbody>().enabled = true;
+            Player1GamObj.GetComponent<DragRigidbody>().enabled = true;
+        }
+        else
+        {
+            Player2GamObj.GetComponent<DragRigidbody>().enabled = false;
+            Player1GamObj.GetComponent<DragRigidbody>().enabled = false;
+        }*/
+        
+        
+        //    if (Input.GetMouseButtonDown(0) &&collision.gameObject.tag == "Floor" )
+        //   {
+        //      Player2Ridg.GetComponent<SphereCollider>().enabled = false;
+        //    Player1Ridg.GetComponent<SphereCollider>().enabled = false;
+        //    gameObject.transform.parent = null;
+        // HammerCubeRigidBody.isKinematic = false;
+        //   }
 
         /*Magnitute dosent work yet*/
-       /* if(collision.gameObject.tag == "CubeDistraction")
-        {
-            if (gameObject.transform.parent == Player1Trans)
-            {
-                Player1Ridg.AddForce((Player1Ridg.gameObject.transform.position - transform.position) * forceFactor * Time.smoothDeltaTime);
+        /* if(collision.gameObject.tag == "CubeDistraction")
+         {
+             if (gameObject.transform.parent == Player1Trans)
+             {
+                 Player1Ridg.AddForce((Player1Ridg.gameObject.transform.position - transform.position) * forceFactor * Time.smoothDeltaTime);
 
-                //  HammerCubeRigidBody.drag = 10f;
-            }
+                 //  HammerCubeRigidBody.drag = 10f;
+             }
 
 
 
-            if (gameObject.transform.parent == Player2Trans)
-            {
-                Player2Ridg.AddForce((Player2Ridg.gameObject.transform.position - transform.position) * forceFactor * Time.smoothDeltaTime);
+             if (gameObject.transform.parent == Player2Trans)
+             {
+                 Player2Ridg.AddForce((Player2Ridg.gameObject.transform.position - transform.position) * forceFactor * Time.smoothDeltaTime);
 
-                //  HammerCubeRigidBody.drag = 10f;
-            }
+                 //  HammerCubeRigidBody.drag = 10f;
+             }
 
-        }*/
+         }*/
 
 
 
@@ -86,10 +108,10 @@ public class childOfPlayer : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) )
         {
             Player2Ridg.GetComponent<SphereCollider>().enabled = false;
-            Player1Ridg.GetComponent<SphereCollider>().enabled = false;
+           Player1Ridg.GetComponent<SphereCollider>().enabled = false;
             gameObject.transform.parent = null;
             HammerCubeRigidBody.isKinematic = false;
         }
