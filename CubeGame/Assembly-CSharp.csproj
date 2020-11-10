@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
+    <Compile Include="Assets\childOfPlayer.cs" />
     <Compile Include="Assets\destroyOnTouch.cs" />
     <Compile Include="Assets\Fire.cs" />
     <Compile Include="Assets\HandGunPickUp.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\PizzaBoxReach.cs" />
     <Compile Include="Assets\PizzaReach.cs" />
+    <Compile Include="Assets\PuchBackForce.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />

@@ -22,6 +22,8 @@ TagManager:
   - HandGun
   - HandGunM1911
   - BoundsCube
+  - HammerCube
+  - CubeDistraction
   layers:
   - Default
   - TransparentFX

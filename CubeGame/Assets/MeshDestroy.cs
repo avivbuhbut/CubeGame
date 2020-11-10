@@ -12,7 +12,7 @@ public class MeshDestroy : MonoBehaviour
 
     public int CutCascades = 1;
     public float ExplodeForce = 0;
-    public bool Distraction1 ;
+    public bool Distraction1;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +24,13 @@ public class MeshDestroy : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-              DestroyMesh();
+            // DestroyMesh();
         }
     }
 
     private void DestroyMesh()
     {
-    
+
         var originalMesh = GetComponent<MeshFilter>().mesh;
         originalMesh.RecalculateBounds();
         var parts = new List<PartMesh>();
@@ -305,20 +305,24 @@ public class MeshDestroy : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        /*
-        if (collision.gameObject.tag == "PizzaBox" && Distraction1 == false)
+
+        if (collision.gameObject.tag == "HammerCube" && Distraction1 == false)
         {
             Distraction1 = true;
             //counter--;
-            ExampleCoroutine();
+            //   ExampleCoroutine();
             DestroyMesh();
         }
+    }
+}
 
+
+        /*
         if (collision.gameObject.tag == "BoundsCube")
         {
             Destroy(collision.gameObject);
-        }
-        */
+        }*?
+        
 
     }
 
@@ -335,4 +339,4 @@ public class MeshDestroy : MonoBehaviour
     }
 
 
-}
+}*/
