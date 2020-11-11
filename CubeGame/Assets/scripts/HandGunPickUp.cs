@@ -17,6 +17,11 @@ public class HandGunPickUp : MonoBehaviour
     public Transform HandGunTrans;
     public Transform AimTrans;
 
+
+    public float handGunStartRotx;
+    public float handGunStartRoty;
+    public float handGunStartRotz;
+
     public bool FirstTransition;
 
     bool isFacingRight = true;
@@ -27,7 +32,12 @@ public class HandGunPickUp : MonoBehaviour
     void Start()
     {
         FirstTransition = false;
-       // HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
+
+        handGunStartRotx = WeaponHolderTrans.rotation.x;
+        handGunStartRoty = WeaponHolderTrans.rotation.y;
+        handGunStartRotz = WeaponHolderTrans.rotation.z;
+
+        // HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Update is called once per frame
@@ -54,27 +64,38 @@ public class HandGunPickUp : MonoBehaviour
         /*if the gun is in players hand , point to mouse pos*/
         if (HandGunTrans.transform.parent == WeaponHolderTrans || HandGunTrans.transform.parent == WeaponHolderTransLeftHand)
         {
-
-            Debug.Log("LeftHandGunFacingDirectio" +LeftHandGunFacingDirectio);
-            Debug.Log("RightHandGunFacingDirectio" + RightHandGunFacingDirectio);
+       
 
             /*RIGHT HAND*/
             if (RightHandGunFacingDirectio == 0 || LeftHandGunFacingDirectio==0) //  gun faces right
             {
 
+
+
+                Debug.Log("RightHandGunFacingDirectio" + RightHandGunFacingDirectio);
                 HandGunTrans.transform.parent = WeaponHolderTrans;
                 HandGunTrans.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
                 Debug.Log("Gun facing Right");
                 //rotation
-                Vector2 mousePos = Input.mousePosition;
-                // mousePos.z = 5.23f;
+                Vector3 mousePos = Input.mousePosition;
+                 mousePos.z = 5.23f;
 
-                Vector2 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTrans.position);
+                Vector3 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTrans.position);
                 mousePos.x = mousePos.x - objectPos.x;
                 mousePos.y = mousePos.y - objectPos.y;
 
                 float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-                WeaponHolderTrans.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                if (FirstTransition != true)
+                {
+                    Debug.Log("before first transition");
+                    WeaponHolderTrans.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                }
+                else
+                {
+                    Debug.Log("after first transition");
+                    WeaponHolderTrans.rotation = Quaternion.Euler(new Vector3(handGunStartRotx, handGunStartRoty, angle));
+                    FirstTransition = false;
+                }
 
 
 
@@ -82,24 +103,24 @@ public class HandGunPickUp : MonoBehaviour
 
 
             }
-            if (RightHandGunFacingDirectio == 180 || LeftHandGunFacingDirectio == 180) {//  gun faces right
-
+            if (RightHandGunFacingDirectio == 180 || LeftHandGunFacingDirectio == 180) {//  gun faces left
 
 
                 Debug.Log("LeftHandGunFacingDirectio" + LeftHandGunFacingDirectio);
-              Debug.Log("RightHandGunFacingDirectio" + RightHandGunFacingDirectio);
+
+                FirstTransition = true;
 
                 HandGunTrans.transform.parent = WeaponHolderTransLeftHand;
                 HandGunTrans.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
 
 
                 //HandGunTrans.transform.rotation = Quaternion.Euler(new Vector3(0f,90f,0f));
-                Vector2 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTransLeftHand.position);
+                Vector3 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTransLeftHand.position);
                 //  FaceLeft();
                 Debug.Log("Gun facing Left");
                 //rotation
-                Vector2 mousePos = Input.mousePosition;
-                // mousePos.z = 5.23f;
+                Vector3 mousePos = Input.mousePosition;
+                 mousePos.z = 5.23f;
 
 
 

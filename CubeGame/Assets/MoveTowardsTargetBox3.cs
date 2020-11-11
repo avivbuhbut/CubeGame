@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTowardsTargetBox1 : MonoBehaviour
+public class MoveTowardsTargetBox3: MonoBehaviour
 {
 
-    public Transform PizzaBox1Trans;
+    public Transform PizzaBox3Trans;
     public Transform LeftBoundsEnemy;
 
     public bool ColidedWithPizza;
@@ -21,26 +21,27 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
     {
 
         if (!ColidedWithPizza)
-            transform.position = Vector3.MoveTowards(this.transform.position, PizzaBox1Trans.position, .6f * Time.deltaTime); // move towards the pizza box
+            transform.position = Vector3.MoveTowards(this.transform.position, PizzaBox3Trans.position, .6f * Time.deltaTime); // move towards the pizza box
         if (ColidedWithPizza)
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime); // move towards the left bound
+
 
     }
 
 
 
-     void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        
-        if(collision.gameObject.name == "PizzaBOX1")
+
+        if (collision.gameObject.name == "PizzaBOX3")
         {
             ColidedWithPizza = true;
             Debug.Log("Colision with pizza box");
-            PizzaBox1Trans.transform.parent = gameObject.transform;
+            PizzaBox3Trans.transform.parent = gameObject.transform;
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime);
         }
 
-     
+
     }
 
     /*
