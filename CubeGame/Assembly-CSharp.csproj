@@ -72,7 +72,8 @@
     <Compile Include="Assets\Image Effects\Scripts\GaussianBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
-    <Compile Include="Assets\MoveTowardsTarget.cs" />
+    <Compile Include="Assets\MoveTowardsTargetBox1.cs" />
+    <Compile Include="Assets\MoveTowardsTargetBox2.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />

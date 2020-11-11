@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTowardsTarget : MonoBehaviour
+public class MoveTowardsTargetBox1 : MonoBehaviour
 {
 
     public Transform PizzaBox1Trans;
@@ -33,7 +33,7 @@ public class MoveTowardsTarget : MonoBehaviour
      void OnCollisionEnter(Collision collision)
     {
         
-        if(collision.gameObject.tag == "PizzaBox")
+        if(collision.gameObject.name == "PizzaBOX1")
         {
             ColidedWithPizza = true;
             Debug.Log("Colision with pizza box");
