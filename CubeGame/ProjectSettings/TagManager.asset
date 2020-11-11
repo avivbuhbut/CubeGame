@@ -24,6 +24,8 @@ TagManager:
   - BoundsCube
   - HammerCube
   - CubeDistraction
+  - CubeEnemy
+  - LeftBoundEnemy
   layers:
   - Default
   - TransparentFX
