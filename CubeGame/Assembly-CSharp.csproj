@@ -63,13 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ActiveMouseCursor.cs" />
-    <Compile Include="Assets\ActiveSphereColider.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
-    <Compile Include="Assets\Enemy1Health.cs" />
-    <Compile Include="Assets\Enemy2Health.cs" />
-    <Compile Include="Assets\Enemy3Health.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />
     <Compile Include="Assets\Image Effects\Scripts\ConvolutionKernel.cs" />
@@ -77,11 +72,6 @@
     <Compile Include="Assets\Image Effects\Scripts\GaussianBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
-    <Compile Include="Assets\lookat.cs" />
-    <Compile Include="Assets\MouseCursor.cs" />
-    <Compile Include="Assets\MoveTowardsTargetBox1.cs" />
-    <Compile Include="Assets\MoveTowardsTargetBox2.cs" />
-    <Compile Include="Assets\MoveTowardsTargetBox3.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
@@ -91,6 +81,8 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\scripts\ActiveMouseCursor.cs" />
+    <Compile Include="Assets\scripts\ActiveSphereColider.cs" />
     <Compile Include="Assets\scripts\BetterJump.cs" />
     <Compile Include="Assets\scripts\CameraFollowPizza.cs" />
     <Compile Include="Assets\scripts\childOfPlayer.cs" />
@@ -100,6 +92,9 @@
     <Compile Include="Assets\scripts\ColorChangingGrandually.cs" />
     <Compile Include="Assets\scripts\DestroyObject.cs" />
     <Compile Include="Assets\scripts\destroyOnTouch.cs" />
+    <Compile Include="Assets\scripts\Enemy1Health.cs" />
+    <Compile Include="Assets\scripts\Enemy2Health.cs" />
+    <Compile Include="Assets\scripts\Enemy3Health.cs" />
     <Compile Include="Assets\scripts\FinshLineDrop.cs" />
     <Compile Include="Assets\scripts\Fire.cs" />
     <Compile Include="Assets\scripts\FollowCamera.cs" />
@@ -109,8 +104,13 @@
     <Compile Include="Assets\scripts\GrapplingGunRaycasthit2D.cs" />
     <Compile Include="Assets\scripts\GrapplingHook.cs" />
     <Compile Include="Assets\scripts\HandGunPickUp.cs" />
+    <Compile Include="Assets\scripts\lookat.cs" />
     <Compile Include="Assets\scripts\MeshDestroy.cs" />
+    <Compile Include="Assets\scripts\MouseCursor.cs" />
     <Compile Include="Assets\scripts\MoveToPos.cs" />
+    <Compile Include="Assets\scripts\MoveTowardsTargetBox1.cs" />
+    <Compile Include="Assets\scripts\MoveTowardsTargetBox2.cs" />
+    <Compile Include="Assets\scripts\MoveTowardsTargetBox3.cs" />
     <Compile Include="Assets\scripts\movingFloor.cs" />
     <Compile Include="Assets\scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\scripts\ObjectStick.cs" />

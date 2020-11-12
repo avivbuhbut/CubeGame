@@ -109,6 +109,7 @@ public class ScoreCount : MonoBehaviour
         /*Cameras*/
         CamBox1.gameObject.SetActive(false);
         CamBox2.gameObject.SetActive(false);
+        CamBox3.gameObject.SetActive(false);
         Player2CAM.gameObject.SetActive(false);
 
 
