@@ -10,14 +10,15 @@ public class Fire : MonoBehaviour
     public float speed = 5f;
     public Transform AimTransform;
     public float Damage = 10f;
+    public ParticleSystem ShellParticles;
+    public ParticleSystem SmokeAfterShot;
 
 
-
- 
     // Start is called before the first frame update
     void Start()
     {
-
+        ShellParticles.Stop();
+        SmokeAfterShot.Stop();
     }
 
     void Update()
@@ -26,6 +27,8 @@ public class Fire : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            ShellParticles.Play();
+            SmokeAfterShot.Play();
             RaycastHit hit;
             /*the ray will start from the AIMtransform and will shoot forward . out hit  - means unity will put all the information of the hit into the hit varible */
            if( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
