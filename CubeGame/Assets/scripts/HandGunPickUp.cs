@@ -45,8 +45,6 @@ public class HandGunPickUp : MonoBehaviour
     {
 
 
-        if (Input.GetKey(KeyCode.Mouse0))
-            Fire();
 
         LeftHandGunFacingDirectio=  Mathf.Atan2(WeaponHolderTransLeftHand.transform.right.z, WeaponHolderTransLeftHand.transform.right.x) * Mathf.Rad2Deg;
         RightHandGunFacingDirectio = Mathf.Atan2(WeaponHolderTrans.transform.right.z, WeaponHolderTrans.transform.right.x) * Mathf.Rad2Deg;
@@ -108,7 +106,7 @@ public class HandGunPickUp : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        Debug.Log("LEFT hand angle:" + angle);
+
     }
 
 
@@ -130,34 +128,13 @@ public class HandGunPickUp : MonoBehaviour
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 
-        Debug.Log("Right hand angle:" + angle);
+ 
         WeaponHolderTrans.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
     }
 
 
-    void Fire()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            clickPos = Vector3.one;
-            Vector3 punktA = new Vector3(1, 2, 0);
-            Vector3 punktB = new Vector3(2, 1, 0);
-            Vector3 punktC = new Vector3(3, 3, 0);
-            Plane plane = new Plane(punktA, punktB, punktC);
-            Ray ray = Player1Cam.ScreenPointToRay(Input.mousePosition);
-            float DistanceToPlane;
-            if (plane.Raycast(ray, out DistanceToPlane))
-            {
-                clickPos = ray.GetPoint(DistanceToPlane);
-            }
-            Vector3 finalClickPos = new Vector3(clickPos.x, clickPos.y, 1);
-            Instantiate(bullet, AimTrans.transform.position, Quaternion.LookRotation(finalClickPos));
-
-        }
-
-
-    }
+ 
 
 
 

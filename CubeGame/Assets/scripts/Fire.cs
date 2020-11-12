@@ -5,35 +5,41 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
 
-    public Camera Player1Cam;
-    public GameObject bullet;
 
-    Vector3 clickPos;
+    public GameObject bullet;
+    public float speed = 5f;
+    public Transform AimTransform;
+    public float Damage = 10f;
+
+
+
+ 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            clickPos = Vector3.one;
-            Vector3 punktA = new Vector3(1, 2, 0);
-            Vector3 punktB = new Vector3(2, 1, 0);
-            Vector3 punktC = new Vector3(3, 3, 0);
-            Plane plane = new Plane(punktA, punktB, punktC);
-            Ray ray = Player1Cam.ScreenPointToRay(Input.mousePosition);
-            float DistanceToPlane;
-            if (plane.Raycast(ray, out DistanceToPlane))
-            {
-                clickPos = ray.GetPoint(DistanceToPlane);
-            }
-            Vector3 finalClickPos = new Vector3(clickPos.x, clickPos.y, 1);
-            Instantiate(bullet, transform.position, Quaternion.LookRotation(finalClickPos));
 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            /*the ray will start from the AIMtransform and will shoot forward . out hit  - means unity will put all the information of the hit into the hit varible */
+           if( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
+            {
+
+                Debug.Log(hit.transform.name);// print the object that the ray hit
+                EnemyHealth enemyHelathScript = hit.transform.GetComponent<EnemyHealth>(); // im getting the enemy health of the enemy that got hit by the ray
+                if(enemyHelathScript != null) //making sure i actually found the script
+                {
+                    enemyHelathScript.TakeDamage(Damage); // decresing the enemy health
+                }
+            }
         }
-        }
-    }
+     }
+
+}
+
