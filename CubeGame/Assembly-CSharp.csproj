@@ -67,7 +67,9 @@
     <Compile Include="Assets\ActiveSphereColider.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
-    <Compile Include="Assets\EnemyHealth.cs" />
+    <Compile Include="Assets\Enemy1Health.cs" />
+    <Compile Include="Assets\Enemy2Health.cs" />
+    <Compile Include="Assets\Enemy3Health.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />
     <Compile Include="Assets\Image Effects\Scripts\ConvolutionKernel.cs" />

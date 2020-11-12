@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-
+    public float ImpactForce = 30f;
     public Transform WeaponHolder;
     public Transform WeaponHolderLeftHand;
     public GameObject bullet;
@@ -28,7 +28,7 @@ public class Fire : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(0) &&( this.gameObject.transform.parent == WeaponHolder.transform) || (this.gameObject.transform.parent == WeaponHolderLeftHand.transform))
+        if (Input.GetMouseButtonDown(0) &&( this.gameObject.transform.parent == WeaponHolder.transform) || Input.GetMouseButtonDown(0) && (this.gameObject.transform.parent == WeaponHolderLeftHand.transform))
         {
             ShellParticles.Play();
             SmokeAfterShot.Play();
@@ -40,17 +40,47 @@ public class Fire : MonoBehaviour
             {
 
                 Debug.Log(hit.transform.name);// print the object that the ray hit
-                EnemyHealth enemyHelathScript = hit.transform.GetComponent<EnemyHealth>(); // im getting the enemy health of the enemy that got hit by the ray
-                if(enemyHelathScript != null) //making sure i actually found the script
+
+                /*Enemy1TakeDamage*/
+                Enemy1Health enemyHelathScript1 = hit.transform.GetComponent<Enemy1Health>(); // im getting the enemy health of the enemy that got hit by the ray
+                if(enemyHelathScript1 != null) //making sure i actually found the script
                 {
-                    enemyHelathScript.TakeDamage(Damage); // decresing the enemy health
+                    enemyHelathScript1.TakeDamage(Damage); // decresing the enemy health
                 }
+
+
+                /*Enemy2TakeDamage*/
+                Enemy2Health enemyHelathScript2 = hit.transform.GetComponent<Enemy2Health>(); // im getting the enemy health of the enemy that got hit by the ray
+                if (enemyHelathScript2 != null) //making sure i actually found the script
+                {
+                    enemyHelathScript2.TakeDamage(Damage); // decresing the enemy health
+                }
+
+
+                /*Enemy3TakeDamage*/
+                Enemy3Health enemyHelathScript3 = hit.transform.GetComponent<Enemy3Health>(); // im getting the enemy health of the enemy that got hit by the ray
+                if (enemyHelathScript3 != null) //making sure i actually found the script
+                {
+                    enemyHelathScript3.TakeDamage(Damage); // decresing the enemy health
+                }
+
+
+
+
+                if (hit.rigidbody != null)
+                    hit.rigidbody.AddForce(-hit.normal * ImpactForce); // adding force to the impact
+
+
+                GameObject impactG0 = Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));// hit.point is the point of impact
+                Destroy(impactG0, 1f);
+
             }
 
-           GameObject impactG0 =   Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));// hit.point is the point of impact
-            Destroy(impactG0, 1f);
         }
-     }
+
+
+    }
+     
 
 }
 
