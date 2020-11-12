@@ -12,13 +12,14 @@ public class Fire : MonoBehaviour
     public float Damage = 10f;
     public ParticleSystem ShellParticles;
     public ParticleSystem SmokeAfterShot;
-
+    public GameObject ImpactEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         ShellParticles.Stop();
         SmokeAfterShot.Stop();
+
     }
 
     void Update()
@@ -29,6 +30,7 @@ public class Fire : MonoBehaviour
         {
             ShellParticles.Play();
             SmokeAfterShot.Play();
+
             RaycastHit hit;
             /*the ray will start from the AIMtransform and will shoot forward . out hit  - means unity will put all the information of the hit into the hit varible */
            if( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
@@ -41,6 +43,9 @@ public class Fire : MonoBehaviour
                     enemyHelathScript.TakeDamage(Damage); // decresing the enemy health
                 }
             }
+
+            Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));// hit.point is the point of impact
+ 
         }
      }
 
