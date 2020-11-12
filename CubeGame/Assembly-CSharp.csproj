@@ -75,6 +75,7 @@
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
     <Compile Include="Assets\lookat.cs" />
+    <Compile Include="Assets\MouseCursor.cs" />
     <Compile Include="Assets\MoveTowardsTargetBox1.cs" />
     <Compile Include="Assets\MoveTowardsTargetBox2.cs" />
     <Compile Include="Assets\MoveTowardsTargetBox3.cs" />
@@ -128,6 +129,9 @@
     <Compile Include="Assets\scripts\TrigCubeChangeParent.cs" />
     <Compile Include="Assets\scripts\TriggerCubeClider.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
+    <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
+    <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
+    <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
     <None Include="Assets\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
