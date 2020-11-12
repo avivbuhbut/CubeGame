@@ -35,8 +35,8 @@ public class MoveTowardsTargetBox3: MonoBehaviour
            
         }
 
-        if (pizzaBox3InAir)
-           Debug.Log("pizzaBox 3 is in air");
+
+         
     }
 
 
@@ -44,12 +44,12 @@ public class MoveTowardsTargetBox3: MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log("Enemy colision:" +collision.gameObject.name);
+
 
         if (collision.gameObject.name == "PizzaBOX3")
         {
             ColidedWithPizza = true;
-            Debug.Log("Colision with pizza box");
+         
             PizzaBox3Trans.transform.parent = gameObject.transform;
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime);
         }

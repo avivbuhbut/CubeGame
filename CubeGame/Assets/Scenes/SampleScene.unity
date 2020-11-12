@@ -6909,7 +6909,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974757328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9b4e6829865b2942a4690be318a97e1, type: 3}
   m_Name: 
@@ -8221,7 +8221,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172302877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48521c8848ea96c4191bf952cbe6d93c, type: 3}
   m_Name: 
@@ -9789,7 +9789,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332451213}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8bfc883dfd5842e693f18013046d84a, type: 3}
   m_Name: 
@@ -9798,7 +9798,7 @@ MonoBehaviour:
   bullet: {fileID: 2155798084974802804, guid: e3f7fefa058e6154b9a489083aa25c93, type: 3}
   WeaponHolderTrans: {fileID: 1988519401}
   WeaponHolderTransLeftHand: {fileID: 1036385666}
-  HandGunTrans: {fileID: 1489100851}
+  HandGunTrans: {fileID: 1806920193}
   AimTrans: {fileID: 1178657461}
   handGunStartRotx: 0
   handGunStartRoty: 0
@@ -10964,7 +10964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1694449805434718, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11039,12 +11039,6 @@ PrefabInstance:
 --- !u!1 &1489100850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1748277932983872, guid: 6f1a7354265853f44b0ed5e2e43676ad,
-    type: 3}
-  m_PrefabInstance: {fileID: 1464746157}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1489100851 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4827498857130004, guid: 6f1a7354265853f44b0ed5e2e43676ad,
     type: 3}
   m_PrefabInstance: {fileID: 1464746157}
   m_PrefabAsset: {fileID: 0}
@@ -12544,12 +12538,12 @@ PrefabInstance:
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.37
+      value: 3.77
       objectReference: {fileID: 0}
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.25
+      value: -5.69
       objectReference: {fileID: 0}
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
@@ -14265,7 +14259,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897278581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c68979594b35f32419c7431a6d0d9070, type: 3}
   m_Name: 

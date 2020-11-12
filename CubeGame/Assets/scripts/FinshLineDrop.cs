@@ -46,7 +46,7 @@ public class FinshLineDrop : ColidedScript
         }
 
 
-        Debug.Log("Anim AcitveFloorDrop: " + animAtor.GetCurrentAnimatorStateInfo(0).IsName("AcitveFloorDrop"));
+
     
         
 
