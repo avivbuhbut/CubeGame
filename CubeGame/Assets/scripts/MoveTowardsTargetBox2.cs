@@ -5,6 +5,8 @@ using UnityEngine;
 public class MoveTowardsTargetBox2 : MonoBehaviour
 {
 
+    public Transform PizzaBoxes;
+
     public Transform PizzaBox2Trans;
     public Transform LeftBoundsEnemy;
 
@@ -30,7 +32,7 @@ public class MoveTowardsTargetBox2 : MonoBehaviour
         else
         {
             ColidedWithPizza = false;
-            PizzaBox2Trans.transform.parent = null;
+            PizzaBox2Trans.transform.parent = PizzaBoxes;
 
         }
     }

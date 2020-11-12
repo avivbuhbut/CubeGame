@@ -7,7 +7,7 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
 
     public Transform PizzaBox1Trans;
     public Transform LeftBoundsEnemy;
-    public Transform PizzaBoxes;
+    public Transform PizzaBoxesTrans;
 
     public bool ColidedWithPizza;
     public bool pizzaBox1InAir;
@@ -16,6 +16,7 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
     void Start()
     {
         ColidedWithPizza = false;
+     //   PizzaBox1Trans.transform.parent = PizzaBoxesTrans;
 
     }
 
@@ -24,14 +25,14 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
     {
         pizzaBox1InAir = PizzaBox1Trans.GetComponent<ScoreCount>().pizzaBox1InAir;
 
-       if (!ColidedWithPizza && pizzaBox1InAir == false)
+       if (!(ColidedWithPizza) && pizzaBox1InAir == false)
             transform.position = Vector3.MoveTowards(this.transform.position, PizzaBox1Trans.position, .6f * Time.deltaTime); // move towards the pizza box
         if (ColidedWithPizza && pizzaBox1InAir == false)
            transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime); // move towards the left bound
-        else
-       {
+        
+       if(pizzaBox1InAir == true) { 
           ColidedWithPizza = false;
-          PizzaBox1Trans.transform.parent = PizzaBoxes.transform;
+         PizzaBox1Trans.transform.parent = PizzaBoxesTrans;
 
 
        }

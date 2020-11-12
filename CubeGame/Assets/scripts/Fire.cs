@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    public float ImpactForce = 30f;
+    public float ImpactForce = 300f;
     public Transform WeaponHolder;
     public Transform WeaponHolderLeftHand;
     public GameObject bullet;
@@ -68,7 +68,7 @@ public class Fire : MonoBehaviour
 
 
                 if (hit.rigidbody != null)
-                    hit.rigidbody.AddForce(-hit.normal * ImpactForce); // adding force to the impact
+                    hit.rigidbody.AddForce(hit.normal * ImpactForce); // adding force to the impact
 
 
                 GameObject impactG0 = Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));// hit.point is the point of impact

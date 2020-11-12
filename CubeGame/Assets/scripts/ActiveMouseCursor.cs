@@ -5,10 +5,11 @@ using UnityEngine;
 public class ActiveMouseCursor : MonoBehaviour
 {
 
-
+    public Rigidbody m1911RidgBody;
     // Start is called before the first frame update
     void Start()
     {
+       
         this.gameObject.GetComponent<MouseCursor>().enabled = false;
         //crosshair = null;
     }
@@ -27,8 +28,10 @@ public class ActiveMouseCursor : MonoBehaviour
 
      void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag=="Player" || collision.gameObject.tag == "Player2")
+        if(collision.gameObject.tag=="Player" )
         {
+            // this.m1911RidgBody.constraints = RigidbodyConstraints.None;
+          //  m1911RidgBody.isKinematic = true;
             this.gameObject.GetComponent<MouseCursor>().enabled = true;
             this.gameObject.GetComponent<MouseCursor>().ActiveCrossHair();
 
