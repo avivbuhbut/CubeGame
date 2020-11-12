@@ -3997,6 +3997,7 @@ MonoBehaviour:
   speedBox1: 0
   Box1LocalSocre: 0
   Box1GlobalSocre: 0
+  pizzaBox1InAir: 0
   currentPosX: 0
   currentPosY: 0
   currentPosZ: 0
@@ -4010,6 +4011,7 @@ MonoBehaviour:
   speedBox2: 0
   Box2LocalSocre: 0
   Box2GlobalSocre: 0
+  pizzaBox2InAir: 0
   velBox3: {x: 0, y: 0, z: 0}
   CamBox3: {fileID: 453069131}
   Box3: {fileID: 1660853286}
@@ -4020,6 +4022,7 @@ MonoBehaviour:
   speedBox3: 0
   Box3LocalSocre: 0
   Box3GlobalSocre: 0
+  pizzaBox3InAir: 0
 --- !u!1 &526808433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,9 +5227,9 @@ Transform:
   m_LocalPosition: {x: 8.156724, y: 5.70387, z: -17.747406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1527746847}
   - {fileID: 240454131}
   - {fileID: 1660853292}
+  - {fileID: 1527746847}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6914,6 +6917,7 @@ MonoBehaviour:
   PizzaBox3Trans: {fileID: 1660853292}
   LeftBoundsEnemy: {fileID: 1193550065}
   ColidedWithPizza: 0
+  pizzaBox3InAir: 0
 --- !u!54 &974757331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8225,6 +8229,7 @@ MonoBehaviour:
   PizzaBox2Trans: {fileID: 240454131}
   LeftBoundsEnemy: {fileID: 1193550065}
   ColidedWithPizza: 0
+  pizzaBox2InAir: 0
 --- !u!65 &1172302880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9611,6 +9616,7 @@ GameObject:
   - component: {fileID: 1332451224}
   - component: {fileID: 1332451225}
   - component: {fileID: 1332451226}
+  - component: {fileID: 1332451227}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9783,7 +9789,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332451213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8bfc883dfd5842e693f18013046d84a, type: 3}
   m_Name: 
@@ -9825,6 +9831,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player2: {fileID: 115516808}
   magnetForce: 100
+--- !u!114 &1332451227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332451213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f66cac4c2af88e41b6c7d33e9669662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HammerCube: {fileID: 2122939975}
 --- !u!1 &1352593714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,7 +10964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1694449805434718, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11114,6 +11133,7 @@ MonoBehaviour:
   speedBox1: 0
   Box1LocalSocre: 0
   Box1GlobalSocre: 0
+  pizzaBox1InAir: 0
   currentPosX: 0
   currentPosY: 0
   currentPosZ: 0
@@ -11127,6 +11147,7 @@ MonoBehaviour:
   speedBox2: 0
   Box2LocalSocre: 0
   Box2GlobalSocre: 0
+  pizzaBox2InAir: 0
   velBox3: {x: 0, y: 0, z: 0}
   CamBox3: {fileID: 453069131}
   Box3: {fileID: 1660853286}
@@ -11137,6 +11158,7 @@ MonoBehaviour:
   speedBox3: 0
   Box3LocalSocre: 0
   Box3GlobalSocre: 0
+  pizzaBox3InAir: 0
 --- !u!54 &1527746843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11224,11 +11246,11 @@ RectTransform:
   m_LocalScale: {x: -1.4653338, y: 0.6330411, z: 1.0291228}
   m_Children: []
   m_Father: {fileID: 764342330}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -0.008, y: 0.045, z: -0.216}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.760004, y: -4.3600006}
+  m_AnchoredPosition: {x: -10.77, y: -6.13}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1527746848
@@ -12354,6 +12376,7 @@ MonoBehaviour:
   speedBox1: 0
   Box1LocalSocre: 0
   Box1GlobalSocre: 0
+  pizzaBox1InAir: 0
   currentPosX: 0
   currentPosY: 0
   currentPosZ: 0
@@ -12367,6 +12390,7 @@ MonoBehaviour:
   speedBox2: 0
   Box2LocalSocre: 0
   Box2GlobalSocre: 0
+  pizzaBox2InAir: 0
   velBox3: {x: 0, y: 0, z: 0}
   CamBox3: {fileID: 453069131}
   Box3: {fileID: 1660853286}
@@ -12377,6 +12401,7 @@ MonoBehaviour:
   speedBox3: 0
   Box3LocalSocre: 0
   Box3GlobalSocre: 0
+  pizzaBox3InAir: 0
 --- !u!54 &1660853288 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 7605921356416353891, guid: f5b7147e9d0d41641b82a01021a9b855,
@@ -12524,7 +12549,7 @@ PrefabInstance:
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1800003
+      value: -6.25
       objectReference: {fileID: 0}
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
@@ -12554,7 +12579,7 @@ PrefabInstance:
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
@@ -14247,7 +14272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PizzaBox1Trans: {fileID: 1527746847}
   LeftBoundsEnemy: {fileID: 1193550065}
+  PizzaBoxes: {fileID: 764342330}
   ColidedWithPizza: 0
+  pizzaBox1InAir: 0
 --- !u!65 &1897278584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15666,7 +15693,7 @@ PrefabInstance:
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7605921356416353903, guid: f5b7147e9d0d41641b82a01021a9b855,
         type: 3}
@@ -16201,7 +16228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122939971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.09, y: -0.84, z: -7.33}
+  m_LocalPosition: {x: 26.23, y: 0.91, z: -7.33}
   m_LocalScale: {x: 1.4384, y: 1.4384, z: 1.4384}
   m_Children: []
   m_Father: {fileID: 0}

@@ -44,6 +44,7 @@ public class ScoreCount : MonoBehaviour
     public int Box1LocalSocre;
     public int Box1GlobalSocre;
     public static int Box1currentGreenPoints;
+    public bool pizzaBox1InAir = false;
 
 
     public float currentPosX;
@@ -63,7 +64,7 @@ public class ScoreCount : MonoBehaviour
     public int Box2LocalSocre;
     public int Box2GlobalSocre;
     public static int Box2currentGreenPoints;
- 
+    public bool pizzaBox2InAir = false;
 
 
     /*Pizza Box3*/
@@ -78,9 +79,11 @@ public class ScoreCount : MonoBehaviour
     public int Box3LocalSocre;
     public int Box3GlobalSocre;
     public static int Box3currentGreenPoints;
-
+    public bool pizzaBox3InAir = false;
 
     public RaycastHit hit;
+
+ 
 
 
 
@@ -159,9 +162,18 @@ public class ScoreCount : MonoBehaviour
         velBox3 = rigidbodyBox3.velocity;
 
 
+        /*Box 1 is in the air GENERAL*/
+        if ((velBox1.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0)))
+            pizzaBox1InAir = true;
+        else
+            pizzaBox1InAir = false;
+
+
         /*if Box 1 is in the air*/
         if ((velBox1.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
+
+           
             Box1LocalSocre++;
 
 
@@ -210,17 +222,22 @@ public class ScoreCount : MonoBehaviour
         {
             Box1currentGreenPoints = 0;
             Box1LocalSocre = 0;
+          
 
         }
 
-
+        /*Box 2 is in the air GENERAL*/
+        if ((velBox2.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0)))
+            pizzaBox2InAir = true;
+        else
+            pizzaBox2InAir = false;
 
 
         /*if Box 2 is in the air*/
         if ((velBox2.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
             Box2LocalSocre++;
-
+    
             /*Boxes Camera control*/
             CamBox1.gameObject.SetActive(false);
             CamBox2.gameObject.SetActive(true);
@@ -259,7 +276,15 @@ public class ScoreCount : MonoBehaviour
             Box2LocalSocre = 0;
 
             Box2currentGreenPoints = 0;
+          
         }
+
+
+        /*Box 3 is in the air GENERAL*/
+        if ((velBox3.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0)))
+            pizzaBox3InAir = true;
+        else
+            pizzaBox3InAir = false;
 
 
 
@@ -267,7 +292,7 @@ public class ScoreCount : MonoBehaviour
         if ((velBox3.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
         {
             Box3LocalSocre++;
-
+          
 
             /*Player Text Control*/
             GlobalScoreTMPPlayer.gameObject.SetActive(false);
@@ -315,7 +340,7 @@ public class ScoreCount : MonoBehaviour
         {
             Box3currentGreenPoints = 0;
             Box3LocalSocre = 0;
-
+            
         }
 
 
@@ -490,6 +515,9 @@ public class ScoreCount : MonoBehaviour
 
             }
         }
+
+
+
 
 
     }

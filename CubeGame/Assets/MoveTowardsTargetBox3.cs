@@ -8,30 +8,43 @@ public class MoveTowardsTargetBox3: MonoBehaviour
     public Transform PizzaBox3Trans;
     public Transform LeftBoundsEnemy;
 
+    
     public bool ColidedWithPizza;
+    public bool pizzaBox3InAir;
 
     // Start is called before the first frame update
     void Start()
     {
         ColidedWithPizza = false;
+    
     }
 
     // Update is called once per frame
     void Update()
     {
+        pizzaBox3InAir = PizzaBox3Trans.GetComponent<ScoreCount>().pizzaBox3InAir;
 
-        if (!ColidedWithPizza)
+        if (!ColidedWithPizza && pizzaBox3InAir == false)
             transform.position = Vector3.MoveTowards(this.transform.position, PizzaBox3Trans.position, .6f * Time.deltaTime); // move towards the pizza box
-        if (ColidedWithPizza)
+        if (ColidedWithPizza && pizzaBox3InAir == false)
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime); // move towards the left bound
+        else
+        {
+            ColidedWithPizza = false;
+            PizzaBox3Trans.transform.parent = null;
+           
+        }
 
-
+        if (pizzaBox3InAir)
+           Debug.Log("pizzaBox 3 is in air");
     }
 
 
 
     void OnCollisionEnter(Collision collision)
     {
+
+        Debug.Log("Enemy colision:" +collision.gameObject.name);
 
         if (collision.gameObject.name == "PizzaBOX3")
         {
@@ -40,6 +53,7 @@ public class MoveTowardsTargetBox3: MonoBehaviour
             PizzaBox3Trans.transform.parent = gameObject.transform;
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime);
         }
+
 
 
     }

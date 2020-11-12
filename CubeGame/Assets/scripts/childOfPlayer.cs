@@ -44,7 +44,7 @@ public class childOfPlayer : MonoBehaviour
             HammerCubeRigidBody.isKinematic = true;
 
             gameObject.transform.parent = Player1Trans;
-            gameObject.transform.position = new Vector3(Player1Trans.position.x-1, Player1Trans.position.y +2, Player1Trans.position.z);
+            gameObject.transform.position = new Vector3(Player1Trans.position.x-1.5f, Player1Trans.position.y +2, Player1Trans.position.z);
      
         }
 
@@ -59,17 +59,12 @@ public class childOfPlayer : MonoBehaviour
 
 
         }
-        
-     /*
-      *if (collision.gameObject.tag == "Floor") {
-            Player2GamObj.GetComponent<DragRigidbody>().enabled = true;
-            Player1GamObj.GetComponent<DragRigidbody>().enabled = true;
-        }
-        else
-        {
-            Player2GamObj.GetComponent<DragRigidbody>().enabled = false;
-            Player1GamObj.GetComponent<DragRigidbody>().enabled = false;
-        }*/
+
+
+      //  if (collision.gameObject.tag == "Floor")
+      //  {
+      //      gameObject.transform.parent = null;
+       // }
         
         
         //    if (Input.GetMouseButtonDown(0) &&collision.gameObject.tag == "Floor" )
@@ -108,12 +103,14 @@ public class childOfPlayer : MonoBehaviour
 
     void OnMouseOver()
     {
+        
         if (Input.GetMouseButtonDown(0) )
         {
             Player2Ridg.GetComponent<SphereCollider>().enabled = false;
            Player1Ridg.GetComponent<SphereCollider>().enabled = false;
             gameObject.transform.parent = null;
             HammerCubeRigidBody.isKinematic = false;
+           
         }
 
     }
