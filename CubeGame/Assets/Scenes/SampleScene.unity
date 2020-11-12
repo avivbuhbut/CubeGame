@@ -12301,7 +12301,7 @@ GameObject:
   - component: {fileID: 1036385667}
   m_Layer: 0
   m_Name: WeaponHolderLeftHand
-  m_TagString: Untagged
+  m_TagString: WeaponHolderLeftHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20607,7 +20607,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -20625,6 +20625,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.030452993, y: 0.13837613, z: 0.24765846}
   m_Center: {x: 0.00000047683716, y: -0.03318825, z: -0.026902022}
+--- !u!114 &1489100856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489100850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933792896a8e6c44084844bfb3e49c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1489100857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489100850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e325a9d86f3bf0841a7a8e30935b3111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 2800000, guid: 0bb68d41cd332d746a2ea8c8c6bebc01, type: 3}
 --- !u!1 &1527746841
 GameObject:
   m_ObjectHideFlags: 0
@@ -23216,6 +23241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ccc71efa390c748881f38a6a8ef3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponHolder: {fileID: 1988519401}
+  WeaponHolderLeftHand: {fileID: 1036385666}
   bullet: {fileID: 1132226643721548, guid: 973564241bf4731469af0b3e5c4119cb, type: 3}
   speed: 5
   AimTransform: {fileID: 1178657461}
@@ -23320,19 +23347,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1806920197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806920192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e325a9d86f3bf0841a7a8e30935b3111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 2800000, guid: 0bb68d41cd332d746a2ea8c8c6bebc01, type: 3}
 --- !u!1 &1862875199
 GameObject:
   m_ObjectHideFlags: 0
@@ -24610,7 +24624,7 @@ GameObject:
   - component: {fileID: 1988519402}
   m_Layer: 0
   m_Name: WeaponHolder
-  m_TagString: Untagged
+  m_TagString: WeaponHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

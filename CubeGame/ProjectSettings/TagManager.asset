@@ -26,6 +26,8 @@ TagManager:
   - CubeDistraction
   - CubeEnemy
   - LeftBoundEnemy
+  - WeaponHolder
+  - WeaponHolderLeftHand
   layers:
   - Default
   - TransparentFX

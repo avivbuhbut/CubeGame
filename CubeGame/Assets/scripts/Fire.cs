@@ -5,7 +5,8 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
 
-
+    public Transform WeaponHolder;
+    public Transform WeaponHolderLeftHand;
     public GameObject bullet;
     public float speed = 5f;
     public Transform AimTransform;
@@ -27,7 +28,7 @@ public class Fire : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) &&( this.gameObject.transform.parent == WeaponHolder.transform) || (this.gameObject.transform.parent == WeaponHolderLeftHand.transform))
         {
             ShellParticles.Play();
             SmokeAfterShot.Play();
