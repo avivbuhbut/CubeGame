@@ -111,8 +111,8 @@ MonoBehaviour:
     y: 30
     width: 1903
     height: 931
-  m_MinSize: {x: 679, y: 494}
-  m_MaxSize: {x: 14002, y: 14044}
+  m_MinSize: {x: 681, y: 494}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
   controlID: 33
 --- !u!114 &6
@@ -267,8 +267,8 @@ MonoBehaviour:
     y: 0
     width: 640
     height: 931
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -385,24 +385,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 815}
-      m_SelectedIDs: 58470000
-      m_LastClickedID: 18264
-      m_ExpandedIDs: e07efeff3ed3feffc6f0ffff22fbffff2efbffff6afbffff48430000184500007245000038480000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6afbffff184500004a480000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Impact
+        m_OriginalName: Impact
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 18696
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -448,9 +448,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.9187775, y: 3.3644538, z: -11.0962105}
+    m_Target: {x: -5.8214293, y: 0.8336383, z: -14.412857}
     speed: 2
-    m_Value: {x: -7.9187775, y: 3.3644538, z: -11.0962105}
+    m_Value: {x: -5.8214293, y: 0.8336383, z: -14.412857}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -479,13 +479,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.21001929, y: -0.23815034, z: 0.05596935, w: 0.9469719}
+    m_Target: {x: 0.080788046, y: -0.0336876, z: 0.0058330493, w: 0.99650776}
     speed: 2
-    m_Value: {x: 0.20994456, y: -0.2380656, z: 0.055949435, w: 0.94663495}
+    m_Value: {x: 0.08075885, y: -0.033675425, z: 0.0058309413, w: 0.9961476}
   m_Size:
-    m_Target: 4.423721
+    m_Target: 6.523722
     speed: 2
-    m_Value: 4.423721
+    m_Value: 6.523722
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -878,20 +878,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Standard Assets/ParticleSystems/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Standard Assets/ParticleSystems/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Git\CubeGame\CubeGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 961}
-    m_SelectedIDs: 7e370000
-    m_LastClickedID: 14206
-    m_ExpandedIDs: 0000000090300000f6300000d0310000f03100002a320000ee320000e03300004034000066370000d63a0000463e000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 92300000
+    m_LastClickedID: 12434
+    m_ExpandedIDs: 0000000092300000f8300000d2310000f23100002c320000f0320000e23300004234000068370000d83a0000483e00002a40000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -919,7 +919,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090300000f6300000d0310000f03100002a320000ee320000e03300004034000066370000d63a0000463e0000
+    m_ExpandedIDs: 0000000092300000f8300000d2310000f23100002c320000f0320000e23300004234000068370000d83a0000483e00002a400000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 18264
+  m_LastSelectedObjectID: 18506
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

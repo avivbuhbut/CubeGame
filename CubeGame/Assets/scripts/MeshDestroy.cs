@@ -310,10 +310,11 @@ public class MeshDestroy : MonoBehaviour
         if (collision.gameObject.tag == "HammerCube" && Distraction1 == false)
         {
             Distraction1 = true;
-            //counter--;
-            //   ExampleCoroutine();
+
             DestroyMesh();
         }
+
+   
 
     // if(collision.gameObject.tag != "HammerCube" || collision.gameObject.tag != "Floor")
             //Destroy()

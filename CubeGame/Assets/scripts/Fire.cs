@@ -13,13 +13,14 @@ public class Fire : MonoBehaviour
     public ParticleSystem ShellParticles;
     public ParticleSystem SmokeAfterShot;
     public GameObject ImpactEffect;
-
+    public RaycastHit hit;
+    public AudioSource GunFireSound;
     // Start is called before the first frame update
     void Start()
     {
         ShellParticles.Stop();
         SmokeAfterShot.Stop();
-
+        GunFireSound.Stop();
     }
 
     void Update()
@@ -30,10 +31,11 @@ public class Fire : MonoBehaviour
         {
             ShellParticles.Play();
             SmokeAfterShot.Play();
+            GunFireSound.Play();
 
-            RaycastHit hit;
+
             /*the ray will start from the AIMtransform and will shoot forward . out hit  - means unity will put all the information of the hit into the hit varible */
-           if( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
+           if ( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
             {
 
                 Debug.Log(hit.transform.name);// print the object that the ray hit
@@ -44,8 +46,8 @@ public class Fire : MonoBehaviour
                 }
             }
 
-            Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));// hit.point is the point of impact
- 
+           GameObject impactG0 =   Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));// hit.point is the point of impact
+            Destroy(impactG0, 1f);
         }
      }
 
