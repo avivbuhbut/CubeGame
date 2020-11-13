@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4391424, g: 0.4874068, b: 0.56765765, a: 1}
+  m_IndirectSpecularColor: {r: 0.43914288, g: 0.48740762, b: 0.5676588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7085,7 +7085,7 @@ Transform:
   m_GameObject: {fileID: 974757328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10.75, y: -2.9643567, z: 13.58}
-  m_LocalScale: {x: 0.4967824, y: 0.46968177, z: 0.46968177}
+  m_LocalScale: {x: 0.4967824, y: 0.46968177, z: 0.55435336}
   m_Children: []
   m_Father: {fileID: 14065128}
   m_RootOrder: 2
@@ -13381,7 +13381,7 @@ Transform:
   m_GameObject: {fileID: 1172302877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.26, y: -2.9643567, z: 13.58}
-  m_LocalScale: {x: 0.4967824, y: 0.4696818, z: 0.4696818}
+  m_LocalScale: {x: 0.4967824, y: 0.4696818, z: 0.5355824}
   m_Children: []
   m_Father: {fileID: 14065128}
   m_RootOrder: 1
@@ -20941,11 +20941,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.75
+      value: -4.47
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24522,7 +24522,7 @@ Transform:
   m_GameObject: {fileID: 1897278581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.2539634, y: -2.9643567, z: 13.58}
-  m_LocalScale: {x: 0.4967824, y: 0.4696818, z: 0.4696818}
+  m_LocalScale: {x: 0.4967824, y: 0.4696818, z: 0.57142955}
   m_Children: []
   m_Father: {fileID: 14065128}
   m_RootOrder: 0

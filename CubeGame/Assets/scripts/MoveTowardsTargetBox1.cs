@@ -32,7 +32,7 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
         
        if(pizzaBox1InAir == true) { 
           ColidedWithPizza = false;
-         PizzaBox1Trans.transform.parent = PizzaBoxesTrans;
+         PizzaBox1Trans.transform.parent = null;
 
 
        }
