@@ -12,19 +12,20 @@ public class HandGunPickUp : MonoBehaviour
     Vector3 clickPos;
 
 
+    /*hand guns transforms*/
     public Transform WeaponHolderTrans;
     public Transform WeaponHolderTransLeftHand;
     public Transform HandGunTrans;
+    public Transform M1911;
     public Transform AimTrans;
 
 
-    public float handGunStartRotx;
-    public float handGunStartRoty;
-    public float handGunStartRotz;
+
 
     public bool FirstTransition;
 
     bool isFacingRight = true;
+
     float LeftHandGunFacingDirectio;
     float RightHandGunFacingDirectio;
 
@@ -32,10 +33,9 @@ public class HandGunPickUp : MonoBehaviour
     void Start()
     {
         FirstTransition = false;
+ 
 
-        handGunStartRotx = WeaponHolderTrans.rotation.x;
-        handGunStartRoty = WeaponHolderTrans.rotation.y;
-        handGunStartRotz = WeaponHolderTrans.rotation.z;
+
 
         // HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
     }
@@ -55,6 +55,8 @@ public class HandGunPickUp : MonoBehaviour
         {
          //   HandGunTrans.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             HandGunTrans.transform.parent = null;
+            HandGunTrans.GetComponent<Rigidbody>().isKinematic = false;
+            M1911.GetComponent<Rigidbody>().isKinematic = false;
         }
 
 
@@ -168,12 +170,12 @@ public class HandGunPickUp : MonoBehaviour
         
             HandGunTrans.transform.parent = WeaponHolderTrans;
             HandGunTrans.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
-            // HandGunTrans.transform.localEulerAngles = new Vector3(0, 180f,180f);
-           //HandGunTrans.GetComponent<Rigidbody>().useGravity = false;
             HandGunTrans.GetComponent<Rigidbody>().isKinematic =true;
-            //  HandGunTrans.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
-            //rotation
-          
+            M1911.GetComponent<Rigidbody>().isKinematic = true;
+
+
         }
+
+       
     }
 }

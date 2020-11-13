@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HandGunPickUp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/MouseCursor.cs">
     <Files>
-      <File FileName="Assets/scripts/ColidedScript.cs" />
-      <File FileName="Assets/scripts/PizzaStickToPlatform.cs" />
-      <File FileName="Assets/scripts/FinshLineDrop.cs" />
-      <File FileName="Assets/PizzaReach.cs" />
-      <File FileName="Assets/Standard Assets/Utility/DragRigidbody.cs" />
-      <File FileName="Assets/destroyOnTouch.cs" />
-      <File FileName="Assets/HandGunPickUp.cs" Line="34" Column="1" />
+      <File FileName="Assets/scripts/Fire.cs" Line="37" Column="43" />
+      <File FileName="Assets/scripts/Enemy1Health.cs" Line="17" Column="10" />
+      <File FileName="Assets/scripts/HandGunPickUp.cs" Line="65" Column="53" />
+      <File FileName="Assets/GunKinematics.cs" Line="13" Column="8" />
+      <File FileName="Assets/scripts/ActiveMouseCursor.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/MouseCursor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="73265bca-9b52-44e4-9cbf-96bdf36c5c74" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3081ae0d-b453-4b23-a9df-0990924cfb89" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
