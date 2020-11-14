@@ -7097,7 +7097,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974757328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9b4e6829865b2942a4690be318a97e1, type: 3}
   m_Name: 
@@ -12496,6 +12496,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1036385666}
   - component: {fileID: 1036385667}
+  - component: {fileID: 1036385669}
+  - component: {fileID: 1036385668}
   m_Layer: 0
   m_Name: WeaponHolderLeftHand
   m_TagString: WeaponHolderLeftHand
@@ -12555,6 +12557,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1036385668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036385665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4fe2347f02dfa40a993ddf277c0c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponHolderTransLeftHand: {fileID: 1036385666}
+  HandGunTrans: {fileID: 1806920193}
+  M1911: {fileID: 1489100851}
+--- !u!65 &1036385669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036385665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1038084401
 GameObject:
   m_ObjectHideFlags: 0
@@ -13303,7 +13333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172302877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48521c8848ea96c4191bf952cbe6d93c, type: 3}
   m_Name: 
@@ -24444,7 +24474,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897278581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c68979594b35f32419c7431a6d0d9070, type: 3}
   m_Name: 
@@ -25098,6 +25128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988519401}
   - component: {fileID: 1988519402}
+  - component: {fileID: 1988519403}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: WeaponHolder
@@ -25157,6 +25188,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1988519403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988519400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f176b954673be642a24defc6a8bf09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponHolderTrans: {fileID: 1988519401}
+  HandGunTrans: {fileID: 1806920193}
+  M1911: {fileID: 1489100851}
 --- !u!1 &1998121557
 GameObject:
   m_ObjectHideFlags: 0

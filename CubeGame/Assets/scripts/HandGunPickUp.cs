@@ -37,7 +37,8 @@ public class HandGunPickUp : MonoBehaviour
 
 
 
-        // HandGunTrans.GetComponent<Rigidbody>().isKinematic = true;
+        M1911.GetComponent<Rigidbody>().isKinematic = false;
+        M1911.gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 
     // Update is called once per frame
@@ -98,8 +99,8 @@ public class HandGunPickUp : MonoBehaviour
 
         HandGunTrans.transform.parent = WeaponHolderTransLeftHand;
         HandGunTrans.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
-        M1911.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
-      
+      M1911.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
+      //  WeaponHolderTransLeftHand.rotation = Quaternion.Euler(-2f, -275f, -2f);
 
         //HandGunTrans.transform.rotation = Quaternion.Euler(new Vector3(0f,90f,0f));
         Vector3 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTransLeftHand.position);
@@ -186,7 +187,7 @@ public class HandGunPickUp : MonoBehaviour
             HandGunTrans.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
             M1911.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
             M1911.rotation = Quaternion.Euler(-2f, 275f, -2f);
-            WeaponHolderTransLeftHand.rotation = Quaternion.Euler(-2f, -275f, -2f);
+      
             //HandGunTrans.rotation = Quaternion.Euler(0, 275f, 0);
 
 
