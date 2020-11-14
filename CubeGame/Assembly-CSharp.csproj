@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
+    <Compile Include="Assets\CiliderScript.cs" />
     <Compile Include="Assets\colidedRightHand.cs" />
     <Compile Include="Assets\ColisionLeftHand.cs" />
     <Compile Include="Assets\GunKinematics.cs" />
