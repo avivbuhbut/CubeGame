@@ -8,8 +8,8 @@ public class MoveTowardsTargetBox3: MonoBehaviour
     public Transform PizzaBox3Trans;
     public Transform LeftBoundsEnemy;
     public Transform PizzaBoxes;
-
-    
+    public Transform PizzaBox3Cam;
+    public Transform Cameras;
     public bool ColidedWithPizza;
     public bool pizzaBox3InAir;
 
@@ -32,8 +32,9 @@ public class MoveTowardsTargetBox3: MonoBehaviour
         else
         {
             ColidedWithPizza = false;
-            PizzaBox3Trans.transform.parent = PizzaBoxes;
-           
+            PizzaBox3Trans.transform.parent = null;
+            PizzaBox3Cam.transform.parent = Cameras;
+
         }
 
 

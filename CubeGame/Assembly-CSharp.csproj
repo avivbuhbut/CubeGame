@@ -68,6 +68,7 @@
     <Compile Include="Assets\CiliderScript.cs" />
     <Compile Include="Assets\colidedRightHand.cs" />
     <Compile Include="Assets\ColisionLeftHand.cs" />
+    <Compile Include="Assets\GraplingGun.cs" />
     <Compile Include="Assets\GunKinematics.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BlackAndWhite.cs" />

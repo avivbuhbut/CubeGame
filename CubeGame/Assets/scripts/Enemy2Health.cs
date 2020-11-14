@@ -7,6 +7,11 @@ public class Enemy2Health : MonoBehaviour
     public Transform PizzaBox2Trans;
 
     public float health = 50f;
+
+
+    public Transform PizzaBox2Cam;
+    public Transform Cameras;
+    public Transform PizzaBoxes;
     // Start is called before the first frame update
 
     public void TakeDamage(float amount)
@@ -15,6 +20,7 @@ public class Enemy2Health : MonoBehaviour
         if (health <= 0)
         {
             PizzaBox2Trans.parent = null;
+            PizzaBox2Cam.parent = Cameras;
             Destroy(this.gameObject);
         }
     }

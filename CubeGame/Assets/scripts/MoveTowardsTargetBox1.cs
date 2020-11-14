@@ -8,6 +8,11 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
     public Transform PizzaBox1Trans;
     public Transform LeftBoundsEnemy;
     public Transform PizzaBoxesTrans;
+    public Transform Cameras;
+
+
+    public Camera PizzaBox1Cam;
+
 
     public bool ColidedWithPizza;
     public bool pizzaBox1InAir;
@@ -32,7 +37,8 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
         
        if(pizzaBox1InAir == true) { 
           ColidedWithPizza = false;
-         PizzaBox1Trans.transform.parent = null;
+         PizzaBox1Trans.transform.parent = PizzaBoxesTrans;
+            PizzaBox1Cam.transform.parent = Cameras;
 
 
        }
@@ -49,6 +55,7 @@ public class MoveTowardsTargetBox1 : MonoBehaviour
             ColidedWithPizza = true;
             Debug.Log("Colision with pizza box");
             PizzaBox1Trans.transform.parent = gameObject.transform;
+            PizzaBox1Cam.transform.parent = gameObject.transform;
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime);
         }
 
