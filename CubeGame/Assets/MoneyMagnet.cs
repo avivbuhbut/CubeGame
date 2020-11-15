@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoneyMagnet : MonoBehaviour
 {
-    public static float magnetForce = 100;
+    public static float  magnetForce = 100;
 
     List<Rigidbody> caughtRigidbodies = new List<Rigidbody>();
 
