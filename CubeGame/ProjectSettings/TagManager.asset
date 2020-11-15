@@ -28,6 +28,7 @@ TagManager:
   - LeftBoundEnemy
   - WeaponHolder
   - WeaponHolderLeftHand
+  - Money
   layers:
   - Default
   - TransparentFX

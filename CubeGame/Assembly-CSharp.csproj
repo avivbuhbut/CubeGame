@@ -77,6 +77,8 @@
     <Compile Include="Assets\Image Effects\Scripts\GaussianBlur.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
+    <Compile Include="Assets\MagnetActivation.cs" />
+    <Compile Include="Assets\MoneyMagnet.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\ResetToStartRotarion.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
     <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
+    <Compile Include="Assets\Spawn.cs" />
     <Compile Include="Assets\ThrowMoney.cs" />
     <None Include="Assets\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

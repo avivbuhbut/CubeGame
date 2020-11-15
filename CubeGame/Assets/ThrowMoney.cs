@@ -18,10 +18,11 @@ public class ThrowMoney : MonoBehaviour
     void Update()
     {
 
-        if(ColidedScript.counter == 3)
+       // if(ColidedScript.counter == 3)
         if (i != 100)
         {
-            Instantiate(MoneyTrans, new Vector3(this.gameObject.transform.position.x-8 , this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+          Transform temoCube  = Instantiate(MoneyTrans, new Vector3(this.gameObject.transform.position.x-8 , this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+            temoCube.GetComponent<Rigidbody>().velocity = new Vector3(0, -10, 0);
             i++;
         }
     }
