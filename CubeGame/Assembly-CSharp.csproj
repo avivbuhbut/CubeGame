@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BasketMoneyChild.cs" />
+    <Compile Include="Assets\BasketMoneyKinematic.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
     <Compile Include="Assets\CiliderScript.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Assets\Image Effects\Scripts\Pixelate.cs" />
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
     <Compile Include="Assets\MagnetActivation.cs" />
+    <Compile Include="Assets\MagnetChildOfPlayer.cs" />
     <Compile Include="Assets\MoneyMagnet.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\ResetToStartRotarion.cs" />

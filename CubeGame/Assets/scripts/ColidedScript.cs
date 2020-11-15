@@ -7,7 +7,6 @@ public class ColidedScript : MonoBehaviour
 
     public static int counter;
 
-    public Transform FinishLineCubeTrans;
     public Transform PizzaBox1;
     public Transform PizzaBox2;
     public Transform PizzaBox3;
@@ -48,9 +47,7 @@ public class ColidedScript : MonoBehaviour
         {
 
             Debug.Log("FinishLineCubeTrans is now parent of pizzaBoxes");
-            PizzaBox1.parent = FinishLineCubeTrans.transform;
-            PizzaBox2.parent = FinishLineCubeTrans.transform;
-            PizzaBox3.parent = FinishLineCubeTrans.transform;
+
         }
 
 

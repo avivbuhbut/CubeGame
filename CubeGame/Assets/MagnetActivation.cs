@@ -13,14 +13,20 @@ public class MagnetActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        OnMouseOver();
+        if (Input.GetMouseButtonDown(0))
             MoneyMagnet.magnetForce = 0;
        // this.transform.GetComponent<SphereCollider>().isTrigger = false; // good to "shoot" the attached objects
 
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
             MoneyMagnet.magnetForce = 80f;
         ///    this.transform.GetComponent<SphereCollider>().isTrigger = true;
 
+    }
+
+     void OnMouseOver()
+    {
+        Debug.Log("Mouse is over: " + this.gameObject);
     }
 }
