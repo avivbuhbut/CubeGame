@@ -53,6 +53,7 @@ public class MoveTowardsTargetBox3: MonoBehaviour
             ColidedWithPizza = true;
          
             PizzaBox3Trans.transform.parent = gameObject.transform;
+            PizzaBox3Cam.transform.parent = gameObject.transform; ;
             transform.position = Vector3.MoveTowards(this.transform.position, LeftBoundsEnemy.position, .6f * Time.deltaTime);
         }
 

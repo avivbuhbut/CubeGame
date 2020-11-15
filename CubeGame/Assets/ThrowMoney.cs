@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ThrowMoney : MonoBehaviour
+{
+
+    public Transform MoneyTrans;
+    public static int i = 0;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if(ColidedScript.counter == 3)
+        if (i != 100)
+        {
+            Instantiate(MoneyTrans, new Vector3(this.gameObject.transform.position.x-8 , this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+            i++;
+        }
+    }
+
+
+}
