@@ -22,6 +22,10 @@ public class Basket1ChildOfPlayer1 : MonoBehaviour
      void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.transform.tag == "Player")
+        {
             gameObject.transform.parent = Player1.transform;
+            gameObject.transform.GetComponent<Rigidbody>().isKinematic = true;
+            gameObject.transform.GetComponent<Rigidbody>().useGravity = false;
+        }
     }
 }

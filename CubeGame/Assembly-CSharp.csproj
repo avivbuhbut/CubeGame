@@ -67,6 +67,7 @@
     <Compile Include="Assets\Basket1LidClose.cs" />
     <Compile Include="Assets\BasketMoneyChild.cs" />
     <Compile Include="Assets\BasketMoneyKinematic.cs" />
+    <Compile Include="Assets\BecomeBasketOnColid.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
     <Compile Include="Assets\CiliderScript.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\colidedRightHand.cs" />
     <Compile Include="Assets\ColisionLeftHand.cs" />
     <Compile Include="Assets\DetacheLid1.cs" />
+    <Compile Include="Assets\followMousePos.cs" />
     <Compile Include="Assets\GraplingGun.cs" />
     <Compile Include="Assets\GunKinematics.cs" />
     <Compile Include="Assets\Image Effects\Scripts\BilateralBlur.cs" />

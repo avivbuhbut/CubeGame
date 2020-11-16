@@ -5,11 +5,12 @@ using UnityEngine;
 public class clodeLid1OnColided : MonoBehaviour
 {
 
-    public Transform Basket1Trans;
+    public Transform PlayerMoneyBasket;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.transform.parent = null;
+        gameObject.transform.GetComponent<Rigidbody>().detectCollisions = true;
     }
 
     // Update is called once per frame
@@ -25,8 +26,10 @@ public class clodeLid1OnColided : MonoBehaviour
 
         if (collision.gameObject.tag == "Basket1")
         {
-            gameObject.transform.parent = Basket1Trans.transform;
-            gameObject.transform.GetComponent<Rigidbody>().isKinematic = true;
+            gameObject.transform.parent = PlayerMoneyBasket.transform;
+
+            gameObject.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            
 
         }
     }
@@ -36,6 +39,8 @@ public class clodeLid1OnColided : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            gameObject.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+            gameObject.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             gameObject.transform.parent = null;
         
             // this.gameObject.transform.GetComponent<Rigidbody>().isKinematic = false ;
