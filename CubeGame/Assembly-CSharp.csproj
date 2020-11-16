@@ -72,6 +72,7 @@
     <Compile Include="Assets\Bullet Casing\Scripts\Sound.cs" />
     <Compile Include="Assets\CiliderScript.cs" />
     <Compile Include="Assets\clodeLid1OnColided.cs" />
+    <Compile Include="Assets\closeLid2OnColid.cs" />
     <Compile Include="Assets\colidedRightHand.cs" />
     <Compile Include="Assets\ColisionLeftHand.cs" />
     <Compile Include="Assets\DetacheLid1.cs" />
