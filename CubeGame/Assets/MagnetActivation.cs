@@ -27,6 +27,6 @@ public class MagnetActivation : MonoBehaviour
 
      void OnMouseOver()
     {
-        Debug.Log("Mouse is over: " + this.gameObject);
+   
     }
 }

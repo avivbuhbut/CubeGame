@@ -29,6 +29,8 @@ TagManager:
   - WeaponHolder
   - WeaponHolderLeftHand
   - Money
+  - Basket1
+  - Basket2
   layers:
   - Default
   - TransparentFX
