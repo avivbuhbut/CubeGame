@@ -10,6 +10,9 @@ public class MeshDestroy : MonoBehaviour
     private Vector2 edgeUV = Vector2.zero;
     private Plane edgePlane = new Plane();
 
+    public static  int counter=0;
+    public Transform Player2Trans;
+    public Transform HammerCubeTrans;
     public int CutCascades = 1;
     public float ExplodeForce = 0;
     public bool Distraction1;
@@ -269,7 +272,7 @@ public class MeshDestroy : MonoBehaviour
         public void MakeGameobject(MeshDestroy original)
         {
             GameObject = new GameObject(original.name);
-          //  GameObject.tag = "CubeDistraction";
+            GameObject.tag = "CubeDistraction";
             GameObject.transform.position = original.transform.position;
             GameObject.transform.rotation = original.transform.rotation;
             GameObject.transform.localScale = original.transform.localScale;
@@ -298,21 +301,30 @@ public class MeshDestroy : MonoBehaviour
             meshDestroy.CutCascades = original.CutCascades;
             meshDestroy.ExplodeForce = original.ExplodeForce;
 
+
+            Destroy(GameObject, 20f);
+
         }
 
     }
 
-    int counter = 1;
-    private void OnCollisionEnter(Collision collision)
+
+     void OnCollisionEnter(Collision collision)
     {
+ 
 
-
-        if (collision.gameObject.tag == "HammerCube" && Distraction1 == false)
+        if (collision.gameObject.tag == "HammerCube" && counter <100)
         {
+            counter++;
+
             Distraction1 = true;
 
             DestroyMesh();
         }
+
+ 
+
+        
 
    
 

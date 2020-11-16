@@ -11,6 +11,7 @@ public class PuchBackForce : MonoBehaviour
     public Rigidbody HummerBoxRigidBody;
     public GameObject Player2GamObj;
     public GameObject Player1GamObj;
+    public float currentHammerPosX;
 
     // Use this for initialization
     void Start()
@@ -22,16 +23,13 @@ public class PuchBackForce : MonoBehaviour
     void Update()
     {
 
-       // LeftHandGunFacingDirectio = Mathf.Atan2(WeaponHolderTransLeftHand.transform.right.z, WeaponHolderTransLeftHand.transform.right.x) * Mathf.Rad2Deg;
-       // RightHandGunFacingDirectio = Mathf.Atan2(WeaponHolderTrans.transform.right.z, WeaponHolderTrans.transform.right.x) * Mathf.Rad2Deg;
 
 
+     //   if (gameObject.transform.parent == Player2GamObj.transform)
+        //    Player2GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = false;
 
-        if (gameObject.transform.parent == Player2GamObj.transform)
-            Player2GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = false;
-
-        if (gameObject.transform.parent == Player1GamObj.transform)
-            Player1GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = false;
+     //   if (gameObject.transform.parent == Player1GamObj.transform)
+          //  Player1GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = false;
 
     }
 
@@ -40,12 +38,16 @@ public class PuchBackForce : MonoBehaviour
         if (other.gameObject.tag == "CubeDistraction" || other.gameObject.tag == "Untagged")
         {
             Debug.Log("pushLeft");
-           
-          //  HummerBoxRigidBody.AddForce(Vector2.left * pushForce, ForceMode.Impulse);
-            /*add right direction*/
-            Player2GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = true;
-            Player1GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = true;
+
+            this.transform.GetComponent<Rigidbody>().isKinematic = false;
+            this.transform.GetComponent<Rigidbody>().useGravity = true;
+          //  Player2GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = true;
+         //   Player1GamObj.GetComponent<SC_RigidbodyMagnet>().enabled = true;
+
         }
+
+
+
     }
 
 }

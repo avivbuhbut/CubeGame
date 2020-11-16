@@ -53,7 +53,7 @@ public class childOfPlayer : MonoBehaviour
             Player2Ridg.GetComponent<SphereCollider>().enabled = true;
             HammerCubeRigidBody.isKinematic = true;
 
-            gameObject.transform.parent = Player2Trans;
+            this.gameObject.transform.parent = Player2Trans;
 
             gameObject.transform.position = new Vector3(Player2Trans.position.x + 1, Player2Trans.position.y + 3, Player2Trans.position.z);
 

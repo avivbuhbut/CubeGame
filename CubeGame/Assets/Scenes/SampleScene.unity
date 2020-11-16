@@ -728,13 +728,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115516800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 777e1abf480fc234da6de1dd86773ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player2: {fileID: 115516808}
-  magnetForce: 100
+  magnetForce: 0
 --- !u!135 &115516812
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6028,6 +6028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c050388294ff342ae9d6c5d92eff13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player2Trans: {fileID: 115516808}
+  HammerCubeTrans: {fileID: 2122939975}
   CutCascades: 1
   ExplodeForce: 0
   Distraction1: 0
@@ -14036,6 +14038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c050388294ff342ae9d6c5d92eff13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player2Trans: {fileID: 115516808}
+  HammerCubeTrans: {fileID: 2122939975}
   CutCascades: 1
   ExplodeForce: 0
   Distraction1: 0
@@ -27908,6 +27912,7 @@ GameObject:
   - component: {fileID: 2122939976}
   - component: {fileID: 2122939977}
   - component: {fileID: 2122939978}
+  - component: {fileID: 2122939979}
   m_Layer: 0
   m_Name: HammerCube
   m_TagString: HammerCube
@@ -27982,7 +27987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122939971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.78, y: -1.14, z: -7.33}
+  m_LocalPosition: {x: 31.78, y: 5.14, z: -7.33}
   m_LocalScale: {x: 1.4384, y: 1.4384, z: 1.4384}
   m_Children: []
   m_Father: {fileID: 0}
@@ -28016,10 +28021,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ffe0afa67f0ef4499aa59bef596fae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 16.89
+  pushForce: 0
   HummerBoxRigidBody: {fileID: 2122939976}
   Player2GamObj: {fileID: 115516800}
   Player1GamObj: {fileID: 1332451213}
+  currentHammerPosX: 0
 --- !u!114 &2122939978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28040,6 +28046,18 @@ MonoBehaviour:
   Player2Trans: {fileID: 115516808}
   Player2Ridg: {fileID: 115516804}
   forceFactor: 10
+--- !u!114 &2122939979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122939971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273c9abb3e211ce4da3bdbe18a20df9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2133786849
 GameObject:
   m_ObjectHideFlags: 0

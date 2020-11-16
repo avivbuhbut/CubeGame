@@ -81,6 +81,7 @@
     <Compile Include="Assets\Image Effects\Scripts\Posterize.cs" />
     <Compile Include="Assets\MagnetActivation.cs" />
     <Compile Include="Assets\MagnetChildOfPlayer.cs" />
+    <Compile Include="Assets\meshCounter.cs" />
     <Compile Include="Assets\MoneyMagnet.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\ResetToStartRotarion.cs" />
