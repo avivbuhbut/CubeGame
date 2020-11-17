@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 494}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 679, y: 494}
+  m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 72
+  controlID: 15
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 73
+  controlID: 16
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 74
+  controlID: 17
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,8 +267,8 @@ MonoBehaviour:
     y: 0
     width: 642
     height: 947
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -385,10 +385,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 8ca6fcff46fbffffe64200009443000024450000b04600006047000016480000
+      scrollPos: {x: 0, y: 1045}
+      m_SelectedIDs: 44490000
+      m_LastClickedID: 18756
+      m_ExpandedIDs: 6afbffff1c440000444400006c4500005e460000c6460000c8470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -448,9 +448,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.7142745, y: 1.088042, z: 14.868364}
+    m_Target: {x: 0.6809152, y: 7.3076897, z: -42.359097}
     speed: 2
-    m_Value: {x: 0.7142745, y: 1.088042, z: 14.868364}
+    m_Value: {x: 0.6809152, y: 7.3076897, z: -42.359097}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -479,13 +479,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.04562708, y: -0.13262036, z: 0.009597515, w: 0.990386}
+    m_Target: {x: 0.12716334, y: -0.006730431, z: 0.0047444017, w: 0.9921702}
     speed: 2
-    m_Value: {x: 0.045627132, y: -0.13109358, z: 0.0095260795, w: 0.9902736}
+    m_Value: {x: 0.12712266, y: -0.0067282785, z: 0.004742884, w: 0.9918529}
   m_Size:
-    m_Target: 34.514194
+    m_Target: 3.143063
     speed: 2
-    m_Value: 34.514194
+    m_Value: 3.143063
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -906,9 +906,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 0c300000
-    m_LastClickedID: 12300
-    m_ExpandedIDs: 000000000c300000723000005a3100007a310000b43100008032000074330000b4330000dc3300007635000062370000fa3a0000c83e0000ca4000007e410000d6c5000000ca9a3b
+    m_SelectedIDs: ba300000
+    m_LastClickedID: 12474
+    m_ExpandedIDs: 00000000ba30000020310000e83100000a32000044320000123300000434000068340000a2370000043b0000ba3e0000c04000005e410000864d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -936,7 +936,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c300000723000005a3100007a310000b43100008032000074330000dc3300007635000062370000fa3a0000c83e0000ca4000007e410000
+    m_ExpandedIDs: 00000000ba30000020310000e83100000a32000044320000123300000434000068340000a2370000043b0000ba3e0000c04000005e410000864d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004c530000a24b00007a4b00003e370000208700002a35000000000000e4550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 17948
+  m_LastSelectedObjectID: 18756
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

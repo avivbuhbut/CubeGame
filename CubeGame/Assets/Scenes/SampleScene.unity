@@ -2395,7 +2395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315846101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.66, y: -4.84, z: -2.42}
+  m_LocalPosition: {x: -17.62, y: -4.84, z: -2.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 102094367}
@@ -16619,6 +16619,7 @@ GameObject:
   - component: {fileID: 1354352348}
   - component: {fileID: 1354352347}
   - component: {fileID: 1354352346}
+  - component: {fileID: 1354352349}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -16699,6 +16700,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354352344}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1354352349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354352344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0512f801bba570342a6c97ef82cb64ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoughAndSauceGamObj: {fileID: 1437778504}
+  PizzaBox1GamObj: {fileID: 1527746841}
 --- !u!1 &1362547662
 GameObject:
   m_ObjectHideFlags: 0
@@ -23250,7 +23265,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527746841}
   m_LocalRotation: {x: -0.000070496186, y: 0.00038944598, z: -0.0018811607, w: 0.99999815}
-  m_LocalPosition: {x: 0, y: 0, z: 10.27}
+  m_LocalPosition: {x: 0, y: 0, z: 10.3}
   m_LocalScale: {x: -1.4653338, y: 0.6330411, z: 1.0291228}
   m_Children: []
   m_Father: {fileID: 764342330}
@@ -23258,7 +23273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.008, y: 0.045, z: -0.216}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.73, y: 0.80000114}
+  m_AnchoredPosition: {x: -18.15, y: -3.25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1527746848
