@@ -31,6 +31,11 @@ TagManager:
   - Money
   - Basket1
   - Basket2
+  - Flour
+  - Water
+  - Sauce
+  - Dough
+  - DoughAndSauce
   layers:
   - Default
   - TransparentFX
