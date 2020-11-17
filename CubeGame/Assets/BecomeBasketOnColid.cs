@@ -6,14 +6,14 @@ public class BecomeBasketOnColid : MonoBehaviour
 {
 
     public Transform Basket1GObject;
-    public Transform Basket2GObject;
+  //  public Transform Basket2GObject;
 
     public Camera PlayerCamera;
     // Start is called before the first frame update
     void Start()
     {
         Basket1GObject.transform.GetComponent<PlayerMovment>().enabled = false;
-        Basket2GObject.transform.GetComponent<PlayerMovment>().enabled = false;
+      //  Basket2GObject.transform.GetComponent<PlayerMovment>().enabled = false;
 
     }
 
@@ -36,12 +36,12 @@ public class BecomeBasketOnColid : MonoBehaviour
 
         }
 
-        if(collision.gameObject.transform.tag == "Basket2")
-        {
-            this.gameObject.transform.GetComponent<PlayerMovment>().enabled = false;
-            Basket2GObject.transform.GetComponent<PlayerMovment>().enabled = true;
-            PlayerCamera.GetComponent<FollowCamera2Script>().target = Basket2GObject.transform;
-        }
+      //  if(collision.gameObject.transform.tag == "Basket2")
+     //   {
+      // //     this.gameObject.transform.GetComponent<PlayerMovment>().enabled = false;
+       //     Basket2GObject.transform.GetComponent<PlayerMovment>().enabled = true;
+        //    PlayerCamera.GetComponent<FollowCamera2Script>().target = Basket2GObject.transform;
+       // }
 
     }
 }
