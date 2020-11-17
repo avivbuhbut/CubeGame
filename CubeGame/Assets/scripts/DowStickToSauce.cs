@@ -27,10 +27,13 @@ public class DowStickToSauce : MonoBehaviour
         if (collision.gameObject.transform.tag == "Sauce")
         {
 
+            DoughAndSauceGamObj.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
             Instantiate(DoughAndSauceGamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
             DoughAndSauceGamObj.SetActive(true);
-            Destroy(SauceTransGamObj);
-            Destroy(this.gameObject);
+
+     
+            this.gameObject.SetActive(false);
+
         }
     }
 

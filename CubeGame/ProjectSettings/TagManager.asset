@@ -36,6 +36,7 @@ TagManager:
   - Sauce
   - Dough
   - DoughAndSauce
+  - PizzaBoxClone
   layers:
   - Default
   - TransparentFX

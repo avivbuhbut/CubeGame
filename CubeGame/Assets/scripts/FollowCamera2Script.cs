@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowCamera2Script : MonoBehaviour
 {
-    public Transform target;
+    public  Transform target;
     public Vector3 target_Offset;
     private void Start()
     {
@@ -12,10 +12,23 @@ public class FollowCamera2Script : MonoBehaviour
     }
     void FixedUpdate()
     {
+
+ 
+
+     // if((target.GetComponent<Rigidbody>().velocity.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0))){
+
+     //   }
+
+
+        
+
+
         if (target)
         {
             transform.position = Vector3.Lerp(transform.position, target.position + target_Offset, 0.1f);
         }
     
     }
+
+
 }
