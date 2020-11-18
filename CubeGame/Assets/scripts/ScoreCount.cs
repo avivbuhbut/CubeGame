@@ -390,8 +390,10 @@ public class ScoreCount : MonoBehaviour
             if (player1GameObj.activeSelf == true)
             {
                 /*calculate the dif till box1 hit the bound*/
-                if(Box1.activeSelf==true)
+                if(Box1.activeSelf==true )
                 GlobalScore =Mathf.Abs( GlobalScore - Box1currentGreenPoints);
+
+    //            if(GameObject.Find())
 
                 /*calculate the dif till box2 hit the bound*/
                 if (Box2.activeSelf == true)

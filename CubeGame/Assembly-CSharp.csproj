@@ -166,6 +166,7 @@
     <Compile Include="Assets\scripts\WhosMoving.cs" />
     <Compile Include="Assets\SwitchCamera.cs" />
     <Compile Include="Assets\TurnOffHitStove.cs" />
+    <Compile Include="Assets\TurnOffPizzaBox1and2.cs" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

@@ -8,6 +8,8 @@ public class CloneOrOriginal : MonoBehaviour
     public Transform PizzaCloneTrans;
     private static Transform  CurrentTransformInAir;
     public int pizzaCounter ;
+
+    public static string CurrentTransInAirName;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,7 @@ public class CloneOrOriginal : MonoBehaviour
             if ((GameObject.Find("PizzaBoxClone" + pizzaCounter).transform.GetComponent<Rigidbody>().velocity.magnitude > 2))
             {
                 Debug.Log("pizza in air: " + (GameObject.Find("PizzaBoxClone" + pizzaCounter).transform.name));
+
                 CurrentTransformInAir = (GameObject.Find("PizzaBoxClone" + pizzaCounter).transform);
 
                 if ((CurrentTransformInAir.transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
