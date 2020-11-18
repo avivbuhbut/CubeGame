@@ -17,7 +17,7 @@ public class CloneOrOriginal : MonoBehaviour
     {
 
         if ((this.gameObject.transform.name == "PizzaBoxClone") &&
-            (this.gameObject.transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
+            (GameObject.Find("PizzaBoxClone").transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
             (!Input.GetKey(KeyCode.Mouse0)))
         {
             Debug.Log("PizzaBOX1(Clone) is in the air");

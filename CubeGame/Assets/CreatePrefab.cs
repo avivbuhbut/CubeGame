@@ -8,10 +8,13 @@ public class CreatePrefab : MonoBehaviour
     public GameObject FlourGmObj;
     public GameObject WaterGmObj;
     public GameObject PizzaSauce;
+    public GameObject DaughAndSauceGamObj;
 
     public int counterFlour = 0;
     public int counterWater = 0;
     public int counterPizzaSauce = 0;
+
+    public int counterDaughAndSauceDebug = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,7 @@ public class CreatePrefab : MonoBehaviour
     void Update()
     {
 
-        if (counterFlour <= 1)
+        if (counterFlour <= 4)
         {
          
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -35,7 +38,7 @@ public class CreatePrefab : MonoBehaviour
         }
 
 
-        if (counterWater <= 1)
+        if (counterWater <= 4)
         {
      
             if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -49,9 +52,9 @@ public class CreatePrefab : MonoBehaviour
         }
 
 
-        if (counterPizzaSauce <= 1)
+        if (counterPizzaSauce <= 4)
         {
-    
+
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 PizzaSauce.SetActive(true);
@@ -60,7 +63,23 @@ public class CreatePrefab : MonoBehaviour
 
             }
 
+
+          
+
         }
 
+
+        if (counterDaughAndSauceDebug <= 4)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                DaughAndSauceGamObj.SetActive(true);
+                counterDaughAndSauceDebug++;
+                Instantiate(DaughAndSauceGamObj, new Vector3(DaughAndSauceGamObj.transform.position.x, DaughAndSauceGamObj.transform.position.y, DaughAndSauceGamObj.transform.position.z), Quaternion.identity);
+
+            }
+
+        }
     }
 }
