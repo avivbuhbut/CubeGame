@@ -16,13 +16,13 @@ public class CloneOrOriginal : MonoBehaviour
     void Update()
     {
 
-        if ((this.gameObject.transform.name == "PizzaBOX1(Clone)") &&
+        if ((this.gameObject.transform.name == "PizzaBoxClone") &&
             (this.gameObject.transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
             (!Input.GetKey(KeyCode.Mouse0)))
         {
             Debug.Log("PizzaBOX1(Clone) is in the air");
-            PizzaBox1Cam.GetComponent<FollowCamera2Script>().target = PizzaCloneTrans.transform;
-            Debug.Log("PizzaCloneTrans.pos.x: " + PizzaCloneTrans.transform.position.x);
+            PizzaBox1Cam.GetComponent<FollowCamera2Script>().target = GameObject.Find("PizzaBoxClone").transform;
+            Debug.Log("PizzaCloneTrans.pos.x: " + PizzaCloneTrans.transform.localPosition.x);
             //PizzaBox1Cam.enabled = true;
         }
 

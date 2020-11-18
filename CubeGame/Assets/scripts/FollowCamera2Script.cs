@@ -13,11 +13,7 @@ public class FollowCamera2Script : MonoBehaviour
     void FixedUpdate()
     {
 
- 
 
-     // if((target.GetComponent<Rigidbody>().velocity.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0))){
-
-     //   }
 
 
         

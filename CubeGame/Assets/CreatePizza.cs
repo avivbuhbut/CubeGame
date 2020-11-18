@@ -9,6 +9,7 @@ public class CreatePizza : MonoBehaviour
     public GameObject PizzaBox1GamObj;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +23,34 @@ public class CreatePizza : MonoBehaviour
         
     }
 
-
+    int counter = 0;
      void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.transform.tag == "DoughAndSauce" )
         {
-            Destroy(DoughAndSauceGamObj);
-          
-            //PizzaBox1GamObj.transform.position = new Vector3()
-            Instantiate(PizzaBox1GamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
-            PizzaBox1GamObj.gameObject.SetActive(true);
-            //  PizzaBox1GamObj.transform.GetComponent<Rigidbody>().velocity = PizzaBox1GamObj.transform.forward * 3;
 
+            counter++;
+            Destroy(DoughAndSauceGamObj);
+
+            //PizzaBox1GamObj.transform.position = new Vector3()
+
+
+            if (counter < 2)
+            {
+             Instantiate(PizzaBox1GamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
+
+                PizzaBox1GamObj.gameObject.SetActive(true);
+            }
+            else
+            {
+                GameObject Clone = Instantiate(PizzaBox1GamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
+                Clone.transform.name = "PizzaBoxClone";
+                Clone.transform.parent = PizzaBox1GamObj.transform.parent;
+            }
+
+            
+            //  PizzaBox1GamObj.transform.GetComponent<Rigidbody>().velocity = PizzaBox1GamObj.transform.forward * 3;
+         
 
         }
     }
