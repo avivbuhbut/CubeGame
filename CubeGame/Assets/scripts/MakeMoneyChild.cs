@@ -24,7 +24,7 @@ public class MakeMoneyChild : MonoBehaviour
     {
         if (other.gameObject.transform.name == "Money(Clone)")
         {
-            other.gameObject.transform.parent = this.transform;
+           other.gameObject.transform.parent = this.transform;
             //other.gameObject.transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX| RigidbodyConstraints.FreezePositionZ;
     
 

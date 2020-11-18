@@ -8,8 +8,7 @@ public class ColidedScript : MonoBehaviour
     public static int counter;
 
     public Transform PizzaBox1;
-    public Transform PizzaBox2;
-    public Transform PizzaBox3;
+
 
 
 
