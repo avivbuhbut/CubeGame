@@ -6,28 +6,58 @@ public class CloneOrOriginal : MonoBehaviour
 {
     public Camera PizzaBox1Cam;
     public Transform PizzaCloneTrans;
+    private static Transform  CurrentTransformInAir;
+    public int pizzaCounter ;
     // Start is called before the first frame update
     void Start()
     {
-        
+        CurrentTransformInAir = this.transform;
+        pizzaCounter = CreatePizza.counterPizzaGen;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+  
 
-        if ((this.gameObject.transform.name == "PizzaBoxClone" +CreatePizza.counterPizzaGen ) &&
-            (GameObject.Find("PizzaBoxClone" + CreatePizza.counterPizzaGen).transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
-            (!Input.GetKey(KeyCode.Mouse0)))
+    /*Fuck You Code - but thanks for working :)*/
+     
+           if(this.gameObject.activeSelf == true)
         {
-            Debug.Log("PizzaBoxClone" + CreatePizza.counterPizzaGen);
-            PizzaBox1Cam.GetComponent<FollowCamera2Script>().target = GameObject.Find("PizzaBoxClone" + CreatePizza.counterPizzaGen).transform;
-
-
+            Debug.Log("this.gameObject.activeSelf : " + this.gameObject.name);
         }
 
 
 
+
+        if ((GameObject.Find("PizzaBoxClone" + pizzaCounter) != null))
+        {
+            if ((GameObject.Find("PizzaBoxClone" + pizzaCounter).transform.GetComponent<Rigidbody>().velocity.magnitude > 2))
+            {
+                Debug.Log("pizza in air: " + (GameObject.Find("PizzaBoxClone" + pizzaCounter).transform.name));
+                CurrentTransformInAir = (GameObject.Find("PizzaBoxClone" + pizzaCounter).transform);
+
+                if ((CurrentTransformInAir.transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
+             (!Input.GetKey(KeyCode.Mouse0)))
+                {
+                    // Debug.Log("PizzaBoxCloneInAir: " + CurrentTransformInAir.transform.name);
+                    PizzaBox1Cam.GetComponent<FollowCamera2Script>().target = CurrentTransformInAir.transform;
+
+
+                }
+            }
+        }
+        else
+        {
+            pizzaCounter--;
+
+            if (pizzaCounter == 0)
+                pizzaCounter = CreatePizza.counterPizzaGen;
+        }
+
+
+        /*
         if ((this.gameObject.transform.name == "PizzaBOX1(Clone)") &&
             (GameObject.Find("PizzaBOX1(Clone)").transform.GetComponent<Rigidbody>().velocity.magnitude > 2) &&
             (!Input.GetKey(KeyCode.Mouse0)))
@@ -45,7 +75,21 @@ public class CloneOrOriginal : MonoBehaviour
         {
             Debug.Log("PizzaBOX1 is in the air");
             PizzaBox1Cam.GetComponent<FollowCamera2Script>().target = this.gameObject.transform;
-        }
+        }*/
 
+    }
+
+
+     void OnCollisionEnter(Collision collision)
+   
+    {
+        if (collision.gameObject.transform.tag == "Floor")
+            CurrentTransformInAir = null;
+
+
+        {
+           // Debug.Log("This pizza is not touching the floor" + this.gameObject);
+           // CurrentTransformInAir = this.gameObject.transform;
+        }
     }
 }
