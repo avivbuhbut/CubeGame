@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Enemy1Health : MonoBehaviour
 {
-    public Transform PizzaBox1Trans;
+   // public Transform PizzaBox1Trans;
     public float health = 50f;
-    public Transform PizzaBox1Cam;
-    public Transform Cameras;
-    public Transform PizzaBoxesTrans;
+  //  public Transform PizzaBox1Cam;
+  //  public Transform Cameras;
+  //  public Transform PizzaBoxesTrans;
+
+    public Transform PizzaSauceTrans;
 
 
 
@@ -17,8 +19,9 @@ public class Enemy1Health : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            PizzaBox1Trans.parent = PizzaBoxesTrans; // if it wasent null the pizzaBox would destroy too.
-            PizzaBox1Cam.parent = Cameras;
+            PizzaSauceTrans.parent = GameObject.Find("PizzaIngridians").transform;
+            //PizzaBox1Trans.parent = PizzaBoxesTrans; // if it wasent null the pizzaBox would destroy too.
+         //s   PizzaBox1Cam.parent = Cameras;
             Destroy(this.gameObject);
         }
     }

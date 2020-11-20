@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43914288, g: 0.48740762, b: 0.5676588, a: 1}
+  m_IndirectSpecularColor: {r: 0.4391424, g: 0.4874068, b: 0.56765765, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,8 +148,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1897278587}
-  - {fileID: 1172302883}
-  - {fileID: 974757329}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8077,152 +8075,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1332451217}
   target_Offset: {x: 0, y: 0, z: 0}
---- !u!1 &974757328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 974757329}
-  - component: {fileID: 974757334}
-  - component: {fileID: 974757333}
-  - component: {fileID: 974757332}
-  - component: {fileID: 974757331}
-  - component: {fileID: 974757330}
-  - component: {fileID: 974757335}
-  m_Layer: 0
-  m_Name: CubeEnemyBox3
-  m_TagString: CubeEnemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &974757329
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.75, y: -2.9643567, z: 13.67}
-  m_LocalScale: {x: 0.4967824, y: 0.46968177, z: 0.55435336}
-  m_Children: []
-  m_Father: {fileID: 14065128}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &974757330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b4e6829865b2942a4690be318a97e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PizzaBox3Trans: {fileID: 0}
-  LeftBoundsEnemy: {fileID: 1193550065}
-  PizzaBoxes: {fileID: 764342330}
-  PizzaBox3Cam: {fileID: 453069136}
-  Cameras: {fileID: 102094367}
-  ColidedWithPizza: 0
-  pizzaBox3InAir: 0
---- !u!54 &974757331
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 104
-  m_CollisionDetection: 0
---- !u!65 &974757332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &974757333
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 616853845a4a54949ac851f2f807aa2a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &974757334
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &974757335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974757328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b83b62faedb5e40a9a13aca143b00a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PizzaBox3Trans: {fileID: 0}
-  health: 50
-  PizzaBox3Cam: {fileID: 453069136}
-  Cameras: {fileID: 102094367}
 --- !u!1 &984490889
 GameObject:
   m_ObjectHideFlags: 0
@@ -14427,153 +14279,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &1172302877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1172302883}
-  - component: {fileID: 1172302882}
-  - component: {fileID: 1172302881}
-  - component: {fileID: 1172302880}
-  - component: {fileID: 1172302878}
-  - component: {fileID: 1172302879}
-  - component: {fileID: 1172302884}
-  m_Layer: 0
-  m_Name: CubeEnemyBox2
-  m_TagString: CubeEnemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!54 &1172302878
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 104
-  m_CollisionDetection: 0
---- !u!114 &1172302879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48521c8848ea96c4191bf952cbe6d93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PizzaBox2Trans: {fileID: 0}
-  LeftBoundsEnemy: {fileID: 1193550065}
-  PizzaBoxesTrans: {fileID: 764342330}
-  Cameras: {fileID: 102094367}
-  PizzaBox2Cam: {fileID: 1636331142}
-  ColidedWithPizza: 0
-  pizzaBox2InAir: 0
---- !u!65 &1172302880
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1172302881
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 616853845a4a54949ac851f2f807aa2a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1172302882
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1172302883
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.26, y: -2.9643567, z: 13.69}
-  m_LocalScale: {x: 0.4967824, y: 0.4696818, z: 0.5355824}
-  m_Children: []
-  m_Father: {fileID: 14065128}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1172302884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172302877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a2e009f7b70ac4b8078647f304da3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PizzaBox2Trans: {fileID: 0}
-  health: 50
-  PizzaBox2Cam: {fileID: 1636331137}
-  Cameras: {fileID: 102094367}
-  PizzaBoxes: {fileID: 764342330}
 --- !u!1 &1178657460
 GameObject:
   m_ObjectHideFlags: 0
@@ -16280,6 +15985,7 @@ GameObject:
   - component: {fileID: 1332451227}
   - component: {fileID: 1332451228}
   - component: {fileID: 1332451229}
+  - component: {fileID: 1332451230}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -16539,6 +16245,20 @@ MonoBehaviour:
   counterWater: 0
   counterPizzaSauce: 0
   counterDaughAndSauceDebug: 0
+--- !u!114 &1332451230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332451213}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c979fd96a0e4843cca5eec8cc95e88b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CubeGamObj: {fileID: 9087559693888620428, guid: 10bcb32280aa04224900ed2e1f374a20,
+    type: 3}
 --- !u!1 &1334267171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5417622958011253905, guid: 4574f0b1c630ce44a908a823b0fc3c19,
@@ -22872,7 +22592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.21
+      value: -1.23
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22880,7 +22600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.52
+      value: -7.4
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalRotation.x
@@ -22953,6 +22673,11 @@ PrefabInstance:
     - target: {fileID: 1620780442430432, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23769447271555568, guid: 6f1a7354265853f44b0ed5e2e43676ad,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
@@ -25626,6 +25351,63 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &1741620834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1489100851}
+    m_Modifications:
+    - target: {fileID: 100004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_Name
+      value: M1911
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b812e42521a5a27499e76cc5ed56e3ac, type: 3}
 --- !u!1 &1742540392
 GameObject:
   m_ObjectHideFlags: 0
@@ -26296,7 +26078,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831421416}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acc232467329a1040a5712509f6ac10c, type: 3}
   m_Name: 
@@ -26990,138 +26772,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &1897278581
+--- !u!1 &1897278581 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3025731039856186767, guid: f06fe704d0ce24e65ad8bc49284e395a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3025731041753463290}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1897278587}
-  - component: {fileID: 1897278586}
-  - component: {fileID: 1897278585}
-  - component: {fileID: 1897278584}
-  - component: {fileID: 1897278583}
-  - component: {fileID: 1897278582}
-  - component: {fileID: 1897278588}
-  - component: {fileID: 1897278589}
-  m_Layer: 0
-  m_Name: CubeEnemyBox1
-  m_TagString: CubeEnemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!54 &1897278582
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 104
-  m_CollisionDetection: 0
---- !u!114 &1897278583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68979594b35f32419c7431a6d0d9070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PizzaBox1Trans: {fileID: 1527746847}
-  LeftBoundsEnemy: {fileID: 1193550065}
-  PizzaBoxesTrans: {fileID: 764342330}
-  Cameras: {fileID: 102094367}
-  PizzaBox1Cam: {fileID: 315846103}
-  ColidedWithPizza: 0
-  pizzaBox1InAir: 0
---- !u!65 &1897278584
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1897278585
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 616853845a4a54949ac851f2f807aa2a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1897278586
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1897278587
+--- !u!4 &1897278587 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3025731041753463290}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2539634, y: -2.9643567, z: 13.66}
-  m_LocalScale: {x: 0.4967824, y: 0.4696818, z: 0.57142955}
-  m_Children: []
-  m_Father: {fileID: 14065128}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1897278588
+--- !u!114 &1897278590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27130,24 +26793,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1897278581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef07df0033d216746977becda46b27a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PizzaBox1Trans: {fileID: 1527746847}
-  health: 50
-  PizzaBox1Cam: {fileID: 315846104}
-  Cameras: {fileID: 102094367}
-  PizzaBoxesTrans: {fileID: 764342330}
---- !u!114 &1897278589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897278581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cbfa0de9c97187468481828c31a6730, type: 3}
+  m_Script: {fileID: 11500000, guid: fe759bae2bbd24989b168d2e69af71f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1913524406
@@ -30100,6 +29746,130 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb39d52aba254b4da8346f32da91def, type: 3}
+--- !u!1001 &3025731041753463290
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 14065128}
+    m_Modifications:
+    - target: {fileID: 3025731039856186767, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_Name
+      value: CubeEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186767, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2539634
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9643567
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBox1Trans
+      value: 
+      objectReference: {fileID: 1527746847}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: LeftBoundsEnemy
+      value: 
+      objectReference: {fileID: 1193550065}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBoxesTrans
+      value: 
+      objectReference: {fileID: 764342330}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: Cameras
+      value: 
+      objectReference: {fileID: 102094367}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBox1Cam
+      value: 
+      objectReference: {fileID: 315846103}
+    - target: {fileID: 3025731039856186758, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBox1Trans
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186758, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBox1Cam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186758, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: Cameras
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186758, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBoxesTrans
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025731039856186758, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaSauceTrans
+      value: 
+      objectReference: {fileID: 1334267172}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f06fe704d0ce24e65ad8bc49284e395a, type: 3}
 --- !u!1001 &4902539670693948413
 PrefabInstance:
   m_ObjectHideFlags: 0

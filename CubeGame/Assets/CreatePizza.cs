@@ -24,7 +24,7 @@ public class CreatePizza : MonoBehaviour
     void Update()
     {
      
-        Debug.Log("counterPizzaGen:" + counterPizzaGen);
+      
     }
 
      void OnCollisionEnter(Collision collision)

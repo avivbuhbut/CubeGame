@@ -7,7 +7,7 @@ public class moneyNotActicveStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.gameObject.SetActive(false);
+       // this.transform.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
