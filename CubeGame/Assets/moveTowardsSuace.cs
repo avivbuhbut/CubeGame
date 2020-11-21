@@ -37,8 +37,15 @@ public class moveTowardsSuace : MonoBehaviour
         }
 
 
+       
+
         if (ColidedWithSouce)
         {
+
+           // if(GameObject.Find("CubeEnemy").transform.localScale.x<1.4f) between 0.5 to 1.4
+     
+
+        
            // GameObject.Find("Sauce").transform.parent = null;
             GameObject.Find("CubeEnemy").transform.localScale += scaleChangeBiger;
             GameObject.Find("Sauce").transform.localScale += scaleChangeSmaller;

@@ -63,10 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlocksAvilableTMPControl.cs" />
     <Compile Include="Assets\CloneOrOriginal.cs" />
     <Compile Include="Assets\ColidedWithDough.cs" />
     <Compile Include="Assets\colidedWithEnemy.cs" />
     <Compile Include="Assets\ColidedWithFlour.cs" />
+    <Compile Include="Assets\ColidWithPlayerDisaper.cs" />
     <Compile Include="Assets\CreateBlocks.cs" />
     <Compile Include="Assets\CreatePizza.cs" />
     <Compile Include="Assets\CreatePrefab.cs" />

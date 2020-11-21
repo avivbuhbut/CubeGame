@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreateBlocks : MonoBehaviour
 {
 
+    public static int BlocksAvilable;
   //  public GameObject CubeGamObj;
     public GameObject CubeGamObj;
     private GameObject linehandler;
@@ -19,17 +20,24 @@ public class CreateBlocks : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            CubeGamObj.SetActive(true);
-            mousepos = Input.mousePosition;
-            mousepos.z = 14.5f;
+        Debug.Log("BlocksAvilable: " + BlocksAvilable);
 
-            mousepos = Camera.main.ScreenToWorldPoint(mousepos);
-            linehandler = Instantiate(CubeGamObj, mousepos, Quaternion.identity) as GameObject;
+        if(Input.GetKey(KeyCode.B)) 
+        if (BlocksAvilable > 0 )
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                BlocksAvilable--; // every time createing a block
+                CubeGamObj.SetActive(true);
+                mousepos = Input.mousePosition;
+                mousepos.z = 14.5f;
+
+                mousepos = Camera.main.ScreenToWorldPoint(mousepos);
+                linehandler = Instantiate(CubeGamObj, mousepos, Quaternion.identity) as GameObject;
+            }
         }
 
-        CubeGamObj.GetComponent<Rigidbody>().isKinematic = false;
+        //CubeGamObj.GetComponent<Rigidbody>().isKinematic = false;
     }
 
 

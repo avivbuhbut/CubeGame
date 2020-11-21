@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3025731039856186764}
   - component: {fileID: 3025731039856186758}
   - component: {fileID: 3025731039856186759}
+  - component: {fileID: 4845491469700649156}
   m_Layer: 0
   m_Name: CubeEnemy
   m_TagString: CubeEnemy
@@ -143,11 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef07df0033d216746977becda46b27a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PizzaBox1Trans: {fileID: 0}
   health: 50
-  PizzaBox1Cam: {fileID: 0}
-  Cameras: {fileID: 0}
-  PizzaBoxesTrans: {fileID: 0}
+  PizzaSauceTrans: {fileID: 0}
+  BuildingCube: {fileID: 0}
 --- !u!114 &3025731039856186759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,5 +157,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cbfa0de9c97187468481828c31a6730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4845491469700649156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025731039856186767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe759bae2bbd24989b168d2e69af71f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
