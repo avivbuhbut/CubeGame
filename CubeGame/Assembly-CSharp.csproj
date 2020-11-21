@@ -82,6 +82,8 @@
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
+    <Compile Include="Assets\fillFlour.cs" />
+    <Compile Include="Assets\fillPizzaSauce.cs" />
     <Compile Include="Assets\moneyNotActicveStart.cs" />
     <Compile Include="Assets\moveTowardsSuace.cs" />
     <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
