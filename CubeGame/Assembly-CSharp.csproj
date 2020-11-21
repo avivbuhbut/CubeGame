@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\CloneOrOriginal.cs" />
     <Compile Include="Assets\ColidedWithDough.cs" />
+    <Compile Include="Assets\colidedWithEnemy.cs" />
     <Compile Include="Assets\ColidedWithFlour.cs" />
     <Compile Include="Assets\CreateBlocks.cs" />
     <Compile Include="Assets\CreatePizza.cs" />
