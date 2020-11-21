@@ -30297,31 +30297,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
-        type: 3}
-      propertyPath: PizzaBox1Trans
-      value: 
-      objectReference: {fileID: 1527746847}
-    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
-        type: 3}
-      propertyPath: LeftBoundsEnemy
-      value: 
-      objectReference: {fileID: 1193550065}
-    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
-        type: 3}
-      propertyPath: PizzaBoxesTrans
-      value: 
-      objectReference: {fileID: 764342330}
-    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
-        type: 3}
-      propertyPath: Cameras
-      value: 
-      objectReference: {fileID: 102094367}
-    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
-        type: 3}
-      propertyPath: PizzaBox1Cam
-      value: 
-      objectReference: {fileID: 315846103}
     - target: {fileID: 3025731039856186758, guid: f06fe704d0ce24e65ad8bc49284e395a,
         type: 3}
       propertyPath: PizzaBox1Trans
@@ -30353,6 +30328,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5386186701713700627, guid: 48d4874f95bda4b3985b1e932f0384d4,
         type: 3}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBox1Trans
+      value: 
+      objectReference: {fileID: 1527746847}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: LeftBoundsEnemy
+      value: 
+      objectReference: {fileID: 1193550065}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBoxesTrans
+      value: 
+      objectReference: {fileID: 764342330}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: Cameras
+      value: 
+      objectReference: {fileID: 102094367}
+    - target: {fileID: 3025731039856186765, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: PizzaBox1Cam
+      value: 
+      objectReference: {fileID: 315846103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06fe704d0ce24e65ad8bc49284e395a, type: 3}
 --- !u!1001 &4902539670693948413

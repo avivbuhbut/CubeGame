@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BlocksAvilableTMPControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/MeshDestroy.cs">
     <Files>
       <File FileName="Assets/scripts/MoveTowardsTargetBox1.cs" Line="33" Column="8" />
-      <File FileName="Assets/moveTowardsSuace.cs" Line="48" Column="9" />
-      <File FileName="Assets/scripts/Enemy1Health.cs" Line="40" Column="25" />
-      <File FileName="Assets/CreateBlocks.cs" Line="25" Column="37" />
-      <File FileName="Assets/scripts/DowStickToSauce.cs" Line="35" Column="46" />
-      <File FileName="Assets/ColidWithPlayerDisaper.cs" Line="26" Column="57" />
+      <File FileName="Assets/moveTowardsSuace.cs" />
+      <File FileName="Assets/scripts/Enemy1Health.cs" />
+      <File FileName="Assets/CreateBlocks.cs" />
+      <File FileName="Assets/scripts/DowStickToSauce.cs" />
+      <File FileName="Assets/ColidWithPlayerDisaper.cs" />
       <File FileName="Assets/BlocksAvilableTMPControl.cs" Line="15" Column="39" />
+      <File FileName="Assets/scripts/MeshDestroy.cs" Line="76" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1a57e577-7ade-44c4-8fcc-462e6b63193f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0baddbfa-08d6-4583-bb44-51aae56d1bc8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
