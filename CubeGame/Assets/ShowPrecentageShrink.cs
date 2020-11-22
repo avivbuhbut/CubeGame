@@ -21,10 +21,10 @@ public class ShowPrecentageShrink : MonoBehaviour
         /*if the sauce is currently colides with the enemy*/
         if (ColidesWithEnemy)
         {
-            TimeTemp += Time.time-0.3f;
+           
             Debug.Log("Time.deltaTime " + Time.time);
             //   StartCoroutine("ExampleCoroutine");
-          if(Time.time  == TimeTemp )
+    
             counterPresent += counterPresent-10;
             SouceTMP.color = Color.red;
             SouceTMP.text = "Pizza Sauce " + counterPresent + "%";
