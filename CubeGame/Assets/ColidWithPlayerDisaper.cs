@@ -23,8 +23,9 @@ public class ColidWithPlayerDisaper : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
 
-            Debug.Log("CreateBlocks.BlocksAvilable: " + CreateBlocks.BlocksAvilable);
+       
             CreateBlocks.BlocksAvilable++;
+            Debug.Log("CreateBlocks.BlocksAvilable: " + CreateBlocks.BlocksAvilable);
             this.gameObject.SetActive(false);
           
 

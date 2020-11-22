@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/MeshDestroy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ShowPrecentageShrink.cs">
     <Files>
       <File FileName="Assets/scripts/MoveTowardsTargetBox1.cs" Line="33" Column="8" />
       <File FileName="Assets/moveTowardsSuace.cs" />
       <File FileName="Assets/scripts/Enemy1Health.cs" />
-      <File FileName="Assets/CreateBlocks.cs" />
-      <File FileName="Assets/scripts/DowStickToSauce.cs" />
-      <File FileName="Assets/ColidWithPlayerDisaper.cs" />
-      <File FileName="Assets/BlocksAvilableTMPControl.cs" Line="15" Column="39" />
+      <File FileName="Assets/CreateBlocks.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/DowStickToSauce.cs" Line="1" Column="1" />
+      <File FileName="Assets/ColidWithPlayerDisaper.cs" Line="28" Column="86" />
+      <File FileName="Assets/BlocksAvilableTMPControl.cs" Line="29" Column="50" />
       <File FileName="Assets/scripts/MeshDestroy.cs" Line="76" Column="40" />
+      <File FileName="Assets/colidedWithEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/ShowPrecentageShrink.cs" Line="26" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0baddbfa-08d6-4583-bb44-51aae56d1bc8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bd155a37-0d0e-408d-b2c3-78bab258c7fd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

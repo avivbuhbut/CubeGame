@@ -172,6 +172,7 @@
     <Compile Include="Assets\scripts\TrigCubeChangeParent.cs" />
     <Compile Include="Assets\scripts\TriggerCubeClider.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
+    <Compile Include="Assets\ShowPrecentageShrink.cs" />
     <Compile Include="Assets\SwitchCamera.cs" />
     <Compile Include="Assets\TurnOffHitStove.cs" />
     <Compile Include="Assets\TurnOffPizzaBox1and2.cs" />
