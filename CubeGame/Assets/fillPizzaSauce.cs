@@ -6,8 +6,9 @@ public class fillPizzaSauce : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    Vector3 PizzaSauce100pScale;
-    Vector3 fillSauce;
+    public Transform SauceTrans;
+   public Vector3 PizzaSauce100pScale;
+   public Vector3 fillSauce;
 
     bool SuaceOnShelf;
     void Start()
@@ -19,21 +20,25 @@ public class fillPizzaSauce : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
-        if (SuaceOnShelf && GameObject.Find("Sauce").transform.localScale != PizzaSauce100pScale)
-            GameObject.Find("Sauce").transform.localScale += fillSauce;
-      
+    
+        if (SauceTrans.GetComponent<SauceColided>().SauceHitSauceShelff && SauceTrans.transform.localScale != PizzaSauce100pScale)
+            SauceTrans.localScale += fillSauce;
+
+
+       //if ()
         
     }
 
 
 void OnCollisionEnter(Collision collision)
 {
-    if (collision.gameObject.transform.name == "Sauce")
-    {
-        SuaceOnShelf = true;
-    }
+        if (collision.gameObject.transform.name == "Sauce")
+        {
+            SuaceOnShelf = true;
+        }
+       
 
-        if (collision.gameObject.transform.name == "Floor")
-            SuaceOnShelf = false;
+
+
 }
 }
