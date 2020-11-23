@@ -166,7 +166,7 @@ public class ShowPrecentageShrink : MonoBehaviour
 
         void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.transform.name == "CubeEnemy" || collision.gameObject.transform.name == "CubeEnemy(Clone)")
+            if (collision.gameObject.transform.name == "CubeEnemySauce" || collision.gameObject.transform.name == "CubeEnemySauce(Clone)")
             {
                 ColidesWithEnemy = true;
 
