@@ -63,15 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlocksAvilableTMPControl.cs" />
-    <Compile Include="Assets\CloneOrOriginal.cs" />
-    <Compile Include="Assets\ColidedWithDough.cs" />
-    <Compile Include="Assets\colidedWithEnemy.cs" />
-    <Compile Include="Assets\ColidedWithFlour.cs" />
-    <Compile Include="Assets\ColidWithPlayerDisaper.cs" />
-    <Compile Include="Assets\CreateBlocks.cs" />
-    <Compile Include="Assets\CreatePizza.cs" />
-    <Compile Include="Assets\CreatePrefab.cs" />
+    <Compile Include="Assets\CustomRenderPassFeature.cs" />
+    <Compile Include="Assets\CustomRenderPassFeature1.cs" />
     <Compile Include="Assets\Downloads\Bullet Casing\Scripts\FP_Shooting.cs" />
     <Compile Include="Assets\Downloads\Bullet Casing\Scripts\Sound.cs" />
     <Compile Include="Assets\Downloads\Image Effects\Scripts\BilateralBlur.cs" />
@@ -84,11 +77,15 @@
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
-    <Compile Include="Assets\fillFlour.cs" />
-    <Compile Include="Assets\fillPizzaSauce.cs" />
-    <Compile Include="Assets\moneyNotActicveStart.cs" />
-    <Compile Include="Assets\moveTowardsSuace.cs" />
-    <Compile Include="Assets\MyGuides\GuideMeshText.cs" />
+    <Compile Include="Assets\PirntColition.cs" />
+    <Compile Include="Assets\Prefabs\MyGuides\GuideMeshText.cs" />
+    <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
+    <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
+    <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\BaseRainScript.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -97,7 +94,6 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\SauceColided.cs" />
     <Compile Include="Assets\scripts\ActiveMouseCursor.cs" />
     <Compile Include="Assets\scripts\ActiveSphereColider.cs" />
     <Compile Include="Assets\scripts\Basket1ChildOfPlayer1.cs" />
@@ -106,18 +102,27 @@
     <Compile Include="Assets\scripts\BasketMoneyKinematic.cs" />
     <Compile Include="Assets\scripts\BecomeBasketOnColid.cs" />
     <Compile Include="Assets\scripts\BetterJump.cs" />
+    <Compile Include="Assets\scripts\BlocksAvilableTMPControl.cs" />
     <Compile Include="Assets\scripts\CameraFollowPizza.cs" />
     <Compile Include="Assets\scripts\childOfPlayer.cs" />
     <Compile Include="Assets\scripts\CiliderScript.cs" />
     <Compile Include="Assets\scripts\clodeLid1OnColided.cs" />
+    <Compile Include="Assets\scripts\CloneOrOriginal.cs" />
     <Compile Include="Assets\scripts\closeLid2OnColid.cs" />
     <Compile Include="Assets\scripts\colidedRightHand.cs" />
     <Compile Include="Assets\scripts\ColidedScript.cs" />
+    <Compile Include="Assets\scripts\ColidedWithDough.cs" />
+    <Compile Include="Assets\scripts\colidedWithEnemy.cs" />
+    <Compile Include="Assets\scripts\ColidedWithFlour.cs" />
     <Compile Include="Assets\scripts\ColidedWithPizzaCreateDow.cs" />
+    <Compile Include="Assets\scripts\ColidWithPlayerDisaper.cs" />
     <Compile Include="Assets\scripts\ColisionLeftHand.cs" />
     <Compile Include="Assets\scripts\Collisions.cs" />
     <Compile Include="Assets\scripts\ColorChangePingPong.cs" />
     <Compile Include="Assets\scripts\ColorChangingGrandually.cs" />
+    <Compile Include="Assets\scripts\CreateBlocks.cs" />
+    <Compile Include="Assets\scripts\CreatePizza.cs" />
+    <Compile Include="Assets\scripts\CreatePrefab.cs" />
     <Compile Include="Assets\scripts\DestroyObject.cs" />
     <Compile Include="Assets\scripts\destroyOnTouch.cs" />
     <Compile Include="Assets\scripts\DetacheLid1.cs" />
@@ -125,6 +130,8 @@
     <Compile Include="Assets\scripts\Enemy1Health.cs" />
     <Compile Include="Assets\scripts\Enemy2Health.cs" />
     <Compile Include="Assets\scripts\Enemy3Health.cs" />
+    <Compile Include="Assets\scripts\fillFlour.cs" />
+    <Compile Include="Assets\scripts\fillPizzaSauce.cs" />
     <Compile Include="Assets\scripts\FinshLineDrop.cs" />
     <Compile Include="Assets\scripts\Fire.cs" />
     <Compile Include="Assets\scripts\FollowCamera.cs" />
@@ -144,8 +151,10 @@
     <Compile Include="Assets\scripts\meshCounter.cs" />
     <Compile Include="Assets\scripts\MeshDestroy.cs" />
     <Compile Include="Assets\scripts\MoneyMagnet.cs" />
+    <Compile Include="Assets\scripts\moneyNotActicveStart.cs" />
     <Compile Include="Assets\scripts\MouseCursor.cs" />
     <Compile Include="Assets\scripts\MoveToPos.cs" />
+    <Compile Include="Assets\scripts\moveTowardsSuace.cs" />
     <Compile Include="Assets\scripts\MoveTowardsTargetBox1.cs" />
     <Compile Include="Assets\scripts\MoveTowardsTargetBox2.cs" />
     <Compile Include="Assets\scripts\MoveTowardsTargetBox3.cs" />
@@ -160,40 +169,63 @@
     <Compile Include="Assets\scripts\PlayMusic.cs" />
     <Compile Include="Assets\scripts\PuchBackForce.cs" />
     <Compile Include="Assets\scripts\ResetToStartRotarion.cs" />
+    <Compile Include="Assets\scripts\SauceColided.cs" />
     <Compile Include="Assets\scripts\SC_RigidbodyMagnet.cs" />
     <Compile Include="Assets\scripts\ScoreCount.cs" />
+    <Compile Include="Assets\scripts\ShowPrecentageShrink.cs" />
     <Compile Include="Assets\scripts\SlowMotion.cs" />
     <Compile Include="Assets\scripts\Spawn.cs" />
     <Compile Include="Assets\scripts\StairsAnimControler.cs" />
     <Compile Include="Assets\scripts\StickToPlatform.cs" />
     <Compile Include="Assets\scripts\stopAnimation.cs" />
+    <Compile Include="Assets\scripts\SwitchCamera.cs" />
     <Compile Include="Assets\scripts\SwitchPlayers.cs" />
     <Compile Include="Assets\scripts\TeleportBox.cs" />
     <Compile Include="Assets\scripts\ThrowMoney.cs" />
     <Compile Include="Assets\scripts\TrigCubeChangeParent.cs" />
     <Compile Include="Assets\scripts\TriggerCubeClider.cs" />
+    <Compile Include="Assets\scripts\TurnOffHitStove.cs" />
+    <Compile Include="Assets\scripts\TurnOffPizzaBox1and2.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
-    <Compile Include="Assets\ShowPrecentageShrink.cs" />
-    <Compile Include="Assets\SwitchCamera.cs" />
-    <Compile Include="Assets\TurnOffHitStove.cs" />
-    <Compile Include="Assets\TurnOffPizzaBox1and2.cs" />
+    <Compile Include="Assets\Water2D\Core\MetaballCameraEffect.cs" />
+    <Compile Include="Assets\Water2D\Core\MetaballParticleClass.cs" />
+    <Compile Include="Assets\Water2D\Core\Water2D_Spawner.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\Attributes.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\ButtonAttributeDrawer.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\FieldDescriptionAttributeDrawer.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\IncrementableAttribute.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\IncrementableAttributeDrawer.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\PopUpAttributeDrawer.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\SeparatorAttributeDrawer.cs" />
+    <Compile Include="Assets\Water2D\PropertyDrawers\TitleAttributeDrawer.cs" />
+    <Compile Include="Assets\Water2D\Scrpts\_SpawnExampleController.cs" />
+    <Compile Include="Assets\Water2D\Scrpts\MouseColliderController.cs" />
+    <Compile Include="Assets\Water2D\Scrpts\screenshot.cs" />
+    <Compile Include="Assets\WaterColidedWithShelf.cs" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
+    <None Include="Assets\Water2D\Shaders\Metaballs_Simple.shader" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\EdgeDetection.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\Identity.compute" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\BilateralBlur.compute" />
+    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
     <None Include="Assets\Downloads\Image Effects\Shaders\BlackAndWhite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Water2D\readme.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Water2D\Shaders\BlurEffectConeTaps.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\RainMaker\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
@@ -208,8 +240,20 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Editor">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -226,8 +270,17 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
