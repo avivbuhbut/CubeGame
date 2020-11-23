@@ -8,14 +8,18 @@ public class moveTowardsSuace : MonoBehaviour
     Vector3 scaleChangeBiger;
     Vector3 scaleChangeSmaller;
 
-
+    Vector3 StartPosEnemy;
     public Transform SauceTrans;
     bool ColidedWithSouce;
+
+    int NewEnemyCounter = 0;
+    Transform NewEnemy;
     // Start is called before the first frame update
     void Start()
     {
         scaleChangeBiger = new Vector3(0.001f, 0.001f, 0.001f);
         scaleChangeSmaller = new Vector3(-0.001f, -0.001f, -0.001f);
+        StartPosEnemy = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
     }
 
     // Update is called once per frame
@@ -23,16 +27,15 @@ public class moveTowardsSuace : MonoBehaviour
     {
         Debug.Log(" SauceTrans.localScale.x : " + SauceTrans.localScale.x);
         /*if the enemy didnt colided with the sauce move towards the sauce, else - move towards bounds*/
-        if (!(ColidedWithSouce))
+        if (!(ColidedWithSouce) && transform.name != "NewEnemy")
             transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Sauce").transform.position, .9f * Time.deltaTime); // move towards the pizza box
-      // else
-            //transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("LeftBoundEnemy").transform.position, .9f * Time.deltaTime);
-
-
+        else
+            if(NewEnemy!= null)
+            NewEnemy.position = Vector3.MoveTowards(NewEnemy.position, GameObject.Find("Player").transform.position, .9f * Time.deltaTime);
 
 
         /*if the enemy is now dead make the sauce go to the original sauce parent agian*/
-       if(GameObject.Find("CubeEnemy").GetComponent<Enemy1Health>().health == 0)
+        if (GameObject.Find("CubeEnemy").GetComponent<Enemy1Health>().health == 0)
         {
             GameObject.Find("Sauce").gameObject.transform.parent = GameObject.Find("PizzaIngridians").gameObject.transform;
             ColidedWithSouce = false;
@@ -51,6 +54,18 @@ public class moveTowardsSuace : MonoBehaviour
         }
         else
             ColidedWithSouce = false;
+
+
+
+        if(ColidedWithSouce && NewEnemyCounter<1)
+        {
+            NewEnemyCounter++;
+             NewEnemy = Instantiate(GameObject.Find("CubeEnemy").transform, StartPosEnemy, Quaternion.identity);
+            NewEnemy.name = "NewEnemy";
+            NewEnemy.position = Vector3.MoveTowards(NewEnemy.position, GameObject.Find("Player").transform.position, .9f * Time.deltaTime);
+
+            
+        }
 
 
     }
