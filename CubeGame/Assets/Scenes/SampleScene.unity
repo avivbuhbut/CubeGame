@@ -2930,6 +2930,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342229559}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &347216047 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
+    type: 3}
+  m_PrefabInstance: {fileID: 551898199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &352285756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,7 +4926,7 @@ PrefabInstance:
     - target: {fileID: 3025731039856186767, guid: f06fe704d0ce24e65ad8bc49284e395a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3025731039856186753, guid: f06fe704d0ce24e65ad8bc49284e395a,
         type: 3}
@@ -4993,6 +4999,11 @@ PrefabInstance:
       propertyPath: SauceTrans
       value: 
       objectReference: {fileID: 1334267172}
+    - target: {fileID: 4845491469700649156, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: CubeEnemySauceTrans
+      value: 
+      objectReference: {fileID: 347216047}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06fe704d0ce24e65ad8bc49284e395a, type: 3}
 --- !u!1 &556300625

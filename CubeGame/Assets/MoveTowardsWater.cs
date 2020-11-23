@@ -16,6 +16,8 @@ public class MoveTowardsWater : MonoBehaviour
 
     int NewEnemyCounter = 0;
     Transform NewEnemy;
+
+    bool ColidedWithIngrediens;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,22 @@ public class MoveTowardsWater : MonoBehaviour
 
         EnemyColidWithWaterCreateNewEnemyMoveToPlayer();
 
-
+        byPassIngrediens();
 
 
         Debug.Log(" WaterTrans.localScale.x : " + WaterTrans.localScale.x);
     }
+
+
+    void byPassIngrediens()
+    {
+        if (ColidedWithIngrediens)
+        {
+ 
+        }
+    }
+
+
 
 
     void EnemyColidWithWaterCreateNewEnemyMoveToPlayer()
@@ -51,7 +64,7 @@ public class MoveTowardsWater : MonoBehaviour
         if (ColidedWithWater && NewEnemyCounter < 1)
         {
             NewEnemyCounter++;
-            NewEnemy = Instantiate(GameObject.Find("CubeEnemyWater").transform, StartPosEnemy, Quaternion.identity);
+            NewEnemy = Instantiate(WaterEnemyTrans.transform, StartPosEnemy, Quaternion.identity);
             NewEnemy.name = "WaterEnemy";
             NewEnemy.position = Vector3.MoveTowards(NewEnemy.position, GameObject.Find("Player").transform.position, .9f * Time.deltaTime);
 
@@ -61,13 +74,14 @@ public class MoveTowardsWater : MonoBehaviour
 
     void changeCubeAndEnemyScale()
     {
+        Debug.Log("WaterTrans.localScale.x " + WaterTrans.localScale.x);
         /*if the sauce scale is bigger than 1 keep decresing it  - else turn of the colision (to stop the decresing of the sauce and icresing of the enemy)*/
         if (ColidedWithWater && WaterTrans.localScale.x > 0)
         {
 
 
-            GameObject.Find("CubeEnemyWater").transform.localScale += scaleChangeBiger;
-            GameObject.Find("Water").transform.localScale += scaleChangeSmaller;
+            WaterEnemyTrans.transform.localScale += scaleChangeBiger;
+            WaterTrans.localScale += scaleChangeSmaller;
 
         }
         else
@@ -109,8 +123,23 @@ public class MoveTowardsWater : MonoBehaviour
 
             // GameObject.Find("Sauce").gameObject.transform.parent = GameObject.Find("CubeEnemy").transform;
         }
-        else
-            ColidedWithWater = false;
+       // else
+          //  ColidedWithWater = false;
+
+
+     
+        if (collision.gameObject.transform.name == "Dough" || collision.gameObject.transform.name == "Sauce"
+            || collision.gameObject.transform.name == "DoughAndSauce" || collision.gameObject.transform.name == "CubeEnemySauce")
+
+            
+        {
+
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
+            ColidedWithIngrediens = true;
+
+           
+        }else
+            ColidedWithIngrediens = false;
     }
 
 }

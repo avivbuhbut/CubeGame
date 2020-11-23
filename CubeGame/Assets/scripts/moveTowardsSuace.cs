@@ -10,8 +10,9 @@ public class moveTowardsSuace : MonoBehaviour
 
     Vector3 StartPosEnemy;
     public Transform SauceTrans;
+    public Transform CubeEnemySauceTrans;
     bool ColidedWithSouce;
-
+    bool ColidedWithIngrediens;
     int NewEnemyCounter = 0;
     Transform NewEnemy;
     // Start is called before the first frame update
@@ -64,8 +65,8 @@ public class moveTowardsSuace : MonoBehaviour
         {
 
 
-            GameObject.Find("CubeEnemySauce").transform.localScale += scaleChangeBiger;
-            GameObject.Find("Sauce").transform.localScale += scaleChangeSmaller;
+            CubeEnemySauceTrans.localScale += scaleChangeBiger;
+            SauceTrans.localScale += scaleChangeSmaller;
 
         }
         else
@@ -97,8 +98,25 @@ public class moveTowardsSuace : MonoBehaviour
 
 
      void OnCollisionEnter(Collision collision)
+
     {
-        if(collision.gameObject.transform.tag== "Sauce")
+
+
+        if (collision.gameObject.transform.name == "Dough" || collision.gameObject.transform.name == "Water"
+            || collision.gameObject.transform.name == "DoughAndSauce" || collision.gameObject.transform.name == "CubeEnemyWater")
+        {
+
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
+            ColidedWithIngrediens = true;
+
+
+        }
+        else
+            ColidedWithIngrediens = false;
+
+
+
+        if (collision.gameObject.transform.tag== "Sauce")
         {
             Debug.Log(" SauceTrans.localScale.x : " + SauceTrans.localScale.x);
             ColidedWithSouce = true;
