@@ -8386,6 +8386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SauceTrans: {fileID: 1334267172}
+  PizzaSauce100pScale: {x: 0, y: 0, z: 0}
+  fillSauce: {x: 0, y: 0, z: 0}
 --- !u!1 &984490889
 GameObject:
   m_ObjectHideFlags: 0
@@ -16622,6 +16624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SouceTMP: {fileID: 1523521651}
+  ColidesWithEnemy: 0
+  ColidedSauceShelf: 0
 --- !u!114 &1334267179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30313,6 +30317,11 @@ PrefabInstance:
       propertyPath: PizzaBox1Cam
       value: 
       objectReference: {fileID: 315846103}
+    - target: {fileID: 4845491469700649156, guid: f06fe704d0ce24e65ad8bc49284e395a,
+        type: 3}
+      propertyPath: SauceTrans
+      value: 
+      objectReference: {fileID: 1334267172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06fe704d0ce24e65ad8bc49284e395a, type: 3}
 --- !u!1001 &4902539670693948413

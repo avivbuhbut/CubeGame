@@ -8,6 +8,8 @@ public class moveTowardsSuace : MonoBehaviour
     Vector3 scaleChangeBiger;
     Vector3 scaleChangeSmaller;
 
+
+    public Transform SauceTrans;
     bool ColidedWithSouce;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,7 @@ public class moveTowardsSuace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(" SauceTrans.localScale.x : " + SauceTrans.localScale.x);
         /*if the enemy didnt colided with the sauce move towards the sauce, else - move towards bounds*/
         if (!(ColidedWithSouce))
             transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Sauce").transform.position, .9f * Time.deltaTime); // move towards the pizza box
@@ -37,20 +39,19 @@ public class moveTowardsSuace : MonoBehaviour
         }
 
 
-       
 
-        if (ColidedWithSouce)
+       /*if the sauce scale is bigger than 1 keep decresing it  - else turn of the colision (to stop the decresing of the sauce and icresing of the enemy)*/
+        if (ColidedWithSouce && SauceTrans.localScale.x > 0)
         {
 
-           // if(GameObject.Find("CubeEnemy").transform.localScale.x<1.4f) between 0.5 to 1.4
-     
-
-        
-           // GameObject.Find("Sauce").transform.parent = null;
+    
             GameObject.Find("CubeEnemy").transform.localScale += scaleChangeBiger;
             GameObject.Find("Sauce").transform.localScale += scaleChangeSmaller;
 
         }
+        else
+            ColidedWithSouce = false;
+
 
     }
 
@@ -59,10 +60,11 @@ public class moveTowardsSuace : MonoBehaviour
     {
         if(collision.gameObject.transform.tag== "Sauce")
         {
-      
+            Debug.Log(" SauceTrans.localScale.x : " + SauceTrans.localScale.x);
             ColidedWithSouce = true;
 
            // GameObject.Find("Sauce").gameObject.transform.parent = GameObject.Find("CubeEnemy").transform;
-        }
+        }else
+            ColidedWithSouce = false;
     }
 }
