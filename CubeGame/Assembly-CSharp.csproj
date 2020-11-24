@@ -81,6 +81,7 @@
     <Compile Include="Assets\FillWater.cs" />
     <Compile Include="Assets\MoveTowardsWater.cs" />
     <Compile Include="Assets\PirntColition.cs" />
+    <Compile Include="Assets\PizzaTimer.cs" />
     <Compile Include="Assets\Prefabs\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Assets\scripts\TurnOffPizzaBox1and2.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
     <Compile Include="Assets\ShowPrecentageShrinkWater.cs" />
+    <Compile Include="Assets\WaitForSecondsExample.cs" />
     <Compile Include="Assets\WaterColided.cs" />
     <Compile Include="Assets\WaterColidedWithShelf.cs" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />

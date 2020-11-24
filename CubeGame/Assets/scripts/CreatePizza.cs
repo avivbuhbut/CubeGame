@@ -10,8 +10,10 @@ public class CreatePizza : MonoBehaviour
     public GameObject DoughAndSauceGamObj;
     public GameObject PizzaBox1GamObj;
 
+    bool colidedWithSauceAndDough;
 
-
+   public float  timeLeft = 10f;
+    float timerPizza = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,41 +25,60 @@ public class CreatePizza : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
-      
-    }
 
-     void OnCollisionEnter(Collision collision)
-    {
-
-        if (collision.gameObject.transform.name == "DoughAndSauce(Clone)" || collision.gameObject.transform.name == "DoughAndSauce" && GameObject.Find("CubeCheckForRainColision").GetComponent<CubeCheckForRainHit>().hit.transform.name != "StoveCelling")
+        if (colidedWithSauceAndDough && timeLeft>0 && GameObject.Find("CubeCheckForRainColision").GetComponent<CubeCheckForRainHit>().hit.transform.name != "StoveCelling")
         {
-     
-            counterPizzaGen++;
+            timeLeft -= Time.deltaTime;
 
-
+            Debug.Log((int)timeLeft);
+            timerPizza = 1;
+        }
+        else if(timeLeft <=0f && timerPizza==1)
+        {
+            timeLeft = 10f;
+            timerPizza++;
+            colidedWithSauceAndDough = false;
             if (counterPizzaGen < 2)
             {
-       
-                GameObject Clone =  Instantiate(PizzaBox1GamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
+
+
+                GameObject Clone = Instantiate(PizzaBox1GamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
                 Clone.transform.name = "PizzaBoxClone" + counterPizzaGen;
                 PizzaBox1GamObj.gameObject.SetActive(true);
-              //  GameObject.Find("DoughAndSauce(Clone)").SetActive(false);
+                //  GameObject.Find("DoughAndSauce(Clone)").SetActive(false);
                 //      Destroy(GameObject.Find("DoughAndSauce(Clone)"));
 
             }
             else
             {
-            
+
 
                 GameObject Clone = Instantiate(PizzaBox1GamObj, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), Quaternion.identity);
                 Clone.transform.name = "PizzaBoxClone" + counterPizzaGen;
                 Clone.transform.parent = PizzaBox1GamObj.transform.parent;
-           
+
                 //  Destroy(GameObject.Find("DoughAndSauce(Clone)"));
 
 
             }
+        }
+    }
+
+     void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.transform.name == "DoughAndSauce(Clone)" || collision.gameObject.transform.name == "DoughAndSauce" 
+            && GameObject.Find("CubeCheckForRainColision").GetComponent<CubeCheckForRainHit>().hit.transform.name != "StoveCelling" || colidedWithSauceAndDough)
+        {
+
+
+            colidedWithSauceAndDough = true;
+
+                counterPizzaGen++;
+
+
+
+            
         }
    
 
@@ -71,4 +92,7 @@ public class CreatePizza : MonoBehaviour
 
         
     }
+
+
+
 }
