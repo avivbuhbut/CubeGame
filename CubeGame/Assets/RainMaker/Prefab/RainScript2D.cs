@@ -193,8 +193,8 @@ namespace DigitalRuby.RainMaker
             base.Update();
 
             cameraMultiplier = (Camera.orthographicSize * 0.25f);
-            visibleBounds.min = Camera.main.ViewportToWorldPoint(Vector3.zero);
-            visibleBounds.max = Camera.main.ViewportToWorldPoint(Vector3.one);
+           // visibleBounds.min = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        //    visibleBounds.max = Camera.main.ViewportToWorldPoint(Vector3.one);
             visibleWorldWidth = visibleBounds.size.x;
             yOffset = (visibleBounds.max.y - visibleBounds.min.y) * RainHeightMultiplier;
 
