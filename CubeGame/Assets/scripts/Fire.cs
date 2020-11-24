@@ -44,7 +44,7 @@ public class Fire : MonoBehaviour
            if ( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
             {
 
-                Debug.Log(hit.transform.name);// print the object that the ray hit
+
 
                 EnamiesTakesDamge();
 

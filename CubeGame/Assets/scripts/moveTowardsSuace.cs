@@ -37,7 +37,7 @@ public class moveTowardsSuace : MonoBehaviour
 
         EnemyColidWithSauceCreateNewEnemyMoveToPlayer();
 
-
+        NewEnemyMoveTowardsPlayer();
 
 
 
@@ -77,9 +77,9 @@ public class moveTowardsSuace : MonoBehaviour
     void EnemyDieSauceParentChange()
     {
         /*if the enemy is now dead make the sauce go to the original sauce parent agian*/
-        if (GameObject.Find("CubeEnemySauce").GetComponent<Enemy1Health>().health == 0)
+        if (CubeEnemySauceTrans.GetComponent<Enemy1Health>().health == 0)
         {
-            GameObject.Find("Sauce").gameObject.transform.parent = GameObject.Find("PizzaIngridians").gameObject.transform;
+            SauceTrans.parent = GameObject.Find("PizzaIngridians").gameObject.transform;
             ColidedWithSouce = false;
         }
 
@@ -91,11 +91,17 @@ public class moveTowardsSuace : MonoBehaviour
         /*if the enemy didnt colided with the sauce move towards the sauce, else - move towards bounds*/
         if (!(ColidedWithSouce) && transform.name != "NewEnemy")
             transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Sauce").transform.position, .9f * Time.deltaTime); // move towards the pizza box
-        else
-            if (NewEnemy != null)
-            NewEnemy.position = Vector3.MoveTowards(NewEnemy.position, GameObject.Find("Player").transform.position, .9f * Time.deltaTime);
+
+     
+
     }
 
+
+    void NewEnemyMoveTowardsPlayer()
+    {
+        if (NewEnemy != null)
+            NewEnemy.position = Vector3.MoveTowards(NewEnemy.position, GameObject.Find("Player").transform.position, .9f * Time.deltaTime);
+    }
 
      void OnCollisionEnter(Collision collision)
 
@@ -109,7 +115,7 @@ public class moveTowardsSuace : MonoBehaviour
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
             ColidedWithIngrediens = true;
 
-
+                
         }
         else
             ColidedWithIngrediens = false;
@@ -118,7 +124,7 @@ public class moveTowardsSuace : MonoBehaviour
 
         if (collision.gameObject.transform.tag== "Sauce")
         {
-            Debug.Log(" SauceTrans.localScale.x : " + SauceTrans.localScale.x);
+
             ColidedWithSouce = true;
 
            // GameObject.Find("Sauce").gameObject.transform.parent = GameObject.Find("CubeEnemy").transform;

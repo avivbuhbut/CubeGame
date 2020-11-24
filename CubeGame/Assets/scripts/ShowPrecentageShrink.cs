@@ -32,7 +32,7 @@ public class ShowPrecentageShrink : MonoBehaviour
 
             if (transform.localScale.x >= 0.9f)
             {
-                Debug.Log("90");
+
                 counterPresent = 90;
                 SouceTMP.color = Color.red;
                 SouceTMP.text = "Pizza Sauce " + counterPresent + "%";

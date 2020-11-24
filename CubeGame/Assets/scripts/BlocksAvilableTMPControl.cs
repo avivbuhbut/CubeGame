@@ -25,7 +25,7 @@ public class BlocksAvilableTMPControl : MonoBehaviour
         if (collision.gameObject.transform.name == "BuildingCube(Clone)")
         {
             CreateBlocks.BlocksAvilable++;
-            Debug.Log("Colided with building cube");
+
             PlayerBlocksAvilableTMP.enabled = true;
             PlayerBlocksAvilableTMP.text = "X" + CreateBlocks.BlocksAvilable + " Blocks";
            // GameObject.Find("BuildingCube").SetActive(false);

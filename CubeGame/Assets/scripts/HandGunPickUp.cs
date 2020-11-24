@@ -72,7 +72,7 @@ public class HandGunPickUp : MonoBehaviour
 
             /*RIGHT HAND*/
           
-                Debug.Log("Gun is in the RIGHT hand");
+
 
                 RightHandHold();
 
@@ -80,7 +80,7 @@ public class HandGunPickUp : MonoBehaviour
             if (RightHandGunFacingDirectio == 180 || LeftHandGunFacingDirectio == 180) {//  gun faces left
 
 
-                Debug.Log("Gun is in the LEFT hand");
+             
 
 
                 LeftHandHold();

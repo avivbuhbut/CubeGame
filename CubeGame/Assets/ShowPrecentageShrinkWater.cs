@@ -32,7 +32,7 @@ public class ShowPrecentageShrinkWater : MonoBehaviour
 
             if (transform.localScale.x >= 0.9f)
             {
-                Debug.Log("90");
+
                 counterPresent = 90;
                 WaterTMP.color = Color.red;
                 WaterTMP.text = "Water" + counterPresent + "%";

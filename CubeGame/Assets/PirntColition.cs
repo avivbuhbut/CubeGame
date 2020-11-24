@@ -19,6 +19,6 @@ public class PirntColition : MonoBehaviour
 
      void OnParticleCollision(GameObject other)
     {
-        Debug.Log(other.gameObject.name);
+
     }
 }

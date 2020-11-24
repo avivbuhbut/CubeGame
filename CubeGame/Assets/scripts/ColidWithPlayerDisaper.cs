@@ -25,7 +25,7 @@ public class ColidWithPlayerDisaper : MonoBehaviour
 
        
 
-            Debug.Log("CreateBlocks.BlocksAvilable: " + CreateBlocks.BlocksAvilable);
+
             this.gameObject.SetActive(false);
           
 

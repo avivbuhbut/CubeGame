@@ -42,8 +42,10 @@ public class MoveTowardsWater : MonoBehaviour
 
         byPassIngrediens();
 
+        NewEnemyMoveTowardsPlayer();
 
-        Debug.Log(" WaterTrans.localScale.x : " + WaterTrans.localScale.x);
+
+  
     }
 
 
@@ -74,7 +76,7 @@ public class MoveTowardsWater : MonoBehaviour
 
     void changeCubeAndEnemyScale()
     {
-        Debug.Log("WaterTrans.localScale.x " + WaterTrans.localScale.x);
+
         /*if the sauce scale is bigger than 1 keep decresing it  - else turn of the colision (to stop the decresing of the sauce and icresing of the enemy)*/
         if (ColidedWithWater && WaterTrans.localScale.x > 0)
         {
@@ -108,8 +110,14 @@ public class MoveTowardsWater : MonoBehaviour
         /*if the enemy didnt colided with the sauce move towards the sauce, else - move towards bounds*/
         if (!(ColidedWithWater) && transform.name != "WaterEnemy")
             transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Water").transform.position, .9f * Time.deltaTime); // move towards the pizza box
-        else
-            if (NewEnemy != null)
+     
+  
+    }
+
+
+    void NewEnemyMoveTowardsPlayer()
+    {
+        if (NewEnemy != null)
             NewEnemy.position = Vector3.MoveTowards(NewEnemy.position, GameObject.Find("Player").transform.position, .9f * Time.deltaTime);
     }
 

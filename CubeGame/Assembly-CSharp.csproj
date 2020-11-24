@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CubeCheckForRainHit.cs" />
     <Compile Include="Assets\CustomRenderPassFeature.cs" />
     <Compile Include="Assets\CustomRenderPassFeature1.cs" />
     <Compile Include="Assets\Downloads\Bullet Casing\Scripts\FP_Shooting.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
+    <Compile Include="Assets\RainStopStoveFireOn.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />

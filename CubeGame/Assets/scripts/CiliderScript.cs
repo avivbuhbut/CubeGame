@@ -18,6 +18,6 @@ public class CiliderScript : MonoBehaviour
 
      void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("This onject: " + collision.gameObject.name + "Hit Enemy");
+
     }
 }
