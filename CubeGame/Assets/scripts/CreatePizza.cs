@@ -30,7 +30,7 @@ public class CreatePizza : MonoBehaviour
      void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.transform.name == "DoughAndSauce(Clone)" || collision.gameObject.transform.name == "DoughAndSauce")
+        if (collision.gameObject.transform.name == "DoughAndSauce(Clone)" || collision.gameObject.transform.name == "DoughAndSauce" && GameObject.Find("CubeCheckForRainColision").GetComponent<CubeCheckForRainHit>().hit.transform.name != "StoveCelling")
         {
      
             counterPizzaGen++;

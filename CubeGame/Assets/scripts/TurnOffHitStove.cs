@@ -20,7 +20,7 @@ public class TurnOffHitStove : MonoBehaviour
      void OnCollisionEnter(Collision collision)
     {
         
-       if(collision.gameObject.transform.tag == "Stove")
+       if(collision.gameObject.transform.tag == "Stove" && GameObject.Find("CubeCheckForRainColision").GetComponent<CubeCheckForRainHit>().hit.transform.name != "StoveCelling")
         {
             this.gameObject.SetActive(false);
         }
