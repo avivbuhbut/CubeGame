@@ -59,7 +59,12 @@ public class CreateBlocks : MonoBehaviour
 
                 mousepos = Camera.main.ScreenToWorldPoint(mousepos);
                 linehandler = Instantiate(CubeGamObj, mousepos, Quaternion.identity) as GameObject;
-            }
+                    linehandler.gameObject.name = "CubePlayerCreate(Clone)";
+
+
+                    linehandler.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation |
+                        RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
+                }
         }
 
         /*delete a block*/

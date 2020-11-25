@@ -6382,7 +6382,7 @@ PrefabInstance:
     - target: {fileID: 3025731039856186767, guid: c6b274e61fe9de5499e6e23d5cb932fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3025731039856186753, guid: c6b274e61fe9de5499e6e23d5cb932fa,
         type: 3}
@@ -16733,7 +16733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c979fd96a0e4843cca5eec8cc95e88b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeGamObj: {fileID: 5578586193083260923, guid: 56f13c1514188424fa82230fc5b8423d,
+  CubeGamObj: {fileID: 8579781875309072059, guid: 57fd4c47a1555a7429a30fc5acced1a3,
     type: 3}
 --- !u!114 &1332451231
 MonoBehaviour:
