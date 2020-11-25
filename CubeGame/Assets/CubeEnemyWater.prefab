@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef07df0033d216746977becda46b27a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplotionEnenyParticle: {fileID: 0}
   health: 50
   PizzaSauceTrans: {fileID: 0}
   BuildingCube: {fileID: 5386186701713700627, guid: 48d4874f95bda4b3985b1e932f0384d4,

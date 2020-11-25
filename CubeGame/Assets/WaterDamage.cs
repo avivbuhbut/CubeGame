@@ -62,5 +62,17 @@ public class WaterDamage : MonoBehaviour
 
 
     }
+   
+     void OnCollisionEnter(Collision collision)
+    {
+     
+        if (collision.transform.gameObject.name == "CubePlayerCreate(Clone)")
+        {
+      
+            if (collision.transform.gameObject != null )
+                timeLeft += timeLeft *2 / 2;
+        }
+    
+    }
 }
 
