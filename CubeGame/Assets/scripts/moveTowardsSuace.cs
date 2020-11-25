@@ -115,7 +115,7 @@ public class moveTowardsSuace : MonoBehaviour
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
             ColidedWithIngrediens = true;
 
-                
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
         }
         else
             ColidedWithIngrediens = false;

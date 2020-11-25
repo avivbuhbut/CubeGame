@@ -82,6 +82,7 @@
     <Compile Include="Assets\MoveTowardsWater.cs" />
     <Compile Include="Assets\PirntColition.cs" />
     <Compile Include="Assets\PizzaTimer.cs" />
+    <Compile Include="Assets\PlayAudio.cs" />
     <Compile Include="Assets\Prefabs\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
@@ -196,6 +197,7 @@
     <Compile Include="Assets\WaitForSecondsExample.cs" />
     <Compile Include="Assets\WaterColided.cs" />
     <Compile Include="Assets\WaterColidedWithShelf.cs" />
+    <Compile Include="Assets\WaterDamage.cs" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\GaussianBlur.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

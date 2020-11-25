@@ -6,6 +6,7 @@ public class CubeCheckForRainHit : MonoBehaviour
 {
     public AudioSource RainAudio;
     public RaycastHit hit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,11 @@ public class CubeCheckForRainHit : MonoBehaviour
 
 
         if (hit.transform.name == "StoveCelling")
+        {
+           
             RainAudio.Play();
-         else
+        }
+        else
             RainAudio.Stop();
 
 

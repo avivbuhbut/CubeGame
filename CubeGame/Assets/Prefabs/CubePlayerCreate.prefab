@@ -12,13 +12,16 @@ GameObject:
   - component: {fileID: 9087559693888620425}
   - component: {fileID: 9087559693888620426}
   - component: {fileID: 9087559693888620427}
+  - component: {fileID: 1017528592256621842}
+  - component: {fileID: 2338048047888029895}
+  - component: {fileID: 4114874175922115136}
   m_Layer: 0
   m_Name: CubePlayerCreate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9087559693888620424
 Transform:
   m_ObjectHideFlags: 0
@@ -86,9 +89,55 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9087559693888620428}
-  m_Material: {fileID: 13400000, guid: 9f93f63d068b08c459038c40fce897d8, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1017528592256621842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087559693888620428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7c27f85ae970b4ab82558278e70bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 10
+--- !u!114 &2338048047888029895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087559693888620428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c050388294ff342ae9d6c5d92eff13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player2Trans: {fileID: 0}
+  HammerCubeTrans: {fileID: 0}
+  CutCascades: 1
+  ExplodeForce: 0
+  Distraction1: 0
+--- !u!54 &4114874175922115136
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087559693888620428}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0

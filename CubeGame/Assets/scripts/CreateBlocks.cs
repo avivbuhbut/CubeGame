@@ -22,6 +22,22 @@ public class CreateBlocks : MonoBehaviour
     {
 
 
+        /*for debug onle*/
+        if (Input.GetKey(KeyCode.Alpha5))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                CubeGamObj.SetActive(true);
+                mousepos = Input.mousePosition;
+                mousepos.z = 14.5f;
+
+                mousepos = Camera.main.ScreenToWorldPoint(mousepos);
+                linehandler = Instantiate(CubeGamObj, mousepos, Quaternion.identity) as GameObject;
+ 
+            }
+        }
+
+
         if(Input.GetKey(KeyCode.B)) 
         if (BlocksAvilable > 0 )
         {

@@ -16,6 +16,15 @@ public class MeshDestroy : MonoBehaviour
     public int CutCascades = 1;
     public float ExplodeForce = 0;
     public bool Distraction1;
+
+    int counterGeneral = 0;
+    public static int counterCubeCreatePlayer = 0;
+
+
+
+
+    //public Transform CubePlayerCreate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,55 +38,65 @@ public class MeshDestroy : MonoBehaviour
         {
             // DestroyMesh();
         }
+
+
     }
-
-    private void DestroyMesh()
+ 
+    public void DestroyMesh(Mesh originalMesh , MeshDestroy GamobjectMeshDestroy, GameObject Gameobj)
     {
+       
 
-        var originalMesh = GetComponent<MeshFilter>().mesh;
-        originalMesh.RecalculateBounds();
-        var parts = new List<PartMesh>();
-        var subParts = new List<PartMesh>();
+     
+     
+        
+            originalMesh.RecalculateBounds();
+            var parts = new List<PartMesh>();
+            var subParts = new List<PartMesh>();
 
-        var mainPart = new PartMesh()
-        {
-            UV = originalMesh.uv,
-            Vertices = originalMesh.vertices,
-            Normals = originalMesh.normals,
-            Triangles = new int[originalMesh.subMeshCount][],
-            Bounds = originalMesh.bounds
-        };
-        for (int i = 0; i < originalMesh.subMeshCount; i++)
-            mainPart.Triangles[i] = originalMesh.GetTriangles(i);
+            var mainPart = new PartMesh()
+            {
+                UV = originalMesh.uv,
+                Vertices = originalMesh.vertices,
+                Normals = originalMesh.normals,
+                Triangles = new int[originalMesh.subMeshCount][],
+                Bounds = originalMesh.bounds
+            };
+            for (int i = 0; i < originalMesh.subMeshCount; i++)
+                mainPart.Triangles[i] = originalMesh.GetTriangles(i);
 
-        parts.Add(mainPart);
+            parts.Add(mainPart);
 
-        for (var c = 0; c < CutCascades; c++)
-        {
+            for (var c = 0; c < CutCascades; c++)
+            {
+                for (var i = 0; i < parts.Count; i++)
+                {
+                    var bounds = parts[i].Bounds;
+                    bounds.Expand(0.5f);
+
+                    var plane = new Plane(UnityEngine.Random.onUnitSphere, new Vector3(UnityEngine.Random.Range(bounds.min.x, bounds.max.x),
+                                                                                       UnityEngine.Random.Range(bounds.min.y, bounds.max.y),
+                                                                                       UnityEngine.Random.Range(bounds.min.z, bounds.max.z)));
+
+
+                    subParts.Add(GenerateMesh(parts[i], plane, true));
+                    subParts.Add(GenerateMesh(parts[i], plane, false));
+                }
+                parts = new List<PartMesh>(subParts);
+                subParts.Clear();
+            }
+
             for (var i = 0; i < parts.Count; i++)
             {
-                var bounds = parts[i].Bounds;
-                bounds.Expand(0.5f);
-
-                var plane = new Plane(UnityEngine.Random.onUnitSphere, new Vector3(UnityEngine.Random.Range(bounds.min.x, bounds.max.x),
-                                                                                   UnityEngine.Random.Range(bounds.min.y, bounds.max.y),
-                                                                                   UnityEngine.Random.Range(bounds.min.z, bounds.max.z)));
-
-
-                subParts.Add(GenerateMesh(parts[i], plane, true));
-                subParts.Add(GenerateMesh(parts[i], plane, false));
+     
+            parts[i].MakeGameobject(GamobjectMeshDestroy, Gameobj);
+                parts[i].GameObject.GetComponent<Rigidbody>().AddForceAtPosition(parts[i].Bounds.center * ExplodeForce, transform.position);
             }
-            parts = new List<PartMesh>(subParts);
-            subParts.Clear();
-        }
 
-        for (var i = 0; i < parts.Count; i++)
-        {
-            parts[i].MakeGameobject(this);
-            parts[i].GameObject.GetComponent<Rigidbody>().AddForceAtPosition(parts[i].Bounds.center * ExplodeForce, transform.position);
-        }
+    
+            Destroy(gameObject);
+        
 
-        Destroy(gameObject);
+       
     }
 
     private PartMesh GenerateMesh(PartMesh original, Plane plane, bool left)
@@ -269,16 +288,17 @@ public class MeshDestroy : MonoBehaviour
                 Triangles[i] = _Triangles[i].ToArray();
         }
 
-        public void MakeGameobject(MeshDestroy original)
+        public void MakeGameobject(MeshDestroy original , GameObject origianlGameobj ) ////////////////////////////////////////////////
         {
-            GameObject = new GameObject(original.name);
-            GameObject.tag = "CubeDistraction";
-            GameObject.transform.position = original.transform.position;
-            GameObject.transform.rotation = original.transform.rotation;
-            GameObject.transform.localScale = original.transform.localScale;
-
+          
+            GameObject = new GameObject(origianlGameobj.name);
+                GameObject.tag = "CubeDistraction";
+                GameObject.transform.position = origianlGameobj.transform.position;
+                GameObject.transform.rotation = origianlGameobj.transform.rotation;
+                GameObject.transform.localScale = origianlGameobj.transform.localScale;
+            
             var mesh = new Mesh();
-            mesh.name = original.GetComponent<MeshFilter>().mesh.name;
+            mesh.name = origianlGameobj.GetComponent<MeshFilter>().mesh.name;
 
             mesh.vertices = Vertices;
             mesh.normals = Normals;
@@ -288,7 +308,7 @@ public class MeshDestroy : MonoBehaviour
             Bounds = mesh.bounds;
 
             var renderer = GameObject.AddComponent<MeshRenderer>();
-            renderer.materials = original.GetComponent<MeshRenderer>().materials;
+            renderer.materials = origianlGameobj.GetComponent<MeshRenderer>().materials;
 
             var filter = GameObject.AddComponent<MeshFilter>();
             filter.mesh = mesh;
@@ -298,8 +318,8 @@ public class MeshDestroy : MonoBehaviour
 
             var rigidbody = GameObject.AddComponent<Rigidbody>();
             var meshDestroy = GameObject.AddComponent<MeshDestroy>();
-            meshDestroy.CutCascades = original.CutCascades;
-            meshDestroy.ExplodeForce = original.ExplodeForce;
+            meshDestroy.CutCascades = origianlGameobj.GetComponent<MeshDestroy>().CutCascades;
+            meshDestroy.ExplodeForce = origianlGameobj.GetComponent<MeshDestroy>().ExplodeForce;
 
 
             Destroy(GameObject, 20f);
@@ -308,7 +328,7 @@ public class MeshDestroy : MonoBehaviour
 
     }
 
-
+    int coutnerHit = 0;
      void OnCollisionEnter(Collision collision)
     {
  
@@ -318,8 +338,9 @@ public class MeshDestroy : MonoBehaviour
             counter++;
 
             Distraction1 = true;
-
-            DestroyMesh();
+            coutnerHit++;
+          
+            DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(),this.gameObject);
         }
 
  
