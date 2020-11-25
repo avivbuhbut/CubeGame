@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeCheckForRainHit : MonoBehaviour
 {
-
+    public AudioSource RainAudio;
     public RaycastHit hit;
     // Start is called before the first frame update
     void Start()
@@ -29,5 +29,21 @@ public class CubeCheckForRainHit : MonoBehaviour
             Debug.DrawRay(GameObject.Find("CubeCheckForRainColision").transform.position, GameObject.Find("CubeCheckForRainColision").transform.TransformDirection(Vector3.down) * 1000, Color.white);
             Debug.Log("Did not Hit");
         }
+
+
+
+
+
+        if (hit.transform.name == "StoveCelling")
+            RainAudio.Play();
+         else
+            RainAudio.Stop();
+
+
     }
+
+
+
+
+
 }
