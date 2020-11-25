@@ -13,7 +13,7 @@ public class CreateBlocks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CubeGamObj.SetActive(false);
+       CubeGamObj.SetActive(false);
     }
 
    
@@ -21,6 +21,8 @@ public class CreateBlocks : MonoBehaviour
     void Update()
     {
 
+
+   
 
         /*for debug onle*/
         if (Input.GetKey(KeyCode.Alpha5))
@@ -33,7 +35,12 @@ public class CreateBlocks : MonoBehaviour
 
                 mousepos = Camera.main.ScreenToWorldPoint(mousepos);
                 linehandler = Instantiate(CubeGamObj, mousepos, Quaternion.identity) as GameObject;
- 
+                linehandler.gameObject.name = "CubePlayerCreate(Clone)";
+
+
+                linehandler.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation |
+                    RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
+
             }
         }
 
