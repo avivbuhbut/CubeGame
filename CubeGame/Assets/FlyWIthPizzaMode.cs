@@ -16,9 +16,14 @@ public class FlyWIthPizzaMode : MonoBehaviour
 
 
         if (Input.GetKey(KeyCode.F)){
-        
-                GameObject.Find("Player").transform.position = new Vector3(GameObject.FindWithTag("PizzaBox").transform.position.x, GameObject.FindWithTag("PizzaBox").transform.position.y + 1, GameObject.FindWithTag("PizzaBox").transform.position.z);
-          
+
+         Transform tran =    LastActivePizzaBox.LastPizzaActive.transform;
+
+
+            if (tran != null) ;
+                GameObject.Find("Player").transform.position = new Vector3(tran.transform.position.x, tran.transform.position.y + 1, tran.transform.position.z);
+         
+
         }
         
     }

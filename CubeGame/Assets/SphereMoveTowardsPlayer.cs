@@ -66,9 +66,9 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
 
         if (PizzaBoxInRadius)
             PizzaBoxTrans.GetComponent<Renderer>().material.color = Color.red;
-        else
-            if (PizzaBoxTrans != null)
-            PizzaBoxTrans.GetComponent<Renderer>().material = PizzaBoxMaterial;
+   //     else
+           // if (PizzaBoxTrans != null)
+       //     PizzaBoxTrans.GetComponent<Renderer>().material.color = Color.;
 
 
     }

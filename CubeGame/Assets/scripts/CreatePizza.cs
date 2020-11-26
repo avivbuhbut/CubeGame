@@ -30,7 +30,7 @@ public class CreatePizza : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
 
-            Debug.Log((int)timeLeft);
+
             timerPizza = 1;
         }
         else if(timeLeft <=0f && timerPizza==1)

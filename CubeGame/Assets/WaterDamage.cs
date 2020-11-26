@@ -53,7 +53,7 @@ public class WaterDamage : MonoBehaviour
            // }
 
 
-            Debug.Log("  this.transform " + this.transform.name);
+     
 
 
             this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
