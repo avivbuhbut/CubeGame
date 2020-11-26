@@ -215,6 +215,7 @@
     <Compile Include="Assets\ShowPrecentageShrinkWater.cs" />
     <Compile Include="Assets\SphereMoveTowardsPlayer.cs" />
     <Compile Include="Assets\stickToOtherWood.cs" />
+    <Compile Include="Assets\StickToWalls.cs" />
     <Compile Include="Assets\WaitForSecondsExample.cs" />
     <Compile Include="Assets\WaterColided.cs" />
     <Compile Include="Assets\WaterColidedWithShelf.cs" />

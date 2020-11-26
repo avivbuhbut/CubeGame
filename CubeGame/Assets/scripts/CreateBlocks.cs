@@ -8,24 +8,45 @@ public class CreateBlocks : MonoBehaviour
     public static int BlocksAvilable;
   //  public GameObject CubeGamObj;
     public GameObject CubeGamObj;
+    public GameObject PizzaProtectorGamObj;
     private GameObject linehandler;
     private Vector3 mousepos;
     // Start is called before the first frame update
     void Start()
     {
        CubeGamObj.SetActive(false);
+        PizzaProtectorGamObj.SetActive(false);
     }
 
    
 
     void Update()
     {
-
-
-   
-
+        ////////////////////////////////////////////FOR DEBUG ONLY (START LINE)/////////////////////////////////////////////////////////
         /*for debug onle*/
-        if (Input.GetKey(KeyCode.Alpha5))
+        if (Input.GetKey(KeyCode.Alpha6))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+
+
+                PizzaProtectorGamObj.SetActive(true);
+                mousepos = Input.mousePosition;
+                mousepos.z = 14.5f;
+
+                mousepos = Camera.main.ScreenToWorldPoint(mousepos);
+                linehandler = Instantiate(PizzaProtectorGamObj, mousepos, Quaternion.identity) as GameObject;
+
+
+
+                linehandler.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation |
+                    RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
+            }
+        }
+
+
+            /*for debug only*/
+            if (Input.GetKey(KeyCode.Alpha5))
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -43,9 +64,9 @@ public class CreateBlocks : MonoBehaviour
 
             }
         }
-
-
-        if(Input.GetKey(KeyCode.B)) 
+        ////////////////////////////////////////////FOR DEBUG ONLY (END LINE) /////////////////////////////////////////////////////////
+        /*create a wood block*/
+        if (Input.GetKey(KeyCode.B)) 
         if (BlocksAvilable > 0 )
         {
             if (Input.GetMouseButtonDown(0))
@@ -81,7 +102,7 @@ public class CreateBlocks : MonoBehaviour
                 	Physics.Raycast(ray, out hit);
    	                Debug.Log("This hit at " + hit.transform.name ); // till here
 
-                if (hit.transform.name == "CubePlayerCreate(Clone)")
+                if (hit.transform.name == "CubePlayerCreate(Clone)" || hit.transform.name == "PizzaPanelProtector(Clone)")
                 {
 
                     BlocksAvilable++;
