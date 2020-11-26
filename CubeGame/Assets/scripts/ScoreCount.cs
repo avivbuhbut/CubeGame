@@ -451,8 +451,8 @@ public class ScoreCount : MonoBehaviour
 
         // if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox")
         if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "PizzaBox" || collision.gameObject.tag == "PlateBoundsP2" || collision.gameObject.tag == "Untagged" || collision.gameObject.tag == "FinishLineCube"
-            || collision.gameObject.tag == "CubeDistraction" || collision.gameObject.tag == "DoughAndSauce" || collision.gameObject.tag == "Sauce" || collision.gameObject.tag == "Water"|| collision.gameObject.tag == "HammerCube"
-            || collision.gameObject.tag == "Basket1"|| collision.gameObject.tag == "Player"|| collision.gameObject.tag == "Player2")
+            || collision.gameObject.tag == "CubeDistraction" || collision.gameObject.tag == "DoughAndSauce" || collision.gameObject.tag == "Sauce" || collision.gameObject.tag == "Water" || collision.gameObject.tag == "HammerCube"
+            || collision.gameObject.tag == "Basket1" || collision.gameObject.tag == "Player" || collision.gameObject.tag == "Player2" || collision.gameObject.tag == "CubeEnemySauce") ;
 
         {
        

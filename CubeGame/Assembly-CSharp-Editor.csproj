@@ -63,6 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_MK\MKGlow\Components\LWRP_And_PPSV2\Editor\MinMaxRangeDecorator.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Components\LWRP_And_PPSV2\Editor\MKGlowEditor.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Editor\Common.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Editor\Configuration.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Editor\EditorHelper.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Editor\EditorHelper.EditorStyles.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Editor\EditorHelper.EditorUIContent.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Editor\InstallWizard.cs" />
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
