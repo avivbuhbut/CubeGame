@@ -2350,7 +2350,6 @@ GameObject:
   - component: {fileID: 315846105}
   - component: {fileID: 315846106}
   - component: {fileID: 315846107}
-  - component: {fileID: 315846102}
   m_Layer: 0
   m_Name: CameraPizzaBox1
   m_TagString: PizzaBoxCam
@@ -2358,14 +2357,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &315846102
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315846101}
-  m_Enabled: 1
 --- !u!20 &315846103
 Camera:
   m_ObjectHideFlags: 0
@@ -31338,7 +31329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2115430041
 RectTransform:
   m_ObjectHideFlags: 0
