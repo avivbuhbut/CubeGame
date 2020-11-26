@@ -66,6 +66,12 @@
     <Compile Include="Assets\_MK\MKGlow\Components\LWRP_And_PPSV2\CameraDataPPSV2.cs" />
     <Compile Include="Assets\_MK\MKGlow\Components\LWRP_And_PPSV2\MKGlow.cs" />
     <Compile Include="Assets\_MK\MKGlow\Components\LWRP_And_PPSV2\SettingsPPSV2.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Examples\Scripts\Asteroid.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Examples\Scripts\AsteroidSpawner.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Examples\Scripts\Cube.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Examples\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Examples\Scripts\RotateObject.cs" />
+    <Compile Include="Assets\_MK\MKGlow\Examples\Scripts\SpectateObjects.cs" />
     <Compile Include="Assets\_MK\MKGlow\Scripts\CameraData.cs" />
     <Compile Include="Assets\_MK\MKGlow\Scripts\Common.cs" />
     <Compile Include="Assets\_MK\MKGlow\Scripts\Compatibility.cs" />

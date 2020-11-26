@@ -2510,7 +2510,9 @@ MonoBehaviour:
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
+  m_BeforeStackBundles:
+  - assemblyQualifiedName: MK.Glow.LWRP.MKGlow, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_AfterStackBundles: []
 --- !u!1 &320406884
 GameObject:
@@ -8645,7 +8647,9 @@ MonoBehaviour:
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
+  m_BeforeStackBundles:
+  - assemblyQualifiedName: MK.Glow.LWRP.MKGlow, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_AfterStackBundles: []
 --- !u!114 &963194232
 MonoBehaviour:
@@ -17524,6 +17528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRedMaterial: {fileID: 2100000, guid: eb37f6b13f327a34983586279e4b4680, type: 2}
+  PlayerGreenMaterial: {fileID: 2100000, guid: 2047ad8a86bca854da57aeeb5892095c, type: 2}
 --- !u!1 &1347638189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7381346362674252873, guid: 1c0e2aa92ffea6e47a7182d04789f16d,

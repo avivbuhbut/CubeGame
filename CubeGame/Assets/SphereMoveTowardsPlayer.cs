@@ -5,10 +5,12 @@ using UnityEngine;
 public class SphereMoveTowardsPlayer : MonoBehaviour
 {
     public Material PlayerRedMaterial;
+    public Material PlayerGreenMaterial;
     bool PlayerIsInRadius; 
     // Start is called before the first frame update
     void Start()
     {
+
         this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
 
     }
@@ -18,11 +20,13 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     {
 
 
-        if(this.transform.position == GameObject.Find("Player").transform.position)
+        if (this.transform.position == GameObject.Find("Player").transform.position)
         {
             GameObject.Find("Player").transform.GetComponent<Renderer>().material = PlayerRedMaterial;
             Debug.Log("now isinde player");
         }
+        else
+            GameObject.Find("Player").transform.GetComponent<Renderer>().material = PlayerGreenMaterial;
 
         if (PlayerIsInRadius)
         {
