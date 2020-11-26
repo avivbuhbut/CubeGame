@@ -6,7 +6,13 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
 {
     public Material PlayerRedMaterial;
     public Material PlayerGreenMaterial;
-    bool PlayerIsInRadius; 
+
+
+    public Material PizzaBoxMaterial;
+    bool PlayerIsInRadius;
+    bool PizzaBoxInRadius;
+
+    Transform PizzaBoxTrans;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,35 +24,97 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerInRadius();
 
+        EnemyInsidePlayerChangeColorPlayer();
 
-        if (this.transform.position == GameObject.Find("Player").transform.position)
+       
+            CahngeColorPizzaWhenInRadius();
+
+        CancelDragRigDollWhenPizzaInRadius();
+
+    }
+
+    void CancelDragRigDollWhenPizzaInRadius()
+    {
+        if (PizzaBoxTrans != null && PizzaBoxInRadius)
         {
-            GameObject.Find("Player").transform.GetComponent<Renderer>().material = PlayerRedMaterial;
-            Debug.Log("now isinde player");
+            if ((PizzaBoxTrans.GetComponent<Rigidbody>().velocity.magnitude > 1) && (!Input.GetKey(KeyCode.Mouse0)))
+            {
+                Debug.Log("Cancel rid");
+                GameObject.Find("Player").GetComponent<DragRigidbody>().enabled = false;
+                PizzaBoxTrans.GetComponent<Rigidbody>().mass = 50;
+            }
+            else
+            {
+                PizzaBoxTrans.GetComponent<Rigidbody>().mass = 1.4f;
+            }
+
         }
+
+        if (!PizzaBoxInRadius && PizzaBoxTrans!= null)
+        {
+            PizzaBoxTrans.GetComponent<Rigidbody>().mass = 1.4f;
+            GameObject.Find("Player").GetComponent<DragRigidbody>().enabled = true;
+            Debug.Log("enabled rid");
+        }
+    }
+
+    //if ((velBox1.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
+    void CahngeColorPizzaWhenInRadius()
+    {
+
+        if (PizzaBoxInRadius)
+            PizzaBoxTrans.GetComponent<Renderer>().material.color = Color.red;
         else
-            GameObject.Find("Player").transform.GetComponent<Renderer>().material = PlayerGreenMaterial;
+            if (PizzaBoxTrans != null)
+            PizzaBoxTrans.GetComponent<Renderer>().material = PizzaBoxMaterial;
+
+
+    }
+
+
+    void PlayerInRadius()
+    {
 
         if (PlayerIsInRadius)
         {
-     
-            this.transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Player").transform.position, 1.7f * Time.deltaTime); // move towards the pizza box
-       
+
+            this.transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Player").transform.position, 2.2f * Time.deltaTime); // move towards the pizza box
+
             this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
         }
         else
             this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
     }
 
-
+    void EnemyInsidePlayerChangeColorPlayer()
+    {
+        if (this.transform.position == GameObject.Find("Player").transform.position)
+        {
+            GameObject.Find("Player").transform.GetComponent<Renderer>().material = PlayerRedMaterial;
+            Debug.Log("now isinde player");
+        }
+       if(this.transform.position != GameObject.Find("Player").transform.position)
+            GameObject.Find("Player").transform.GetComponent<Renderer>().material = PlayerGreenMaterial;
+    }
  
      void OnTriggerEnter(Collider other)
     {
+
+
         if (other.transform.gameObject.name == "Player")
         {
-            Debug.Log("In Sphere radius:" + other.transform.gameObject.name);
+          
             PlayerIsInRadius = true;
+        }
+
+       if (other.transform.gameObject.tag == "PizzaBox")
+       {
+            Debug.Log("game object enter radius: " + other.transform.gameObject.name);
+            PizzaBoxTrans = other.transform ;
+
+            PizzaBoxInRadius = true;
         }
     }
 
@@ -56,6 +124,14 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
         {
             Debug.Log("Player Exit Sphere radius:" + other.transform.gameObject.name);
             PlayerIsInRadius = false;
+        }
+
+        if (other.transform.gameObject.tag == "PizzaBox")
+        {
+        
+           
+            Debug.Log("PizzaBox Exit Sphere radius:" + other.transform.gameObject.name);
+            PizzaBoxInRadius = false;
         }
     }
 }
