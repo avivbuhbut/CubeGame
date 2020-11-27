@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class playerStandsOnButton : MonoBehaviour
 {
+
+    public float Timer;
+    bool ColidedWithPlayer;
+
+    public Vector3 MoveToPos;
+
+
+    public Animator PressurePlateButtonAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +21,21 @@ public class playerStandsOnButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //  Timer = Time.time;
+
+        if (ColidedWithPlayer)
+        {
+
+            PressurePlateButtonAnimator.SetBool("Active",true);
+
+
+        }
+        else
+        {
+            PressurePlateButtonAnimator.SetBool("Active", false);
+        }
+
+
     }
 
 
@@ -21,9 +43,20 @@ public class playerStandsOnButton : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-           
-         //   this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
-            //  this.gameObject.transform.GetComponent<Rigidbody>().AddExplosionForce(5, this.transform.position,10f,10f,ForceMode.Impulse);
+           //GameObject.Find("Player").transform.parent = this.transform;
+            ColidedWithPlayer = true;
+
+        }
+    }
+
+     void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+
+            //GameObject.Find("Player").transform.parent = null;
+            ColidedWithPlayer = false;
+
         }
     }
 }
