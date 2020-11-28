@@ -37,7 +37,7 @@ public class WaterDamage : MonoBehaviour
         if (timeLeft <= 10 && timeLeft > 0)
         {
        
-            Debug.Log((int)timeLeft);
+
             counter = 1;
        
         }

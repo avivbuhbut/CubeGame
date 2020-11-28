@@ -30,13 +30,13 @@ public class ColisionLeftHand : MonoBehaviour
     }
      void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
+        Debug.Log("Left on triggers: " + other.gameObject.name);
         //  M1911Trans.Rotate(-2f, 280f, -2f);
     
      //   HandGunTrans.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
      //   M1911.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
      if(other.gameObject.name == "M1911" )
-            M1911.rotation = Quaternion.Euler(50f, -280, -2f);
+            M1911.rotation = Quaternion.Euler(180, 180, -2f);
 
     }
 }

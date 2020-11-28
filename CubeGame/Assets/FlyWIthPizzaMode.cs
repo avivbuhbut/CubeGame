@@ -17,7 +17,8 @@ public class FlyWIthPizzaMode : MonoBehaviour
 
         if (Input.GetKey(KeyCode.F)){
 
-         Transform tran =    LastActivePizzaBox.LastPizzaActive.transform;
+
+         Transform tran = LastActivePizzaBox.LastPizzaActive.transform;
 
 
             if (tran != null) ;

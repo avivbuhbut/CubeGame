@@ -12,6 +12,7 @@ public class CheckIfPizzaWet : MonoBehaviour
     public RaycastHit hitUp;
     int counter = 0;
     public float TimeNotInRain;
+    public bool pizzaIsNotInRain;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,20 +37,23 @@ public class CheckIfPizzaWet : MonoBehaviour
              //        this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.white, 10f);
              }
 
-          
-      
 
-        
-        if (this.transform!=null)
-             if((hitDown.transform.tag == "Floor" && hitUp.transform.tag !="Bounds" 
-            || hitDown.transform.tag != "Bounds" && hitUp.transform.tag == "Floor") && this.transform.GetComponent<Rigidbody>().velocity.magnitude ==0)
-        {
-              
-            this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.white, 10f);
-        }
-  
-  
-  
+
+
+
+        if (this.transform != null)
+            if ((hitDown.transform.tag == "Floor" && hitUp.transform.tag != "Bounds"
+           || hitDown.transform.tag != "Bounds" && hitUp.transform.tag == "Floor") && this.transform.GetComponent<Rigidbody>().velocity.magnitude == 0)
+            {
+                
+                pizzaIsNotInRain = true;
+                this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.white, 10f);
+            }
+         
+
+
+
+
 
 
 
@@ -63,7 +67,7 @@ public class CheckIfPizzaWet : MonoBehaviour
   
         if (other.gameObject.name == "RainFallParticleSystem")
         {
-          
+            pizzaIsNotInRain = false;
             this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.blue, 10f);
    
         }

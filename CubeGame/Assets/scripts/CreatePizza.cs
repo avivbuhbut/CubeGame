@@ -12,7 +12,7 @@ public class CreatePizza : MonoBehaviour
 
     bool colidedWithSauceAndDough;
 
-   public float  timeLeft = 10f;
+   public float  timeLeft = 4f;
     float timerPizza = 0;
     // Start is called before the first frame update
     void Start()

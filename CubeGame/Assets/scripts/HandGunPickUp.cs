@@ -108,7 +108,7 @@ public class HandGunPickUp : MonoBehaviour
         //HandGunTrans.transform.rotation = Quaternion.Euler(new Vector3(0f,90f,0f));
         Vector3 objectPos = Camera.main.WorldToScreenPoint(WeaponHolderTransLeftHand.position);
         //  FaceLeft();
-        Debug.Log("Gun facing Left");
+
         //rotation
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
@@ -128,7 +128,7 @@ public class HandGunPickUp : MonoBehaviour
     public void RightHandHold()
     {
 
-        Debug.Log("Gun facing Left");
+      
 
         HandGunTrans.transform.parent = WeaponHolderTrans;
         HandGunTrans.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
@@ -180,7 +180,9 @@ public class HandGunPickUp : MonoBehaviour
     {
         if(collision.gameObject.tag == "HandGun")
         {
-            M1911.GetComponent<Rigidbody>().isKinematic = true;
+
+            M1911.GetComponent<BoxCollider>().isTrigger = true;
+           M1911.GetComponent<Rigidbody>().isKinematic = true;
             HandGunTrans.transform.parent = WeaponHolderTrans;
 
             // M1911.rotation = Quaternion.Euler(0.018f, 269.449f, 1.917f);

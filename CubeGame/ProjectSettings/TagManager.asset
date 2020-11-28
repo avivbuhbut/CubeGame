@@ -38,6 +38,7 @@ TagManager:
   - DoughAndSauce
   - PizzaBoxClone
   - Stove
+  - Wall
   layers:
   - Default
   - TransparentFX
