@@ -14557,13 +14557,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036385665}
-  m_LocalRotation: {x: -0.922272, y: -0.38261774, z: 0.011290281, w: -0.053764053}
-  m_LocalPosition: {x: -1.56, y: 0, z: 0}
+  m_LocalRotation: {x: -0.98779136, y: -0.07675461, z: -0.06557187, w: -0.118648045}
+  m_LocalPosition: {x: -1.1019998, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1332451217}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 6.189, y: -181.17099, z: 134.873}
+  m_LocalEulerAnglesHint: {x: 12.964001, y: -188.721, z: 170.121}
 --- !u!23 &1036385667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14626,10 +14626,10 @@ BoxCollider:
   m_GameObject: {fileID: 1036385665}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.482854, y: 1, z: 1.3380675}
+  m_Center: {x: 0.24077392, y: -0.0014065028, z: 0.16809641}
 --- !u!1 &1038084401
 GameObject:
   m_ObjectHideFlags: 0
@@ -15949,7 +15949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178657460}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.009, y: 0.017, z: -0.174}
+  m_LocalPosition: {x: -0.0085, y: 0.0293, z: -0.174}
   m_LocalScale: {x: 0.32384422, y: 0.32384467, z: 0.32384422}
   m_Children: []
   m_Father: {fileID: 1806920193}
@@ -24502,7 +24502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.53
+      value: -3.17
       objectReference: {fileID: 0}
     - target: {fileID: 4952727429218122, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30336,6 +30336,8 @@ GameObject:
   - component: {fileID: 1988519401}
   - component: {fileID: 1988519402}
   - component: {fileID: 1988519403}
+  - component: {fileID: 1988519405}
+  - component: {fileID: 1988519404}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: WeaponHolder
@@ -30410,6 +30412,32 @@ MonoBehaviour:
   WeaponHolderTrans: {fileID: 1988519401}
   HandGunTrans: {fileID: 1806920193}
   M1911: {fileID: 1489100851}
+--- !u!114 &1988519404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988519400}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0039854e604514595bb70502da18c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  M1911: {fileID: 1489100851}
+--- !u!65 &1988519405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988519400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1998121557
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class ColisionLeftHand : MonoBehaviour
      //   HandGunTrans.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
      //   M1911.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);
      if(other.gameObject.name == "M1911" )
-            M1911.rotation = Quaternion.Euler(180, 180, -2f);
+            M1911.localRotation = Quaternion.Euler(180, 180, -M1911.rotation.z);
 
     }
 }

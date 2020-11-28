@@ -99,6 +99,7 @@
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
     <Compile Include="Assets\FillWater.cs" />
     <Compile Include="Assets\FlyWIthPizzaMode.cs" />
+    <Compile Include="Assets\GunColidedRightHand.cs" />
     <Compile Include="Assets\HandGunprintColision.cs" />
     <Compile Include="Assets\LastActivePizzaBox.cs" />
     <Compile Include="Assets\MoveTowardsWater.cs" />

@@ -56,6 +56,7 @@ public class HandGunPickUp : MonoBehaviour
         {
             Debug.Log("Im here in q");
             //   HandGunTrans.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            M1911.gameObject.GetComponent<BoxCollider>().isTrigger = false;
             M1911.gameObject.GetComponent<Rigidbody>().useGravity = true;
             M1911.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             HandGunTrans.transform.parent = null;
@@ -193,7 +194,7 @@ public class HandGunPickUp : MonoBehaviour
 
             HandGunTrans.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
             M1911.transform.position = new Vector3(WeaponHolderTrans.position.x, WeaponHolderTrans.position.y, WeaponHolderTrans.position.z);
-            M1911.rotation = Quaternion.Euler(-2f, 275f, -2f);
+           M1911.rotation = Quaternion.Euler(-2f, 275f, -2f);
       
             //HandGunTrans.rotation = Quaternion.Euler(0, 275f, 0);
 
