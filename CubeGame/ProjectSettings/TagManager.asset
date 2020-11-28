@@ -39,6 +39,7 @@ TagManager:
   - PizzaBoxClone
   - Stove
   - Wall
+  - CubeShifter
   layers:
   - Default
   - TransparentFX

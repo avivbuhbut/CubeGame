@@ -83,6 +83,7 @@
     <Compile Include="Assets\ColiderWithOtherSideTMP.cs" />
     <Compile Include="Assets\CubeCheckForRainHit.cs" />
     <Compile Include="Assets\CubeLifeDurationLeft.cs" />
+    <Compile Include="Assets\CubeShifterScrpt.cs" />
     <Compile Include="Assets\CustomRenderPassFeature.cs" />
     <Compile Include="Assets\CustomRenderPassFeature1.cs" />
     <Compile Include="Assets\Downloads\Bullet Casing\Scripts\FP_Shooting.cs" />
@@ -222,6 +223,7 @@
     <Compile Include="Assets\scripts\TurnOffPizzaBox1and2.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
     <Compile Include="Assets\ShowPrecentageShrinkWater.cs" />
+    <Compile Include="Assets\ShrinkAndGrow.cs" />
     <Compile Include="Assets\SphereMoveTowardsPlayer.cs" />
     <Compile Include="Assets\StartSideTmpColider.cs" />
     <Compile Include="Assets\stickToOtherWood.cs" />
