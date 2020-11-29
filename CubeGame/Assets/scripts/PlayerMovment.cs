@@ -8,7 +8,7 @@ public class PlayerMovment : MonoBehaviour
     Rigidbody rigidbody;
     void Start()
     {
-
+  
     }
 
     // Update is called once per frame
