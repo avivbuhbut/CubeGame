@@ -6,7 +6,7 @@ public class CubeShifterScrpt : MonoBehaviour
 {
 
     bool hitCubeShifterBool;
-      Transform hitCubeTrans;
+      public static Transform hitCubeTrans;
     public Vector3 DeafultSizeCubeShifter;
     public static RaycastHit hit;
     // Start is called before the first frame update
@@ -30,12 +30,12 @@ public class CubeShifterScrpt : MonoBehaviour
 
            
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) //make the cube width grow
+            if (Input.GetKeyDown(KeyCode.RightArrow)) //make the cube width grow
             hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x + 0.3f,
                    hitCubeTrans.transform.localScale.y, hitCubeTrans.transform.localScale.z);
 
 
-            if (Input.GetKeyDown(KeyCode.RightArrow)) //make the cube width decreese
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) //make the cube width decreese
                 hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x - 0.3f,
                        hitCubeTrans.transform.localScale.y, hitCubeTrans.transform.localScale.z);
 
