@@ -30,7 +30,7 @@ public class ColisionLeftHand : MonoBehaviour
     }
      void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Left on triggers: " + other.gameObject.name);
+
         //  M1911Trans.Rotate(-2f, 280f, -2f);
     
      //   HandGunTrans.transform.position = new Vector3(WeaponHolderTransLeftHand.position.x, WeaponHolderTransLeftHand.position.y, WeaponHolderTransLeftHand.position.z);

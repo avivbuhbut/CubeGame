@@ -81,6 +81,8 @@
     <Compile Include="Assets\becomeCubeShifter.cs" />
     <Compile Include="Assets\BoxHitPlayerBecomeChild.cs" />
     <Compile Include="Assets\CheckIfPizzaWet.cs" />
+    <Compile Include="Assets\checkIfSauceWet.cs" />
+    <Compile Include="Assets\ColidedWithAnotherCubeShifter.cs" />
     <Compile Include="Assets\ColidedWIthEnemyChangeColor.cs" />
     <Compile Include="Assets\colidedWithTriggerBecomeChild.cs" />
     <Compile Include="Assets\ColiderWithOtherSideTMP.cs" />
@@ -232,6 +234,7 @@
     <Compile Include="Assets\ShrinkAndGrow.cs" />
     <Compile Include="Assets\SphereMoveTowardsPlayer.cs" />
     <Compile Include="Assets\StartSideTmpColider.cs" />
+    <Compile Include="Assets\StickOnKeyPress.cs" />
     <Compile Include="Assets\stickToOtherWood.cs" />
     <Compile Include="Assets\StickToWalls.cs" />
     <Compile Include="Assets\TurnOffPlayerMovmentOnStart.cs" />

@@ -67,7 +67,7 @@ public class CubeShifterScrpt : MonoBehaviour
       
             // Casts the ray and get the first game object hit
             Physics.Raycast(ray, out hit);
-            Debug.Log("This hit at " + hit.transform.tag); // till here
+
 
             if (hit.transform.tag == "CubeShifter")
             {
