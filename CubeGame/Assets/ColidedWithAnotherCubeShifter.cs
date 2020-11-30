@@ -28,6 +28,8 @@ public class ColidedWithAnotherCubeShifter : MonoBehaviour
             ColidedWithTransCubeShifter = collision.transform;
             Debug.Log(ColidedWithTransCubeShifter.transform.name);
             ColidedWithAnotherCubeShifterbool = true;
+
+            //collision.gameObject.transform.GetComponent<Rigidbody>().constraints = ri
         }
 
        
