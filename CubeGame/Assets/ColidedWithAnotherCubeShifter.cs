@@ -6,16 +6,17 @@ public class ColidedWithAnotherCubeShifter : MonoBehaviour
 {
     public static bool ColidedWithAnotherCubeShifterbool;
     public static Transform ColidedWithTransCubeShifter;
+  public static  Vector3 currentSize;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        currentSize = this.transform.localScale;
     }
 
      void OnCollisionEnter(Collision collision)
@@ -23,6 +24,7 @@ public class ColidedWithAnotherCubeShifter : MonoBehaviour
         if(collision.gameObject.transform.tag == "CubeShifter")
         {
 
+        
             ColidedWithTransCubeShifter = collision.transform;
             Debug.Log(ColidedWithTransCubeShifter.transform.name);
             ColidedWithAnotherCubeShifterbool = true;

@@ -28,24 +28,48 @@ public class CubeShifterScrpt : MonoBehaviour
             /*maybe set up color lerping back and forth (or just changing till the player is no longer editing the cube)
              * so the player will know what cube is he editing*/
 
-           
+            if (hitCubeTrans.childCount == 1)
+            {
+                hitCubeTrans.GetChild(1).transform.localScale = ColidedWithAnotherCubeShifter.currentSize;
+                if (Input.GetKeyDown(KeyCode.RightArrow)) //make the cube width grow
+                    hitCubeTrans.parent.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x + 0.3f,
+                            hitCubeTrans.parent.transform.localScale.y, hitCubeTrans.transform.localScale.z);
 
-            if (Input.GetKeyDown(KeyCode.RightArrow)) //make the cube width grow
-            hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x + 0.3f,
-                   hitCubeTrans.transform.localScale.y, hitCubeTrans.transform.localScale.z);
+
+                if (Input.GetKeyDown(KeyCode.LeftArrow)) //make the cube width decreese
+                    hitCubeTrans.parent.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x - 0.3f,
+                            hitCubeTrans.parent.transform.localScale.y, hitCubeTrans.transform.localScale.z);
+
+                if (Input.GetKeyDown(KeyCode.UpArrow)) //make the cube hight grow
+                    hitCubeTrans.parent.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x,
+                            hitCubeTrans.parent.transform.localScale.y + 0.3f, hitCubeTrans.transform.localScale.z);
+
+                if (Input.GetKeyDown(KeyCode.DownArrow)) //make the cube hight decrese
+                    hitCubeTrans.parent.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x,
+                            hitCubeTrans.parent.transform.localScale.y - 0.3f, hitCubeTrans.transform.localScale.z);
+            }
+            else if (hitCubeTrans.childCount == 0)
+            {
+
+                if (Input.GetKeyDown(KeyCode.RightArrow)) //make the cube width grow
+                    hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x + 0.3f,
+                           hitCubeTrans.transform.localScale.y, hitCubeTrans.transform.localScale.z);
 
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) //make the cube width decreese
-                hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x - 0.3f,
-                       hitCubeTrans.transform.localScale.y, hitCubeTrans.transform.localScale.z);
+                if (Input.GetKeyDown(KeyCode.LeftArrow)) //make the cube width decreese
+                    hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x - 0.3f,
+                           hitCubeTrans.transform.localScale.y, hitCubeTrans.transform.localScale.z);
 
-            if (Input.GetKeyDown(KeyCode.UpArrow)) //make the cube hight grow
-                hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x ,
-                       hitCubeTrans.transform.localScale.y + 0.3f, hitCubeTrans.transform.localScale.z);
+                if (Input.GetKeyDown(KeyCode.UpArrow)) //make the cube hight grow
+                    hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x,
+                           hitCubeTrans.transform.localScale.y + 0.3f, hitCubeTrans.transform.localScale.z);
 
-            if (Input.GetKeyDown(KeyCode.DownArrow)) //make the cube hight decrese
-                hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x,
-                       hitCubeTrans.transform.localScale.y - 0.3f, hitCubeTrans.transform.localScale.z);
+                if (Input.GetKeyDown(KeyCode.DownArrow)) //make the cube hight decrese
+                    hitCubeTrans.transform.localScale = new Vector3(hitCubeTrans.transform.localScale.x,
+                           hitCubeTrans.transform.localScale.y - 0.3f, hitCubeTrans.transform.localScale.z);
+
+
+            }
         }
 
 
@@ -54,6 +78,8 @@ public class CubeShifterScrpt : MonoBehaviour
             hitCubeTrans.transform.localScale = DeafultSizeCubeShifter;
         }
 
+
+       
 
     }
 
@@ -68,8 +94,8 @@ public class CubeShifterScrpt : MonoBehaviour
             // Casts the ray and get the first game object hit
             Physics.Raycast(ray, out hit);
 
-
-            if (hit.transform.tag == "CubeShifter")
+           
+            if (hit.transform.tag == "CubeShifter" )
             {
                 hitCubeShifterBool = true;
 

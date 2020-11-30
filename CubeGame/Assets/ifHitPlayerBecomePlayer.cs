@@ -6,9 +6,10 @@ public class ifHitPlayerBecomePlayer : MonoBehaviour
 {
 
     //  public Transform Basket2GObject;
-
+    public static bool PlayerIsNowAcitvePlayer;
     public Camera PlayerCamera;
     bool thePlayerIsNotTHisCube;
+    bool PressedOnAnotherCubeShifter;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,13 @@ public class ifHitPlayerBecomePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && this.transform.gameObject.activeSelf)
+        if (Input.GetKeyDown(KeyCode.M) && CubeShifterScrpt.hit.transform.name=="Player")
         {
             this.gameObject.transform.GetComponent<PlayerMovment>().enabled = false;
         
                 GameObject.Find("Player").transform.GetComponent<PlayerMovment>().enabled = true;
-
-
+            PlayerIsNowAcitvePlayer = true;
+            becomeCubeShifter.CubeSHifterIsNowPlayer = false;
             PlayerCamera.GetComponent<FollowCamera2Script>().target = GameObject.Find("Player").transform;
 
             
@@ -37,8 +38,12 @@ public class ifHitPlayerBecomePlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-     
-        
+        if (collision.transform.tag == "CubeShifter" && CubeShifterScrpt.hit.transform.name == "CubeShifter1")
+        {
+            PressedOnAnotherCubeShifter = true;
+        }
+
+
 
 
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoxHitPlayerBecomeChild : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +16,16 @@ public class BoxHitPlayerBecomeChild : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if(CubeShifterScrpt.hit.transform!=null)
+        Debug.Log(CubeShifterScrpt.hit.transform.name);
+
+        if (Input.GetKeyDown(KeyCode.L) && CubeShifterScrpt.hit.transform.name == this.transform.name)
         {
             this.gameObject.transform.GetComponent<Rigidbody>().isKinematic = false;
             this.transform.parent = null;
         }
+
+     
     }
 
 

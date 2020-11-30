@@ -5,9 +5,9 @@ using UnityEngine;
 public class becomeCubeShifter : MonoBehaviour
 {
 
-  
-    //  public Transform Basket2GObject;
 
+    //  public Transform Basket2GObject;
+    public static bool CubeSHifterIsNowPlayer;
     public Camera PlayerCamera;
     bool PlayerPressOnCubeShifter;
     // Start is called before the first frame update
@@ -24,13 +24,14 @@ public class becomeCubeShifter : MonoBehaviour
 
     void Update()
     {
-        if (PlayerPressOnCubeShifter && Input.GetKeyDown(KeyCode.L))
+        if (PlayerPressOnCubeShifter && Input.GetKeyDown(KeyCode.M) && CubeShifterScrpt.hit.transform.name != "CubeShifter2")
         {
             this.gameObject.transform.GetComponent<PlayerMovment>().enabled = false;
             if (CubeShifterScrpt.hit.transform != null)
                 CubeShifterScrpt.hit.transform.GetComponent<PlayerMovment>().enabled = true;
+            CubeSHifterIsNowPlayer = true;
+            ifHitPlayerBecomePlayer.PlayerIsNowAcitvePlayer = false;
 
-         
             PlayerCamera.GetComponent<FollowCamera2Script>().target = CubeShifterScrpt.hit.transform;
          
         }
@@ -39,8 +40,9 @@ public class becomeCubeShifter : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "CubeShifter" && CubeShifterScrpt.hit.transform == collision.transform) 
+        if (collision.transform.tag == "CubeShifter" && CubeShifterScrpt.hit.transform.name == "CubeShifter1" ) 
         {
+           
             PlayerPressOnCubeShifter = true;
     
         

@@ -48,8 +48,8 @@ public class checkIfSauceWet : MonoBehaviour
         }
 
 
-        Debug.Log("hitDown.transform.tag: " + hitDown.transform.tag);
-        Debug.Log("hitUp.transform.tag: " + hitUp.transform.tag);
+
+
 
         if (this.transform != null)
             if ((hitDown.transform.tag == "Floor" && hitUp.transform.tag != "Bounds"
