@@ -78,6 +78,7 @@
     <Compile Include="Assets\_MK\MKGlow\Scripts\RenderTargetContext.cs" />
     <Compile Include="Assets\_MK\MKGlow\Scripts\Resources.cs" />
     <Compile Include="Assets\_MK\MKGlow\Scripts\Settings.cs" />
+    <Compile Include="Assets\ActiveCameraInScene.cs" />
     <Compile Include="Assets\becomeCubeShifter.cs" />
     <Compile Include="Assets\BoxHitPlayerBecomeChild.cs" />
     <Compile Include="Assets\CheckIfPizzaWet.cs" />
@@ -120,6 +121,20 @@
     <Compile Include="Assets\PlayerMoney.cs" />
     <Compile Include="Assets\playerStandsOnButton.cs" />
     <Compile Include="Assets\PlayerStickToWalls.cs" />
+    <Compile Include="Assets\Polydraw\Example\Orthographic\OrthoDemo.cs" />
+    <Compile Include="Assets\Polydraw\Example\Perspective\Code\Button.cs" />
+    <Compile Include="Assets\Polydraw\Example\Perspective\Code\EventListenerExample.cs" />
+    <Compile Include="Assets\Polydraw\Example\Perspective\Code\GameManager.cs" />
+    <Compile Include="Assets\Polydraw\Example\Perspective\Code\Menu.cs" />
+    <Compile Include="Assets\Polydraw\Example\Perspective\Code\MouseLookConstrained.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\Draw.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\DrawSettings.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\DrawUtility.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\ObjExporter.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\PolydrawEnum.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\PolydrawExtensions.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\PolydrawObject.cs" />
+    <Compile Include="Assets\Polydraw\Scripts\Triangulator.cs" />
     <Compile Include="Assets\Prefabs\MyGuides\GuideMeshText.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
@@ -243,6 +258,7 @@
     <Compile Include="Assets\WaterColided.cs" />
     <Compile Include="Assets\WaterColidedWithShelf.cs" />
     <Compile Include="Assets\WaterDamage.cs" />
+    <Compile Include="Assets\ZoomOutCamWhenDraw.cs" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Sprites\Sprites-Diffuse.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\MKGlowStandard.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-Glossy.shader" />
@@ -254,6 +270,7 @@
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Particle\MK_Particle AddMultiply.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Samples\Polybrush\1.0.2\Shader Examples (Standard)\Shader\StandardVertexColor.shader" />
     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Particle\MK_Particle Alpha Blend.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Normal\MK_Normal-DiffuseBumped.shader" />
@@ -278,6 +295,7 @@
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\BilateralBlur.compute" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Particle\MK_Particle Multiply.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Cutout\MK_Cutout-DiffuseBumpSpec.shader" />
+    <None Include="Assets\Polydraw\Example\Art Credits.txt" />
     <None Include="Assets\_MK\MKGlow\Shaders\Effect\MKGlowSM20.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-DiffuseBumpSpec.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-DiffuseBumped.shader" />
@@ -324,11 +342,13 @@
     <None Include="Assets\_MK\MKGlow\Shaders\Effect\MKGlowSelectiveRender.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\UI\UI-Lit-Bumped.shader" />
+    <None Include="Assets\Samples\Polybrush\1.0.2\Shader Examples (Standard)\Shader\StandardTextureBlend.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Cutout\MK_Cutout-DiffuseBumped.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\UI\UI-Lit-Transparent.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\UI\UI-Unlit-Transparent.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Sprites\Sprites-Default.shader" />
+    <None Include="Assets\Polydraw\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
@@ -336,6 +356,12 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Polybrush">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Polybrush.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Polybrush.Editor">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Polybrush.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>

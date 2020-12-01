@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2219461465202648195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2219461465202648194}
+  - component: {fileID: 2219461465202648221}
+  - component: {fileID: 2219461465202648220}
+  m_Layer: 0
+  m_Name: Draw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2219461465202648194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219461465202648195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2219461465202648221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219461465202648195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b262e63a28723534bac46e27be419ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawStyle: 0
+  maxVertices: 4
+  samplingRate: 40
+  drawSettings:
+    axis: 0
+    frontMaterial: {fileID: 0}
+    sideMaterial: {fileID: 0}
+    uvScale: {x: 1, y: 1}
+    uvOffset: {x: 0, y: 0}
+    uvRotation: 0
+    generateSide: 1
+    sideLength: 1
+    anchor: 2
+    faceOffset: -0.2
+    generateBackFace: 0
+    zPosition: -1
+    requireMinimumArea: 1
+    minimumAreaToDraw: 1
+    smoothAngle: 45
+    drawEdgePlanes: 0
+    edgeMaterial: {fileID: 0}
+    edgeLengthModifier: 1.2
+    edgeHeight: 0.5
+    minLengthToDraw: 0.4
+    edgeOffset: 0.2
+    maxAngle: 45
+    areaRelativeHeight: 0
+    minEdgeHeight: 0.1
+    maxEdgeHeight: 1
+    minimumDistanceBetweenPoints: 0.02
+    forceConvex: 1
+    applyRigidbody: 1
+    areaRelativeMass: 1
+    massModifier: 1
+    mass: 25
+    useGravity: 1
+    isKinematic: 0
+    useTag: 0
+    tagVal: drawnMesh
+    meshName: Drawn Mesh
+    colliderType: 1
+    manualColliderDepth: 0
+    colAnchor: 0
+    colDepth: 1
+    boxColliderSize: 0.1
+    drawNormals: 0
+    normalLength: 0.3
+  drawMeshInProgress: 1
+  useDistanceCheck: 0
+  maxDistance: 5
+  closingDistance: 0.5
+  showPointMarkers: 0
+  pointMarker: {fileID: 100000, guid: 1da247cd9c7234ec1928716ffa400f37, type: 3}
+  drawLineRenderer: 1
+  lineRenderer: {fileID: 0}
+  lineWidth: 0.1
+  maxAllowedObjects: 6
+  inputCamera: {fileID: 0}
+  boxColliderSize: 0.01
+--- !u!114 &2219461465202648220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219461465202648195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ab1dea4fea9ab458e0a9d2c2dea126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialLibrary:
+  - {fileID: 2100000, guid: e4c7d07beb9863a44a00f2ed0b24f799, type: 2}
+  - {fileID: 2100000, guid: 225a45ebd65ba5949beabe2b35f244f1, type: 2}
+  - {fileID: 2100000, guid: a93c8f418296e7041bf3644c94d50e06, type: 2}
+  - {fileID: 2100000, guid: 9fba2467ab6f65b47b7496956cbc1442, type: 2}
+  - {fileID: 2100000, guid: 63ead08f65bdfb84ba4b23718619c91a, type: 2}
+  - {fileID: 2100000, guid: 4447e32a424caba448b82b2b2dd7a10e, type: 2}

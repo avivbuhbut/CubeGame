@@ -63,6 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Polydraw\Editor\DrawEditor.cs" />
+    <Compile Include="Assets\Polydraw\Editor\DrawInspectorEditor.cs" />
+    <Compile Include="Assets\Polydraw\Example\Perspective\Code\Editor\ButtonEditor.cs" />
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
@@ -75,6 +78,12 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Polybrush">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Polybrush.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Polybrush.Editor">
+      <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Polybrush.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>D:/Git/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
