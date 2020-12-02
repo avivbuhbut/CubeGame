@@ -259,6 +259,7 @@
     <Compile Include="Assets\WaterColidedWithShelf.cs" />
     <Compile Include="Assets\WaterDamage.cs" />
     <Compile Include="Assets\ZoomOutCamWhenDraw.cs" />
+    <Compile Include="Assets\ZoomOutCurrentCamera.cs" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Sprites\Sprites-Diffuse.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\MKGlowStandard.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-Glossy.shader" />
