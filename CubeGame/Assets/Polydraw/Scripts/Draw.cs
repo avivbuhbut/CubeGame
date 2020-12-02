@@ -568,7 +568,7 @@ public class Draw : MonoBehaviour
 					else
 						rigidbody.mass = drawSettings.mass;
 
-					rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
+					rigidbody.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
 					
 					if(drawSettings.useGravity)
 						rigidbody.useGravity = true;

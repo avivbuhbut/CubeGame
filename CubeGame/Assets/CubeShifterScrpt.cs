@@ -27,7 +27,7 @@ public class CubeShifterScrpt : MonoBehaviour
 
             /*maybe set up color lerping back and forth (or just changing till the player is no longer editing the cube)
              * so the player will know what cube is he editing*/
-
+             if(hitCubeTrans!=null)
             if (hitCubeTrans.childCount == 1)
             {
                 hitCubeTrans.GetChild(1).transform.localScale = ColidedWithAnotherCubeShifter.currentSize;

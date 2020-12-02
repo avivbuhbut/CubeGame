@@ -253,6 +253,7 @@
     <Compile Include="Assets\SphereMoveTowardsPlayer.cs" />
     <Compile Include="Assets\StartSideTmpColider.cs" />
     <Compile Include="Assets\StickOnKeyPress.cs" />
+    <Compile Include="Assets\StickToAnything.cs" />
     <Compile Include="Assets\stickToOtherWood.cs" />
     <Compile Include="Assets\StickToWalls.cs" />
     <Compile Include="Assets\TurnOffPlayerMovmentOnStart.cs" />
