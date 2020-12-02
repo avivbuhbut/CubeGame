@@ -29,6 +29,7 @@ using UnityEngine;
 
             // We need to actually hit an object
             RaycastHit hit = new RaycastHit();
+        if (Camera.main != null) 
             if (
                 !Physics.Raycast(mainCamera.ScreenPointToRay(Input.mousePosition).origin,
                                  mainCamera.ScreenPointToRay(Input.mousePosition).direction, out hit, 100,

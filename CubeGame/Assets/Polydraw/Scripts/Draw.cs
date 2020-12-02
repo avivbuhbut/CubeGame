@@ -20,8 +20,6 @@ using System.Linq;
 using System.IO;
 using Polydraw;
 
-namespace Polydraw
-{
 
 public class Draw : MonoBehaviour
 {
@@ -180,7 +178,7 @@ public class Draw : MonoBehaviour
 
             // If we're not rendering with the camera used for input, set the ortho cam coordinates to match
             // the coordinates drawn at the Z position of the perspective camera.
-            drawSettings.zPosition = GameObject.Find("Player").transform.position.z;
+            drawSettings.zPosition = GameObject.Find("Player").transform.position.z+2;
 
 
         if (inputCamera != Camera.main)
@@ -217,9 +215,8 @@ public class Draw : MonoBehaviour
 					DrawFinalMesh(userPoints);
                     if (Input.GetKey(KeyCode.G))
                     {
-                     
-       
-                     
+                
+                  
                         if (Input.GetMouseButtonDown(0))
                         {
                             Vector3 worldPos = inputCamera.ScreenToWorldPoint(new Vector3(
@@ -317,9 +314,9 @@ public class Draw : MonoBehaviour
 					
 				if(Input.GetMouseButtonUp(0))
 				{
-					//DrawFinalMesh(userPoints);
-					//DestroyPreviewMesh();
-					//DestroyLineRenderer();
+				DrawFinalMesh(userPoints);
+					DestroyPreviewMesh();
+					DestroyLineRenderer();
 				}
 				break;
 		}
@@ -958,19 +955,21 @@ public class Draw : MonoBehaviour
 	 */
 	public void SetOrthographioCameraDimensions(Camera perspCam, float zPos)
 	{
-		Vector3 tr = perspCam.ScreenToWorldPoint(new Vector3(perspCam.pixelWidth, perspCam.pixelHeight, zPos - perspCam.transform.position.z));
-		Vector3 bl = perspCam.ScreenToWorldPoint(new Vector3(0, 0, zPos - perspCam.transform.position.z));
+        if (Camera.main!= null)
+        {
+            Vector3 tr = perspCam.ScreenToWorldPoint(new Vector3(perspCam.pixelWidth, perspCam.pixelHeight, zPos - perspCam.transform.position.z));
+            Vector3 bl = perspCam.ScreenToWorldPoint(new Vector3(0, 0, zPos - perspCam.transform.position.z));
 
-		Vector3 center = new Vector3( (tr.x + bl.x) / 2f, (tr.y + bl.y) / 2f, zPos);
+            Vector3 center = new Vector3((tr.x + bl.x) / 2f, (tr.y + bl.y) / 2f, zPos);
 
-		inputCamera.transform.position = new Vector3(center.x, center.y, perspCam.transform.position.z);
+            inputCamera.transform.position = new Vector3(center.x, center.y, perspCam.transform.position.z);
 
-		inputCamera.orthographic = true;
-		inputCamera.transform.rotation = new Quaternion(0f, 0f, 0f, 1f);
+            inputCamera.orthographic = true;
+            inputCamera.transform.rotation = new Quaternion(0f, 0f, 0f, 1f);
 
-		// orthographicSize is Y
-		inputCamera.orthographicSize = (tr.y - bl.y) / 2f;
+            // orthographicSize is Y
+            inputCamera.orthographicSize = (tr.y - bl.y) / 2f;
+        }
 	}
 #endregion
-}
 }

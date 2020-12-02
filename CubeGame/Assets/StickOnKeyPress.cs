@@ -14,9 +14,9 @@ public class StickOnKeyPress : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(ColidedWithAnotherCubeShifter.ColidedWithAnotherCubeShifterbool);
-        if(CubeShifterScrpt.hit.transform != null)
-        Debug.Log("CubeShifterScrpt.hit.transform.tag :" + CubeShifterScrpt.hit.transform.tag);
+
+
+
 
         if (CubeShifterScrpt.hit.transform != null)
         {

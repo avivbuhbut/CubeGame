@@ -22,7 +22,11 @@ public class PlayerMovment : MonoBehaviour
     void PlayerMovmentCotrol()
     {
         if (Input.GetKey(KeyCode.Space))
-            transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * 8f, Space.Self);
+            this.transform.GetComponent<Rigidbody>().mass = 0.3f; 
+
+        }
         //     rigidbody.velocity = new Vector2(rigidbody.velocity.x, speed);
 
         if (Input.GetKey(KeyCode.A))

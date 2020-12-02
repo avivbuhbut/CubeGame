@@ -44,7 +44,7 @@ public class CheckIfPizzaWet : MonoBehaviour
         if (this.transform != null)
             if ((hitDown.transform.tag == "Floor" && hitUp.transform.tag != "Bounds"
            || hitDown.transform.tag != "Bounds" && hitUp.transform.tag == "Floor") && 
-           this.transform.GetComponent<Rigidbody>().velocity.magnitude < 2 ||
+           this.transform.GetComponent<Rigidbody>().velocity.magnitude > 2||
            (hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "CubeShifter")
            || (hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "Floor")
                 || (hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "CubeShifter"))
@@ -72,6 +72,7 @@ public class CheckIfPizzaWet : MonoBehaviour
         if (other.gameObject.name == "RainFallParticleSystem")
         {
             pizzaIsNotInRain = false;
+           
             this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.blue, 10f);
    
         }

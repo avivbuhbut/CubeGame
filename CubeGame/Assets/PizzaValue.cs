@@ -34,7 +34,7 @@ public class PizzaValue : MonoBehaviour
 
 
 
-            Debug.Log((int)Timer);
+
             if ((int)Timer == 0)
             {
 

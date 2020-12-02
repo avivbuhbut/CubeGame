@@ -36,7 +36,7 @@ public class RainStopStoveFireOn : MonoBehaviour
         {
             if (counterStartParticale == 1)
             {
-                Debug.Log("Rain Stop Hitting Stove!");
+
                 FireStove1ParticleSystem.Play();
                 FireStove2ParticleSystem.Play();
                 counterStartParticale++;

@@ -25,11 +25,7 @@ public class CloneOrOriginal : MonoBehaviour
 
     /*Fuck You Code - but thanks for working :)*/
      
-           if(this.gameObject.activeSelf == true)
-        {
-            Debug.Log("this.gameObject.activeSelf : " + this.gameObject.name);
-        }
-
+       
 
 
 
@@ -37,7 +33,7 @@ public class CloneOrOriginal : MonoBehaviour
         {
             if ((GameObject.Find("PizzaBoxClone" + pizzaCounter).transform.GetComponent<Rigidbody>().velocity.magnitude > 2))
             {
-                Debug.Log("pizza in air: " + (GameObject.Find("PizzaBoxClone" + pizzaCounter).transform.name));
+              
 
                 CurrentTransformInAir = (GameObject.Find("PizzaBoxClone" + pizzaCounter).transform);
 
@@ -57,6 +53,8 @@ public class CloneOrOriginal : MonoBehaviour
 
             if (pizzaCounter == 0)
                 pizzaCounter = CreatePizza.counterPizzaGen;
+
+
         }
 
 
