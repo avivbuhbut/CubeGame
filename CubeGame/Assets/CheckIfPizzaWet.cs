@@ -46,7 +46,11 @@ public class CheckIfPizzaWet : MonoBehaviour
            || hitDown.transform.tag != "Bounds" && hitUp.transform.tag == "Floor") && this.transform.GetComponent<Rigidbody>().velocity.magnitude <1 
            ||(hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "CubeShifter") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1 
           || (hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "Floor") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1
-                || (hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "CubeShifter") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1)
+                || (hitDown.transform.tag == "CubeShifter" && hitUp.transform.tag == "CubeShifter") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1
+                || (hitDown.transform.name == "Drawn Mesh" && hitUp.transform.tag == "CubeShifter") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1
+                 || (hitDown.transform.name == "CubeShifter" && hitUp.transform.tag == "Drawn Mesh") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1
+         || (hitDown.transform.name == "Floor" && hitUp.transform.tag == "Drawn Mesh") && this.transform.GetComponent<Rigidbody>().velocity.magnitude < 1)
+            
             {
                 
                 pizzaIsNotInRain = true;
