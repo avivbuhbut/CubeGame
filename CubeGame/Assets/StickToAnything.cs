@@ -31,8 +31,8 @@ public class StickToAnything : MonoBehaviour
                 this.transform.parent = collision.transform;
                 this.transform.GetComponent<Rigidbody>().isKinematic = true;
             }
-
-        if (collision.transform.name == "Player" && CubeShifterScrpt.hit.transform.name == "CubeShifter1" && Input.GetKey(KeyCode.K) || CubeShifterScrpt.hit.transform.name == "CubeShifter1(Clone)" )
+        if (CubeShifterScrpt.hit.transform != null)
+            if (collision.transform.name == "Player" && CubeShifterScrpt.hit.transform.name == "CubeShifter1" && Input.GetKey(KeyCode.K) || CubeShifterScrpt.hit.transform.name == "CubeShifter1(Clone)" )
         {
             this.transform.parent = collision.transform;
             this.transform.GetComponent<Rigidbody>().isKinematic = true;
@@ -48,7 +48,7 @@ public class StickToAnything : MonoBehaviour
         if (other.transform.name == "Player")
         {
           
-            this.transform.GetComponent<Rigidbody>().mass = 0.2f;
+         //   this.transform.GetComponent<Rigidbody>().mass = 0.2f;
 
         }
     }
@@ -60,7 +60,7 @@ public class StickToAnything : MonoBehaviour
         if (other.transform.name == "Player")
         {
 
-            this.transform.GetComponent<Rigidbody>().mass = 1f;
+           // this.transform.GetComponent<Rigidbody>().mass = 1f;
 
         }
     }

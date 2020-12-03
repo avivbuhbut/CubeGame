@@ -75,6 +75,7 @@ public class CubeShifterScrpt : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
+           // if(hitCubeTrans!= null)
             hitCubeTrans.transform.localScale = DeafultSizeCubeShifter;
         }
 

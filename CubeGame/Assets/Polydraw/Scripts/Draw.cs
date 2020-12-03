@@ -89,7 +89,7 @@ public class Draw : MonoBehaviour
 	public LineRenderer lineRenderer;						///< The LineRenderer to use when drawing.  If left null, a default line renderer will be created.
 	public float lineWidth = .1f;							///< If #lineRenderer is left unassigned, this is the width that will be used for an automatically generated LineRenderer.
 
-	public int maxAllowedObjects = 6;						///< The maximum amount of meshes allowed on screen at any time.  Meshes will be deleted as new objects are drawn, in the order of oldest to newest.
+	public int maxAllowedObjects = 7;						///< The maximum amount of meshes allowed on screen at any time.  Meshes will be deleted as new objects are drawn, in the order of oldest to newest.
 
 	bool placingPoint = false;
 	Vector3 previousMousePosition;
@@ -800,7 +800,7 @@ public class Draw : MonoBehaviour
 	 */
 	public void CheckMaxMeshes() 
 	{
-		if(generatedMeshes.Count >= maxAllowedObjects && maxAllowedObjects > 0)
+		if(generatedMeshes.Count-1 >= maxAllowedObjects && maxAllowedObjects > 0)
 		{
 			GameObject g = generatedMeshes[0];
 			generatedMeshes.RemoveAt(0);

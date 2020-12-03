@@ -142,11 +142,11 @@ public class ScoreCount : MonoBehaviour
 
 
         /*Global Score Player1*/
-        GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
+     //   GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
 
 
         /*Global Score Player2*/
-        GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
+        //GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
         /*Box1 velocity*/
         velBox1 = rigidbodyBox1.velocity;

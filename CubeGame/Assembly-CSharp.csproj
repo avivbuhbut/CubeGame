@@ -86,6 +86,8 @@
     <Compile Include="Assets\ColidedWithAnotherCubeShifter.cs" />
     <Compile Include="Assets\ColidedWIthEnemyChangeColor.cs" />
     <Compile Include="Assets\colidedWithTriggerBecomeChild.cs" />
+    <Compile Include="Assets\ColiderExitHoleWay.cs" />
+    <Compile Include="Assets\ColiderForPizzaAndPlayer.cs" />
     <Compile Include="Assets\ColiderWithOtherSideTMP.cs" />
     <Compile Include="Assets\CubeCheckForRainHit.cs" />
     <Compile Include="Assets\CubeLifeDurationLeft.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Assets\LastActivePizzaBox.cs" />
     <Compile Include="Assets\MoveTowardsWater.cs" />
     <Compile Include="Assets\PirntColition.cs" />
+    <Compile Include="Assets\PizzaBoxColided.cs" />
     <Compile Include="Assets\PizzaTimer.cs" />
     <Compile Include="Assets\PizzaValue.cs" />
     <Compile Include="Assets\PlayAudio.cs" />
@@ -252,6 +255,7 @@
     <Compile Include="Assets\ShrinkAndGrow.cs" />
     <Compile Include="Assets\SphereMoveTowardsPlayer.cs" />
     <Compile Include="Assets\StartSideTmpColider.cs" />
+    <Compile Include="Assets\StartTimerEnterFirstChallange.cs" />
     <Compile Include="Assets\StickOnKeyPress.cs" />
     <Compile Include="Assets\StickToAnything.cs" />
     <Compile Include="Assets\stickToOtherWood.cs" />
