@@ -21,7 +21,9 @@ public class StartTimerEnterFirstChallange : MonoBehaviour
     {
         int Min;
 
-       
+c
+      
+
         //  PlayerTimerTMP.text = "TIME LEFT: \n" + timeLeft;
         if (PlayerPassThrow&& PizzaBoxPassThrow)
         {

@@ -69,13 +69,13 @@ public class PizzaValue : MonoBehaviour
 
      void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.name == "Floor")
+        if (collision.transform.tag == "Floor")
             PizzaHitFloor = true;
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.transform.name == "Floor")
+        if (collision.transform.tag == "Floor")
             PizzaHitFloor = false;
     }
 }

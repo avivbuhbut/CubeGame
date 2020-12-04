@@ -25,6 +25,7 @@ public class ZoomOutCurrentCamera : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.C) && Camera.main.fieldOfView == 80)
         {
+
             Camera.main.fieldOfView = 60;
         }
     
