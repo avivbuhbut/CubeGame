@@ -6,7 +6,7 @@ using TMPro;
 public class EnemyLife : MonoBehaviour
 {
 
-    static int SphereLife = 100;
+    static int SphereLife = 10;
     static bool HitByThrowObj;
     public TextMeshPro EnemyLifeTMP;
     static int GlobalHitCounter = 0;
@@ -25,40 +25,57 @@ public class EnemyLife : MonoBehaviour
        
         GlobalHitCounter++;
 
+        if(this.transform!=null)
         if (HitByThrowObj  && ThrowFast)
         {
        //     Debug.Log(" Time.deltaTime % 1 " + Time.deltaTime % 1);
 
             SphereLife = SphereLife - 10;
             EnemyLifeTMP.gameObject.SetActive(true);
-            if(SphereLife< 100 && SphereLife > 50)
-            {
-                EnemyLifeTMP.text = SphereLife + "%";
-                EnemyLifeTMP.color = Color.green;
-                moveDirection = this.transform.position - HitByThrowTrans.position;
-                this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -500f);
+                if (SphereLife < 100 && SphereLife > 50)
+                {
+                    EnemyLifeTMP.text = SphereLife + "%";
+                    EnemyLifeTMP.color = Color.green;
+                    if (this.transform != null) { 
+                    moveDirection = this.transform.position - HitByThrowTrans.position;
+                    this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -500f);
+                }
             }
 
             if (SphereLife < 50 && SphereLife > 20)
             {
                 EnemyLifeTMP.text = SphereLife + "%";
                 EnemyLifeTMP.color = Color.yellow;
-                moveDirection = this.transform.position - HitByThrowTrans.position;
-                this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -50);
+                    if (this.transform != null)
+                    {
+                        moveDirection = this.transform.position - HitByThrowTrans.position;
+                        this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -50);
+                    }
             }
 
             if (SphereLife < 20 && SphereLife > 0)
             {
                 EnemyLifeTMP.text = SphereLife + "%";
                 EnemyLifeTMP.color = Color.red;
-                moveDirection = this.transform.position - HitByThrowTrans.position;
-                this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -50);
-            }
+                    if (this.transform != null)
+                    {
+                        moveDirection = this.transform.position - HitByThrowTrans.position;
+                        this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -50);
+                    }
+
+                    if (SphereLife <= 0)
+                    {
+
+                        this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
+
+                    }
+                }
 
 
             if (SphereLife <= 0)
             {
-            this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
+                    
+                        this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
 
             }
 

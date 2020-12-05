@@ -35307,7 +35307,7 @@ PrefabInstance:
     - target: {fileID: 2187892015146156792, guid: 88b496e554f80c14a92150b4620e1ad1,
         type: 3}
       propertyPath: drawStyle
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2187892015146156790, guid: 88b496e554f80c14a92150b4620e1ad1, type: 3}
