@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class thisObjColidedWithSphere : MonoBehaviour
 {
@@ -36,7 +37,47 @@ public class thisObjColidedWithSphere : MonoBehaviour
 
     }
 
-    
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "SphereEnemy")
+        {
+
+            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.red, 10f);
+
+        }
+
+        if(!((GameObject.Find("EnemySphere (1)").GetComponent< SphereMoveTowardsPlayer>().PlayerIsInRadius) && other.transform.tag == "SphereEnemy"))
+        {
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+
+     
+    }
+
+
+     void OnTriggerExit(Collider other)
+    {
+
+
+        if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerIsInRadius) && other.transform.tag == "SphereEnemy")
+        {
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+               RigidbodyConstraints.FreezePositionZ;
+        }
+
+        if (other.transform.tag == "SphereEnemy")
+        {
+
+           this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                RigidbodyConstraints.FreezePositionZ;
+            this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.white, 10f);
+
+        }
+    }
+
+
 
 
 }

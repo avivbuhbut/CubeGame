@@ -26,10 +26,7 @@ public class ActiveSphereColider : MonoBehaviour
      void OnCollisionEnter(Collision collision)
     {
         
-       if(collision.gameObject.tag == "HammerCube")
-          gameObject.GetComponent<SphereCollider>().enabled = true;
-       else
-            gameObject.GetComponent<SphereCollider>().enabled = false;
+     
 
 
 

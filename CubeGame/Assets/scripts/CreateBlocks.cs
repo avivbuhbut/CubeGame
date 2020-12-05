@@ -11,6 +11,7 @@ public class CreateBlocks : MonoBehaviour
     public GameObject PizzaProtectorGamObj;
     private GameObject linehandler;
     private Vector3 mousepos;
+    public GameObject ThrowObjGamObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,7 @@ public class CreateBlocks : MonoBehaviour
         }
 
 
+
             /*for debug only*/
             if (Input.GetKey(KeyCode.Alpha5))
         {
@@ -65,6 +67,29 @@ public class CreateBlocks : MonoBehaviour
             }
         }
         ////////////////////////////////////////////FOR DEBUG ONLY (END LINE) /////////////////////////////////////////////////////////
+        ///
+
+        if (Input.GetKey(KeyCode.Alpha7))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                CubeGamObj.SetActive(true);
+                mousepos = Input.mousePosition;
+                mousepos.z = 15.2f;
+
+                mousepos = Camera.main.ScreenToWorldPoint(mousepos);
+                linehandler = Instantiate(ThrowObjGamObj, mousepos, Quaternion.identity) as GameObject;
+                linehandler.gameObject.name = "ThrowPizzaObj";
+                linehandler.gameObject.tag = "ThrowPizzaObj";
+
+
+
+                linehandler.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                    RigidbodyConstraints.FreezePositionZ;
+
+            }
+        }
+
         /*create a wood block*/
         if (Input.GetKey(KeyCode.B)) 
         if (BlocksAvilable > 0 )
@@ -87,6 +112,8 @@ public class CreateBlocks : MonoBehaviour
                         RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
                 }
         }
+
+
 
         /*delete a block*/
         if (Input.GetKey(KeyCode.H))

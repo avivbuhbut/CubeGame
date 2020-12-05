@@ -85,7 +85,9 @@ public class EnemyLife : MonoBehaviour
 
      void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Magnitude:" + other.transform.GetComponent<Rigidbody>().velocity.magnitude);
+        
+
+
         if (other.transform.tag== "ThrowPizzaObj"&& other.transform.GetComponent<Rigidbody>().velocity.magnitude > 15)
         {
 

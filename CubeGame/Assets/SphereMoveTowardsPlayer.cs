@@ -9,7 +9,7 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
 
 
     public Material PizzaBoxMaterial;
-    bool PlayerIsInRadius;
+    public bool PlayerIsInRadius;
     bool PizzaBoxInRadius;
 
     Transform PizzaBoxTrans;
@@ -77,6 +77,8 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     void PlayerInRadius()
     {
 
+
+   
         if (PlayerIsInRadius)
         {
 
