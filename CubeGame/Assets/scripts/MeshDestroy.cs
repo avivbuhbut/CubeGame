@@ -310,19 +310,23 @@ public class MeshDestroy : MonoBehaviour
         public void MakeGameobject(MeshDestroy original , GameObject origianlGameobj ) ////////////////////////////////////////////////
         {
           
-            GameObject = new GameObject(origianlGameobj.name);
+         
+            GameObject = new GameObject("Broken");
+          
                 GameObject.tag = origianlGameobj.tag;
             
                 GameObject.transform.position = origianlGameobj.transform.position;
                 GameObject.transform.rotation = origianlGameobj.transform.rotation;
                 GameObject.transform.localScale = origianlGameobj.transform.localScale;
             
+            
             var mesh = new Mesh();
             mesh.name = origianlGameobj.GetComponent<MeshFilter>().mesh.name;
-
+           
             mesh.vertices = Vertices;
             mesh.normals = Normals;
             mesh.uv = UV;
+
             for (var i = 0; i < Triangles.Length; i++)
                 mesh.SetTriangles(Triangles[i], i, true);
             Bounds = mesh.bounds;
@@ -334,6 +338,7 @@ public class MeshDestroy : MonoBehaviour
             filter.mesh = mesh;
 
             var collider = GameObject.AddComponent<MeshCollider>();
+            var BoxColider = GameObject.AddComponent<BoxCollider>();
             collider.convex = true;
 
             var rigidbody = GameObject.AddComponent<Rigidbody>();

@@ -80,7 +80,7 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
         if (PlayerIsInRadius)
         {
 
-            this.transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Player").transform.position, 2.2f * Time.deltaTime); // move towards the pizza box
+            this.transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Player").transform.position, 2.8f * Time.deltaTime); // move towards the pizza box
 
             this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
         }

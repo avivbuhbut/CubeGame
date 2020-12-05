@@ -40,6 +40,9 @@ TagManager:
   - Stove
   - Wall
   - CubeShifter
+  - Fire
+  - ThrowPizzaObj
+  - SphereEnemy
   layers:
   - Default
   - TransparentFX

@@ -16,10 +16,11 @@ public class thisObjColidedWithSphere : MonoBehaviour
     void Update()
     {
         if (PizzaThrowcolidedWithSphere && counterPizzaThrow > 80)
-        {
+      {
+            Debug.Log(counterPizzaThrow);
             counterPizzaThrow--;
             this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh,this.transform.GetComponent<MeshDestroy>(),this.gameObject);
-        }
+       }
     }
 
      void OnCollisionEnter(Collision collision)
@@ -27,10 +28,15 @@ public class thisObjColidedWithSphere : MonoBehaviour
 
         if (collision.transform.name == "EnemySphere (1)")
         {
+            this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
 
             PizzaThrowcolidedWithSphere = true;
 
         }
 
     }
+
+    
+
+
 }
