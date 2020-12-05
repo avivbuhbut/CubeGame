@@ -375,7 +375,7 @@ public class PolydrawObject : MonoBehaviour
 		t_position				= oldRb.position;
 		t_rotation				= oldRb.rotation;
 		t_interpolation			= oldRb.interpolation;
-		t_solverIterationCount	= oldRb.solverIterationCount;
+		t_solverIterationCount	= oldRb.solverIterations;
 		#if UNITY_5
 		t_sleepThreshold		= oldRb.sleepThreshold;
 		#else
@@ -408,7 +408,7 @@ public class PolydrawObject : MonoBehaviour
 		newRb.position				= t_position;
 		newRb.rotation				= t_rotation;
 		newRb.interpolation			= t_interpolation;
-		newRb.solverIterationCount	= t_solverIterationCount;
+		newRb.solverIterations	= t_solverIterationCount;
 		#if UNITY_5
 		newRb.sleepThreshold		= t_sleepThreshold;
 		#else

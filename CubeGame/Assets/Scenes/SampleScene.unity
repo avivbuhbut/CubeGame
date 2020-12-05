@@ -3835,6 +3835,8 @@ GameObject:
   - component: {fileID: 419031091}
   - component: {fileID: 419031090}
   - component: {fileID: 419031089}
+  - component: {fileID: 419031095}
+  - component: {fileID: 419031096}
   m_Layer: 0
   m_Name: ThrowPizzaObj
   m_TagString: Untagged
@@ -3943,6 +3945,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419031095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419031088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c050388294ff342ae9d6c5d92eff13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player2Trans: {fileID: 115516808}
+  HammerCubeTrans: {fileID: 2122939975}
+  CutCascades: 1
+  ExplodeForce: 0
+  Distraction1: 0
+--- !u!114 &419031096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419031088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd06f543142b1584da88c670e08674c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &434968012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7216,6 +7247,8 @@ GameObject:
   - component: {fileID: 755540725}
   - component: {fileID: 755540724}
   - component: {fileID: 755540729}
+  - component: {fileID: 755540730}
+  - component: {fileID: 755540732}
   m_Layer: 0
   m_Name: EnemySphere (1)
   m_TagString: Untagged
@@ -7324,6 +7357,35 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &755540730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755540723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c050388294ff342ae9d6c5d92eff13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player2Trans: {fileID: 115516808}
+  HammerCubeTrans: {fileID: 2122939975}
+  CutCascades: 1
+  ExplodeForce: 0
+  Distraction1: 0
+--- !u!114 &755540732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755540723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54453a75f7bea9d4f97a72102c373ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &761458258
 PrefabInstance:
   m_ObjectHideFlags: 0

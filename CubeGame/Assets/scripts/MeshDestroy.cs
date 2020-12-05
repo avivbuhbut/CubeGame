@@ -20,7 +20,10 @@ public class MeshDestroy : MonoBehaviour
     int counterGeneral = 0;
     public static int counterCubeCreatePlayer = 0;
 
-
+    bool ThrowHitSphere;
+    bool PizzaThrowcolidedWithSphere;
+    static int counterPizzaThrow = 100;
+    static int CounterThrowHitSphere;
 
 
     //public Transform CubePlayerCreate;
@@ -38,7 +41,22 @@ public class MeshDestroy : MonoBehaviour
         {
             // DestroyMesh();
         }
+        /*
+        if (PizzaThrowcolidedWithSphere && counterPizzaThrow > 80)
+        {
+           counterPizzaThrow--;
+            GameObject.Find("ThrowPizzaObj").transform.GetComponent<MeshDestroy>().DestroyMesh(GameObject.Find("ThrowPizzaObj").transform.gameObject.GetComponent<MeshFilter>().mesh, GameObject.Find("ThrowPizzaObj").transform.GetComponent<MeshDestroy>(), GameObject.Find("ThrowPizzaObj").gameObject);
+        }*/
 
+        /*
+        
+        if(ThrowHitSphere&& CounterThrowHitSphere > 80)
+        {
+            CounterThrowHitSphere--;
+            GameObject.Find("EnemySphere (1)").transform.GetComponent<MeshDestroy>().DestroyMesh(GameObject.Find("EnemySphere (1)").transform.gameObject.GetComponent<MeshFilter>().mesh, GameObject.Find("EnemySphere (1)").transform.GetComponent<MeshDestroy>(), GameObject.Find("EnemySphere (1)").gameObject);
+
+        }*/
+        //  if() add the exact same thing but for the sphere(enemy itself)
 
     }
  
@@ -90,6 +108,7 @@ public class MeshDestroy : MonoBehaviour
      
             parts[i].MakeGameobject(GamobjectMeshDestroy, Gameobj);
                 parts[i].GameObject.GetComponent<Rigidbody>().AddForceAtPosition(parts[i].Bounds.center * ExplodeForce, transform.position);
+            parts[i].GameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
             }
 
     
@@ -292,7 +311,8 @@ public class MeshDestroy : MonoBehaviour
         {
           
             GameObject = new GameObject(origianlGameobj.name);
-                GameObject.tag = "CubeDistraction";
+                GameObject.tag = origianlGameobj.tag;
+            
                 GameObject.transform.position = origianlGameobj.transform.position;
                 GameObject.transform.rotation = origianlGameobj.transform.rotation;
                 GameObject.transform.localScale = origianlGameobj.transform.localScale;
@@ -343,15 +363,14 @@ public class MeshDestroy : MonoBehaviour
             DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(),this.gameObject);
         }
 
- 
 
-        
+/*
+        if (collision.transform.name == "ThrowPizzaObj")
+        {
+            Debug.Log(this.transform.name + " colided with " + collision.transform.name);
+            ThrowHitSphere = true;
 
-   
-
-    // if(collision.gameObject.tag != "HammerCube" || collision.gameObject.tag != "Floor")
-            //Destroy()
-
+        }*/
 
 
 
