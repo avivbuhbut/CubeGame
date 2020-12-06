@@ -6,7 +6,7 @@ using TMPro;
 public class EnemyLife : MonoBehaviour
 {
 
-    static int SphereLife = 10;
+    static int SphereLife = 50;
     static bool HitByThrowObj;
     public TextMeshPro EnemyLifeTMP;
     static int GlobalHitCounter = 0;
@@ -42,7 +42,7 @@ public class EnemyLife : MonoBehaviour
                 }
             }
 
-            if (SphereLife < 50 && SphereLife > 20)
+            if (SphereLife <= 50 && SphereLife > 20)
             {
                 EnemyLifeTMP.text = SphereLife + "%";
                 EnemyLifeTMP.color = Color.yellow;
@@ -53,7 +53,7 @@ public class EnemyLife : MonoBehaviour
                     }
             }
 
-            if (SphereLife < 20 && SphereLife > 0)
+            if (SphereLife <= 20 && SphereLife > 0)
             {
                 EnemyLifeTMP.text = SphereLife + "%";
                 EnemyLifeTMP.color = Color.red;

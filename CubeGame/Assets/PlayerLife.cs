@@ -5,12 +5,14 @@ using TMPro;
 
 public class PlayerLife : MonoBehaviour
 {
-    static int PlayerLifeCounter = 100;
+    public static int PlayerLifeCounter = 100;
     public TextMeshPro PlayerLifeTMP;
     bool ColidedWithEnemy;
     Transform SphereTrans;
     Vector3 MoveDirection;
     Vector3 StartPosPlayer;
+
+    public Camera RainCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -78,16 +80,16 @@ public class PlayerLife : MonoBehaviour
             ColidedWithEnemy = true;
             // MoveDirection = this.transform.position - collision.transform.position;
 
-            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(this.transform.position.x, 0, 0) * 50);
-            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(-this.transform.position.x,0,0) * -50);
-            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(0,-this.transform.position.y*0.4f, 0)*-50);
-            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(0, this.transform.position.y * 0.4f, 0) * 50);
+            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(this.transform.position.x, 0, 0) * 20);
+            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(-this.transform.position.x,0,0) * -20);
+            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(0,-this.transform.position.y*0.4f, 0)*-20);
+            this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(0, this.transform.position.y * 0.4f, 0) * 20);
             //SphereTrans  = collision.transform;
 
 
         if(PlayerLifeCounter<=0)
                 this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
-
+            RainCamera.gameObject.SetActive(false);
         }
     }
     void OnCollisionExit(Collision collision)

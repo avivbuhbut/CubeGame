@@ -11,12 +11,14 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     public Material PizzaBoxMaterial;
     public bool PlayerIsInRadius;
     bool PizzaBoxInRadius;
+    bool PlayerCloneInRadius;
+    Transform Player;
 
     Transform PizzaBoxTrans;
     // Start is called before the first frame update
     void Start()
     {
-
+        Player = GameObject.Find("Player").transform;
         this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
 
     }
@@ -25,8 +27,9 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     void Update()
     {
         PlayerInRadius();
+        PlayerCloneInRadiusMethod();
 
-        EnemyInsidePlayerChangeColorPlayer();
+       // EnemyInsidePlayerChangeColorPlayer();
 
        
             CahngeColorPizzaWhenInRadius();
@@ -78,8 +81,8 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     {
 
 
-    
-        if (PlayerIsInRadius)
+
+        if (PlayerIsInRadius && Player!=null)
         {
 
             this.transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Player").transform.position, 2.8f * Time.deltaTime); // move towards the pizza box
@@ -89,6 +92,24 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
         else
             this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
     }
+
+
+    void PlayerCloneInRadiusMethod()
+    {
+
+
+
+        if (PlayerCloneInRadius)
+        {
+
+            this.transform.position = Vector3.MoveTowards(this.transform.position, GameObject.Find("Player(Clone)").transform.position, 2.8f * Time.deltaTime); // move towards the pizza box
+
+            this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+        }
+        else
+            this.transform.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
+    }
+
 
     void EnemyInsidePlayerChangeColorPlayer()
     {
@@ -103,6 +124,11 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
  
      void OnTriggerEnter(Collider other)
     {
+
+        if(other.transform.gameObject.name == "Player(Clone)")
+        {
+            PlayerCloneInRadius = true;
+        }
 
 
         if (other.transform.gameObject.name == "Player")
@@ -135,5 +161,12 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
             Debug.Log("PizzaBox Exit Sphere radius:" + other.transform.gameObject.name);
             PizzaBoxInRadius = false;
         }
+
+
+        if (other.transform.gameObject.name == "Player(Clone)")
+        {
+            PlayerCloneInRadius = false ;
+        }
+
     }
 }
