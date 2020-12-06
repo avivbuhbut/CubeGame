@@ -14,14 +14,14 @@ public class enableAndDisable : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.G))
         {
-            DrawGameObj.SetActive(true);
-            DrawGameObj.transform.GetComponent<Draw>().enabled = true;
-            DrawGameObj.transform.GetComponent<LineRenderer>().enabled = true;
+           DrawGameObj.SetActive(true);
+            this.transform.GetComponent<Draw>().enabled = true;
+            this.transform.GetComponent<LineRenderer>().enabled = true;
         }
         //Instantiate(DrawGameObj, new Vector3(1, 1, 1), Quaternion.identity);
         else
         {
-            DrawGameObj.SetActive(false);
+
            // DrawGameObj.transform.GetComponent<Draw>().enabled = false;
            // DrawGameObj.transform.GetComponent<LineRenderer>().enabled = false;
         }

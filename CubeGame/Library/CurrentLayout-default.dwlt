@@ -385,10 +385,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1764}
-      m_SelectedIDs: a8570000
-      m_LastClickedID: 22440
-      m_ExpandedIDs: 6afbffff025500004255000082550000c0570000545800009c5a00001c5e0000
+      scrollPos: {x: 0, y: 1636}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6afbffff025500004255000054580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -448,9 +448,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.73540086, y: 5.75347, z: -13.162967}
+    m_Target: {x: 16.156271, y: 26.005293, z: -37.137154}
     speed: 2
-    m_Value: {x: 0.73540086, y: 5.75347, z: -13.162967}
+    m_Value: {x: 16.156271, y: 26.005293, z: -37.137154}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -479,13 +479,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.2851163, y: 0.09316597, z: 0.00043405843, w: 0.9543386}
+    m_Target: {x: 0.1447785, y: -0.120933436, z: 0.045296226, w: 0.981379}
     speed: 2
-    m_Value: {x: 0.28644246, y: 0.09313236, z: 0.00029399796, w: 0.95356023}
+    m_Value: {x: 0.14619614, y: -0.12082043, z: 0.045460977, w: 0.9807969}
   m_Size:
-    m_Target: 0.90005547
+    m_Target: 3.3000553
     speed: 2
-    m_Value: 0.90005547
+    m_Value: 3.3000553
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004c530000a24b00007a4b00003e370000208700002a350000e45500001a52000052420000de36000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1048,7 +1048,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 328}
+    m_ScrollPosition: {x: 0, y: 255}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 258
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 22602
+  m_LastSelectedObjectID: 22664
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

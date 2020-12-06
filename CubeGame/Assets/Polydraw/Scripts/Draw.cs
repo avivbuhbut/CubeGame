@@ -178,7 +178,10 @@ public class Draw : MonoBehaviour
 
             // If we're not rendering with the camera used for input, set the ortho cam coordinates to match
             // the coordinates drawn at the Z position of the perspective camera.
-            drawSettings.zPosition = GameObject.Find("Player").transform.position.z+2;
+         
+            drawSettings.zPosition = GameObject.FindWithTag("Player").transform.position.z+2;
+
+           
 
 
         if (inputCamera != Camera.main)

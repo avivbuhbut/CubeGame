@@ -22,7 +22,9 @@ public class EnemyLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
+        Debug.Log("HitByThrowObj:" + HitByThrowObj);
+        Debug.Log("ThrowFast:" + ThrowFast);
         GlobalHitCounter++;
 
         if(this.transform!=null)
@@ -102,10 +104,9 @@ public class EnemyLife : MonoBehaviour
 
      void OnTriggerEnter(Collider other)
     {
-        
 
 
-        if (other.transform.tag== "ThrowPizzaObj"&& other.transform.GetComponent<Rigidbody>().velocity.magnitude > 15)
+        if (other.transform.tag== "ThrowPizzaObj"&& other.transform.GetComponent<Rigidbody>().velocity.magnitude > 35)
         {
 
             ThrowFast = true;

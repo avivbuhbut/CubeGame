@@ -684,7 +684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578d29cd2b92b9947a7e29be4e54b96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DrawGameObj: {fileID: 0}
+  DrawGameObj: {fileID: 2219461465202648195, guid: deb68e394db0bd14a929286f222275e8,
+    type: 3}
 --- !u!114 &3593259107995495981
 MonoBehaviour:
   m_ObjectHideFlags: 0
