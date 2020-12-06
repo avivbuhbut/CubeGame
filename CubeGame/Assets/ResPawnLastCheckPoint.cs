@@ -5,8 +5,9 @@ using UnityEngine;
 public class ResPawnLastCheckPoint : MonoBehaviour
 {
 
-
+    
     public GameObject PlayerGamObj;
+   // public Camera RainCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,8 @@ public class ResPawnLastCheckPoint : MonoBehaviour
            GameObject NewPlayer =  Instantiate(PlayerGamObj, new Vector3(this.transform.position.x,this.transform.position.y+1,this.transform.position.z), Quaternion.identity) ;
             PlayerLife.PlayerLifeCounter = 100;
             Camera.main.GetComponent<FollowCamera2Script>().target = NewPlayer.transform;
-            
+           // RainCamera.gameObject.SetActive(true);
+          //  RainCamera.GetComponent<FollowCamera>().target = NewPlayer.transform.gameObject;
 
         }
         

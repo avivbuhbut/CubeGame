@@ -6,14 +6,18 @@ public class PlayerMovment : MonoBehaviour
     public float speed;
     // Use this for initialization
     Rigidbody rigidbody;
+
+
     void Start()
     {
   
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+     void FixedUpdate()
     {
+
+ 
 
         PlayerMovmentCotrol();
     }

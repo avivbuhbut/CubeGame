@@ -12,7 +12,7 @@ public class PlayerLife : MonoBehaviour
     Vector3 MoveDirection;
     Vector3 StartPosPlayer;
 
-    public Camera RainCamera;
+  //  public Camera RainCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +89,7 @@ public class PlayerLife : MonoBehaviour
 
         if(PlayerLifeCounter<=0)
                 this.transform.GetComponent<MeshDestroy>().DestroyMesh(this.transform.gameObject.GetComponent<MeshFilter>().mesh, this.transform.GetComponent<MeshDestroy>(), this.gameObject);
-            RainCamera.gameObject.SetActive(false);
+    
         }
     }
     void OnCollisionExit(Collision collision)

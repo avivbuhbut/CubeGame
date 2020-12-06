@@ -9179,7 +9179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246cc59c7a84ea44f87f6b70acfe30c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1332451217}
   offset: {x: 0, y: 7.5, z: 0}
 --- !u!20 &902029897
 Camera:
@@ -17417,6 +17416,7 @@ GameObject:
   - component: {fileID: 1212594323}
   - component: {fileID: 1212594322}
   - component: {fileID: 1212594327}
+  - component: {fileID: 1212594328}
   m_Layer: 0
   m_Name: FinishLevelButton (1)
   m_TagString: Untagged
@@ -17536,6 +17536,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerGamObj: {fileID: 1250473307085735533, guid: 55433745ab80ff84880348e40e1c9741,
     type: 3}
+--- !u!114 &1212594328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212594320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e473b79054ddb424ebb6f2ea6676b971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1230790241
 GameObject:
   m_ObjectHideFlags: 0
@@ -25929,7 +25941,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527746841}
   m_LocalRotation: {x: 0.99981135, y: 0.0018883151, z: 0.00035314818, w: 0.01932847}
-  m_LocalPosition: {x: 0, y: 0, z: 10.177657}
+  m_LocalPosition: {x: 0, y: 0, z: 10.18}
   m_LocalScale: {x: -1.4653338, y: 0.29029432, z: 1.4326419}
   m_Children:
   - {fileID: 1824084291}
@@ -25939,7 +25951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 177.785, y: -0.04498291, z: -0.21697998}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.91, y: -2.3968956}
+  m_AnchoredPosition: {x: -17.91, y: -2.46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1527746848
@@ -34362,6 +34374,11 @@ PrefabInstance:
       propertyPath: AimTrans
       value: 
       objectReference: {fileID: 1178657461}
+    - target: {fileID: 1250473307085735544, guid: 55433745ab80ff84880348e40e1c9741,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1250473307085735546, guid: 55433745ab80ff84880348e40e1c9741,
         type: 3}
       propertyPath: Player2
