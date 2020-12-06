@@ -98,6 +98,7 @@ public class EnemyLife : MonoBehaviour
         if (collision.transform.tag == "ThrowPizzaObj")
         {
             HitByThrowObj = false;
+ 
         }
     }
 

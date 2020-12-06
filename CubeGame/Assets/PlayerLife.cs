@@ -19,6 +19,8 @@ public class PlayerLife : MonoBehaviour
     {
 
         PlayerLifeTMP.gameObject.SetActive(false);
+     
+
     }
 
     // Update is called once per frame
