@@ -40,37 +40,112 @@ public class thisObjColidedWithSphere : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "SphereEnemy")
+        if (other.transform.tag == "SphereEnemy"&& (GameObject.Find("Player")!=null))
         {
+            if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerIsInRadius))
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                       RigidbodyConstraints.FreezePositionZ;
+
+            }else
+
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+            /*
+             *             else if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius))
+        {
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                    RigidbodyConstraints.FreezePositionZ;
+
+        }
+        else if(!(GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius))
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;*/
 
             //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.red, 10f);
 
         }
 
-        if(!((GameObject.Find("EnemySphere (1)").GetComponent< SphereMoveTowardsPlayer>().PlayerIsInRadius) && other.transform.tag == "SphereEnemy"))
+
+        if (other.transform.tag == "SphereEnemy" && (GameObject.Find("Player(Clone)").activeSelf))
         {
-            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius))
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                       RigidbodyConstraints.FreezePositionZ;
+
+            }
+            else
+
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+            /*
+             *             else if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius))
+        {
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                    RigidbodyConstraints.FreezePositionZ;
+
+        }
+        else if(!(GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius))
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;*/
+
+            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.red, 10f);
+
         }
 
-     
+
+
+        //The not makes the problem
+        // if (!((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius) && other.transform.tag == "SphereEnemy"))
+        //{
+        //    Debug.Log("DFD");
+        //     this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        //  }
+        //  else
+        //      this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+        //      RigidbodyConstraints.FreezePositionZ;
+
+        /* i think it should be this way
+          if((GameObject.Find("EnemySphere (1)").GetComponent< SphereMoveTowardsPlayer>().PlayerIsInRadius) && other.transform.tag == "SphereEnemy"))
+        {
+         this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                RigidbodyConstraints.FreezePositionZ;
+      
+        }else
+              this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+         
+         
+         */
+
+
+
+
     }
 
 
-     void OnTriggerExit(Collider other)
+        void OnTriggerExit(Collider other)
     {
 
-
-        if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerIsInRadius) && other.transform.tag == "SphereEnemy")
-        {
-            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
-               RigidbodyConstraints.FreezePositionZ;
-        }
 
         if (other.transform.tag == "SphereEnemy")
         {
 
-           this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+
+            if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerCloneInRadius) && other.transform.tag == "SphereEnemy")
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                   RigidbodyConstraints.FreezePositionZ;
+            }
+
+
+            if ((GameObject.Find("EnemySphere (1)").GetComponent<SphereMoveTowardsPlayer>().PlayerIsInRadius) && other.transform.tag == "SphereEnemy")
+            {
+                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
+                   RigidbodyConstraints.FreezePositionZ;
+            }
+
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
                 RigidbodyConstraints.FreezePositionZ;
             this.gameObject.transform.GetComponent<Renderer>().material.DOColor(Color.white, 10f);
 

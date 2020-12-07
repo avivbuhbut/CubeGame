@@ -50,7 +50,7 @@ public class EnemyLife : MonoBehaviour
                 EnemyLifeTMP.color = Color.yellow;
                     if (this.transform != null)
                     {
-                        moveDirection = this.transform.position - HitByThrowTrans.position;
+
                         this.transform.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -50);
                     }
             }
@@ -98,7 +98,7 @@ public class EnemyLife : MonoBehaviour
         if (collision.transform.tag == "ThrowPizzaObj")
         {
             HitByThrowObj = false;
- 
+            ThrowFast = false;
         }
     }
 

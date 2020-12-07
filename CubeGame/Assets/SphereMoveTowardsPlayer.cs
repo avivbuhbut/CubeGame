@@ -11,7 +11,7 @@ public class SphereMoveTowardsPlayer : MonoBehaviour
     public Material PizzaBoxMaterial;
     public bool PlayerIsInRadius;
     bool PizzaBoxInRadius;
-    bool PlayerCloneInRadius;
+  public  bool PlayerCloneInRadius;
     Transform Player;
 
     Transform PizzaBoxTrans;

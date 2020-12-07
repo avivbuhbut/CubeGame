@@ -5872,13 +5872,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611452894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.00077204616, z: -0, w: 0.99999976}
   m_LocalPosition: {x: -4.2593374, y: 6.0204883, z: 1.8}
   m_LocalScale: {x: 1929.0516, y: 163.95831, z: 4.1693525}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.08800001, z: 0}
 --- !u!4 &612467450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4274653050354540, guid: e55149ba6f4d00741984987e258c3378,
@@ -7334,9 +7334,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRedMaterial: {fileID: 2100000, guid: eb37f6b13f327a34983586279e4b4680, type: 2}
-  PlayerGreenMaterial: {fileID: 2100000, guid: 2047ad8a86bca854da57aeeb5892095c, type: 2}
+  PlayerGreenMaterial: {fileID: 2100000, guid: a8283e011483444859e6081824d6e5eb, type: 2}
   PizzaBoxMaterial: {fileID: 2100000, guid: ec452b45674ee434eaedb02b14a828d5, type: 2}
   PlayerIsInRadius: 0
+  PlayerCloneInRadius: 0
 --- !u!135 &755540725
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8319,6 +8320,70 @@ Transform:
   - {fileID: 1864502979}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &836427364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 836427366}
+  - component: {fileID: 836427365}
+  m_Layer: 0
+  m_Name: Reflection Probe (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &836427365
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836427364}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 1
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 72.86044, y: 87.992386, z: 17.292763}
+  m_BoxOffset: {x: 20.802353, y: 29.359962, z: -3.6463814}
+  m_NearClip: 0.01
+  m_FarClip: 1020.11
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &836427366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836427364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.72, y: 8.39, z: -8.6}
+  m_LocalScale: {x: 9.940413, y: 1.7142, z: 1.7142}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838299553
 GameObject:
@@ -9535,7 +9600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 689.9988, y: -253}
+  m_AnchoredPosition: {x: 689.99805, y: -253}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923154954
@@ -19059,10 +19124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae1a49a9951c3d468d50ba79d3c410e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerRedMaterial: {fileID: 2100000, guid: eb37f6b13f327a34983586279e4b4680, type: 2}
-  PlayerGreenMaterial: {fileID: 2100000, guid: 2047ad8a86bca854da57aeeb5892095c, type: 2}
-  PizzaBoxMaterial: {fileID: 2100000, guid: ec452b45674ee434eaedb02b14a828d5, type: 2}
+  PlayerRedMaterial: {fileID: 0}
+  PlayerGreenMaterial: {fileID: 0}
+  PizzaBoxMaterial: {fileID: 0}
   PlayerIsInRadius: 0
+  PlayerCloneInRadius: 0
 --- !u!1 &1346260976
 GameObject:
   m_ObjectHideFlags: 0
@@ -33154,7 +33220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -99.70001, y: -48.299988}
+  m_AnchoredPosition: {x: -99.69922, y: -48.299805}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101732296
