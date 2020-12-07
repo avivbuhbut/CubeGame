@@ -81,6 +81,8 @@
     <Compile Include="Assets\ActiveCameraInScene.cs" />
     <Compile Include="Assets\becomeCubeShifter.cs" />
     <Compile Include="Assets\BoxHitPlayerBecomeChild.cs" />
+    <Compile Include="Assets\BreakAnythingTouch.cs" />
+    <Compile Include="Assets\BreakOnHitAgainst.cs" />
     <Compile Include="Assets\CheckIfPizzaWet.cs" />
     <Compile Include="Assets\checkIfSauceWet.cs" />
     <Compile Include="Assets\ColidedWithAnotherCubeShifter.cs" />
