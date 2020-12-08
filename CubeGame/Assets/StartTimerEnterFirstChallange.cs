@@ -5,11 +5,11 @@ using TMPro;
 
 public class StartTimerEnterFirstChallange : MonoBehaviour
 {
-
+    public Animator AnimHalfLevelGoUpAnim;
     bool PlayerPassThrow;
     bool PizzaBoxPassThrow;
     public TextMeshPro PlayerTimerTMP;
-    public float timeLeft = 120f;
+    public float timeLeft = 240f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +22,12 @@ public class StartTimerEnterFirstChallange : MonoBehaviour
         int Min;
 
 
-      
+  
 
         //  PlayerTimerTMP.text = "TIME LEFT: \n" + timeLeft;
         if (PlayerPassThrow&& PizzaBoxPassThrow)
         {
-
+            AnimHalfLevelGoUpAnim.SetBool("Activate", true);
             timeLeft -= Time.deltaTime;
             Min = (int)timeLeft / 60;
 
