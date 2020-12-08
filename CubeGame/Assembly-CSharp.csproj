@@ -114,6 +114,7 @@
     <Compile Include="Assets\enableAndDisable.cs" />
     <Compile Include="Assets\EndButtonChallengeOne.cs" />
     <Compile Include="Assets\EnemyLife.cs" />
+    <Compile Include="Assets\EnterPlayerRadiusRigBodyOn.cs" />
     <Compile Include="Assets\everythingBecomesChild.cs" />
     <Compile Include="Assets\FillWater.cs" />
     <Compile Include="Assets\FlyWIthPizzaMode.cs" />

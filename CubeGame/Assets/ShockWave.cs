@@ -20,8 +20,11 @@ public class ShockWave : MonoBehaviour
             this.transform.GetComponent<SphereCollider>().enabled = true;
             for (int i = 0; i < caughtRigidbodies.Count; i++)
             {
-                Debug.Log("caughtRigidbodies[i]: " + caughtRigidbodies[i]);
-                caughtRigidbodies[i].velocity = (transform.position - (caughtRigidbodies[i].transform.position + caughtRigidbodies[i].centerOfMass)) * magnetForce*0.4f * Time.deltaTime;
+                if (caughtRigidbodies[i] != null)
+                {
+                    Debug.Log("caughtRigidbodies[i]: " + caughtRigidbodies[i]);
+                    caughtRigidbodies[i].velocity = (transform.position - (caughtRigidbodies[i].transform.position + caughtRigidbodies[i].centerOfMass)) * magnetForce * 0.6f * Time.deltaTime;
+                }
             }
 
         }
@@ -31,8 +34,12 @@ public class ShockWave : MonoBehaviour
             Debug.Log(" O key is now up");
             for (int i = 0; i < caughtRigidbodies.Count; i++)
             {
-                Debug.Log("caughtRigidbodies[i]: " + caughtRigidbodies[i]);
-                caughtRigidbodies[i].velocity = (transform.position - (caughtRigidbodies[i].transform.position + caughtRigidbodies[i].centerOfMass)) * -magnetForce*7 * Time.deltaTime;
+                if (caughtRigidbodies[i] != null)
+                {
+                    Debug.Log("caughtRigidbodies[i]: " + caughtRigidbodies[i]);
+
+                    caughtRigidbodies[i].velocity = (transform.position - (caughtRigidbodies[i].transform.position + caughtRigidbodies[i].centerOfMass)) * -magnetForce * 8.6f * Time.deltaTime;
+                }
             }
         }
     }
