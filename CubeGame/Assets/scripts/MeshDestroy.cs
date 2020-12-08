@@ -359,7 +359,7 @@ public class MeshDestroy : MonoBehaviour
 
       
 
-        if (collision.gameObject.tag == "DestructionBall" && counter <2)
+        if (collision.gameObject.tag == "DestructionBall" && counter <20)
         {
             counter++;
 

@@ -121,6 +121,7 @@
     <Compile Include="Assets\getCloneTransOnColid.cs" />
     <Compile Include="Assets\GunColidedRightHand.cs" />
     <Compile Include="Assets\HandGunprintColision.cs" />
+    <Compile Include="Assets\hitbyBall.cs" />
     <Compile Include="Assets\ifHitPlayerBecomePlayer.cs" />
     <Compile Include="Assets\LastActivePizzaBox.cs" />
     <Compile Include="Assets\MoveTowardsWater.cs" />
