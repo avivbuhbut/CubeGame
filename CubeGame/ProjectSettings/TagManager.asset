@@ -43,6 +43,7 @@ TagManager:
   - Fire
   - ThrowPizzaObj
   - SphereEnemy
+  - DestructionBall
   layers:
   - Default
   - TransparentFX

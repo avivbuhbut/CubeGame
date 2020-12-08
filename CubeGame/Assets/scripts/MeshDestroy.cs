@@ -356,9 +356,10 @@ public class MeshDestroy : MonoBehaviour
     int coutnerHit = 0;
      void OnCollisionEnter(Collision collision)
     {
- 
 
-        if (collision.gameObject.tag == "HammerCube" && counter <100)
+      
+
+        if (collision.gameObject.tag == "DestructionBall" && counter <2)
         {
             counter++;
 
