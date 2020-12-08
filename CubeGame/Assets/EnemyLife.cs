@@ -107,7 +107,7 @@ public class EnemyLife : MonoBehaviour
     {
 
 
-        if (other.transform.tag== "ThrowPizzaObj"&& other.transform.GetComponent<Rigidbody>().velocity.magnitude > 35)
+        if (other.transform.tag== "ThrowPizzaObj"&& other.transform.GetComponent<Rigidbody>().velocity.magnitude > 25)
         {
 
             ThrowFast = true;

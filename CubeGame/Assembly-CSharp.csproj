@@ -260,6 +260,7 @@
     <Compile Include="Assets\scripts\TurnOffHitStove.cs" />
     <Compile Include="Assets\scripts\TurnOffPizzaBox1and2.cs" />
     <Compile Include="Assets\scripts\WhosMoving.cs" />
+    <Compile Include="Assets\ShockWave.cs" />
     <Compile Include="Assets\ShowPrecentageShrinkWater.cs" />
     <Compile Include="Assets\ShrinkAndGrow.cs" />
     <Compile Include="Assets\SphereMoveTowardsPlayer.cs" />

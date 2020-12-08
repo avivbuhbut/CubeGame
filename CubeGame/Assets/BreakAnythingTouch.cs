@@ -25,20 +25,23 @@ public class BreakAnythingTouch : MonoBehaviour
             collision.transform.GetComponent<MeshDestroy>().DestroyMesh(collision.transform.gameObject.GetComponent<MeshFilter>().mesh, collision.transform.GetComponent<MeshDestroy>(), collision.gameObject);
             counter++;
         }
+            //collision.transform.GetComponent<MeshDestroy>().DestroyMesh(collision.transform.gameObject.GetComponent<MeshFilter>().mesh, collision.transform.GetComponent<MeshDestroy>(), collision.gameObject);
+
         }
         //try to make it break 5 times! 
 
 
 
 
-      //  if(collision.transform.name == "Broken" && counter<10)
-      //  {
-         //   collision.transform.GetComponent<MeshDestroy>().DestroyMesh(collision.transform.gameObject.GetComponent<MeshFilter>().mesh, collision.transform.GetComponent<MeshDestroy>(), collision.gameObject);
+        //  if(collision.transform.name == "Broken" && counter<10)
+        //  if(collision.transform.name == "Broken" && counter<10)
+        //  {
+        //   collision.transform.GetComponent<MeshDestroy>().DestroyMesh(collision.transform.gameObject.GetComponent<MeshFilter>().mesh, collision.transform.GetComponent<MeshDestroy>(), collision.gameObject);
 
         //    counter++;
-     //   }
+        //   }
 
-      
+
     }
     
     void OnCollisionExit(Collision collision)
