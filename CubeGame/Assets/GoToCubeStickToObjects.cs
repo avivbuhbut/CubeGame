@@ -20,8 +20,15 @@ public class GoToCubeStickToObjects : MonoBehaviour
         // Casts the ray and get the first game object hit
         Physics.Raycast(ray, out hit);
 
-        if (hit.transform.name == "GoToStickCube")
-            this.transform.GetComponent<Rigidbody>().isKinematic = false;
+      //  if (hit.transform.name == "GoToStickCube")
+           // this.transform.GetComponent<Rigidbody>().isKinematic = false;
+
+
+       // if(hit.transform.name == this.transform.name && Input.GetMouseButtonDown(0))
+      //  {
+       //     this.transform.GetComponent<Rigidbody>().isKinematic = false;
+       //     this.transform.parent = null;
+       // }
 
     }
 
@@ -30,5 +37,6 @@ public class GoToCubeStickToObjects : MonoBehaviour
 
         if(collision.transform.name == "CubeDistraction (3)")
         this.transform.GetComponent<Rigidbody>().isKinematic = true;
+        this.transform.parent = collision.transform;
     }
 }

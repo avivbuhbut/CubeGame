@@ -71,8 +71,7 @@ public class CreateBlocks : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Alpha7))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
+            
                 CubeGamObj.SetActive(true);
                 mousepos = Input.mousePosition;
                 mousepos.z = 15.2f;
@@ -87,7 +86,7 @@ public class CreateBlocks : MonoBehaviour
                 linehandler.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ |
                     RigidbodyConstraints.FreezePositionZ;
 
-            }
+            
         }
 
         /*create a wood block*/
