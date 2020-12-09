@@ -91,6 +91,7 @@
     <Compile Include="Assets\ColiderExitHoleWay.cs" />
     <Compile Include="Assets\ColiderForPizzaAndPlayer.cs" />
     <Compile Include="Assets\ColiderWithOtherSideTMP.cs" />
+    <Compile Include="Assets\CreateAnimScript.cs" />
     <Compile Include="Assets\CubeCheckForRainHit.cs" />
     <Compile Include="Assets\CubeLifeDurationLeft.cs" />
     <Compile Include="Assets\CubeShifterKinematic.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\FillWater.cs" />
     <Compile Include="Assets\FlyWIthPizzaMode.cs" />
     <Compile Include="Assets\getCloneTransOnColid.cs" />
+    <Compile Include="Assets\GoToCubeStickToObjects.cs" />
     <Compile Include="Assets\GunColidedRightHand.cs" />
     <Compile Include="Assets\HandGunprintColision.cs" />
     <Compile Include="Assets\hitbyBall.cs" />
