@@ -5,6 +5,7 @@ using TMPro;
 
 public class StartTimerEnterFirstChallange : MonoBehaviour
 {
+
     public Animator AnimHalfLevelGoUpAnim;
     bool PlayerPassThrow;
     bool PizzaBoxPassThrow;
@@ -14,6 +15,7 @@ public class StartTimerEnterFirstChallange : MonoBehaviour
     void Start()
     {
         PlayerTimerTMP.gameObject.SetActive(true);
+        AnimHalfLevelGoUpAnim.SetBool("Activate", false);
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class StartTimerEnterFirstChallange : MonoBehaviour
         if (PlayerPassThrow&& PizzaBoxPassThrow)
         {
             AnimHalfLevelGoUpAnim.SetBool("Activate", true);
+         
             timeLeft -= Time.deltaTime;
             Min = (int)timeLeft / 60;
 
