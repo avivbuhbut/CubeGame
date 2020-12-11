@@ -127,6 +127,7 @@
     <Compile Include="Assets\hitbyBall.cs" />
     <Compile Include="Assets\ifHitPlayerBecomePlayer.cs" />
     <Compile Include="Assets\LastActivePizzaBox.cs" />
+    <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\MoveTowardsWater.cs" />
     <Compile Include="Assets\ObjThorwColidedWithSphere.cs" />
     <Compile Include="Assets\PirntColition.cs" />
@@ -300,6 +301,7 @@
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Normal\MK_Normal-DiffuseBumped.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Normal\MK_Normal-DiffuseBumpSpec.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\Effect\MKGlowSM30.shader" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\UI\UI-Unlit-Detail.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\Effect\MKGlowSM40.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Other\MK_Illumin-Diffuse.shader" />
@@ -310,14 +312,17 @@
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Transparent\MK_Transparent-Diffuse.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Transparent\MK_Transparent-DiffuseBumpSpec.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\Inc\Downsample.hlsl" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Other\MK_Unlit-Normal.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\UI\UI-Default.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\Identity.compute" />
     <None Include="Assets\_MK\MKGlow\Shaders\Sprites\Sprites-Diffuse.shader" />
     <None Include="Assets\Downloads\Image Effects\Compute Shaders\Resources\ConvolutionKernels\BilateralBlur.compute" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Particle\MK_Particle Multiply.shader" />
+    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Cutout\MK_Cutout-DiffuseBumpSpec.shader" />
     <None Include="Assets\Polydraw\Example\Art Credits.txt" />
     <None Include="Assets\_MK\MKGlow\Shaders\Effect\MKGlowSM20.shader" />
@@ -331,6 +336,7 @@
     <None Include="Assets\_MK\MKGlow\Shaders\UI\UI-Unlit-TextDetail.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Lava_Flowing_Shader\ReadMe.txt" />
     <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
