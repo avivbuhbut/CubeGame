@@ -89,8 +89,8 @@ public class ScoreCount : MonoBehaviour
 
     void Start()
     {
-        Box3.SetActive(false);
-        Box2.SetActive(false);
+       // Box3.SetActive(false);
+        //Box2.SetActive(false);
         
 
         hit = new RaycastHit();
@@ -156,32 +156,33 @@ public class ScoreCount : MonoBehaviour
         velBox2 = rigidbodyBox2.velocity;
 
         /*Box3 velocity*/
-        velBox3 = rigidbodyBox3.velocity;
+
 
 
         /*Box 1 is in the air GENERAL*/
-        if ((velBox1.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0)))
+        if ((velBox2.magnitude > 2) && (!Input.GetKey(KeyCode.Mouse0)))
             pizzaBox1InAir = true;
         else
             pizzaBox1InAir = false;
 
 
         /*if Box 1 is in the air*/
-        if ((velBox1.magnitude > 8) && (!Input.GetKey(KeyCode.Mouse0)))
+        if ((velBox2.magnitude > 4) && (!Input.GetKey(KeyCode.Mouse0))&& !(player1GameObj.GetComponent<Rigidbody>().velocity.magnitude>0))
         {
 
             // tell the main camera to follow th pizza and when the pizza lend
             //come back to player
 
             /*Cameras Control*/
-            //CamBox1.gameObject.SetActive(true);
-           // Player1CAM.gameObject.SetActive(false);
+            CamBox2.gameObject.SetActive(true);
+            Player1CAM.gameObject.SetActive(false);
         }
         else
         {
-
-           // CamBox1.gameObject.SetActive(false);
-           // Player1CAM.gameObject.SetActive(true);
+            CamBox2.gameObject.SetActive(false);
+            Player1CAM.gameObject.SetActive(true);
+            // CamBox1.gameObject.SetActive(false);
+            // Player1CAM.gameObject.SetActive(true);
             Box1currentGreenPoints = 0;
             Box1LocalSocre = 0;
 

@@ -10,7 +10,7 @@ public class ColiderForPizzaAndPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Anim.SetBool("Active", false);
+       // Anim.SetBool("Active", false);
     }
 
     // Update is called once per frame

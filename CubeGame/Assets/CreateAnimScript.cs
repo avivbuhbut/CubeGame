@@ -75,8 +75,8 @@ public class CreateAnimScript : MonoBehaviour
         {
             
             
-            TransToMove.transform.position = Vector3.MoveTowards(TransToMove.position, new Vector3(DestTrans.transform.position.x, DestTrans.transform.position.y, TransToMove.transform.position.z),
-                0.02f);
+         //   TransToMove.transform.position = Vector3.MoveTowards(TransToMove.position, new Vector3(DestTrans.transform.position.x, DestTrans.transform.position.y, TransToMove.transform.position.z),
+                //0.02f);
 
           //  TransToMove.transform.position = TrVector3.up;
 
