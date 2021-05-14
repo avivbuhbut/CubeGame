@@ -126,6 +126,7 @@
     <Compile Include="Assets\HandGunprintColision.cs" />
     <Compile Include="Assets\hitbyBall.cs" />
     <Compile Include="Assets\ifHitPlayerBecomePlayer.cs" />
+    <Compile Include="Assets\InAirPlayAnimation.cs" />
     <Compile Include="Assets\LastActivePizzaBox.cs" />
     <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\MoveTowardsWater.cs" />

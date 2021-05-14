@@ -38,7 +38,8 @@ using UnityEngine;
                 return;
             }
             // We need to hit a rigidbody that is not kinematic
-            if (!hit.rigidbody || hit.rigidbody.isKinematic || hit.rigidbody.name =="Player" || hit.rigidbody.name == "Player2")
+            if (!hit.rigidbody || hit.rigidbody.isKinematic || hit.rigidbody.name =="Player" || hit.rigidbody.name == "Player2"||
+            hit.rigidbody.name== "Sphere")
             {
                 return;
             }

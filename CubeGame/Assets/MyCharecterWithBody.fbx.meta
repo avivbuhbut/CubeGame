@@ -6,9 +6,6 @@ ModelImporter:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  - first:
-      74: -1900132722527647994
-    second: Armature|LightAction
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -41,15 +38,15 @@ ModelImporter:
       name: Armature|ArmatureAction
       takeName: Armature|ArmatureAction
       internalID: 0
-      firstFrame: 2.8
-      lastFrame: 16.7
+      firstFrame: 1.6000001
+      lastFrame: 15.299999
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
