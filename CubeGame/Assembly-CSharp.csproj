@@ -113,6 +113,7 @@
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
     <Compile Include="Assets\Downloads\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
+    <Compile Include="Assets\DragRidgidZoomOutCam.cs" />
     <Compile Include="Assets\enableAndDisable.cs" />
     <Compile Include="Assets\EndButtonChallengeOne.cs" />
     <Compile Include="Assets\EnemyLife.cs" />
@@ -287,6 +288,8 @@
     <Compile Include="Assets\WaterDamage.cs" />
     <Compile Include="Assets\ZoomOutCamWhenDraw.cs" />
     <Compile Include="Assets\ZoomOutCurrentCamera.cs" />
+    <Compile Include="Assets\ZoomOutMainCam.cs" />
+    <Compile Include="Assets\ZoomOutOnTouchPizzaBox.cs" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Sprites\Sprites-Diffuse.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\MKGlowStandard.shader" />
     <None Include="Assets\_MK\MKGlow\Shaders\VariantsSelective\Legacy\Illumin\MK_Illumin-Glossy.shader" />
@@ -429,6 +432,9 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
@@ -443,9 +449,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/2019.2.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

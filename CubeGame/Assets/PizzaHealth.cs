@@ -9,19 +9,35 @@ public class PizzaHealth : MonoBehaviour
     public RaycastHit hitUp;
     public RaycastHit hitDown;
     float timeExposedToRain=1;
-
+    public Transform CanvasTrans;
+    float maxBarAfterfall;
     float f;
 
     // Start is called before the first frame update
     void Start()
     {
         bar.fillAmount  = 1;
+        maxBarAfterfall = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-      //  bar.fillAmount = fill;
+        //  bar.fillAmount = fill;
+
+        if (maxBarAfterfall < 0)
+            maxBarAfterfall = 0;
+
+        if (this.transform.GetComponent<Rigidbody>().velocity.magnitude > 0)
+        {
+            CanvasTrans.gameObject.SetActive(false);
+        }
+        else
+        {
+            CanvasTrans.gameObject.SetActive(true);
+        }
+
+        CanvasTrans.position = new Vector3(this.transform.position.x, this.transform.position.y+0.7f, this.transform.position.z);
 
 
 
@@ -43,7 +59,11 @@ public class PizzaHealth : MonoBehaviour
 
         bool LifeDown = false ;
 
-        if (hitUp.transform.tag == "Bounds" && hitDown.transform.tag =="Floor" || )
+      
+
+
+        if (hitUp.transform.tag == "Bounds" && hitDown.transform.tag =="Floor" ||
+           hitUp.transform.tag == "Floor" && hitDown.transform.tag == "Bounds")
         {
 
 
@@ -66,12 +86,15 @@ public class PizzaHealth : MonoBehaviour
         }
 
 
-        if (hitUp.transform.tag != "Bounds")
+        if (hitUp.transform.tag != "Bounds" && hitDown.transform.tag =="Floor" ||
+           hitUp.transform.tag == "Floor" && hitDown.transform.tag != "Bounds")
         {
 
 
-            if ((Mathf.Round(timeExposedToRain % 2) == 0) && LifeDown == false && bar.fillAmount!=1)
+
+            if ((Mathf.Round(timeExposedToRain % 2) == 0) && LifeDown == false && bar.fillAmount<=maxBarAfterfall)
             {
+                Debug.Log("maxBarAfterfall: " + maxBarAfterfall);
                 LifeDown = true;
                 bar.fillAmount += 0.0002f;
 
@@ -104,5 +127,14 @@ public class PizzaHealth : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.relativeVelocity.magnitude);
+
+        if (collision.relativeVelocity.magnitude > 10)
+        {
+            bar.fillAmount -= 0.07f;
+            maxBarAfterfall -= 0.07f;
+
+        }
+
+
     }
 }

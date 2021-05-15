@@ -15,13 +15,14 @@ public class RainStopStoveFireOn : MonoBehaviour
     void Start()
     {
 
-        FireStove1ParticleSystem.Stop();
-        FireStove2ParticleSystem.Stop();
+        FireStove1ParticleSystem.Play();
+        FireStove2ParticleSystem.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if (GameObject.Find("CubeCheckForRainColision").GetComponent< CubeCheckForRainHit>().hit.transform.name == this.transform.name)
         {
 
@@ -41,7 +42,7 @@ public class RainStopStoveFireOn : MonoBehaviour
                 FireStove2ParticleSystem.Play();
                 counterStartParticale++;
             }
-        }
+        }*/
     }
 
     

@@ -21,7 +21,8 @@ using UnityEngine;
             // Make sure the user pressed the mouse down
             if (!Input.GetMouseButtonDown(0))
             {
-                return;
+           // Camera.main.fieldOfView = 60;
+            return;
             }
 
           
@@ -43,6 +44,10 @@ using UnityEngine;
             {
                 return;
             }
+
+       
+
+         
 
             if (!m_SpringJoint)
             {

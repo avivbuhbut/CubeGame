@@ -6,6 +6,7 @@ public class SlowMotion : MonoBehaviour
 
     float currentAmount = 0f;
     float maxAmount = 5f;
+    public bool SlowMotionIsOn;
 
     // Use this for initialization
     void Start()
@@ -19,7 +20,7 @@ public class SlowMotion : MonoBehaviour
 
         if (Input.GetKeyDown("z"))
         {
-
+            SlowMotionIsOn = true;
             if (Time.timeScale == 1.0f)
                 Time.timeScale = 0.3f;
 
@@ -28,6 +29,8 @@ public class SlowMotion : MonoBehaviour
                 Time.timeScale = 1.0f;
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
         }
+
+        SlowMotionIsOn = false;
 
 
         if (Time.timeScale == 0.03f)
