@@ -20,25 +20,7 @@ public class TestingMovment : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.A))
-        {
 
-            Debug.LogError("Pressing A");
-
-            animatorWalking.enabled = true;
-
-            animatorWalking.SetBool("Activate", true);
-            transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World); //LEFT
-            transform.rotation = Quaternion.Euler(0,-180 , 0);
-
-
-        }
-        else
-        {
-            animatorWalking.SetBool("Activate", false);
-            animatorWalking.enabled = false;
-
-        }
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -47,9 +29,21 @@ public class TestingMovment : MonoBehaviour
             animatorWalking.SetBool("Activate", true);
 
             transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World); //RIGHT
-            transform.rotation = Quaternion.Euler(0,180 , 0);
-        }
-        else
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        } else if(Input.GetKey(KeyCode.A))
+            {
+
+                Debug.LogError("Pressing A");
+
+                animatorWalking.enabled = true;
+
+                animatorWalking.SetBool("Activate", true);
+                transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World); //LEFT
+                transform.rotation = Quaternion.Euler(0, -360, 0);
+
+
+            }
+            else
         {
             animatorWalking.SetBool("Activate", false);
              animatorWalking.enabled = false;

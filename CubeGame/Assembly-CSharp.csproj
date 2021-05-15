@@ -133,6 +133,7 @@
     <Compile Include="Assets\ObjThorwColidedWithSphere.cs" />
     <Compile Include="Assets\PirntColition.cs" />
     <Compile Include="Assets\PizzaBoxColided.cs" />
+    <Compile Include="Assets\PizzaHealth.cs" />
     <Compile Include="Assets\PizzaTimer.cs" />
     <Compile Include="Assets\PizzaValue.cs" />
     <Compile Include="Assets\PlayAudio.cs" />
@@ -442,6 +443,9 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Git/CubeGameOldVer/CubeGame/CubeGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/2019.2.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
