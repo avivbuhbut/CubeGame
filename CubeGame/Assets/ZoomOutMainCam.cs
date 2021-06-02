@@ -16,7 +16,7 @@ public class ZoomOutMainCam : MonoBehaviour
     void Update()
     {
 
-        Debug.Log()
+       
 
        if (Hit.transform.tag == "PizzaBox")
         {
