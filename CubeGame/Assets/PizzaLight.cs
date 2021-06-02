@@ -18,6 +18,6 @@ public class PizzaLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LightTrans.position = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
+        LightTrans.position = new Vector3(this.transform.position.x, this.transform.position.y + 3, this.transform.position.z);
     }
 }

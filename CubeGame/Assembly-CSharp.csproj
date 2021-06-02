@@ -92,6 +92,7 @@
     <Compile Include="Assets\ColiderExitHoleWay.cs" />
     <Compile Include="Assets\ColiderForPizzaAndPlayer.cs" />
     <Compile Include="Assets\ColiderWithOtherSideTMP.cs" />
+    <Compile Include="Assets\ControllerCubeImpact.cs" />
     <Compile Include="Assets\CreateAnimScript.cs" />
     <Compile Include="Assets\CubeCheckForRainHit.cs" />
     <Compile Include="Assets\CubeLifeDurationLeft.cs" />

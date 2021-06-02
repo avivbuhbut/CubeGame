@@ -44,6 +44,7 @@ TagManager:
   - ThrowPizzaObj
   - SphereEnemy
   - DestructionBall
+  - ControlledCube
   layers:
   - Default
   - TransparentFX
