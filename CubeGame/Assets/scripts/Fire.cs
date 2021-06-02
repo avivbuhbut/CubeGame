@@ -32,7 +32,7 @@ public class Fire : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(0) &&( this.gameObject.transform.parent == WeaponHolder.transform) || Input.GetMouseButtonDown(0) && (this.gameObject.transform.parent == WeaponHolderLeftHand.transform))
+        if (Input.GetMouseButtonDown(0) )
         {
             /*play particals when shooting*/
             ShellParticles.Play();
@@ -44,7 +44,7 @@ public class Fire : MonoBehaviour
            if ( Physics.Raycast(AimTransform.transform.position, AimTransform.transform.right, out hit))
             {
 
-
+                Debug.Log(hit.transform.name);
 
                 EnamiesTakesDamge();
 
