@@ -122,6 +122,7 @@
     <Compile Include="Assets\everythingBecomesChild.cs" />
     <Compile Include="Assets\FillWater.cs" />
     <Compile Include="Assets\FlyWIthPizzaMode.cs" />
+    <Compile Include="Assets\FogColor.cs" />
     <Compile Include="Assets\getCloneTransOnColid.cs" />
     <Compile Include="Assets\GoToCubeStickToObjects.cs" />
     <Compile Include="Assets\GunColidedRightHand.cs" />
