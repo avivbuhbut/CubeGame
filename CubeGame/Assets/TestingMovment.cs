@@ -18,7 +18,12 @@ public class TestingMovment : MonoBehaviour
 
 
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * 8f, Space.Self);
+            this.transform.GetComponent<Rigidbody>().mass = 0.3f;
 
+        }
 
 
 
