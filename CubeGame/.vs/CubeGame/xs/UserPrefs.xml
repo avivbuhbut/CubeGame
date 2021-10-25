@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FlourColidedPlayer.cs">
     <Files>
       <File FileName="Assets/TestingMovment.cs" Line="18" Column="58" />
-      <File FileName="Assets/ReadJoyStick.cs" Line="23" Column="3" />
-      <File FileName="Assets/StickToPlayer.cs" Line="11" Column="17" />
-      <File FileName="Assets/InAirPlayAnimation.cs" Line="45" Column="10" />
-      <File FileName="Assets/PizzaHealth.cs" Line="129" Column="3" />
-      <File FileName="Assets/DoughColidePlayer.cs" Line="29" Column="45" />
-      <File FileName="Assets/FlourColidedPlayer.cs" Line="31" Column="5" />
-      <File FileName="Assets/StickToAnything.cs" Line="37" Column="11" />
-      <File FileName="Assets/scripts/DowStickToSauce.cs" Line="1" Column="1" />
+      <File FileName="Assets/ReadJoyStick.cs" />
+      <File FileName="Assets/StickToPlayer.cs" />
+      <File FileName="Assets/InAirPlayAnimation.cs" />
+      <File FileName="Assets/PizzaHealth.cs" />
+      <File FileName="Assets/DoughColidePlayer.cs" />
+      <File FileName="Assets/FlourColidedPlayer.cs" Line="62" Column="2" />
+      <File FileName="Assets/StickToAnything.cs" />
+      <File FileName="Assets/scripts/DowStickToSauce.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
