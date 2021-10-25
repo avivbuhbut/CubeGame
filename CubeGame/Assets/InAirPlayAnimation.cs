@@ -42,7 +42,7 @@ public class InAirPlayAnimation : MonoBehaviour
      void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log("Colided with: " + collision.transform.name);
+       // Debug.Log("Colided with: " + collision.transform.name);
 
 
 

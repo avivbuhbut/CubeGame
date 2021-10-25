@@ -20,8 +20,8 @@ public class FlyWIthPizzaMode : MonoBehaviour
     {
 
 
-        Debug.Log("first player status: " + FirstPlayerTrans.gameObject.activeSelf);
-        Debug.Log("SecondPlayerTrans status: " + SecondPlayerTrans.gameObject.activeSelf);
+//        Debug.Log("first player status: " + FirstPlayerTrans.gameObject.activeSelf);
+  //      Debug.Log("SecondPlayerTrans status: " + SecondPlayerTrans.gameObject.activeSelf);
 
         if (Input.GetKey(KeyCode.Q) && FirstPlayerTrans.gameObject.activeSelf)
         {

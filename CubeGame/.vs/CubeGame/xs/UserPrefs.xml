@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ShowPrecentageShrink.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FlourColidedPlayer.cs">
     <Files>
-      <File FileName="Assets/scripts/MoveTowardsTargetBox1.cs" Line="33" Column="8" />
-      <File FileName="Assets/moveTowardsSuace.cs" />
-      <File FileName="Assets/scripts/Enemy1Health.cs" />
-      <File FileName="Assets/CreateBlocks.cs" Line="1" Column="1" />
+      <File FileName="Assets/TestingMovment.cs" Line="18" Column="58" />
+      <File FileName="Assets/ReadJoyStick.cs" Line="23" Column="3" />
+      <File FileName="Assets/StickToPlayer.cs" Line="11" Column="17" />
+      <File FileName="Assets/InAirPlayAnimation.cs" Line="45" Column="10" />
+      <File FileName="Assets/PizzaHealth.cs" Line="129" Column="3" />
+      <File FileName="Assets/DoughColidePlayer.cs" Line="29" Column="45" />
+      <File FileName="Assets/FlourColidedPlayer.cs" Line="31" Column="5" />
+      <File FileName="Assets/StickToAnything.cs" Line="37" Column="11" />
       <File FileName="Assets/scripts/DowStickToSauce.cs" Line="1" Column="1" />
-      <File FileName="Assets/ColidWithPlayerDisaper.cs" Line="28" Column="86" />
-      <File FileName="Assets/BlocksAvilableTMPControl.cs" Line="29" Column="50" />
-      <File FileName="Assets/scripts/MeshDestroy.cs" Line="76" Column="40" />
-      <File FileName="Assets/colidedWithEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/ShowPrecentageShrink.cs" Line="26" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bd155a37-0d0e-408d-b2c3-78bab258c7fd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5d5e4016-df1f-4b25-b37c-4bc1a810948d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

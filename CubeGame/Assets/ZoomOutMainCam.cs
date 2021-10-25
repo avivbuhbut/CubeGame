@@ -8,7 +8,7 @@ public class ZoomOutMainCam : MonoBehaviour
     public RaycastHit Hit;
     void Start()
     {
-        Debug.Log("Camera.main.fieldOfView: " + Camera.main.fieldOfView);
+      //  Debug.Log("Camera.main.fieldOfView: " + Camera.main.fieldOfView);
         //Camera.main.fieldOfView = 100f;
     }
 

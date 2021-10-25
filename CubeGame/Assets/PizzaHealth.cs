@@ -44,14 +44,14 @@ public class PizzaHealth : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hitUp)){
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * hitUp.distance, Color.yellow);
-            Debug.Log("Above Pizza: " + hitUp.transform.tag);
+      //      Debug.Log("Above Pizza: " + hitUp.transform.tag);
         }
 
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hitDown))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hitDown.distance, Color.yellow);
-            Debug.Log("Above Pizza: " + hitDown.transform.tag);
+//            Debug.Log("Above Pizza: " + hitDown.transform.tag);
         }
 
 
@@ -126,7 +126,7 @@ public class PizzaHealth : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.relativeVelocity.magnitude);
+//        Debug.Log(collision.relativeVelocity.magnitude);
 
         if (collision.relativeVelocity.magnitude > 10)
         {
