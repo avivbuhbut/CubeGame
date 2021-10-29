@@ -5,17 +5,15 @@
 // www.michaelkremmel.de                            //
 // Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 namespace MK.Glow
-{	
-	/// <summary>
-	/// Renderbuffer based on a mip setup
-	/// </summary>
-	internal sealed class MipBuffer
+{
+    /// <summary>
+    /// Renderbuffer based on a mip setup
+    /// </summary>
+    internal sealed class MipBuffer
 	{
 		private RenderTarget[] _renderTargets = new RenderTarget[PipelineProperties.renderBufferSize];
 		internal RenderTarget[] renderTargets { get { return _renderTargets; } }

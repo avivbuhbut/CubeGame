@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 
 
-    public class FollowTarget : MonoBehaviour
+public class FollowTarget : MonoBehaviour
     { 
     Transform target;
         public Vector3 offset = new Vector3(0f, 7.5f, 0f);

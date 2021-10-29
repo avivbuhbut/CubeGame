@@ -1,10 +1,9 @@
 using UnityEngine;
-using System.Collections;
 
 namespace PolyDraw.Demo
 {
 
-	public class MouseLookConstrained : MonoBehaviour
+    public class MouseLookConstrained : MonoBehaviour
 	{
 		public Vector2 sensitivity = new Vector2(.3f, .3f);
 		public ClampValues clampX = new ClampValues(-10f, 10f);

@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace PolyDraw.Demo
 {
-[CustomEditor(typeof(Button))]
+    [CustomEditor(typeof(Button))]
 public class ButtonEditor : Editor
 {
 	Button b;

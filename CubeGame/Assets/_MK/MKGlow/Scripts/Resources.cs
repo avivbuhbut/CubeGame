@@ -5,8 +5,6 @@
 // www.michaelkremmel.de                            //
 // Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 /*
 #if UNITY_EDITOR && !UNITY_CLOUD_BUILD

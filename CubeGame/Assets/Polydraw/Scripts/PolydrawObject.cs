@@ -1,14 +1,12 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
 
-namespace Polydraw {
+namespace Polydraw
+{
 
-public class PolydrawObject : MonoBehaviour
+    public class PolydrawObject : MonoBehaviour
 {
 #region Classes
 

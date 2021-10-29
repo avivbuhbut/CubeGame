@@ -1,11 +1,10 @@
-﻿using UnityEngine;
-using System;
-using System.Collections;
+﻿using System;
 #if UDUINO_READY
 using System.IO.Ports;
 #endif
 
-namespace Uduino {
+namespace Uduino
+{
 
     public class UduinoDevice_DesktopSerial : UduinoDevice
     {

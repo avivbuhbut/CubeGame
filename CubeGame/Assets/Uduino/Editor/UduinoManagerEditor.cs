@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditorInternal;

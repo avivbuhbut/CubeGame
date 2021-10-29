@@ -5,14 +5,12 @@
 // www.michaelkremmel.de                            //
 // Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 namespace MK.Glow
 {
-	public static class Compatibility
+    public static class Compatibility
     {
         private static readonly bool _defaultHDRFormatSupported = SystemInfo.SupportsRenderTextureFormat(RenderTextureFormat.DefaultHDR);
         private static readonly bool _11R11G10BFormatSupported = SystemInfo.SupportsRenderTextureFormat(RenderTextureFormat.RGB111110Float);

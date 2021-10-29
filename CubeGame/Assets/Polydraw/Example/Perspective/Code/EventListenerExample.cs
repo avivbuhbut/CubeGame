@@ -3,13 +3,11 @@
  */
 
 using UnityEngine;
-using System.Collections;
-using Polydraw;
 
 namespace PolyDraw.Demo
 {
 
-	public class EventListenerExample : MonoBehaviour
+    public class EventListenerExample : MonoBehaviour
 	{
 		public Material[] materialLibrary = new Material[0];
 		int curMatIndex = 0;

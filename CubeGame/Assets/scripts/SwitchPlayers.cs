@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class SwitchPlayers : MonoBehaviour
@@ -31,7 +29,7 @@ public class SwitchPlayers : MonoBehaviour
         Player2Cam.gameObject.SetActive(false);
         Player2.gameObject.SetActive(false);
         PlayerCam.gameObject.SetActive(true);
-        Player.gameObject.SetActive(true);
+      //  Player.gameObject.SetActive(true);
    
         
         // Player2.SetActive(!Player2.activeInHierarchy);

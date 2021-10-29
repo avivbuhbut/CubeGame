@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Uduino; // adding Uduino NameSpace 
 
 public class MultipleButtons : MonoBehaviour

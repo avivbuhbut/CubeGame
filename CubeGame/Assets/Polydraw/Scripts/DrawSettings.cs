@@ -1,9 +1,9 @@
 using UnityEngine;
-using System.Collections;
 
-namespace Polydraw {
+namespace Polydraw
+{
 
-[System.Serializable]
+    [System.Serializable]
 public class DrawSettings
 {
 	public DrawSettings()

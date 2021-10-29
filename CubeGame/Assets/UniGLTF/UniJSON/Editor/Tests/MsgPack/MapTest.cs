@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using System;
-using System.IO;
 using System.Linq;
 
 namespace UniJSON.MsgPack

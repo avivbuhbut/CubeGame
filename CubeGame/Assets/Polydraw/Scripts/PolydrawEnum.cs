@@ -1,9 +1,6 @@
-using UnityEngine;
-using System.Collections;
-
 namespace Polydraw
 {
-	public enum Axis
+    public enum Axis
 	{
 		Forward,
 		Right,

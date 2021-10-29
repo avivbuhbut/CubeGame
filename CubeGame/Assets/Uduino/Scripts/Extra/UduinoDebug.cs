@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Uduino
+﻿namespace Uduino
 {
     public static class Log 
     {

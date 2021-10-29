@@ -1,11 +1,10 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace PolyDraw.Demo
 {
 
-	public class Menu : MonoBehaviour
+    public class Menu : MonoBehaviour
 	{
 		public Rect worldRect = new Rect(0f, 0f, 0f, 0f);
 		private Vector2 prevScreenSize = Vector2.zero;

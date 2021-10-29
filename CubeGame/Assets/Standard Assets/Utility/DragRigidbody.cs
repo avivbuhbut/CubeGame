@@ -1,8 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-    public class DragRigidbody : MonoBehaviour
+public class DragRigidbody : MonoBehaviour
     {
         const float k_Spring = 50.0f;
         const float k_Damper = 1.0f;

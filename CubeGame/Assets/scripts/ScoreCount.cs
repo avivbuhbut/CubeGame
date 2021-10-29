@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 public class ScoreCount : MonoBehaviour
 {
@@ -261,20 +259,20 @@ public class ScoreCount : MonoBehaviour
 
        
             /*if player1 is currently active*/
-            if (player1GameObj.activeSelf == true)
-            {
+           /// if (player1GameObj.activeSelf == true)
+           // {
                 /*Boxs Camera Control*/
-                CamBox1.gameObject.SetActive(false);
+            //    CamBox1.gameObject.SetActive(false);
 
 
 
                 /*Player1 Control Camera Control*/
-                Player1CAM.gameObject.SetActive(true);
+           //     Player1CAM.gameObject.SetActive(true);
        
 
                 //pizzaBox2TextMesh.gameObject.SetActive(false);
 
-            }
+           // }
         }
 
 

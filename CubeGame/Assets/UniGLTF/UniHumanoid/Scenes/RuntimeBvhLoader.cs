@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using UniHumanoid;
 using System.IO;
 using System;
 #if UNITY_EDITOR

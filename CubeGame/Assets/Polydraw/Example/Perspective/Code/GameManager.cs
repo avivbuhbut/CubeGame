@@ -2,13 +2,11 @@ using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using System.Collections;
-using Polydraw;
 
 namespace PolyDraw.Demo
 {
 
-	public class GameManager : MonoBehaviour {
+    public class GameManager : MonoBehaviour {
 
 		public static bool contextMenu = false;
 		static Menu menu;

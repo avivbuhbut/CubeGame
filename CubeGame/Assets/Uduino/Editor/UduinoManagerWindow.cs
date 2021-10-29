@@ -1,9 +1,7 @@
 ﻿using System;
-using System.IO;
 using Uduino;
 using UnityEditor;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class UduinoManagerWindow : EditorWindow
 {

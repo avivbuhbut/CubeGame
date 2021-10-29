@@ -8,10 +8,9 @@ using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using System.Collections;
 using System.IO;
 using System.Text;
- 
+
 public class ObjExporter {
  
     public static string MeshToString(MeshFilter mf) {

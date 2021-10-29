@@ -6,13 +6,11 @@
 // Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace MK.Glow
 {
-	//Attribute for Range
-	public sealed class MinMaxRangeAttribute : PropertyAttribute
+    //Attribute for Range
+    public sealed class MinMaxRangeAttribute : PropertyAttribute
 	{
 		public float minLimit, maxLimit;
 

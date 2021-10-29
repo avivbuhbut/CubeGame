@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ZoomOutMainCam : MonoBehaviour
 {
@@ -18,12 +16,12 @@ public class ZoomOutMainCam : MonoBehaviour
 
        
 
-       if (Hit.transform.tag == "PizzaBox")
-        {
-            Camera.main.fieldOfView = 100;
-        }
-        else
-            Camera.main.fieldOfView = 60;
+      // if (Hit.transform.tag == "PizzaBox")
+      //  {
+      //      Camera.main.fieldOfView = 100;
+      //  }
+       // else
+        //    Camera.main.fieldOfView = 60;
 
     }
 }

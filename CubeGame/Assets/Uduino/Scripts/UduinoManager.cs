@@ -9,7 +9,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 #if UDUINO_READY
-using System.IO.Ports;
 #endif
 
 

@@ -1,9 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-using System;
 using Polydraw;
-using System.Collections;
-using System.Collections.Generic;
 
 [CustomEditor(typeof(PolydrawObject))]
 public class DrawEditor : Editor

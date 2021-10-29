@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.LWRP;
-using UnityEngine.Rendering.Universal;
 
 public class CustomRenderPassFeature : ScriptableRendererFeature
 {

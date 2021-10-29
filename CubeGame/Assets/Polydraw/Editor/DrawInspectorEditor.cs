@@ -7,8 +7,6 @@
 
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using Polydraw;
 
 [CustomEditor(typeof(Draw))]
 class DrawInspectorEditor : Editor {

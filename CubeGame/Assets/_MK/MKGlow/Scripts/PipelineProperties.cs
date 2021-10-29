@@ -6,17 +6,15 @@
 // Copyright © 2020 All rights reserved.            //
 //////////////////////////////////////////////////////
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MK.Glow
 {
-    #if UNITY_2018_3_OR_NEWER
-    #if ENABLE_VR
+#if UNITY_2018_3_OR_NEWER
+#if ENABLE_VR
     using XRSettings = UnityEngine.XR.XRSettings;
-    #endif
-    #endif
+#endif
+#endif
 
     /// <summary>
     /// Contains all PipelineProperties used in MK Glow

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using UniGLTF.UniUnlit;
+﻿using UniGLTF.UniUnlit;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 
 namespace UniGLTF

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DepthFirstScheduler
+﻿namespace DepthFirstScheduler
 {
     public static partial class Scheduler
     {
