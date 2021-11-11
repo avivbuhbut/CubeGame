@@ -2,7 +2,7 @@
 using TMPro;
 public class PizzaTimer : MonoBehaviour
 {
-
+    
     public TextMeshPro PizzaTimerTMP;
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,7 @@ public class PizzaTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         PizzaTimerTMP.color = Color.red;
         PizzaTimerTMP.text = (int)GameObject.Find("StoveBack").GetComponent<CreatePizza>().timeLeft + " S";
 

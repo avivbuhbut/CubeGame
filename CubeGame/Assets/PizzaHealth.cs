@@ -14,6 +14,7 @@ public class PizzaHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         bar.fillAmount  = 1;
         maxBarAfterfall = 1;
     }
@@ -25,6 +26,8 @@ public class PizzaHealth : MonoBehaviour
 
         if (maxBarAfterfall < 0)
             maxBarAfterfall = 0;
+
+        
 
         if (this.transform.GetComponent<Rigidbody>().velocity.magnitude > 0)
         {

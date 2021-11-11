@@ -1,20 +1,14 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FlourColidedPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/testRotationRighArm.cs">
     <Files>
-      <File FileName="Assets/TestingMovment.cs" Line="18" Column="58" />
-      <File FileName="Assets/ReadJoyStick.cs" />
-      <File FileName="Assets/StickToPlayer.cs" />
-      <File FileName="Assets/InAirPlayAnimation.cs" />
-      <File FileName="Assets/PizzaHealth.cs" />
-      <File FileName="Assets/DoughColidePlayer.cs" />
-      <File FileName="Assets/FlourColidedPlayer.cs" Line="62" Column="2" />
-      <File FileName="Assets/StickToAnything.cs" />
-      <File FileName="Assets/scripts/DowStickToSauce.cs" />
+      <File FileName="Assets/MovingBoneTestPlayerHand.cs" Line="22" Column="59" />
+      <File FileName="Assets/TestingMovment.cs" Line="52" Column="19" />
+      <File FileName="Assets/testRotationRighArm.cs" Line="37" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5d5e4016-df1f-4b25-b37c-4bc1a810948d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="09c9db06-15af-44d8-b187-9ac0dc3f2792" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
