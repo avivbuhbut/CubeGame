@@ -474,6 +474,7 @@
     <Compile Include="Assets/_MK/MKGlow/Scripts/Resources.cs" />
     <Compile Include="Assets/_MK/MKGlow/Scripts/Common.cs" />
     <Compile Include="Assets/UniGLTF/UniJSON/Scripts/MsgPack/MsgPackFormatter.cs" />
+    <Compile Include="Assets/ScoreTextStayAbovePiz.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/_MK/MKGlow/Shaders/UI/UI-DefaultFont.shader" />

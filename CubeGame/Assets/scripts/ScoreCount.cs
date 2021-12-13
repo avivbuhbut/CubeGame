@@ -36,7 +36,7 @@ public class ScoreCount : MonoBehaviour
     public GameObject Box1;
     public Rigidbody rigidbodyBox1;
     public Transform transformBox1;
-    public TextMeshPro GlobalScoreTMPBox1;
+    public TextMeshPro PizzaScore;
     public TextMeshPro LocalScorepizzaBox1TMP;
     public float speedBox1;
     public int Box1LocalSocre;
@@ -126,7 +126,7 @@ public class ScoreCount : MonoBehaviour
         /*pizzaBox2*/
         speedBox2 = rigidbodyBox2.velocity.magnitude;
         GlobalScoreTMPBox2.gameObject.SetActive(false);
-        LocalScorepizzaBox2TMP.gameObject.SetActive(false);
+        LocalScorepizzaBox2TMP.gameObject.SetActive(true);
 
         /*pizzaBox2*/
         speedBox3 = rigidbodyBox3.velocity.magnitude;
@@ -140,11 +140,11 @@ public class ScoreCount : MonoBehaviour
 
 
         /*Global Score Player1*/
-     //   GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
+        //   GlobalScoreTMPPlayer.text = "Total Score: " + GlobalScore;
 
 
         /*Global Score Player2*/
-        //GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
+        GlobalScoreTextPlayer2.text = "Total Score: " + GlobalScore;
 
         /*Box1 velocity*/
         velBox1 = rigidbodyBox1.velocity;
@@ -167,6 +167,10 @@ public class ScoreCount : MonoBehaviour
         /*if Box 1 is in the air*/
         if ((velBox2.magnitude > 4) && (!Input.GetKey(KeyCode.Mouse0))&& !(player1GameObj.GetComponent<Rigidbody>().velocity.magnitude>0))
         {
+
+            Debug.Log("Box is in the air" + velBox2.magnitude);
+            int i = 2;
+            PizzaScore.text = velBox2.magnitude.ToString();
 
             // tell the main camera to follow th pizza and when the pizza lend
             //come back to player

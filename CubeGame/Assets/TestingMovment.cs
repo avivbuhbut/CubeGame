@@ -15,6 +15,7 @@ public class TestingMovment : MonoBehaviour
 
         manager.pinMode(AnalogPin.A1, PinMode.Input);
         manager.pinMode(AnalogPin.A0, PinMode.Input);
+
         transform.rotation = Quaternion.Euler(0, 270, 0);
 
     }
@@ -27,6 +28,8 @@ public class TestingMovment : MonoBehaviour
         int value = manager.analogRead(AnalogPin.A1);
 
         int JS_UpDowVal = manager.analogRead(AnalogPin.A0);
+
+
         if (Input.GetKey(KeyCode.D))
         {
             animatorWalking.SetBool("Activate", false);
@@ -38,7 +41,7 @@ public class TestingMovment : MonoBehaviour
                 LeftArmMovSpeed = 0.2f * Time.time;
                 Debug.Log(LeftArmMovSpeed);
                 Debug.Log(JS_UpDowVal);
-                //  LeftHandBone.LookAt(this.LeftHandBone.position.x,this.LeftHandBone.position.y+2,this.LeftHandBone.position.z);
+                 //LeftHandBone.LookAt(this.LeftHandBone.position.x,this.LeftHandBone.position.y+2,this.LeftHandBone.position.z);
             }
 
         }

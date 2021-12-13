@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{A2083B20-033A-5C4D-12A0-42C4F17E9EAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/testRotationRighArm.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ScoreTextStayAbovePiz.cs">
     <Files>
       <File FileName="Assets/MovingBoneTestPlayerHand.cs" Line="22" Column="59" />
-      <File FileName="Assets/TestingMovment.cs" Line="52" Column="19" />
+      <File FileName="Assets/TestingMovment.cs" Line="33" Column="37" />
       <File FileName="Assets/testRotationRighArm.cs" Line="37" Column="16" />
+      <File FileName="Assets/scripts/ScoreCount.cs" Line="173" Column="48" />
+      <File FileName="Assets/ScoreTextStayAbovePiz.cs" Line="18" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="09c9db06-15af-44d8-b187-9ac0dc3f2792" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e0618dbc-4ac0-4da0-b8d3-6d541b9c970b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
